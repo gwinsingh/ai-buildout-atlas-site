@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" data-root="" data-page="methodology">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology · AI Buildout Atlas</title>
+  <meta name="description" content="How the AI Buildout Atlas is researched, fact-checked, synthesized and published, what the fact-checks found, where the atlas is still weak, and how to update it.">
+  <script>try{var t=localStorage.getItem('atlas-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/atlas.css">
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/atlas.js" defer></script>
+  <style>
+    /* ---- Page-local: production pipeline diagram and tier list. Tokens from atlas.css only. ---- */
+    .pl-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.5rem; margin: 1.25rem 0 0.25rem; font-family: var(--font-sans); font-size: 0.8125rem; font-weight: 600; color: var(--ink); }
+    .pl-strip span { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 0.15rem 0.7rem; }
+    .pl-strip i { font-style: normal; color: var(--ink-3); }
+    .pipeline { display: grid; gap: 1.5rem; margin: 1rem 0 0.9rem; list-style: none; padding: 0; font-family: var(--font-sans); }
+    .pipeline > li {
+      position: relative; margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-lg);
+      padding: 0.9rem 1.1rem; display: grid; grid-template-columns: 12.5rem minmax(0, 1fr) 16rem; gap: 0.4rem 1.4rem; align-items: start; min-width: 0;
+    }
+    .pipeline > li::after { content: ""; position: absolute; left: 1.9rem; bottom: -1.3rem; width: 2px; height: 0.95rem; background: var(--rule-2); }
+    .pipeline > li::before { content: ""; position: absolute; left: calc(1.9rem - 5px); bottom: -1.45rem; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 7px solid var(--rule-2); }
+    .pipeline > li:last-child::after, .pipeline > li:last-child::before { display: none; }
+    .pl-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0 0.6rem; align-items: baseline; }
+    .pl-num { font: 650 0.75rem/1 var(--font-mono); color: var(--accent); background: var(--accent-soft); border-radius: 4px; padding: 0.25rem 0.45rem; }
+    .pipeline h3 { font-family: var(--font-sans); font-size: 1.02rem; line-height: 1.3; margin: 0; }
+    .pl-who { grid-column: 2; font-size: 0.78rem; color: var(--ink-2); font-weight: 600; margin: 0.15rem 0 0; }
+    :where(.article) .pipeline p { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); margin: 0; }
+    .pl-out { list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 1px dashed var(--rule-2); }
+    :where(.article) .pl-out li { font-family: var(--font-sans); font-size: 0.78rem; line-height: 1.4; color: var(--ink-2); margin: 0 0 0.25rem; }
+    .pl-out code { font-size: 0.74rem; overflow-wrap: anywhere; }
+    .pl-out strong { color: var(--ink); }
+    .pl-loop { font-family: var(--font-sans); font-size: 0.8125rem; line-height: 1.5; color: var(--ink-2); border: 1px dashed var(--rule-2); border-radius: var(--radius); padding: 0.6rem 0.9rem; margin: 0 0 2rem; display: flex; gap: 0.6rem; align-items: flex-start; }
+    .pl-loop svg { flex: none; margin-top: 0.15rem; color: var(--accent); }
+    .tiers { list-style: none; padding: 0; margin: 1rem 0 1.5rem; display: grid; gap: 6px; font-family: var(--font-sans); }
+    .tiers > li { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 0.9rem; align-items: start; background: var(--surface-2); border-radius: 6px; padding: 0.7rem 0.9rem; margin: 0; }
+    .tier-tag { font: 650 0.72rem/1.5 var(--font-mono); color: var(--ink-2); letter-spacing: 0.02em; }
+    .tiers > li:first-child .tier-tag { color: var(--accent); }
+    :where(.article) .tiers p { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); margin: 0; }
+    .tiers strong { color: var(--ink); }
+    @media (max-width: 900px) {
+      .pipeline > li { grid-template-columns: minmax(0, 1fr); }
+      .pl-out { border-left: 0; border-top: 1px dashed var(--rule-2); padding: 0.5rem 0 0; margin-top: 0.3rem; }
+    }
+    @media (max-width: 640px) { table.mtab { min-width: 38rem; } }
+    @media (max-width: 520px) { .tiers > li { grid-template-columns: minmax(0, 1fr); gap: 0.25rem; } }
+  </style>
+</head>
+<body>
+<header class="topbar"></header>
+<div class="shell">
+  <nav class="sidebar" id="atlas-sidebar" aria-label="Atlas contents"></nav>
+  <main id="main" class="main" tabindex="-1">
+    <article class="article">
+
+      <header class="hero">
+        <div class="hero-top"><span class="layer-chip">REF</span><span class="hero-track">Reference · Methodology</span></div>
+        <h1>How the atlas is made</h1>
+        <p class="dek">The research standard behind every number, how the pages were researched, checked and built, what the fact-checks found, where the atlas is still weak, and how to update it.</p>
+        <dl class="hero-meta">
+          <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
+          <div><dt>Reading time</dt><dd data-reading-time></dd></div>
+          <div><dt>Applies to</dt><dd>Western track, edition 1</dd></div>
+          <div><dt>Related</dt><dd><a href="sources.html">Sources</a> · <a href="western/W11-synthesis.html">W11 Synthesis</a></dd></div>
+        </dl>
+      </header>
+
+      <div class="kpis wide" role="group" aria-label="The atlas by the numbers">
+        <div class="kpi"><span class="kpi-label">Layer dossiers (W00–W11)</span><span class="kpi-value">12</span><span class="kpi-foot">~150,000 words · as of 2026-09-25</span></div>
+        <div class="kpi"><span class="kpi-label">Numbered sources cited</span><span class="kpi-value">842</span><span class="kpi-foot"><a href="sources.html">searchable list</a></span></div>
+        <div class="kpi"><span class="kpi-label">Claims fact-checked, two passes</span><span class="kpi-value">311</span><span class="kpi-foot">~570 individual figures</span></div>
+        <div class="kpi"><span class="kpi-label">Confirmed</span><span class="kpi-value">75%</span><span class="kpi-foot">233 of 311 rows</span></div>
+        <div class="kpi"><span class="kpi-label">Found likely fabricated</span><span class="kpi-value">0</span><span class="kpi-foot">13 contradicted and corrected</span></div>
+      </div>
+
+      <div class="summary" role="note" aria-labelledby="sixty">
+        <p class="eyebrow" id="sixty">The 60-second version</p>
+        <ol>
+          <li><strong>Primary sources first.</strong> Filings, earnings releases and calls, regulator data and company posts come first. Reputable press and industry research come second. Everything else is flagged.</li>
+          <li><strong>Every number is tagged</strong> <span class="prov" data-prov="R">R</span> reported, <span class="prov" data-prov="G">G</span> guidance, <span class="prov" data-prov="E">E</span> third-party estimate or <span class="prov" data-prov="A">A</span> our estimate. Each one carries a date or fiscal period, and a confidence tag where it is contested.</li>
+          <li><strong>The atlas was built in stages:</strong> ten analysts researched the layers in parallel, two independent fact-checkers checked 311 claims, a synthesis pass reconciled 36 disagreements into one set of canonical numbers, and HTML engineers built and tested the pages.</li>
+          <li><strong>The fact-checks found errors but no fabrications.</strong> They corrected 13 contradicted claims and 36 partly wrong ones, confirmed most of 2026's extraordinary events, and left 29 rows unverified. The most important of those is a report that Anthropic's run-rate passed $100B.</li>
+          <li><strong>The main weaknesses are known.</strong> The web-search budget ran out partway through the research. Private-company figures come from leaks and press reports. The "AI-attributable" splits are our own judgment.</li>
+        </ol>
+      </div>
+
+      <!-- ============================================================ 1 STANDARD -->
+      <section>
+        <h2><span class="kicker">01 · Research standard</span>What counts as evidence</h2>
+        <p class="lede">The analyst's job is to let a reader answer five questions about any layer: who pays whom, how much, for what, at what margin, and what could break it.</p>
+        <p>Sources are ranked. When they disagree, the dossier shows the range and explains why the numbers differ rather than picking the convenient one. Important numbers are triangulated. For every company, the dossier says which fiscal period each figure comes from.</p>
+        <ol class="tiers">
+          <li><span class="tier-tag">TIER 1</span><p><strong>Primary filings and disclosures.</strong> 10-K, 10-Q and 20-F filings, earnings releases and call transcripts, investor-day decks, S-1s, regulator data (EIA, FERC, ISO/RTO queues and auctions), and official company blogs and press releases.</p></li>
+          <li><span class="tier-tag">TIER 2</span><p><strong>Credible reporting and research.</strong> Reuters, Bloomberg, FT, WSJ, The Information, CNBC, SemiAnalysis, Epoch AI, IEA, LBNL, Dell'Oro, TrendForce, Synergy, IDC, Menlo Ventures, a16z, Sequoia.</p></li>
+          <li><span class="tier-tag">TIER 3</span><p><strong>Everything else, clearly flagged.</strong> Aggregators, encyclopedias, newsletters and headline-only listings. Where an entry was cited from prior knowledge or a search listing, the <a href="sources.html">sources page</a> marks it "not re-fetched".</p></li>
+        </ol>
+        <aside class="callout callout--definition">
+          <p class="callout-label">Definition</p>
+          <p><dfn>Recency rule</dfn>: always use the latest print. The default "as of" date is the research date (25 Sep 2026 for this edition). Calendar Q2 2026 results, reported in July and August 2026, are the latest full quarter for most companies.</p>
+        </aside>
+      </section>
+
+      <!-- ============================================================ 2 PROVENANCE -->
+      <section>
+        <h2><span class="kicker">02 · Provenance and confidence</span>How every number is labelled</h2>
+        <p>A provenance badge follows every key number. It tells you what kind of claim the number is, which is a different question from how reliable it is. A reported figure can come from a secondary source. An estimate can be very solid. Confidence tags cover the second question.</p>
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Tag</th><th scope="col">Means</th><th scope="col">Typical source</th><th scope="col">Example from the atlas</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><span class="prov" data-prov="R">R</span> Reported</th><td>Filed or published by the company or a regulator</td><td>10-Q, earnings release, auction result</td><td>Nvidia data-center revenue $89.0B in Q2 FY27 (May–Jul 2026)</td></tr>
+              <tr><th scope="row"><span class="prov" data-prov="G">G</span> Guidance</th><td>The company's own forecast</td><td>Earnings call, outlook table</td><td>Alphabet 2026 capex guide $195–205B (Jul 2026)</td></tr>
+              <tr><th scope="row"><span class="prov" data-prov="E">E</span> Estimate</th><td>A third party's number, including press reports of private companies</td><td>TrendForce, Synergy, IEA, Reuters</td><td>Anthropic run-rate $65B at end-July 2026 (Reuters)</td></tr>
+              <tr><th scope="row"><span class="prov" data-prov="A">A</span> Atlas estimate</th><td>Our own number, with the arithmetic shown on the page or in <code>data/</code></td><td>The analyst's model</td><td>Western AI data-center investment ~$1.0T in CY2026 (range $0.9–1.1T)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Mixed tags such as <code>R/A</code> mean the atlas combined reported inputs with its own arithmetic. An example is the ~$2.46T contracted backlog, which adds up five companies' disclosed backlog figures.</p>
+
+        <h3>Confidence tags</h3>
+        <div class="table-wrap">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Tag</th><th scope="col">When it is used</th><th scope="col">How pages treat it</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>conf: high</code></th><td>Several independent sources agree, or it comes from a filing</td><td>Used freely</td></tr>
+              <tr><th scope="row"><code>conf: med</code></th><td>One good source, or sources that differ within a narrow range</td><td>Used, with the range shown</td></tr>
+              <tr><th scope="row"><code>conf: low</code></th><td>A single secondary source, a leak, or a judgment-heavy allocation</td><td>Used as context, never as a headline, and flagged on the page</td></tr>
+              <tr><th scope="row"><code>unverified</code></th><td>The fact-checkers could not trace it to any reachable source</td><td>Kept, labelled "(conf: low, unverified)", and listed in <a href="#still-open">still-open claims</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="callout callout--why">
+          <p class="callout-label">Why canonical numbers</p>
+          <p>Ten analysts working in parallel produced different values for the same metric. Western AI capex for 2026 came out at $0.95T, $1.075T and $0.9T, because each analyst drew the scope a little differently. The synthesis pass picked one value for each contested metric and explained why (W11 §9). The results are stored in <code>data/western/_canonical.json</code>, and every page must use them. <a href="#reconciliation">The full reconciliation table</a> is below.</p>
+        </aside>
+      </section>
+
+      <!-- ============================================================ 3 PIPELINE -->
+      <section>
+        <h2><span class="kicker">03 · Production</span>How this edition was produced</h2>
+        <p>The atlas is written by Claude working in two roles (see <code>CLAUDE.md</code>). The <strong>Senior Analyst</strong> does primary-source research and quantifies everything. The <strong>HTML Engineer</strong> turns the research into visual pages. Large jobs are split across parallel agents, one layer each, and then pass through an independent fact-check and a synthesis.</p>
+        <p class="pl-strip wide" aria-hidden="true"><span>Brief</span><i>→</i><span>Research ×10</span><i>→</i><span>Fact-check ×2</span><i>→</i><span>Synthesis</span><i>→</i><span>Pages &amp; QA</span></p>
+        <ol class="pipeline wide" aria-label="Production pipeline, in order">
+          <li>
+            <div class="pl-head"><span class="pl-num">1</span><h3 data-toc="false">Brief &amp; taxonomy</h3><p class="pl-who">Lead</p></div>
+            <p>Sets the mission, the stable layer IDs, the dossier template, the data schema and the voice.</p>
+            <ul class="pl-out">
+              <li><code>CLAUDE.md</code></li>
+              <li><code>methodology/analyst-playbook.md</code></li>
+              <li><code>methodology/html-style-guide.md</code></li>
+            </ul>
+          </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">2</span><h3 data-toc="false">Layer research</h3><p class="pl-who">10 analyst agents in parallel</p></div>
+            <p>One dossier per layer, W01 to W10: 9,000–16,000 words each, with markdown tables and a numbered source list, plus a JSON file of chart-ready datasets.</p>
+            <ul class="pl-out">
+              <li><strong>10</strong> dossiers + <strong>10</strong> data files</li>
+              <li><strong>811</strong> numbered sources</li>
+              <li><code>research/western/W01–W10</code></li>
+            </ul>
+          </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">3</span><h3 data-toc="false">Fact-check</h3><p class="pl-who">2 independent checkers</p></div>
+            <p>Each checker took the highest-impact and most surprising claims, checked them against sources and arithmetic, fixed the dossiers and JSON in place, and logged every verdict.</p>
+            <ul class="pl-out">
+              <li><strong>311</strong> claim rows</li>
+              <li><code>methodology/qa/factcheck-W01-W05.md</code></li>
+              <li><code>methodology/qa/factcheck-W06-W10.md</code></li>
+            </ul>
+          </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">4</span><h3 data-toc="false">Synthesis</h3><p class="pl-who">Lead analyst</p></div>
+            <p>Connects the layers: the money map, profit pools, circular financing, the revenue gap and scenarios. It reconciles disagreements and fixes one canonical value for each headline number.</p>
+            <ul class="pl-out">
+              <li><strong>36</strong> disagreements reconciled</li>
+              <li><code>W11-synthesis.md</code>, <code>W00-overview.md</code></li>
+              <li><code>data/western/_canonical.json</code></li>
+            </ul>
+          </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">5</span><h3 data-toc="false">Pages &amp; QA</h3><p class="pl-who">HTML engineer agents in parallel</p></div>
+            <p>One page per layer from a shared design system. Each is tested in light and dark themes at 1440px and 375px wide, with no console errors and no sideways scrolling.</p>
+            <ul class="pl-out">
+              <li><code>docs/western/*.html</code></li>
+              <li><code>docs/assets/</code> (css, js, nav)</li>
+              <li><code>tools/build_sources.py</code></li>
+            </ul>
+          </li>
+        </ol>
+        <p class="pl-loop wide"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M13 5.5A5.5 5.5 0 1 0 13.5 9M13 1.8v3.9H9.1"/></svg><span><strong>Feedback loop.</strong> Fact-check corrections go straight back into the dossiers and <code>data/</code> files. The synthesis then applies the corrections that cut across layers (for example, Microsoft's calendar-2024 capex including leases was $75.6B, not $55.7B). Pages read their headline numbers from the canonical file, so a correction reaches every page that uses the number.</span></p>
+
+        <h3>What the analysts were told</h3>
+        <ul>
+          <li><strong>Use the latest data and never invent a number.</strong> If something cannot be verified, say so and mark it <code>(conf: low)</code>.</li>
+          <li><strong>Make the money explicit.</strong> Name the payer and the payee, the amount, what it buys, and the margin.</li>
+          <li><strong>Present bull and bear cases with equal rigor.</strong> Don't add investment-advice disclaimers.</li>
+          <li><strong>Use independent judgment.</strong> If something important is missing from the layer's scope, add it.</li>
+          <li><strong>Don't work around blocked sites</strong> with scripts. Use another source instead.</li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ 4 FACT-CHECK -->
+      <section>
+        <h2><span class="kicker">04 · Fact-check</span>What the fact-checks found</h2>
+        <p>Two independent passes checked 311 claim rows, covering about 570 individual figures, across the ten layer dossiers. Three quarters were confirmed. None was judged likely to be fabricated. The two passes worked under very different conditions, and that shapes how much weight their verdicts carry.</p>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "stacked": true, "horizontal": true,
+            "title": "Three quarters of checked claims were confirmed; none looked fabricated",
+            "subtitle": "Fact-check verdicts by pass, number of claim rows",
+            "valueFormat": { "decimals": 0 }, "unit": "claim rows",
+            "xKey": "pass",
+            "series": [
+              { "key": "confirmed", "label": "Confirmed", "color": 1 },
+              { "key": "partial", "label": "Partial", "color": 4 },
+              { "key": "contradicted", "label": "Contradicted", "color": 8 },
+              { "key": "unverified", "label": "Unverified", "color": 7 }
+            ],
+            "data": [
+              { "pass": "W01–W05 (171 rows)", "confirmed": 126, "partial": 17, "contradicted": 7, "unverified": 21 },
+              { "pass": "W06–W10 (140 rows)", "confirmed": 107, "partial": 19, "contradicted": 6, "unverified": 8 }
+            ],
+            "height": 150,
+            "source": "methodology/qa/factcheck-W01-W05.md and factcheck-W06-W10.md, summary tables",
+            "asOf": "2026-09-25", "provenance": "A",
+            "note": "Fabricated-likely: 0 in both passes. Several W01–W05 'unverified' rows (e.g. Anthropic's Series H, the SpaceX IPO) were later confirmed by the W06–W10 pass."
+          }
+          </script>
+        </figure>
+
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Verdict</th><th scope="col" class="num">W01–W05</th><th scope="col" class="num">W06–W10</th><th scope="col" class="num">Total</th><th scope="col" class="num">Share</th><th scope="col">What happened next</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Confirmed</th><td>126</td><td>107</td><td>233</td><td>74.9%</td><td>No change</td></tr>
+              <tr><th scope="row">Partial</th><td>17</td><td>19</td><td>36</td><td>11.6%</td><td>Number, wording, date or tag corrected in the dossier and JSON</td></tr>
+              <tr><th scope="row">Contradicted</th><td>7</td><td>6</td><td>13</td><td>4.2%</td><td>Corrected everywhere it appeared</td></tr>
+              <tr><th scope="row">Unverified</th><td>21</td><td>8</td><td>29</td><td>9.3%</td><td>Kept; headline items tagged <code>(conf: low, unverified)</code></td></tr>
+              <tr><th scope="row">Fabricated-likely</th><td>0</td><td>0</td><td>0</td><td>0%</td><td>None found</td></tr>
+            </tbody>
+            <tfoot><tr><th scope="row">All rows</th><td class="num">171</td><td class="num">140</td><td class="num">311</td><td class="num">100%</td><td></td></tr></tfoot>
+          </table>
+        </div>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "horizontal": true,
+            "title": "The demand and model-lab dossiers got the most scrutiny",
+            "subtitle": "Fact-check claim rows by dossier, count",
+            "valueFormat": { "decimals": 0 }, "unit": "claim rows",
+            "xKey": "layer",
+            "series": [{ "key": "rows", "label": "Claim rows" }],
+            "data": [
+              { "layer": "W01 Demand & capex", "rows": 60 },
+              { "layer": "W02 Capital & financing", "rows": 43 },
+              { "layer": "W03 Energy & power", "rows": 29 },
+              { "layer": "W04 Data centers", "rows": 15 },
+              { "layer": "W05 Compute silicon", "rows": 24 },
+              { "layer": "W06 Semi supply chain", "rows": 24 },
+              { "layer": "W07 Networking & systems", "rows": 10 },
+              { "layer": "W08 Cloud", "rows": 17 },
+              { "layer": "W09 Model labs", "rows": 65 },
+              { "layer": "W10 Apps & agents", "rows": 24 }
+            ],
+            "source": "methodology/qa/factcheck-*.md, rows by dossier",
+            "asOf": "2026-09-25", "provenance": "A",
+            "note": "Some W09 rows also cover W10 claims. Extraordinary claims (valuations near $1T, 10x revenue jumps, mega-deals) were checked first."
+          }
+          </script>
+        </figure>
+
+        <h3>Two passes, two very different conditions</h3>
+        <div class="bullbear wide">
+          <aside class="callout callout--note">
+            <p class="callout-label">Pass 1 · W01–W05</p>
+            <h3>No source could be fetched</h3>
+            <p>Every fetch returned a proxy HTTP 429 (rate limit) for about 25 minutes of retries, and web search was already exhausted. So the verdicts rest on the checker's knowledge up to early 2026 and on re-run arithmetic and cross-dossier comparison. About half the confirmations are arithmetic.</p>
+            <p>The pass's value was in catching internal conflicts, such as fiscal versus calendar years, sums that don't add up and one metric stated three ways. It could not test events after about March 2026.</p>
+          </aside>
+          <aside class="callout callout--note">
+            <p class="callout-label">Pass 2 · W06–W10</p>
+            <h3>About 60 sources fetched</h3>
+            <p>The rate limit lifted after about 45 minutes, and the checker fetched company releases, SEC exhibits, company blogs, TrendForce, SEMI, Synergy, Menlo, Ramp and others. About 85 of its 107 confirmations rest on a fetched source.</p>
+            <p>It confirmed most of 2026's extraordinary claims: SpaceX absorbing xAI and its IPO, the $60B Cursor deal, Anthropic's $965B valuation and $65B run-rate, OpenAI's $852B round, Micron's 84.9% gross margin, and Nvidia's $89.0B data-center quarter.</p>
+          </aside>
+        </div>
+
+        <h3>The corrections that mattered most</h3>
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Claim as first written</th><th scope="col">Corrected to</th><th scope="col">Why it matters</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Anthropic run-rate "&gt;$100B" in September 2026</th><td>Last confirmed: <strong>$65B at end-July</strong> <span class="prov" data-prov="E">E</span>; the September figure is unverified (conf: low)</td><td>Moves lab revenue, end-customer AI money and the agentic share; Anthropic vs OpenAI is ~1.6×, not ~2.5×</td></tr>
+              <tr><th scope="row">SpaceX IPO raised "~$86B"</th><td><strong>~$75B</strong> at $135/share, ~$1.77T valuation (12 Jun 2026)</td><td>Capital-markets totals in W02 and W09</td></tr>
+              <tr><th scope="row">Apr-2026 amendment: Microsoft stops taking a share of OpenAI's revenue</th><td>Reversed: <strong>OpenAI stops receiving a share of Microsoft's revenue</strong>; the AGI clause was dropped</td><td>No margin uplift for OpenAI from the change</td></tr>
+              <tr><th scope="row">Nebius Q2 GAAP operating result "≈ $0"</th><td><strong>−$175.9M</strong> (about −30% margin)</td><td>Neoclouds are loss-making at the operating line (about −$1.5B in 2026E)</td></tr>
+              <tr><th scope="row">Big-4 2024 capex incl. leases "~$230B"</th><td><strong>~$250B</strong>. Microsoft's CY2024 was $75.6B; $55.7B was its fiscal year</td><td>Western AI capex 2024 becomes ~$290B, which changes the growth path</td></tr>
+              <tr><th scope="row">Nvidia's share of chain gross profit "80–85%"</th><td><strong>~88–89%</strong> at chip level, ~86% at rack level</td><td>Profit-pool shares in W06, W07 and W11</td></tr>
+              <tr><th scope="row">"Nvidia takes ~5–6× the gross profit of TSMC + HBM makers"</th><td><strong>~8–9×</strong> from the dossier's own figures</td><td>Internal arithmetic error</td></tr>
+              <tr><th scope="row">Oracle debt "$125B"</th><td><strong>~$129.5B</strong> notes payable (FY26, May 2026)</td><td>Oracle leverage, the BBB- rating story</td></tr>
+              <tr><th scope="row">Alphabet 2026 capex guide "$175–185B"</th><td><strong>$195–205B</strong> (July guide; Feb was $175–185B)</td><td>The Big-4 total becomes ~$733B</td></tr>
+              <tr><th scope="row">Vendor share of lab equity "45–50%"</th><td><strong>~40–60%</strong>, depending on definitions and on Amazon's $35B conditional tranche</td><td>The circularity headline</td></tr>
+              <tr><th scope="row">Micron "$22B of deposits"</th><td><strong>~$22B of deposits and commitments</strong> (~$18B cash)</td><td>Memory customer prepayments</td></tr>
+              <tr><th scope="row">Colossus 1 went live "Dec-2024"; Oklo "−66% from peak"; Nvidia Q1 FY27 DC "$75.4B"</th><td>Sep-2024; −80%; $75.2B</td><td>Timeline and data accuracy</td></tr>
+              <tr><th scope="row">Anthropic and OpenAI IPO filing dates "May" / "Aug"</th><td>1 Jun 2026 and 8 Jun 2026 (company posts)</td><td>Timeline accuracy</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="still-open">Claims that are still unverified</h3>
+        <p>These claims stay in the dossiers with their tags, but no fetched source confirmed them. A follow-up pass with full web access should start here. Items the second pass later confirmed have been removed from the list (for example Anthropic's Series H, the SpaceX IPO, Dell's $95B AI backlog and Crusoe's Series F).</p>
+        <div class="table-wrap wide is-tall">
+          <table data-sortable class="table--compact mtab">
+            <thead><tr><th scope="col">Claim</th><th scope="col">Layer</th><th scope="col">Why it is open</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Anthropic run-rate passed $100B (mid-Sep 2026, NYT via Axios)</th><td>W09, W10</td><td>Axios URL rate-limited; no trace in other archives checked</td><td><span class="status status--critical">Low, unverified</span></td></tr>
+              <tr><th scope="row">Anthropic "≥$517B of compute leases in 11 months"</th><td>W01</td><td>Source unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">Google pays SpaceX ~$920M/month and Anthropic ~$1.25B/month for Colossus capacity</th><td>W01</td><td>Single encyclopedia source, unreachable; flows re-tagged R → E</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">NextEra to buy Dominion for ~$67B, all-stock (May 2026)</th><td>W03</td><td>Sources unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">New York enacted the first statewide data-center moratorium (Jul 2026)</th><td>W01</td><td>Not echoed in W03/W04, which track moratoria</td><td><span class="status status--critical">Doubtful</span></td></tr>
+              <tr><th scope="row">GE Vernova FY26 free-cash-flow guide of $11.5–12.5B</th><td>W03</td><td>Conflicts with the checker's recollection of a lower Dec-2025 guide</td><td><span class="status status--critical">Doubtful</span></td></tr>
+              <tr><th scope="row">Texas permit halt with a 474 GW ERCOT queue; Oracle force majeure on Project Jupiter</th><td>W01, W03</td><td>Sources unreachable; the Jupiter claim comes via a stock-data site</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">Berkshire's $10B Alphabet private placement within a $90B equity programme</th><td>W02</td><td>The sum checks; the event is not confirmed</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">OpenAI ≈ 25% of Nvidia's FY28 revenue; Nvidia's $105B residual-value guarantee for OpenAI's Ohio site</th><td>W05</td><td>Unreachable, though corroborated across dossiers</td><td><span class="status status--warning">Corroborated</span></td></tr>
+              <tr><th scope="row">Microsoft building lives 15 → 25 years, cutting CY26 capex from $190B to $175B</th><td>W01, W02</td><td>Call transcript unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">SK hynix 2Q26 revenue KRW 79.3tn and operating profit KRW 60.5tn</th><td>W06</td><td>Secondary aggregator only; no IR release found</td><td><span class="status status--warning">Conf: med</span></td></tr>
+              <tr><th scope="row">AWS backlog $496B; Oracle GPU utilization 97.9%</th><td>W08</td><td>Not in the releases; from transcripts and press</td><td><span class="status status--warning">Widely reported</span></td></tr>
+              <tr><th scope="row">Anthropic IPO exchange and underwriters (Nasdaq; Goldman, JPMorgan, Morgan Stanley)</th><td>W09</td><td>Not in any fetched source</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">2026 ARR and valuations of Harvey, Lovable, Sierra, OpenEvidence, Perplexity, ElevenLabs, Replit</th><td>W10</td><td>Sacra pages not fetched; already tagged [E]</td><td><span class="status status--warning">Estimate</span></td></tr>
+              <tr><th scope="row">Stanford "Canaries" revision to 19% below trend (Aug 2026); Census BTOS 22%</th><td>W10</td><td>Not fetched</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">Nscale ~$45B and AMD 2 GW / $5B deal terms with Anthropic</th><td>W05, W09</td><td>Deal terms from secondary reports</td><td><span class="status status--warning">Conf: low–med</span></td></tr>
+              <tr><th scope="row">IEA ~485 TWh of 2025 data-center electricity; PJM 2028/29 auction; JLL 66 GW under construction</th><td>W03, W04</td><td>Sources unreachable in pass 1; arithmetic checks</td><td><span class="status status--warning">Consistent</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Status labels summarize the fact-check logs. "Doubtful" means the checker had a specific reason to think the claim is wrong. Click a column header to sort.</p>
+      </section>
+
+      <!-- ============================================================ 5 RECONCILIATION -->
+      <section>
+        <h2 id="reconciliation"><span class="kicker">05 · Reconciliation</span>Where the dossiers disagreed, and the value we use</h2>
+        <p>The synthesis compared every headline metric across the ten dossiers. Where they differed, it chose one canonical value and recorded the reason. Most differences were about scope, such as calendar versus fiscal year, whether leases count, or whether developer-built shells count as capex. A few were stale figures the fact-checks caught.</p>
+        <div class="table-wrap wide is-tall">
+          <table data-sortable class="table--compact mtab">
+            <thead><tr><th scope="col">Metric</th><th scope="col">What the dossiers said</th><th scope="col">Canonical value</th><th scope="col">Why</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Big-4 2026 capex guidance</th><td>W01 ~$733B; W02 ~$730B; W10 $720-745B</td><td>~$733B (MSFT 175 new basis; GOOGL 195-205; AMZN ~220; META 130-145)</td><td>Resolved: fact-check W06-W10 confirmed Meta $130-145B (Jul); W02's $135-145B stale; Alphabet $175-185B was the Feb guide.</td></tr>
+              <tr><th scope="row">Meta Hyperion SPV equity</th><td>W02 ~$7B (Blue Owl 80%); W04 ~$2.5B</td><td>~$2.5B Blue Owl cash equity (conf med); $27.3B bond at 6.58%</td><td>Resolved toward W04: ~$27B project almost fully bond-funded plus ~$3B distribution to Meta; $7B does not reconcile.</td></tr>
+              <tr><th scope="row">CoreWeave power</th><td>W01 1.5 GW active / 3.7 GW contracted; W02 '4.2 GW active contracted'</td><td>1.5 GW active, 3.7 GW contracted (Q2-26)</td><td>Resolved: CoreWeave Q2 release (fact-check W06-W10 #99).</td></tr>
+              <tr><th scope="row">OpenAI custom-chip codename</th><td>W01 'Jalapeno'; W05 'Titan'</td><td>Omit from site; if needed 'Jalapeno' (conf low-med)</td><td>Resolved: only 'Jalapeno' traced (secondary source).</td></tr>
+              <tr><th scope="row">Microsoft-OpenAI Apr-2026 amendment</th><td>W09 original: Microsoft stops taking a share of OpenAI revenue</td><td>OpenAI stops receiving a share of Microsoft revenue; AGI clause dropped</td><td>Fact-check W06-W10 #42 (direction reversed); no margin uplift for OpenAI.</td></tr>
+              <tr><th scope="row">Oracle debt</th><td>W02 $125-130B; W08 $125B</td><td>~$129.5B notes payable (FY26, May-2026)</td><td>Fact-check W06-W10.</td></tr>
+              <tr><th scope="row">OpenAI 2025 gross margin</th><td>W09 ~33%; leaked lines imply ~43%</td><td>~33% reported / ~43% implied</td><td>Show both.</td></tr>
+              <tr><th scope="row">Neocloud operating result 2026E</th><td>W08 Nebius ~0%; W11 v1 -$0.5B</td><td>~-$1.5B; Nebius Q2 GAAP op loss -$175.9M</td><td>Fact-check W06-W10 #101.</td></tr>
+              <tr><th scope="row">B200 build cost</th><td>W06 ~$5,600</td><td>~$5,450 (HBM ~8% of $35k)</td><td>Midpoint arithmetic.</td></tr>
+              <tr><th scope="row">Nvidia share of chain gross profit</th><td>W06 80-85%; W07 '5 of 6'</td><td>~88-89% chip-level; ~86% rack-level</td><td>Fact-check W06-W10 #13.</td></tr>
+              <tr><th scope="row">Big-4 2024 capex / Western AI capex 2024</th><td>W02/W10 ~$230B Big-4; W10 ~$270B total</td><td>Big-4 ~$250B incl. leases; Western AI ~$290B</td><td>Fact-check W01-W05: MSFT CY2024 incl. leases $75.6B ($55.7B was FY24).</td></tr>
+              <tr><th scope="row">Big-4 2025 capex</th><td>W01 $376B cash / ~$413B company basis; W02/W10 ~$410B</td><td>$413B company basis</td><td>Includes MSFT finance leases and Meta lease principal.</td></tr>
+              <tr><th scope="row">OpenAI 2026 cash burn vs operating loss</th><td>W10 ~$27B burn; W09 Q1-2026 plan -$25B FCF; W11 op. loss ~-$37B</td><td>~$25-30B cash burn; ~-$37B operating loss</td><td>Operating loss includes non-cash stock comp; cash plan predates the Q2 loss.</td></tr>
+              <tr><th scope="row">Big-5 incl. Oracle, CY2026</th><td>W02 ~$815B; W08 '~$700B+ big-5'</td><td>$815B (company basis)</td><td>Oracle CY-adjusted ~$85B from FY27 guide $90-95B.</td></tr>
+              <tr><th scope="row">Western AI data-center investment, CY2026</th><td>W01 ~$0.95T; W02 ~$1.075T total build; W10 ~$0.9T; W05 $1.0-1.2T global</td><td>~$1.0T (range 0.9-1.1T)</td><td>W01 excludes developer-built shells leased to tenants (~$70B); W02 includes Amazon non-DC capex and non-AI capex; W10 is a rough top-down.</td></tr>
+              <tr><th scope="row">Western AI capex, CY2025</th><td>W02 ~$575B; W10 ~$500B</td><td>~$550B</td><td>Big-4 $413B company basis + Oracle ~$40B CY + neoclouds/xAI/sovereign/developer shells ~$100B.</td></tr>
+              <tr><th scope="row">Contracted backlog (5 companies)</th><td>All ~$2.46T; CoreWeave $104B (Jun) vs ~$129B (Aug)</td><td>$2.46T (Jun/Aug-2026)</td><td>Use period-consistent disclosures; ~$2.48T if CoreWeave's Aug figure is used.</td></tr>
+              <tr><th scope="row">OpenAI + Anthropic share of backlog</th><td>W01 40-50% (JSON 43%); W02 ~40%; W08 45-55% of hyperscaler RPO</td><td>~43% (~$1.05T); conf low-med</td><td>Only hard datapoint: OpenAI ~45% of Microsoft RPO (Dec-2025).</td></tr>
+              <tr><th scope="row">Anthropic run-rate</th><td>W10 $65B (end-Jul, re-tagged [E]); W09 &gt;$100B (18-Sep, NYT/Axios); W02 '$47-65B'</td><td>$65B at end-Jul [E] (Reuters, confirmed); '&gt;$100B (Sep)' UNVERIFIED, conf low</td><td>Fact-check W06-W10 found no trace of the Sep figure; confirmed vs OpenAI: $65B vs $40B (Jul) = ~1.6x.</td></tr>
+              <tr><th scope="row">Anthropic 2026 revenue</th><td>W09 $60-70B (JSON 65); W10 ~$56B</td><td>~$60B (range $56-65B)</td><td>Fact-check range; upper half needs the unverified Sep run-rate.</td></tr>
+              <tr><th scope="row">OpenAI 2026 revenue</th><td>W09 $36B (company plan, FT); W10 ~$35B</td><td>~$36B</td><td>Company plan; H2 needs ~$3.9B/month.</td></tr>
+              <tr><th scope="row">OpenAI Mar-2026 round</th><td>W01 ~$120B; W02/W09 $122B at $852B</td><td>$122B at $852B post (closed 31-Mar-2026)</td><td>Primary close figure.</td></tr>
+              <tr><th scope="row">OpenAI -&gt; AWS commitment</th><td>W02 $100B incl. the Nov-2025 $38B; W09 $38B + $100B = $138B</td><td>$100B (conservative; up to $138B if additive)</td><td>Primary release ambiguity; flagged conf low.</td></tr>
+              <tr><th scope="row">Anthropic 2026 equity raised</th><td>W02/W09 $95B (G $30B + H $65B); W09 +$5B Amazon (Apr) = $100B</td><td>$95B in rounds (+$5B Amazon if separate from Series H)</td><td>W02's H1 total ($217B for both labs) = 122 + 30 + 65.</td></tr>
+              <tr><th scope="row">Nvidia CY2026 data-center revenue</th><td>W01 ~$370B; W05 FY27E DC $378B (flows imply ~$385B); W07 ~$356B run-rate (floor); W10 ~$400B run-rate</td><td>~$365B CY2026 (exit run-rate ~$400B+)</td><td>FY27 DC $378B - Jan-2027 (~$37B) + Jan-2026 (~$21B); fact-check asked W11 to pick one.</td></tr>
+              <tr><th scope="row">Nvidia operating profit, 2026</th><td>W05 ~$255B annualised (Q2 x4); W08 '~$200B+'</td><td>~$250B total CY2026 (~$240B data center)</td><td>Q1 53.5 + Q2 63.7 + Q3/Q4 at guided ~66% OM.</td></tr>
+              <tr><th scope="row">Oracle uncommenced leases</th><td>W02 ~$260B (FY26 10-K); W04 $288B (31-Aug-2026)</td><td>$288B (Aug-2026)</td><td>Most recent filing.</td></tr>
+              <tr><th scope="row">SpaceX IPO proceeds</th><td>W02 $75B at $1.77T; W09 ~$86B (since fixed)</td><td>~$75B at $135/share, ~$1.77T (12-Jun-2026, SPCX)</td><td>Confirmed by fact-check W06-W10.</td></tr>
+              <tr><th scope="row">Memory's share of AI capex</th><td>W01 ~6% ($55B direct, ex-HBM); W06 via TrendForce 47% of CSP capex</td><td>~15% direct ($150B) + ~6% HBM inside accelerators = ~21% ($207B)</td><td>Buy-side evidence: Microsoft ~$25B and Amazon ~$20B of 2026 capex is memory inflation alone. TrendForce's 47% likely uses a different denominator.</td></tr>
+              <tr><th scope="row">Direct end-customer gen-AI spend 2026E</th><td>W10 ~$126B (110-150)</td><td>~$130B; plus ~$20B enterprise AI cloud infra and ~$50B AI ad uplift = ~$200B end-customer AI money</td><td>Anthropic 2026 revenue raised to $60B.</td></tr>
+              <tr><th scope="row">Cost per GW (all-in)</th><td>W01 $50-60B (Nvidia ~$35B); W02 $45-50B; W04 $50-60B; W05 $55-65B (Rubin, Nvidia ~$40B)</td><td>Blackwell-era ~$50-60B/GW; Vera Rubin-era ~$60-70B/GW</td><td>Rising Nvidia content per GW ($18B -&gt; $25B -&gt; $40B).</td></tr>
+              <tr><th scope="row">Nvidia capital committed to customers</th><td>W02 ~$62B since Sep-2025; W05 '~$50B into frontier labs'; W05 ~$99B equity held</td><td>~$60B committed since Sep-2025 (+$6.3B backstop, $105B guarantee cap)</td><td>Different scopes: labs only vs all customers vs total portfolio.</td></tr>
+              <tr><th scope="row">Hyperscaler AI cloud operating profit 2026</th><td>W08 $40-60B</td><td>~$33B (range 25-50)</td><td>Fresh depreciation and Oracle's thin AI margins pull the AI slice below segment averages.</td></tr>
+              <tr><th scope="row">Lab share of 2026 equity from vendors</th><td>W02 ~45% (H1: ~$100B of $217B); W09 45-50%; W02 bear case '~66% of OpenAI round'</td><td>~40-60% (strict ~45%, broad ~60%)</td><td>Fact-check range; depends on SoftBank and Amazon's $35B conditional tranche.</td></tr>
+              <tr><th scope="row">Stargate scale</th><td>W01 ~7 GW (Sep-2025); W04 9+ GW across 7 sites</td><td>~9 GW planned; ~1.2 GW (Abilene) substantially live</td><td>Latest site count.</td></tr>
+              <tr><th scope="row">2027 capex</th><td>W01 Street $1.0-1.14T (Big-4); W02 ~$1.1T industry; W05 Nvidia cites top-5 ~$1.3T</td><td>Big-5 ~$1.1-1.3T; Western AI total ~$1.35T (base case)</td><td>Guidance ratchet history supports the upper half.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Source: <code>data/western/W11-synthesis.json → reconciliation</code> (W11 §9), as of 2026-09-25. Values are exactly as recorded there.</p>
+      </section>
+
+      <!-- ============================================================ 6 LIMITATIONS -->
+      <section>
+        <h2><span class="kicker">06 · Limitations</span>Known limitations</h2>
+        <p>These are the ways this edition could be wrong. They are listed in rough order of how much they could move the conclusions.</p>
+        <ol>
+          <li><strong>The web-search budget ran out partway through the research.</strong> Several analyst sessions (W01, W02, W04, W06, W09 among them) hit the limit, and sites such as openai.com, Wikipedia, CNBC, Bloomberg and some IR pages were rate-limited or blocked. Some 2025-era facts therefore come from the analysts' prior knowledge of filings. They are labelled "(prior knowledge)" or "not re-fetched" in the dossiers and on the <a href="sources.html">sources page</a>.</li>
+          <li><strong>The first fact-check pass could not open any source.</strong> Its confirmations rest on knowledge up to early 2026 and on arithmetic. Events after about March 2026 in W01–W05 were only partly re-checked by the second pass.</li>
+          <li><strong>Private-company financials come from leaks and press reports.</strong> Neither OpenAI nor Anthropic has a public S-1. OpenAI's 2025 figures ($13.07B revenue, −$20.9B operating loss) come from leaked audited statements that the FT confirmed. Lab run-rates come from Reuters, Axios and The Information. These figures are tagged <span class="prov" data-prov="E">E</span> and can move by billions when filings appear.</li>
+          <li><strong>"AI-attributable" is our judgment.</strong> No company reports "AI profit". The atlas attributes slices itself: TSMC ~35% of revenue, memory's AI-direct ~$149B against an AI-induced ~$390B windfall (conf: low), and ad uplift ~$50B, which assumes ~40% of Meta's post-2023 growth came from AI. The layer profit pools are right in order of magnitude, not precise.</li>
+          <li><strong>The legacy-cash figure is a residual.</strong> The ~$547B from Big Tech's existing businesses is whatever the money map needs to balance, so errors elsewhere land there. Its range is about $480–600B.</li>
+          <li><strong>Calendar-year conversions add error.</strong> Fiscal years are shifted to calendar years (Nvidia's FY27 ≈ CY2026 less a month). Growth is so fast that this adds about ±5% even to reported figures.</li>
+          <li><strong>Lab operating results extrapolate from one or two quarters</strong> of leaked data (OpenAI ~−$37B, Anthropic ~+$3.5B, xAI ~−$10B in 2026E).</li>
+          <li><strong>Scenario probabilities are judgment, not models</strong> (base 50%, bear 30%, bull 20%). The 2024 profit pools for W03, W04 and W07 are rough back-casts.</li>
+          <li><strong>"Western" is a convention.</strong> It means non-China. Nvidia sales to India and Southeast Asia count as Western. The effect is small.</li>
+          <li><strong>Some sources are weak by design.</strong> These include aggregators (StockTitan, BigGo, Investing.com summaries), Wikipedia, and title-only or headline-only listings. They are marked in the source lists and were deprioritized in the fact-checks.</li>
+        </ol>
+        <aside class="callout callout--note">
+          <p class="callout-label">What would change the story</p>
+          <p>If Anthropic's September run-rate turns out to be ~$65–80B rather than above $100B, lab revenue in 2026 falls by ~$4–7B and the exit-2026 run-rate of end-customer AI money falls to ~$255–265B <span class="prov" data-prov="A">A</span>. The broad conclusions still hold: suppliers mint the profit, labs lose money, and revenue must roughly double to justify what has been built (W11 §16).</p>
+        </aside>
+      </section>
+
+      <!-- ============================================================ 7 UPDATING -->
+      <section>
+        <h2><span class="kicker">07 · Maintenance</span>How to update the atlas</h2>
+        <p>The atlas is built to be refreshed without rewriting it. Numbers that feed charts live in <code>data/</code>, the IDs never change, and history is added to rather than overwritten.</p>
+        <ol>
+          <li><strong>Refresh the dossier</strong> in <code>research/&lt;track&gt;/Wxx-*.md</code>: change its <code>as_of</code> date, add new facts with tags and <code>[n]</code> citations, and append new sources to the numbered list without renumbering the old ones.</li>
+          <li><strong>Update the data</strong> in <code>data/&lt;track&gt;/Wxx-*.json</code>. If a headline number changes, update <code>_canonical.json</code> as well, so every page picks up the same value.</li>
+          <li><strong>Fact-check the changes.</strong> Log the verdicts in <code>methodology/qa/</code> and list any correction that affects other layers.</li>
+          <li><strong>Rebuild the pages.</strong> Update the layer page in <code>docs/</code>, register any new page in <code>docs/assets/js/nav.js</code>, then regenerate this site's source list with <code>python3 tools/build_sources.py</code> (use <code>--check</code> to see counts first).</li>
+          <li><strong>QA</strong> each page in light and dark themes at 1440px and 375px wide, with no console errors and no sideways scroll. The checklist is in <code>methodology/html-style-guide.md</code> §9.</li>
+          <li><strong>Record the change</strong> in <code>CHANGELOG.md</code> and <code>ROADMAP.md</code>, and add an entry to "What's new" on the <a href="index.html">home page</a>. Don't silently overwrite history: add dated timeline entries instead.</li>
+        </ol>
+        <aside class="callout callout--watch">
+          <p class="callout-label">Natural refresh points</p>
+          <ul>
+            <li><strong>Quarterly earnings</strong> (late Oct to Nov 2026 for calendar Q3): hyperscaler capex guides, Nvidia Q3 FY27 (guided to $108B ±2%), cloud backlogs.</li>
+            <li><strong>Lab filings:</strong> the Anthropic and OpenAI S-1s would replace leaked figures with reported ones.</li>
+            <li><strong>Monthly indicators:</strong> lab run-rates, DRAM contract prices, H100 and GB200 rental prices, and TSMC monthly revenue.</li>
+            <li><strong>New tracks:</strong> add <code>research/china/</code> and <code>docs/china/</code> with C-prefixed IDs. The sources generator picks up new track folders automatically.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <nav data-pager></nav>
+    </article>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<footer class="site-footer"></footer>
+</body>
+</html>

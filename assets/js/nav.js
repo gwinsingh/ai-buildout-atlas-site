@@ -33,18 +33,18 @@ window.ATLAS_NAV = {
       title: "Western build-out",
       short: "Western",
       items: [
-        { id: "W00", title: "Overview",                 href: "western/W00-overview.html",            status: "draft", dek: "The stack, the money map, the story" },
-        { id: "W01", title: "Demand & capex",           href: "western/W01-demand-capex.html",        status: "draft", dek: "Who is spending, how much, on what" },
-        { id: "W02", title: "Capital & financing",      href: "western/W02-capital-financing.html",   status: "draft", dek: "Where the money comes from" },
-        { id: "W03", title: "Energy & power",           href: "western/W03-energy-power.html",        status: "draft", dek: "Electrons, grids and the power bottleneck" },
-        { id: "W04", title: "Data centers",             href: "western/W04-datacenters.html",         status: "draft", dek: "Developers, REITs, construction, power and cooling" },
-        { id: "W05", title: "Compute silicon",          href: "western/W05-compute-silicon.html",     status: "draft", dek: "GPUs, custom ASICs, CPUs, accelerators" },
-        { id: "W06", title: "Semiconductor supply chain", href: "western/W06-semi-supply-chain.html", status: "draft", dek: "Foundry, packaging, HBM, equipment, EDA" },
-        { id: "W07", title: "Networking & systems",     href: "western/W07-networking-systems.html",  status: "draft", dek: "Switches, optics, servers and racks" },
-        { id: "W08", title: "Cloud",                    href: "western/W08-cloud.html",               status: "draft", dek: "Hyperscalers and neoclouds" },
-        { id: "W09", title: "Model labs",               href: "western/W09-model-labs.html",          status: "draft", dek: "Frontier and open-weight labs" },
-        { id: "W10", title: "Applications & agents",    href: "western/W10-apps-agents.html",         status: "draft", dek: "Where end-customer money enters" },
-        { id: "W11", title: "Synthesis",                href: "western/W11-synthesis.html",           status: "draft", dek: "Money flow, profit pools, risks, scenarios" }
+        { id: "W00", title: "Overview",                 href: "western/W00-overview.html",            status: "live", dek: "The stack, the money map, the story" },
+        { id: "W01", title: "Demand & capex",           href: "western/W01-demand-capex.html",        status: "live", dek: "Who is spending, how much, on what" },
+        { id: "W02", title: "Capital & financing",      href: "western/W02-capital-financing.html",   status: "live", dek: "Where the money comes from" },
+        { id: "W03", title: "Energy & power",           href: "western/W03-energy-power.html",        status: "live", dek: "Electrons, grids and the power bottleneck" },
+        { id: "W04", title: "Data centers",             href: "western/W04-datacenters.html",         status: "live", dek: "Developers, REITs, construction, power and cooling" },
+        { id: "W05", title: "Compute silicon",          href: "western/W05-compute-silicon.html",     status: "live", dek: "GPUs, custom ASICs, CPUs, accelerators" },
+        { id: "W06", title: "Semiconductor supply chain", href: "western/W06-semi-supply-chain.html", status: "live", dek: "Foundry, packaging, HBM, equipment, EDA" },
+        { id: "W07", title: "Networking & systems",     href: "western/W07-networking-systems.html",  status: "live", dek: "Switches, optics, servers and racks" },
+        { id: "W08", title: "Cloud",                    href: "western/W08-cloud.html",               status: "live", dek: "Hyperscalers and neoclouds" },
+        { id: "W09", title: "Model labs",               href: "western/W09-model-labs.html",          status: "live", dek: "Frontier and open-weight labs" },
+        { id: "W10", title: "Applications & agents",    href: "western/W10-apps-agents.html",         status: "live", dek: "Where end-customer money enters" },
+        { id: "W11", title: "Synthesis",                href: "western/W11-synthesis.html",           status: "live", dek: "Money flow, profit pools, risks, scenarios" }
       ]
     },
     {

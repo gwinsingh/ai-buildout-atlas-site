@@ -1141,6 +1141,12 @@
       var valLabW = spec.labels && spec.labels.length ? Math.max.apply(null, spec.labels.map(function (l) { return textW(l.text, labelSize, 600); })) + 10 : 12;
       x0 = catW; x1 = W - Math.max(valLabW, 12);
       nt = niceTicks(dmin, dmax, tickCount(x1 - x0, 90));
+      // Thin the ticks until the labels have room (fixes crowding on narrow screens).
+      for (var tc = nt.ticks.length - 1; tc >= 2; tc--) {
+        var tw = maxTickW(nt.ticks, fmt, stepDecimals(nt.step));
+        if ((x1 - x0) / Math.max(1, nt.ticks.length - 1) >= tw + 14) break;
+        nt = niceTicksN(dmin, dmax, tc);
+      }
       var dec2 = stepDecimals(nt.step);
       // make room for the last tick label
       x1 = Math.min(x1, W - maxTickW(nt.ticks, fmt, dec2) / 2 - 2);

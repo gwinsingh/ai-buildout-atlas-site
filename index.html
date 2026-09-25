@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en" data-root="" data-page="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Buildout Atlas · From electrons to agents</title>
+  <meta name="description" content="From electrons to agents: how the AI build-out works and where the money goes. Ten layers, one money map, every number dated and sourced.">
+  <script>try{var t=localStorage.getItem('atlas-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/atlas.css">
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/atlas.js" defer></script>
+  <style>
+    /* ---- Page-local components (home only). Tokens from atlas.css; no new colors. ---- */
+    .home-hero h1 { font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.4rem); max-width: 22ch; }
+    :where(.article) .answer p { font-size: 1.1875rem; line-height: 1.7; margin: 0; color: var(--ink-prose); }
+
+    /* Interactive layer stack */
+    .stackmap { margin: 1.25rem 0 2.25rem; font-family: var(--font-sans); }
+    .sm-controls { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0 0 1rem; align-items: center; }
+    .sm-controls-label { font-size: 0.75rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); margin-right: 0.35rem; }
+    .sm-controls button { font: 600 0.8125rem/1.4 var(--font-sans); color: var(--ink-2); background: var(--surface); border: 1px solid var(--rule-2); border-radius: 999px; padding: 0.3rem 0.8rem; cursor: pointer; }
+    .sm-controls button:hover { background: var(--surface-3); }
+    .sm-controls button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-line); }
+    .sm-controls button:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .sm-block { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0 1rem; padding: 0.6rem 0; border-top: 1px solid var(--rule); }
+    .sm-block:first-of-type { border-top: 0; }
+    .sm-block-label { padding-top: 0.55rem; }
+    .sm-block-label strong { display: block; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink); }
+    .sm-block-label span { display: block; font-size: 0.78rem; color: var(--ink-2); line-height: 1.35; margin-top: 0.2rem; }
+    .sm-rows { display: grid; gap: 4px; min-width: 0; }
+    .sm-row {
+      position: relative; display: grid; grid-template-columns: 3rem minmax(0, 0.95fr) minmax(0, 1.25fr); gap: 0.75rem; align-items: center;
+      padding: 0.65rem 0.9rem; background: var(--surface-2); border: 1px solid transparent; border-radius: 6px; transition: background 0.12s, border-color 0.12s;
+    }
+    .sm-row:hover, .sm-row:focus-within { background: var(--surface-3); border-color: var(--rule-2); }
+    .sm-id { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 650; color: var(--accent); }
+    .sm-name a { font-weight: 650; font-size: 0.95rem; color: var(--ink); text-decoration: none; line-height: 1.3; }
+    .sm-name a::after { content: ""; position: absolute; inset: 0; border-radius: 6px; }   /* whole row is the link */
+    .sm-name a:focus-visible { outline: none; }
+    .sm-row:has(a:focus-visible) { outline: 2px solid var(--focus); outline-offset: 1px; }
+    .sm-dek { display: block; font-size: 0.8125rem; color: var(--ink-2); line-height: 1.35; margin-top: 0.1rem; }
+    .sm-go { font-size: 0.8rem; color: var(--ink-3); margin-left: 0.25rem; }
+    .sm-row:hover .sm-go { color: var(--accent); }
+    .sm-row .prov { position: relative; z-index: 1; }                                   /* badges stay hoverable above the row link */
+    .sm-view { display: none; min-width: 0; }
+    .stackmap[data-mode="head"] .sm-head, .stackmap[data-mode="rev"] .sm-rev, .stackmap[data-mode="op"] .sm-op { display: block; }
+    .sm-num { display: block; font-size: 0.8125rem; color: var(--ink-2); line-height: 1.4; }
+    .sm-num + .sm-num { margin-top: 0.25rem; }
+    .sm-num b { font-size: 0.95rem; font-weight: 680; color: var(--ink); font-variant-numeric: tabular-nums; margin-right: 0.2rem; }
+    .sm-barwrap { display: flex; align-items: center; gap: 0.5rem; }
+    .sm-track { flex: 1; min-width: 0; height: 14px; }
+    .sm-bar { display: block; height: 100%; width: calc(var(--v, 0) * 100%); min-width: 2px; background: var(--seq-5); border-radius: 0 3px 3px 0; }
+    .sm-bar.is-neg { background: var(--div-neg-2); }
+    .sm-val { flex: none; width: 5.5rem; font-size: 0.875rem; font-weight: 650; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .sm-na { font-size: 0.8125rem; color: var(--ink-2); }
+    .sm-foot { font-family: var(--font-sans); font-size: 0.8125rem; color: var(--ink-2); line-height: 1.5; margin: 0.9rem 0 0; }
+    .sm-bookends { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; margin-top: 1rem; }
+    .sm-bookends .sm-row { grid-template-columns: 3rem minmax(0, 1fr); background: var(--surface); border-color: var(--rule); }
+
+    /* Track cards */
+    .tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 1.5rem; }
+    .track-card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: 1.2rem 1.3rem; font-family: var(--font-sans); min-width: 0; display: flex; flex-direction: column; }
+    .track-card header { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+    .track-card h3 { font-family: var(--font-serif); font-size: 1.45rem; margin: 0; }
+    .track-card .tc-state { margin-left: auto; }
+    :where(.article) .track-card p { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.55; color: var(--ink-2); margin: 0 0 0.8rem; }
+    .track-card .metrics { margin-top: 0.25rem; }
+    .track-card .tc-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.875rem; font-weight: 600; }
+    .china-qs { columns: 2 22rem; column-gap: 2rem; margin: 0.5rem 0 0; padding-left: 1.6em; }
+    :where(.article) .china-qs li { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); break-inside: avoid; margin: 0 0 0.55rem; }
+    .china-qs li strong { color: var(--ink); }
+
+    /* How to read */
+    .howto { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; margin: 1.25rem 0 1.5rem; }
+    .howto > div { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: 1rem 1.15rem; font-family: var(--font-sans); min-width: 0; }
+    .howto h3 { font-family: var(--font-sans); font-size: 1rem; margin: 0 0 0.6rem; }
+    :where(.article) .howto p, :where(.article) .howto li, :where(.article) .howto dd { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); }
+    :where(.article) .howto p { margin: 0 0 0.6rem; }
+    .howto dl { margin: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 0.45rem 0.6rem; align-items: baseline; }
+    .howto dt { margin: 0; }
+    :where(.article) .howto dd { margin: 0; }
+    .howto code { font-size: 0.8em; }
+
+    @media (max-width: 760px) {
+      .sm-block { grid-template-columns: minmax(0, 1fr); }
+      .sm-block-label { padding: 0.2rem 0 0.4rem; display: flex; flex-wrap: wrap; gap: 0.1rem 0.6rem; align-items: baseline; }
+      .sm-block-label span { margin: 0; }
+      .sm-row { grid-template-columns: 2.6rem minmax(0, 1fr); row-gap: 0.45rem; padding: 0.65rem 0.75rem; }
+      .sm-view { grid-column: 2; }
+      .sm-bookends, .tracks { grid-template-columns: minmax(0, 1fr); }
+      .sm-val { width: 4.75rem; }
+    }
+  </style>
+</head>
+<body>
+<header class="topbar"></header>
+<div class="shell">
+  <nav class="sidebar" id="atlas-sidebar" aria-label="Atlas contents"></nav>
+
+  <main id="main" class="main" tabindex="-1">
+    <article class="article">
+
+      <!-- ============================================================ HERO -->
+      <header class="hero home-hero">
+        <div class="hero-top">
+          <span class="layer-chip">ATLAS</span>
+          <span class="hero-track">AI Buildout Atlas · Edition 1 · Western track</span>
+        </div>
+        <h1>From electrons to agents: how the AI build-out works and where the money goes</h1>
+        <p class="dek">Ten layers, from the power grid to the apps people pay for. One money map. Every number dated, sourced and tagged with where it came from.</p>
+        <dl class="hero-meta">
+          <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
+          <div><dt>Reading time</dt><dd data-reading-time></dd></div>
+          <div><dt>Tracks</dt><dd>Western (live) · China (coming soon)</dd></div>
+          <div><dt>Behind it</dt><dd>12 dossiers · <a href="sources.html">842 sources</a> · <a href="methodology.html">311 claims fact-checked</a></dd></div>
+        </dl>
+      </header>
+
+      <!-- ============================================================ BIG ANSWER -->
+      <div class="summary answer" role="note" aria-labelledby="big-answer">
+        <p class="eyebrow" id="big-answer">The answer in one paragraph</p>
+        <p>In 2026 the Western world is spending <strong>about $1.0 trillion on AI data centers</strong> <span class="prov" data-prov="A">A</span>, up from ~$290B in 2024, mostly through five companies: Microsoft, Alphabet, Amazon, Meta and Oracle. About two-thirds buys chips and servers that wear out in five to six years, and <strong>Nvidia alone receives ~35¢ of every dollar</strong> <span class="prov" data-prov="A">A</span>. <strong>The money mostly does not come from AI customers yet.</strong> About half is Big Tech's existing profit from search, social ads, retail and software, a fifth is new debt, and a fifth (~$200B) is what consumers, businesses and advertisers pay for AI. That last slice is growing about <strong>3× a year</strong>, led by coding agents. <strong>The suppliers keep the profit:</strong> of a ~$637B AI operating-profit pool, chipmakers take ~44% and memory makers ~23%, the clouds earn ~5% and the model labs lose ~$48B <span class="prov" data-prov="A">A</span>. To earn a normal return on what has already been built, AI revenue needs to reach <strong>~$600B a year, about twice today's ~$280B run-rate</strong> <span class="prov" data-prov="A">A</span>. Our base case closes that gap around 2028–29. Along the way, whoever owns the scarce input earns the rent. The scarce input moved from GPUs (2023) to packaging (2024), power (2025) and memory (2026).</p>
+      </div>
+
+      <!-- ============================================================ KPIs -->
+      <div class="kpis wide" role="group" aria-label="Headline numbers">
+        <div class="kpi">
+          <span class="kpi-label">Western AI data-center investment, CY2026E</span>
+          <span class="kpi-value">~$1.0<small>T</small></span>
+          <span class="kpi-delta is-up">+~80% <span>vs ~$550B in 2025</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> CY2026E · <a href="western/W01-demand-capex.html">W01</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">End-customer AI money, CY2026E</span>
+          <span class="kpi-value">~$200<small>B</small></span>
+          <span class="kpi-delta is-up">~3× <span>vs ~$70B in 2025</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> CY2026E · <a href="western/W10-apps-agents.html">W10</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Capex per $1 of end-customer AI money, 2026E</span>
+          <span class="kpi-value">~5×</span>
+          <span class="kpi-delta is-down">from 12× <span>in 2024 (8× in 2025)</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> CY2026E · <a href="western/W11-synthesis.html">W11</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Share of 2026 build-out money from Big Tech's legacy cash flow</span>
+          <span class="kpi-value">~49%</span>
+          <span class="kpi-delta is-flat">~$547B <span>of ~$1.12T</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> CY2026E · <a href="western/W02-capital-financing.html">W02</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Positive AI operating-profit pool, 2026E</span>
+          <span class="kpi-value">~$637<small>B</small></span>
+          <span class="kpi-delta is-up">from ~$134B <span>in 2024 (~$589B net of lab losses)</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> CY2026E · <a href="western/W11-synthesis.html">W11</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Nvidia's share of that profit pool, 2026E</span>
+          <span class="kpi-value">~38%</span>
+          <span class="kpi-delta is-down">from ~55% <span>in 2024</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> ~$240B, 2026E · <a href="western/W05-compute-silicon.html">W05</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">Big-4 capex as a share of operating cash flow, Q2 2026</span>
+          <span class="kpi-value">96%</span>
+          <span class="kpi-delta is-up">from ~41% <span>in 2023</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> Q2 2026 · <a href="western/W01-demand-capex.html">W01</a></span>
+        </div>
+        <div class="kpi">
+          <span class="kpi-label">AI revenue needed to pay for what's built (depreciation basis)</span>
+          <span class="kpi-value">~$600<small>B/yr</small></span>
+          <span class="kpi-delta is-flat">~2.1× <span>the ~$280B exit-2026 run-rate</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="A">A</span> 2024–26 capex · <a href="western/W11-synthesis.html">W11</a></span>
+        </div>
+      </div>
+
+      <!-- ============================================================ LAYER STACK -->
+      <section>
+        <h2>The stack, from electrons to agents</h2>
+        <p>The atlas splits the build-out into ten layers. Picture three familiar things stacked up: a <strong>power grid</strong> at the bottom (energy and buildings), a <strong>factory</strong> in the middle (chips, memory, networking and the clouds that own them), and a <strong>retail chain</strong> on top (model labs and the apps customers pay for). A <strong>bank</strong> sits underneath all of it. Click any layer to open its page. Switch the view to compare the layers' 2026 AI revenue and operating profit.</p>
+
+        <div class="stackmap wide" data-mode="head" id="stackmap">
+          <div class="sm-controls" role="group" aria-label="What each layer shows">
+            <span class="sm-controls-label">Show</span>
+            <button type="button" data-mode="head" aria-pressed="true">Headline numbers</button>
+            <button type="button" data-mode="rev" aria-pressed="false">AI revenue, 2026E</button>
+            <button type="button" data-mode="op" aria-pressed="false">AI operating profit, 2026E</button>
+          </div>
+
+          <div class="sm-block">
+            <div class="sm-block-label"><strong>Customers</strong><span>End-customer money enters here: ~$200B in 2026E</span></div>
+            <div class="sm-rows">
+              <div class="sm-row">
+                <span class="sm-id">W10</span>
+                <span class="sm-name"><a href="western/W10-apps-agents.html">Applications &amp; agents<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where end-customer money enters</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>~$200B</b> end-customer AI money, CY2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>&gt;1B</b> ChatGPT weekly users, Aug 2026 <span class="prov" data-prov="R">R</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.182"></span></span><span class="sm-val">$83B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.093"></span></span><span class="sm-val">$26.5B</span></span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm-block">
+            <div class="sm-block-label"><strong>Model makers</strong><span>Turn compute into models, sold as tokens, seats and agents</span></div>
+            <div class="sm-rows">
+              <div class="sm-row">
+                <span class="sm-id">W09</span>
+                <span class="sm-name"><a href="western/W09-model-labs.html">Model labs<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Frontier and open-weight labs</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>−$48B</b> labs' combined operating result, 2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>$65B / $40B</b> Anthropic / OpenAI run-rate, Jul 2026 <span class="prov" data-prov="E">E</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.226"></span></span><span class="sm-val">$103B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar is-neg" style="--v:0.169"></span></span><span class="sm-val">−$48B loss</span></span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm-block">
+            <div class="sm-block-label"><strong>Compute owners</strong><span>Buy and run the capacity. Big Tech cash, debt and equity enter here</span></div>
+            <div class="sm-rows">
+              <div class="sm-row">
+                <span class="sm-id">W08</span>
+                <span class="sm-name"><a href="western/W08-cloud.html">Cloud<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Hyperscalers and neoclouds</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>$143.4B</b> cloud infrastructure revenue, Q2 2026 (+43%) <span class="prov" data-prov="E">E</span></span><span class="sm-num"><b>~$2.46T</b> contracted backlog, five companies, Jun/Aug 2026 <span class="prov" data-prov="R">R</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.259"></span></span><span class="sm-val">$118B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.111"></span></span><span class="sm-val">$31.5B</span></span></span>
+              </div>
+              <div class="sm-row">
+                <span class="sm-id">W01</span>
+                <span class="sm-name"><a href="western/W01-demand-capex.html">Demand &amp; capex<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Who is spending, how much, on what</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>~$1.0T</b> Western AI data-center investment, CY2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>96%</b> Big-4 capex / operating cash flow, Q2 2026 <span class="prov" data-prov="A">A</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-na">A spending layer, not a revenue layer: ~$1.0T of capex</span></span>
+                <span class="sm-view sm-op"><span class="sm-na">Not a profit layer; the return shows up in W08 and W10</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm-block">
+            <div class="sm-block-label"><strong>Suppliers</strong><span>Build the machines, buildings and electrons. Most of the profit is here</span></div>
+            <div class="sm-rows">
+              <div class="sm-row">
+                <span class="sm-id">W07</span>
+                <span class="sm-name"><a href="western/W07-networking-systems.html">Networking &amp; systems<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Switches, optics, servers and racks</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>$16.7B</b> Broadcom AI semiconductor revenue, FQ3-26 (+221%) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~86%</b> of rack-level gross profit goes to Nvidia, 2026 <span class="prov" data-prov="A">A</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.285"></span></span><span class="sm-val">$130B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.088"></span></span><span class="sm-val">$25B</span></span></span>
+              </div>
+              <div class="sm-row">
+                <span class="sm-id">W05</span>
+                <span class="sm-name"><a href="western/W05-compute-silicon.html">Compute silicon<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">GPUs, custom ASICs, CPUs, accelerators</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>$89.0B</b> Nvidia data-center revenue, Q2 FY27 (+117% y/y) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~44%</b> of the AI operating-profit pool, 2026E <span class="prov" data-prov="A">A</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:1"></span></span><span class="sm-val">$456B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:1"></span></span><span class="sm-val">$283.5B</span></span></span>
+              </div>
+              <div class="sm-row">
+                <span class="sm-id">W06</span>
+                <span class="sm-name"><a href="western/W06-semi-supply-chain.html">Semiconductor supply chain<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Foundry, packaging, HBM, equipment, EDA</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>84.9%</b> Micron gross margin, FQ3-26 <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>67.7%</b> TSMC gross margin, 2Q26 (a record) <span class="prov" data-prov="R">R</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.708"></span></span><span class="sm-val">$323B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.717"></span></span><span class="sm-val">$203.4B</span></span></span>
+              </div>
+              <div class="sm-row">
+                <span class="sm-id">W04</span>
+                <span class="sm-name"><a href="western/W04-datacenters.html">Data centers<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Developers, REITs, construction, power and cooling</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>1.4%</b> vacancy in North American primary markets, H1 2026 <span class="prov" data-prov="E">E</span></span><span class="sm-num"><b>~$50–60B</b> all-in cost of 1 GW with chips (Blackwell era) <span class="prov" data-prov="E">E</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.726"></span></span><span class="sm-val">$331B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.183"></span></span><span class="sm-val">$52B</span></span></span>
+              </div>
+              <div class="sm-row">
+                <span class="sm-id">W03</span>
+                <span class="sm-name"><a href="western/W03-energy-power.html">Energy &amp; power<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Electrons, grids and the power bottleneck</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>$333/MW-day</b> PJM capacity price, 2027/28 (from $28.92 for 2024/25) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~485 TWh</b> global data-center electricity, 2025 (+17%) <span class="prov" data-prov="E">E</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.101"></span></span><span class="sm-val">$46B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.053"></span></span><span class="sm-val">$15B</span></span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm-block">
+            <div class="sm-block-label"><strong>Financing</strong><span>Underneath everything: ~$1.1T of 2026 flows</span></div>
+            <div class="sm-rows">
+              <div class="sm-row">
+                <span class="sm-id">W02</span>
+                <span class="sm-name"><a href="western/W02-capital-financing.html">Capital &amp; financing<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where the money comes from</span></span>
+                <span class="sm-view sm-head"><span class="sm-num"><b>~$200B</b> debt applied to the build-out, 2026E (~18% of flows) <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>$217B</b> OpenAI + Anthropic equity raised, H1 2026 (43% of global VC) <span class="prov" data-prov="R">R</span></span></span>
+                <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.066"></span></span><span class="sm-val">~$30B</span></span></span>
+                <span class="sm-view sm-op"><span class="sm-na">Fees and spread (~$30B/yr) not split into profit</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sm-bookends">
+            <div class="sm-row">
+              <span class="sm-id">W00</span>
+              <span class="sm-name"><a href="western/W00-overview.html">Start here: the overview<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">The stack, the money map and the story from ChatGPT's launch to today</span></span>
+            </div>
+            <div class="sm-row">
+              <span class="sm-id">W11</span>
+              <span class="sm-name"><a href="western/W11-synthesis.html">Synthesis<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Money flow, profit pools, circular financing, risks and scenarios</span></span>
+            </div>
+          </div>
+
+          <p class="sm-foot" id="sm-note"><span class="prov" data-prov="A">A</span> Revenue and operating-profit bars are our 2026E estimates of the AI-attributable slice of each layer (W11 §4.1, <code>data/western/W11-synthesis.json → layer_stack</code>); bars share one scale per view. Revenue double-counts along the chain (TSMC's revenue sits inside Nvidia's costs), so compare profit, not revenue, across layers. W10 includes ~$50B of AI-driven ad uplift at Meta and Google. Headline numbers come from <code>data/western/_canonical.json</code>, as of 25 Sep 2026.</p>
+        </div>
+
+        <aside class="callout callout--insight">
+          <p class="callout-label">Key insight</p>
+          <p>The layers the public associates with AI (clouds, labs and apps) together capture <strong>less than a tenth</strong> of the 2026 AI operating profit. The profit sits two and three layers down, with whoever owns the scarcest input: Nvidia's chips, then the memory makers <span class="prov" data-prov="A">A</span>.</p>
+        </aside>
+      </section>
+
+      <!-- ============================================================ MONEY MAP -->
+      <section>
+        <h2>Where the money comes from and where it goes</h2>
+        <p>This is the 2026 money map in five steps. Read it left to right. Money comes in from six sources. Some of it passes through apps and model labs. All of it reaches the companies that own compute, who pay the suppliers. It ends as someone's operating profit, or as wages, materials and interest. Band widths are proportional to dollars. Hover a band to trace it.</p>
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "sankey",
+            "title": "Half the money is Big Tech's old profit, and most of it ends at the chip and memory makers",
+            "subtitle": "Western AI build-out, flow of funds, CY2026E, USD bn (total $1,117bn). Simplified from the 40-node map in W11.",
+            "valueFormat": "$bn", "unit": "USD bn, CY2026E",
+            "columns": ["Sources of money", "Apps, ads & labs", "Compute owners", "Suppliers", "Where it ends"],
+            "nodes": [
+              { "id": "cust", "label": "End customers", "column": 0, "note": "Consumers ~$30B, enterprises ~$120B, advertisers ~$52B" },
+              { "id": "legacy", "label": "Big Tech legacy cash flow", "column": 0, "note": "Search, social ads, retail, Office/Windows, non-AI cloud. A residual (range ~$480-600B)." },
+              { "id": "debt", "label": "Debt", "column": 0, "note": "IG bonds, SPV/project finance, private credit, GPU-backed and high-yield" },
+              { "id": "equity", "label": "Equity", "column": 0, "note": "VC, sovereign funds, IPOs and public stock (non-vendor)" },
+              { "id": "sov", "label": "Sovereign", "column": 0, "note": "Sovereign and enterprise own-build budgets" },
+              { "id": "vendor", "label": "Vendor financing", "column": 0, "note": "Deployed in 2026; ~$110B+ is committed" },
+              { "id": "apps", "label": "Apps, ads & model labs", "column": 1, "note": "AI-native apps, incumbent AI SKUs, AI-ranked ads, OpenAI, Anthropic, Google, xAI" },
+              { "id": "owners", "label": "Compute owners & builders", "column": 2, "note": "Hyperscalers, neoclouds, developers and SPVs, lab-owned and sovereign builds; incl. ~$1.0T capex plus power bills and rent" },
+              { "id": "it", "label": "Chips, memory & networking", "column": 3, "note": "Nvidia, custom ASICs and AMD, memory makers, TSMC, networking, servers" },
+              { "id": "fac", "label": "Buildings, power & cooling gear", "column": 3, "note": "Power and cooling equipment, construction, land, grid hook-ups, soft costs" },
+              { "id": "p_nvidia", "label": "Nvidia operating profit", "column": 4 },
+              { "id": "p_memory", "label": "Memory makers' profit", "column": 4, "note": "AI-attributable only (conf: low)" },
+              { "id": "p_other", "label": "Other suppliers' profit", "column": 4, "note": "TSMC, Broadcom/AMD/Marvell, networking, power and cooling OEMs, builders, landlords, utilities, incumbent software" },
+              { "id": "costs", "label": "Wages, materials & other costs", "column": 4 },
+              { "id": "interest", "label": "Interest", "column": 4 }
+            ],
+            "links": [
+              { "source": "cust", "target": "apps", "value": 180, "label": "Subscriptions, seats, API, agents, AI ad uplift" },
+              { "source": "cust", "target": "owners", "value": 22, "label": "Enterprise AI cloud and GPU rental" },
+              { "source": "legacy", "target": "owners", "value": 547, "label": "Operating cash from existing businesses" },
+              { "source": "debt", "target": "owners", "value": 192, "label": "Bonds, SPV and project debt, private credit, GPU-backed loans" },
+              { "source": "debt", "target": "apps", "value": 5, "label": "Lab-level debt" },
+              { "source": "equity", "target": "owners", "value": 69, "label": "Public equity, infrastructure/PE and neocloud equity" },
+              { "source": "equity", "target": "apps", "value": 36, "label": "VC, sovereign and IPO money covering lab and app losses" },
+              { "source": "sov", "target": "owners", "value": 35, "label": "National AI clusters, on-prem AI servers" },
+              { "source": "vendor", "target": "apps", "value": 27, "label": "Vendor equity into labs (Amazon, Nvidia, Google, Microsoft, AMD)" },
+              { "source": "vendor", "target": "owners", "value": 4, "label": "Nvidia equity into CoreWeave and Nebius" },
+              { "source": "apps", "target": "owners", "value": 185, "label": "Compute rental, labs' own builds, ad uplift reinvested" },
+              { "source": "apps", "target": "costs", "value": 57, "label": "Lab and app talent, R&D, sales and G&A" },
+              { "source": "apps", "target": "p_other", "value": 6, "label": "Incumbent software AI profit" },
+              { "source": "owners", "target": "it", "value": 680, "label": "IT equipment capex (about two-thirds)" },
+              { "source": "owners", "target": "fac", "value": 320, "label": "Buildings, power and cooling capex" },
+              { "source": "owners", "target": "p_other", "value": 17, "label": "Utility and landlord margins on power bills and rent" },
+              { "source": "owners", "target": "costs", "value": 21, "label": "Fuel, grid, landlord and neocloud operating costs" },
+              { "source": "owners", "target": "interest", "value": 16, "label": "Neocloud and landlord debt service" },
+              { "source": "it", "target": "p_nvidia", "value": 228, "label": "Nvidia operating profit (~65% margin)" },
+              { "source": "it", "target": "p_memory", "value": 149, "label": "AI-attributable memory profit (~72% margin)" },
+              { "source": "it", "target": "p_other", "value": 92, "label": "TSMC, Broadcom/AMD/Marvell, networking and server profit" },
+              { "source": "it", "target": "costs", "value": 211, "label": "Components, fab depreciation, assembly, staff" },
+              { "source": "fac", "target": "p_other", "value": 44, "label": "Equipment makers', contractors' and designers' margins" },
+              { "source": "fac", "target": "costs", "value": 276, "label": "Copper, steel, labor, land, fees" }
+            ],
+            "height": 480, "labelSmall": true,
+            "source": "AI Buildout Atlas W11 money map (data/western/W11-synthesis.json, sankey), aggregated from 40 nodes to 15; totals unchanged",
+            "asOf": "2026-09-25", "provenance": "A",
+            "note": "Atlas estimate: a cash flow-of-funds, not a P&L. Every intermediate node balances. Hyperscalers' own AI-cloud profit (~$33B) and lab losses (about −$48B) are P&L items and are not shown as cash links.",
+            "alt": "Sankey diagram of the 2026E Western AI build-out, $1,117bn in total. Sources: Big Tech legacy cash flow $547bn, end customers $202bn, debt $197bn, equity $105bn, sovereign and enterprise budgets $35bn, vendor financing $31bn. $248bn passes through apps, ads and model labs, which send $185bn on to compute owners. Compute owners ($1,054bn in) spend $680bn on chips, memory, networking and servers and $320bn on buildings, power and cooling. Endpoints: Nvidia operating profit $228bn, memory makers' profit $149bn, other suppliers' profit $159bn, wages, materials and other costs $565bn, interest $16bn."
+          }
+          </script>
+        </figure>
+        <p>Three things stand out. First, <strong>customers supply less than a fifth of the money</strong> ($202B of $1,117B) <span class="prov" data-prov="A">A</span>, so the build-out is still funded mainly on the expectation of demand. Second, <strong>about 51¢ of every capex dollar becomes a supplier's operating profit</strong>, with Nvidia ~23¢ and memory ~15¢ <span class="prov" data-prov="A">A</span>. Third, <strong>debt now funds about as much as AI customers do</strong>. The full eight-column map, with every flow and its source dossier, is in <a href="western/W11-synthesis.html">W11 Synthesis</a>.</p>
+      </section>
+
+      <!-- ============================================================ TRACKS -->
+      <section>
+        <h2>Two tracks, one taxonomy</h2>
+        <p>The atlas is built in tracks that share the same layer IDs, so any layer can be compared line by line across regions. W05 (Western compute silicon) will sit next to C05 (China compute silicon).</p>
+        <div class="tracks wide">
+          <article class="track-card">
+            <header><h3 data-toc="false">Western build-out</h3><span class="pill pill--accent tc-state">Live</span></header>
+            <p>The US, Europe, Taiwan, Korea, Japan, the Gulf and the rest of the non-China world. Ten layer pages plus an overview and a synthesis, researched from filings, earnings calls, regulator data and reputable press.</p>
+            <dl class="metrics">
+              <div><dt>Pages</dt><dd>12 <small>W00–W11</small></dd></div>
+              <div><dt>Sources</dt><dd>842</dd></div>
+              <div><dt>Claims fact-checked</dt><dd>311</dd></div>
+              <div><dt>As of</dt><dd>25 Sep 2026</dd></div>
+            </dl>
+            <div class="tc-links"><a href="western/W00-overview.html">Start with W00 Overview →</a><a href="western/W11-synthesis.html">Jump to W11 Synthesis →</a></div>
+          </article>
+          <article class="track-card">
+            <header><h3 data-toc="false">China build-out</h3><span class="tag tc-state">Coming soon</span></header>
+            <p>Track 2 mirrors every layer with a C prefix (C00–C11) and uses the same definitions, so the two tracks can be read side by side. Our starting hypotheses: China spends roughly an order of magnitude fewer dollars but gets more compute per dollar. Its profit pool is flatter, because it has no ~75%-margin chip monopolist and open-weight models are in a price war. Its binding constraint is chips (EUV tools, HBM), not power <span class="prov" data-prov="A">A</span>.</p>
+            <dl class="metrics">
+              <div><dt>Pages planned</dt><dd>12 <small>C00–C11</small></dd></div>
+              <div><dt>Questions to answer</dt><dd>15</dd></div>
+            </dl>
+            <div class="tc-links"><a href="#china-questions">See the 15 questions ↓</a></div>
+          </article>
+        </div>
+
+        <h3 id="china-questions">The questions Track 2 will answer</h3>
+        <p>Each question is set up so its answer lands next to the Western number on the same definition (from W11 §13).</p>
+        <ol class="china-qs wide">
+          <li><strong>Capex.</strong> What is China's total AI data-center capex in CY2026 (Alibaba, Tencent, ByteDance, Baidu, telcos, state funds), on W01's company-basis definition?</li>
+          <li><strong>Funding.</strong> What share comes from operating cash flow versus state-directed bank credit, local-government funds and policy banks?</li>
+          <li><strong>Silicon profit pool.</strong> Without Nvidia, who captures it (Huawei Ascend, Cambricon, Hygon, in-house chips), and at what gross margins?</li>
+          <li><strong>Where scarcity sits.</strong> SMIC 7/5nm capacity, domestic HBM (CXMT), advanced packaging or power? Is China's binding constraint chips while the West's is power and memory?</li>
+          <li><strong>End-customer AI revenue</strong> on W10's definition: subscriptions, enterprise API and agents, and AI-driven ads at ByteDance, Tencent and Alibaba.</li>
+          <li><strong>Unit costs.</strong> How much lower are China's $/MW, $/GPU-hour and $/million tokens, and why (power prices, construction cost, open-weight price wars)?</li>
+          <li><strong>Circularity.</strong> Are there vendor or cloud equity loops (Alibaba and Tencent in Moonshot, Zhipu, MiniMax, StepFun) comparable to the West's?</li>
+          <li><strong>Backlog.</strong> What is the equivalent of contracted backlog (RPO), given that Chinese firms disclose little?</li>
+          <li><strong>Power.</strong> How much headroom does "East Data, West Compute" provide, at what tariff, and how fast is generation being added?</li>
+          <li><strong>Token volumes.</strong> ByteDance Doubao and Alibaba Qwen tokens per minute versus Google's 22 billion.</li>
+          <li><strong>Open weights abroad.</strong> What share of Chinese open-weight usage is outside China (~13% of OpenRouter tokens), and does it make money?</li>
+          <li><strong>Capex intensity.</strong> Capex/operating cash flow and server depreciation lives at Alibaba, Tencent and Baidu, versus the US Big-4's 96%.</li>
+          <li><strong>Export controls.</strong> How do H20/H200 availability and the 25% revenue-share regime shape the chip mix, and how big is the grey market?</li>
+          <li><strong>Profit pools by layer, 2024–26E,</strong> in the same table format as W11 §4.1, so the tracks can be shown side by side.</li>
+          <li><strong>Scenario triggers.</strong> Property and local-government debt, chip controls, domestic demand and a Taiwan contingency.</li>
+        </ol>
+      </section>
+
+      <!-- ============================================================ HOW TO READ -->
+      <section>
+        <h2>How to read this atlas</h2>
+        <p>Every number in the atlas carries three things: <strong>where it came from</strong> (a provenance badge), <strong>how sure we are</strong> (a confidence tag, where it matters) and <strong>when it was true</strong> (a date or fiscal period). Hover or tap any badge to see what it means.</p>
+        <div class="howto wide">
+          <div>
+            <h3 data-toc="false">Provenance badges</h3>
+            <dl>
+              <dt><span class="prov" data-prov="R">R</span></dt><dd><strong>Reported:</strong> filed or published by the company or a regulator (10-K, earnings release, ISO auction result).</dd>
+              <dt><span class="prov" data-prov="G">G</span></dt><dd><strong>Guidance:</strong> the company's own forecast, such as a capex range or next-quarter revenue.</dd>
+              <dt><span class="prov" data-prov="E">E</span></dt><dd><strong>Estimate:</strong> from a third party (TrendForce, Synergy, IEA, press reports of private-company figures).</dd>
+              <dt><span class="prov" data-prov="A">A</span></dt><dd><strong>Atlas estimate:</strong> our own number, with the arithmetic shown on the page or in the data file.</dd>
+            </dl>
+          </div>
+          <div>
+            <h3 data-toc="false">Confidence tags</h3>
+            <p>Contested or thinly sourced claims carry <code>conf: high</code>, <code>conf: med</code> or <code>conf: low</code>. A claim the fact-checkers could not trace to any source is marked <strong>unverified</strong> and never used as a headline. Example: a September report that Anthropic's run-rate passed $100B is unverified, so the atlas uses the last confirmed figure, $65B at end-July <span class="prov" data-prov="E">E</span>.</p>
+            <p>Each layer page ends with its low-confidence items. The <a href="methodology.html">methodology page</a> lists the claims still open.</p>
+          </div>
+          <div>
+            <h3 data-toc="false">Dates and periods</h3>
+            <p>Every page shows an <strong>As of</strong> date (this edition: 25 Sep 2026). Every figure names its period.</p>
+            <dl>
+              <dt><code>CY2026E</code></dt><dd>Calendar-year estimate. Fiscal years are shifted to calendar years, which adds about ±5% error.</dd>
+              <dt><code>Q2 FY27</code></dt><dd>A company's fiscal quarter (for Nvidia, May–Jul 2026).</dd>
+              <dt><code>run-rate</code></dt><dd>The latest month or quarter, annualized. It is not contracted revenue.</dd>
+            </dl>
+          </div>
+          <div>
+            <h3 data-toc="false">One set of numbers</h3>
+            <p>Where dossiers disagreed, the synthesis picked one value and explained why (W11 §9). Those values live in <code>data/western/_canonical.json</code>, and every page uses them, so the same metric reads the same everywhere.</p>
+            <p>Every chart has a <strong>Table</strong> button with the underlying numbers, a source line and an as-of date. Dotted terms show a definition when you hover or tap them.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ WHAT'S NEW -->
+      <section>
+        <h2>What's new</h2>
+        <ol class="timeline">
+          <li class="is-key"><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
+              <h4>First edition: the Western track</h4>
+              <p>Twelve analyst dossiers (W00–W11, roughly 150,000 words) and a web page for each layer. They include the 2026 money map, profit pools, circular financing, the "$600B question", scenarios to 2030 and a risk register.</p>
+              <span class="tag">Edition 1</span>
+            </div>
+          </li>
+          <li><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
+              <h4>Two independent fact-check passes</h4>
+              <p>311 claims checked across W01–W10: 233 confirmed, 36 partly right, 13 contradicted and corrected, 29 unverified, none found to be fabricated. The corrections were carried into the synthesis and the canonical numbers.</p>
+            </div>
+          </li>
+          <li><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
+              <h4>Reference pages</h4>
+              <p><a href="sources.html">Sources</a> (all 842 citations, searchable) and <a href="methodology.html">Methodology</a> (how the atlas is researched, checked and updated).</p>
+            </div>
+          </li>
+        </ol>
+        <aside class="callout callout--watch">
+          <p class="callout-label">Coming next</p>
+          <ul>
+            <li><strong>Track 2: China</strong> (C00–C11), answering the 15 questions above on the same definitions.</li>
+            <li><strong>A follow-up fact-check with full web access.</strong> It covers the claims still unverified, starting with Anthropic's September run-rate and SK hynix's 2Q26 figures.</li>
+            <li><strong>A refresh after Q3 2026 earnings</strong> (late October to November 2026). Hyperscaler capex guides, Nvidia's Q3 FY27 and the lab run-rates all move the canonical numbers.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <nav data-pager></nav>
+    </article>
+  </main>
+
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<footer class="site-footer"></footer>
+
+<script>
+/* Layer-stack view toggle (page-local). Without JS the headline view shows. */
+(function () {
+  var map = document.getElementById('stackmap');
+  if (!map) return;
+  var btns = Array.prototype.slice.call(map.querySelectorAll('.sm-controls button'));
+  var saved = null;
+  try { saved = sessionStorage.getItem('atlas-home-stack'); } catch (e) {}
+  function set(mode) {
+    map.setAttribute('data-mode', mode);
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mode') === mode ? 'true' : 'false'); });
+    try { sessionStorage.setItem('atlas-home-stack', mode); } catch (e) {}
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { set(b.getAttribute('data-mode')); }); });
+  if (saved === 'rev' || saved === 'op') set(saved);
+})();
+</script>
+</body>
+</html>
