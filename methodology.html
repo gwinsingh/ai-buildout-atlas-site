@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Methodology · AI Buildout Atlas</title>
-  <meta name="description" content="How the AI Buildout Atlas is researched, fact-checked, synthesized and published, what the fact-checks found, where the atlas is still weak, and how to update it.">
+  <meta name="description" content="How the AI Buildout Atlas is researched, fact-checked, re-checked, synthesized and published, what the fact-checks found, where the atlas is still weak, and how to update it.">
   <script>try{var t=localStorage.getItem('atlas-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="stylesheet" href="assets/css/atlas.css">
   <script src="assets/js/nav.js" defer></script>
@@ -61,17 +61,17 @@
         <dl class="hero-meta">
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
-          <div><dt>Applies to</dt><dd>Western track, edition 1</dd></div>
+          <div><dt>Applies to</dt><dd>Western track, Edition 1 + Edition 2 re-check (25 Sep 2026)</dd></div>
           <div><dt>Related</dt><dd><a href="sources.html">Sources</a> · <a href="western/W11-synthesis.html">W11 Synthesis</a></dd></div>
         </dl>
       </header>
 
       <div class="kpis wide" role="group" aria-label="The atlas by the numbers">
-        <div class="kpi"><span class="kpi-label">Layer dossiers (W00–W11)</span><span class="kpi-value">12</span><span class="kpi-foot">~150,000 words · as of 2026-09-25</span></div>
-        <div class="kpi"><span class="kpi-label">Numbered sources cited</span><span class="kpi-value">842</span><span class="kpi-foot"><a href="sources.html">searchable list</a></span></div>
-        <div class="kpi"><span class="kpi-label">Claims fact-checked, two passes</span><span class="kpi-value">311</span><span class="kpi-foot">~570 individual figures</span></div>
-        <div class="kpi"><span class="kpi-label">Confirmed</span><span class="kpi-value">75%</span><span class="kpi-foot">233 of 311 rows</span></div>
-        <div class="kpi"><span class="kpi-label">Found likely fabricated</span><span class="kpi-value">0</span><span class="kpi-foot">13 contradicted and corrected</span></div>
+        <div class="kpi"><span class="kpi-label">Layer dossiers (W00–W11)</span><span class="kpi-value">12</span><span class="kpi-foot">~175,000 words · as of 2026-09-25</span></div>
+        <div class="kpi"><span class="kpi-label">Numbered sources cited</span><span class="kpi-value">1,085</span><span class="kpi-foot"><a href="sources.html">searchable list</a></span></div>
+        <div class="kpi"><span class="kpi-label">Claim rows fact-checked, three passes</span><span class="kpi-value">549</span><span class="kpi-foot">311 in Edition 1 + 238 in the re-check</span></div>
+        <div class="kpi"><span class="kpi-label">Confirmed</span><span class="kpi-value">80%</span><span class="kpi-foot">439 of 549 rows</span></div>
+        <div class="kpi"><span class="kpi-label">Found likely fabricated</span><span class="kpi-value">1</span><span class="kpi-foot">NVIDIA–MediaTek "$110bn", removed · 22 contradicted and corrected</span></div>
       </div>
 
       <div class="summary" role="note" aria-labelledby="sixty">
@@ -79,9 +79,10 @@
         <ol>
           <li><strong>Primary sources first.</strong> Filings, earnings releases and calls, regulator data and company posts come first. Reputable press and industry research come second. Everything else is flagged.</li>
           <li><strong>Every number is tagged</strong> <span class="prov" data-prov="R">R</span> reported, <span class="prov" data-prov="G">G</span> guidance, <span class="prov" data-prov="E">E</span> third-party estimate or <span class="prov" data-prov="A">A</span> our estimate. Each one carries a date or fiscal period, and a confidence tag where it is contested.</li>
-          <li><strong>The atlas was built in stages:</strong> ten analysts researched the layers in parallel, two independent fact-checkers checked 311 claims, a synthesis pass reconciled 36 disagreements into one set of canonical numbers, and HTML engineers built and tested the pages.</li>
-          <li><strong>The fact-checks found errors but no fabrications.</strong> They corrected 13 contradicted claims and 36 partly wrong ones, confirmed most of 2026's extraordinary events, and left 29 rows unverified. The most important of those is a report that Anthropic's run-rate passed $100B.</li>
-          <li><strong>The main weaknesses are known.</strong> The web-search budget ran out partway through the research. Private-company figures come from leaks and press reports. The "AI-attributable" splits are our own judgment.</li>
+          <li><strong>The atlas was built in stages:</strong> ten analysts researched the layers in parallel, two independent fact-checkers checked 311 claims, a synthesis pass reconciled 36 disagreements into one set of canonical numbers, and HTML engineers built and tested the pages. An Edition-2 re-check on 25 Sep 2026, this time with working web access, re-verified W01–W05 (238 rows), filled thin spots in W03, W04, W06 and W07, and swept the news since mid-September.</li>
+          <li><strong>The fact-checks found one likely fabrication and a few dozen errors.</strong> A claim that NVIDIA would buy MediaTek for $110bn was removed; the real deal is a $3.5bn convertible-bond purchase. The re-check also reversed two Edition-1 "corrections" about Meta's Hyperion financing and confirmed most of 2026's extraordinary events. Across the three passes, 22 claims were contradicted and corrected.</li>
+          <li><strong>The biggest open number is Anthropic's run-rate.</strong> The last firm figure is &gt;$65B at end-July. The New York Times reported a &gt;$100B pace on 18 Sep. Anthropic has not confirmed it, so the atlas shows it as a press report (conf: med).</li>
+          <li><strong>The main weaknesses are known.</strong> W06–W10 were not re-checked row by row. Some filings (Nscale's S-1, SpaceX's S-1) were read only through press summaries. Private-company figures come from leaks and press reports, and the "AI-attributable" splits are our own judgment.</li>
         </ol>
       </div>
 
@@ -111,7 +112,7 @@
             <tbody>
               <tr><th scope="row"><span class="prov" data-prov="R">R</span> Reported</th><td>Filed or published by the company or a regulator</td><td>10-Q, earnings release, auction result</td><td>Nvidia data-center revenue $89.0B in Q2 FY27 (May–Jul 2026)</td></tr>
               <tr><th scope="row"><span class="prov" data-prov="G">G</span> Guidance</th><td>The company's own forecast</td><td>Earnings call, outlook table</td><td>Alphabet 2026 capex guide $195–205B (Jul 2026)</td></tr>
-              <tr><th scope="row"><span class="prov" data-prov="E">E</span> Estimate</th><td>A third party's number, including press reports of private companies</td><td>TrendForce, Synergy, IEA, Reuters</td><td>Anthropic run-rate $65B at end-July 2026 (Reuters)</td></tr>
+              <tr><th scope="row"><span class="prov" data-prov="E">E</span> Estimate</th><td>A third party's number, including press reports of private companies</td><td>TrendForce, Synergy, IEA, Reuters</td><td>Anthropic run-rate &gt;$65B at end-July 2026 (Bloomberg and CNBC, 17 Aug)</td></tr>
               <tr><th scope="row"><span class="prov" data-prov="A">A</span> Atlas estimate</th><td>Our own number, with the arithmetic shown on the page or in <code>data/</code></td><td>The analyst's model</td><td>Western AI data-center investment ~$1.0T in CY2026 (range $0.9–1.1T)</td></tr>
             </tbody>
           </table>
@@ -140,8 +141,8 @@
       <!-- ============================================================ 3 PIPELINE -->
       <section>
         <h2><span class="kicker">03 · Production</span>How this edition was produced</h2>
-        <p>The atlas is written by Claude working in two roles (see <code>CLAUDE.md</code>). The <strong>Senior Analyst</strong> does primary-source research and quantifies everything. The <strong>HTML Engineer</strong> turns the research into visual pages. Large jobs are split across parallel agents, one layer each, and then pass through an independent fact-check and a synthesis.</p>
-        <p class="pl-strip wide" aria-hidden="true"><span>Brief</span><i>→</i><span>Research ×10</span><i>→</i><span>Fact-check ×2</span><i>→</i><span>Synthesis</span><i>→</i><span>Pages &amp; QA</span></p>
+        <p>The atlas is written by Claude working in two roles (see <code>CLAUDE.md</code>). The <strong>Senior Analyst</strong> does primary-source research and quantifies everything. The <strong>HTML Engineer</strong> turns the research into visual pages. Large jobs are split across parallel agents, one layer each, and then pass through an independent fact-check and a synthesis. Edition 1 ran steps 1–5. The Edition-2 re-check (steps 6–7, 25 Sep 2026) went back over the Western track with working web access.</p>
+        <p class="pl-strip wide" aria-hidden="true"><span>Brief</span><i>→</i><span>Research ×10</span><i>→</i><span>Fact-check ×2</span><i>→</i><span>Synthesis</span><i>→</i><span>Pages &amp; QA</span><i>→</i><span>Re-check ×7</span><i>→</i><span>Propagate &amp; QA</span></p>
         <ol class="pipeline wide" aria-label="Production pipeline, in order">
           <li>
             <div class="pl-head"><span class="pl-num">1</span><h3 data-toc="false">Brief &amp; taxonomy</h3><p class="pl-who">Lead</p></div>
@@ -174,7 +175,7 @@
             <div class="pl-head"><span class="pl-num">4</span><h3 data-toc="false">Synthesis</h3><p class="pl-who">Lead analyst</p></div>
             <p>Connects the layers: the money map, profit pools, circular financing, the revenue gap and scenarios. It reconciles disagreements and fixes one canonical value for each headline number.</p>
             <ul class="pl-out">
-              <li><strong>36</strong> disagreements reconciled</li>
+              <li><strong>36</strong> disagreements reconciled (<strong>42</strong> rows after the re-check)</li>
               <li><code>W11-synthesis.md</code>, <code>W00-overview.md</code></li>
               <li><code>data/western/_canonical.json</code></li>
             </ul>
@@ -188,6 +189,25 @@
               <li><code>tools/build_sources.py</code></li>
             </ul>
           </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">6</span><h3 data-toc="false">Edition-2 re-check</h3><p class="pl-who">7 research agents, at most 4 at a time</p></div>
+            <p>Two fact-checkers re-verified every W01–W05 headline number and every Edition-1 row left unverified, partial or contradicted, this time against fetched filings and releases. Two agents filled thin spots (W03/W04, W06/W07), one swept the news since mid-September (W08–W10), and two carried fixes that cut across layers. Each agent had its own search cap.</p>
+            <ul class="pl-out">
+              <li><strong>135</strong> of ~200 web searches, <strong>~434</strong> page fetches</li>
+              <li><strong>238</strong> claim rows; sources now <strong>1,085</strong></li>
+              <li><code>methodology/qa/factcheck-W01-W05-v2.md</code></li>
+              <li><code>methodology/qa/hardening-2026-09-25.md</code></li>
+            </ul>
+          </li>
+          <li>
+            <div class="pl-head"><span class="pl-num">7</span><h3 data-toc="false">Propagation &amp; QA</h3><p class="pl-who">4 page agents + 2 synthesis agents</p></div>
+            <p>Page agents carried every change into the layer pages. Synthesis agents updated W00, W11 and the canonical file. Every changed page then passed <code>tools/qa_pages.py</code>, which checks light and dark themes at 1440px and 375px for console errors, sideways scroll and SVG labels that overlap or spill out of their chart.</p>
+            <ul class="pl-out">
+              <li><code>docs/western/*.html</code>, W00, W11</li>
+              <li><code>data/western/_canonical.json</code> (14 keys changed, 13 added)</li>
+              <li><code>tools/qa_pages.py</code></li>
+            </ul>
+          </li>
         </ol>
         <p class="pl-loop wide"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M13 5.5A5.5 5.5 0 1 0 13.5 9M13 1.8v3.9H9.1"/></svg><span><strong>Feedback loop.</strong> Fact-check corrections go straight back into the dossiers and <code>data/</code> files. The synthesis then applies the corrections that cut across layers (for example, Microsoft's calendar-2024 capex including leases was $75.6B, not $55.7B). Pages read their headline numbers from the canonical file, so a correction reaches every page that uses the number.</span></p>
 
@@ -198,51 +218,54 @@
           <li><strong>Present bull and bear cases with equal rigor.</strong> Don't add investment-advice disclaimers.</li>
           <li><strong>Use independent judgment.</strong> If something important is missing from the layer's scope, add it.</li>
           <li><strong>Don't work around blocked sites</strong> with scripts. Use another source instead.</li>
+          <li><strong>Stay inside a search budget</strong> (Edition 2). Each re-check agent had its own WebSearch cap (22–45) and fetched primary pages directly where it could.</li>
         </ul>
       </section>
 
       <!-- ============================================================ 4 FACT-CHECK -->
       <section>
         <h2><span class="kicker">04 · Fact-check</span>What the fact-checks found</h2>
-        <p>Two independent passes checked 311 claim rows, covering about 570 individual figures, across the ten layer dossiers. Three quarters were confirmed. None was judged likely to be fabricated. The two passes worked under very different conditions, and that shapes how much weight their verdicts carry.</p>
+        <p>Three passes have checked 549 claim rows. The two Edition-1 passes checked 311 rows, about 570 individual figures, across the ten layer dossiers. The Edition-2 re-check (25 Sep 2026) went back over W01–W05 with working web access and logged 238 more rows. Some claims were therefore checked twice. Four in five rows were confirmed and one looked fabricated. The three passes worked under very different conditions, and that shapes how much weight their verdicts carry.</p>
 
         <figure class="wide">
           <script type="application/json" data-chart>
           {
             "type": "bar", "stacked": true, "horizontal": true,
-            "title": "Three quarters of checked claims were confirmed; none looked fabricated",
-            "subtitle": "Fact-check verdicts by pass, number of claim rows",
+            "title": "Four in five checked claims were confirmed; one looked fabricated",
+            "subtitle": "Verdicts by pass, claim rows. Pass 1: W01–W05, pass 2: W06–W10 (Edition 1); pass 3: W01–W05 re-check (Sep 2026)",
             "valueFormat": { "decimals": 0 }, "unit": "claim rows",
             "xKey": "pass",
             "series": [
               { "key": "confirmed", "label": "Confirmed", "color": 1 },
               { "key": "partial", "label": "Partial", "color": 4 },
               { "key": "contradicted", "label": "Contradicted", "color": 8 },
-              { "key": "unverified", "label": "Unverified", "color": 7 }
+              { "key": "unverified", "label": "Unverified", "color": 7 },
+              { "key": "fabricated", "label": "Fabricated-likely", "color": 5 }
             ],
             "data": [
-              { "pass": "W01–W05 (171 rows)", "confirmed": 126, "partial": 17, "contradicted": 7, "unverified": 21 },
-              { "pass": "W06–W10 (140 rows)", "confirmed": 107, "partial": 19, "contradicted": 6, "unverified": 8 }
+              { "pass": "Pass 1", "confirmed": 126, "partial": 17, "contradicted": 7, "unverified": 21, "fabricated": 0 },
+              { "pass": "Pass 2", "confirmed": 107, "partial": 19, "contradicted": 6, "unverified": 8, "fabricated": 0 },
+              { "pass": "Pass 3", "confirmed": 206, "partial": 19, "contradicted": 9, "unverified": 3, "fabricated": 1 }
             ],
-            "height": 150,
-            "source": "methodology/qa/factcheck-W01-W05.md and factcheck-W06-W10.md, summary tables",
+            "height": 200,
+            "source": "methodology/qa/factcheck-W01-W05.md, factcheck-W06-W10.md and factcheck-W01-W05-v2.md, summary tables",
             "asOf": "2026-09-25", "provenance": "A",
-            "note": "Fabricated-likely: 0 in both passes. Several W01–W05 'unverified' rows (e.g. Anthropic's Series H, the SpaceX IPO) were later confirmed by the W06–W10 pass."
+            "note": "The one fabricated-likely row is W05's 'NVIDIA to acquire MediaTek for $110bn', found by the re-check. The re-check re-verified many Edition-1 W01–W05 claims, so some claims are counted in two passes."
           }
           </script>
         </figure>
 
         <div class="table-wrap wide">
           <table class="table--compact mtab">
-            <thead><tr><th scope="col">Verdict</th><th scope="col" class="num">W01–W05</th><th scope="col" class="num">W06–W10</th><th scope="col" class="num">Total</th><th scope="col" class="num">Share</th><th scope="col">What happened next</th></tr></thead>
+            <thead><tr><th scope="col">Verdict</th><th scope="col" class="num">Ed. 1 W01–W05</th><th scope="col" class="num">Ed. 1 W06–W10</th><th scope="col" class="num">Re-check W01–W05</th><th scope="col" class="num">Total</th><th scope="col" class="num">Share</th><th scope="col">What happened next</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Confirmed</th><td>126</td><td>107</td><td>233</td><td>74.9%</td><td>No change</td></tr>
-              <tr><th scope="row">Partial</th><td>17</td><td>19</td><td>36</td><td>11.6%</td><td>Number, wording, date or tag corrected in the dossier and JSON</td></tr>
-              <tr><th scope="row">Contradicted</th><td>7</td><td>6</td><td>13</td><td>4.2%</td><td>Corrected everywhere it appeared</td></tr>
-              <tr><th scope="row">Unverified</th><td>21</td><td>8</td><td>29</td><td>9.3%</td><td>Kept; headline items tagged <code>(conf: low, unverified)</code></td></tr>
-              <tr><th scope="row">Fabricated-likely</th><td>0</td><td>0</td><td>0</td><td>0%</td><td>None found</td></tr>
+              <tr><th scope="row">Confirmed</th><td>126</td><td>107</td><td>206</td><td>439</td><td>80.0%</td><td>No change, or a low-confidence tag removed</td></tr>
+              <tr><th scope="row">Partial</th><td>17</td><td>19</td><td>19</td><td>55</td><td>10.0%</td><td>Number, wording, date or tag corrected in the dossier and JSON</td></tr>
+              <tr><th scope="row">Contradicted</th><td>7</td><td>6</td><td>9</td><td>22</td><td>4.0%</td><td>Corrected everywhere it appeared</td></tr>
+              <tr><th scope="row">Unverified</th><td>21</td><td>8</td><td>3</td><td>32</td><td>5.8%</td><td>Kept with a confidence tag; listed under <a href="#still-open">still unverified</a></td></tr>
+              <tr><th scope="row">Fabricated-likely</th><td>0</td><td>0</td><td>1</td><td>1</td><td>0.2%</td><td>Deleted from the dossier, data and page; replaced with the real event</td></tr>
             </tbody>
-            <tfoot><tr><th scope="row">All rows</th><td class="num">171</td><td class="num">140</td><td class="num">311</td><td class="num">100%</td><td></td></tr></tfoot>
+            <tfoot><tr><th scope="row">All rows</th><td class="num">171</td><td class="num">140</td><td class="num">238</td><td class="num">549</td><td class="num">100%</td><td></td></tr></tfoot>
           </table>
         </div>
 
@@ -251,7 +274,7 @@
           {
             "type": "bar", "horizontal": true,
             "title": "The demand and model-lab dossiers got the most scrutiny",
-            "subtitle": "Fact-check claim rows by dossier, count",
+            "subtitle": "Edition-1 fact-check claim rows by dossier, count",
             "valueFormat": { "decimals": 0 }, "unit": "claim rows",
             "xKey": "layer",
             "series": [{ "key": "rows", "label": "Claim rows" }],
@@ -269,12 +292,12 @@
             ],
             "source": "methodology/qa/factcheck-*.md, rows by dossier",
             "asOf": "2026-09-25", "provenance": "A",
-            "note": "Some W09 rows also cover W10 claims. Extraordinary claims (valuations near $1T, 10x revenue jumps, mega-deals) were checked first."
+            "note": "Edition-1 passes only. Some W09 rows also cover W10 claims. The re-check added 113 rows for W01–W02, 48 for W03, 25 for W04 and 52 for W05. Extraordinary claims (valuations near $1T, 10x revenue jumps, mega-deals) were checked first."
           }
           </script>
         </figure>
 
-        <h3>Two passes, two very different conditions</h3>
+        <h3>Three passes, three very different conditions</h3>
         <div class="bullbear wide">
           <aside class="callout callout--note">
             <p class="callout-label">Pass 1 · W01–W05</p>
@@ -289,13 +312,63 @@
             <p>It confirmed most of 2026's extraordinary claims: SpaceX absorbing xAI and its IPO, the $60B Cursor deal, Anthropic's $965B valuation and $65B run-rate, OpenAI's $852B round, Micron's 84.9% gross margin, and Nvidia's $89.0B data-center quarter.</p>
           </aside>
         </div>
+        <aside class="callout callout--insight wide">
+          <p class="callout-label">Pass 3 · W01–W05 re-check · Edition 2, 25 Sep 2026</p>
+          <h3>Working web access, primary sources first</h3>
+          <p>The first pass could not fetch a single page, so Edition 2 re-ran it. Two checkers (FC1 for W01–W02, FC2 for W03–W05) used 34 searches and about 177 fetches: SEC EDGAR full-text search and XBRL pages, company releases and transcripts, regulators and grid operators. There were no rate-limit errors. They re-checked every TL;DR number, every Edition-1 row marked unverified, partial or contradicted, and every <code>(conf: low, unverified)</code> tag. The full log is <code>factcheck-W01-W05-v2.md</code>. Thin-spot research and the news sweep are in <code>hardening-2026-09-25.md</code>.</p>
+        </aside>
 
-        <h3>The corrections that mattered most</h3>
+        <h3>What the re-check found</h3>
+        <p>Of 238 rows, 206 were confirmed, 19 partly right, 9 contradicted and 3 left open. One was judged likely fabricated. Every extraordinary 2026 event flagged in Edition 1 turned out to be real.</p>
+        <aside class="callout callout--note">
+          <p class="callout-label">The one likely fabrication</p>
+          <p>W05 said <strong>"NVIDIA agreed to acquire MediaTek for $110bn (Sep 2026)"</strong>. Its only trace was one unsourced encyclopedia sentence. The real event is NVIDIA buying <strong>$3.5bn of MediaTek convertible bonds</strong>, part of a $3.9bn issue, on 31 Aug 2026 <span class="prov" data-prov="R">R</span>. The claim was deleted from the dossier, the data and the page, and replaced with the real deal. It was never used in any W11 number.</p>
+        </aside>
+        <p>Two Edition-1 "corrections" were themselves wrong, and the re-check reversed them:</p>
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Item</th><th scope="col">Edition 1 said</th><th scope="col">Re-check</th><th scope="col">Evidence</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Meta Hyperion SPV equity</th><td>~$2.5B of Blue Owl cash ("resolved toward W04")</td><td><strong>$7.0B</strong> of Blue Owl cash for 80% <span class="prov" data-prov="R">R</span>. W02 was right</td><td>Meta Q3-2025 10-Q: "the Investor contributed $7.0 billion in cash". <code>_canonical.json</code> <code>hyperion_spv_equity</code> 2.5 → 7.0</td></tr>
+              <tr><th scope="row">Meta's Hyperion lease</th><td>"~$12.3B initial lease commitment" removed as a suspected mix-up with El Paso</td><td><strong>Reinstated:</strong> ~$12.3B over four years from 2029, renewals up to 20 years <span class="prov" data-prov="R">R</span></td><td>Same 10-Q ("initial lease commitment")</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Corrections from the re-check</h3>
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Claim as it was</th><th scope="col">Corrected to</th><th scope="col">Source</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Meta 2026 capex guide $135–145B (W02)</th><td><strong>$130–145B</strong> <span class="prov" data-prov="G">G</span>; W01 was right, and the Big-4 total stays ~$733B</td><td>Meta Q2-2026 release</td></tr>
+              <tr><th scope="row">Oracle FY27 capex "~$90B in June, raised to $90–95B in September"</th><td><strong>$90–95B gross / ~$70B net</strong>, guided in June and reaffirmed in September. Not a raise</td><td>Oracle Q1 FY27 call</td></tr>
+              <tr><th scope="row">Goldman: Big-4 2027 capex ~$1.14T (Sep 2026)</th><td><strong>~$1.14T for the Big-4 plus Oracle</strong>, published in July; ~35% debt-funded</td><td>Goldman Sachs via Yahoo Finance</td></tr>
+              <tr><th scope="row">OpenAI → AWS "$100B over 8 years, including the $38B"</th><td><strong>$38B + $100B ≈ $138B</strong> <span class="prov" data-prov="R">R</span></td><td>Amazon: "expanding … $38 billion agreement by $100 billion"</td></tr>
+              <tr><th scope="row">"OpenAI ≈ 25% of NVIDIA's FY28 business"</th><td><strong>The AI labs NVIDIA backs, as a group, ≈ a quarter</strong>; OpenAI alone ≈ 12 GW of commitments</td><td>NVIDIA Q2 FY27 call</td></tr>
+              <tr><th scope="row">OpenAI's Broadcom chip "Titan" (W05)</th><td><strong>"Jalapeño"</strong>, conf: high</td><td>OpenAI, 24 Jun 2026</td></tr>
+              <tr><th scope="row">Broadcom FY27 AI revenue "&gt;$100B"</th><td><strong>~$115B FY27, ~$230B FY28</strong>, six XPU customers <span class="prov" data-prov="G">G</span></td><td>Broadcom Q3 FY26 call</td></tr>
+              <tr><th scope="row">CoreWeave "4.2 GW active contracted power" (W02)</th><td><strong>~1.5 GW active, ~3.7 GW contracted (30 Jun); ~4.2 GW contracted (11 Aug)</strong></td><td>CoreWeave Q2 release; 17 Sep business update</td></tr>
+              <tr><th scope="row">Meta debt "~$55B+ of bonds"</th><td><strong>$83.7B</strong> long-term debt; $90.3B cash</td><td>Meta Q2-2026 release</td></tr>
+              <tr><th scope="row">Anthropic "≥$517B of compute leases", cited to CNBC</th><td><strong>~$517B / ~14.8 GW</strong> of agreements in 11 months, a press tally by The Information (via DCD) <span class="prov" data-prov="E">E</span>, conf: med</td><td>DatacenterDynamics, 7 Sep 2026</td></tr>
+              <tr><th scope="row">Anthropic–Akamai $1.8B</th><td>Superseded: <strong>$11.6B over 7 years</strong> (up to ~$20B), plus a warrant for up to ~5% of Akamai</td><td>Akamai, 24 Sep 2026</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Upgraded from "unverified" to confirmed</h3>
+        <ul>
+          <li><strong>Lab money:</strong> Anthropic's Series H ($65B at $965B), its run-rate path to &gt;$65B (end-July), OpenAI &gt;$40B (August), the SpaceX IPO (~$75B at $135/share) and SpaceX's $60B purchase of Cursor.</li>
+          <li><strong>Filings read directly:</strong> NVIDIA's $279B supply and $366B total commitments and its $105B cap on the PORTS-Pike guarantee (Q2 FY27 10-Q), Google paying SpaceX ~$920M/month (SpaceX SEC filing), and SK hynix's 2Q26 results from its own release.</li>
+          <li><strong>Power and policy:</strong> New York's statewide moratorium (Executive Order 62, 14 Jul 2026), NextEra–Dominion, GE Vernova's FY26 free-cash-flow guide, IEA's 485 TWh, PJM's 2028/29 auction, and Siemens Energy's rename to "Omterra".</li>
+          <li><strong>Deals and credit:</strong> Oracle's Project Jupiter force-majeure notice (24 Sep 2026), Oracle's cut to BBB-, Alphabet's $90B equity programme with Berkshire's $10B, Dell's Q2 FY27 AI backlog, Aligned's $40B sale and Crusoe's Series F.</li>
+        </ul>
+
+        <h3>The Edition-1 corrections that mattered most</h3>
         <div class="table-wrap wide">
           <table class="table--compact mtab">
             <thead><tr><th scope="col">Claim as first written</th><th scope="col">Corrected to</th><th scope="col">Why it matters</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Anthropic run-rate "&gt;$100B" in September 2026</th><td>Last confirmed: <strong>$65B at end-July</strong> <span class="prov" data-prov="E">E</span>; the September figure is unverified (conf: low)</td><td>Moves lab revenue, end-customer AI money and the agentic share; Anthropic vs OpenAI is ~1.6×, not ~2.5×</td></tr>
+              <tr><th scope="row">Anthropic run-rate "&gt;$100B" in September 2026</th><td>Last firm figure: <strong>&gt;$65B at end-July</strong> <span class="prov" data-prov="E">E</span>. The re-check found the September report is real: the NYT reported a &gt;$100B <em>pace</em> on 18 Sep, which Anthropic has not confirmed (conf: med)</td><td>Moves lab revenue, end-customer AI money and the agentic share; Anthropic vs OpenAI is ~1.6× on firm data, ~2.5× only if the pace holds</td></tr>
               <tr><th scope="row">SpaceX IPO raised "~$86B"</th><td><strong>~$75B</strong> at $135/share, ~$1.77T valuation (12 Jun 2026)</td><td>Capital-markets totals in W02 and W09</td></tr>
               <tr><th scope="row">Apr-2026 amendment: Microsoft stops taking a share of OpenAI's revenue</th><td>Reversed: <strong>OpenAI stops receiving a share of Microsoft's revenue</strong>; the AGI clause was dropped</td><td>No margin uplift for OpenAI from the change</td></tr>
               <tr><th scope="row">Nebius Q2 GAAP operating result "≈ $0"</th><td><strong>−$175.9M</strong> (about −30% margin)</td><td>Neoclouds are loss-making at the operating line (about −$1.5B in 2026E)</td></tr>
@@ -306,53 +379,50 @@
               <tr><th scope="row">Alphabet 2026 capex guide "$175–185B"</th><td><strong>$195–205B</strong> (July guide; Feb was $175–185B)</td><td>The Big-4 total becomes ~$733B</td></tr>
               <tr><th scope="row">Vendor share of lab equity "45–50%"</th><td><strong>~40–60%</strong>, depending on definitions and on Amazon's $35B conditional tranche</td><td>The circularity headline</td></tr>
               <tr><th scope="row">Micron "$22B of deposits"</th><td><strong>~$22B of deposits and commitments</strong> (~$18B cash)</td><td>Memory customer prepayments</td></tr>
-              <tr><th scope="row">Colossus 1 went live "Dec-2024"; Oklo "−66% from peak"; Nvidia Q1 FY27 DC "$75.4B"</th><td>Sep-2024; −80%; $75.2B</td><td>Timeline and data accuracy</td></tr>
+              <tr><th scope="row">Colossus 1 went live "Dec-2024"; Oklo "−66% from peak"; Nvidia Q1 FY27 DC "$75.4B"</th><td>Sep-2024 (still disputed, see below); −80%; $75.2B (both confirmed by the re-check)</td><td>Timeline and data accuracy</td></tr>
               <tr><th scope="row">Anthropic and OpenAI IPO filing dates "May" / "Aug"</th><td>1 Jun 2026 and 8 Jun 2026 (company posts)</td><td>Timeline accuracy</td></tr>
             </tbody>
           </table>
         </div>
 
         <h3 id="still-open">Claims that are still unverified</h3>
-        <p>These claims stay in the dossiers with their tags, but no fetched source confirmed them. A follow-up pass with full web access should start here. Items the second pass later confirmed have been removed from the list (for example Anthropic's Series H, the SpaceX IPO, Dell's $95B AI backlog and Crusoe's Series F).</p>
+        <p>These claims stay in the dossiers with their tags, but no fetched primary source settles them. The Edition-2 re-check cleared most of the Edition-1 list, so those items have been removed: the $517B compute tally, Google's SpaceX rental, NextEra–Dominion, New York's moratorium, GE Vernova's cash-flow guide, Oracle's force-majeure notice, Berkshire's Alphabet placement, Microsoft's 25-year building lives, NVIDIA's commitments and SK hynix's 2Q26 results. W06–W10 were not re-checked row by row, so a few of their Edition-1 items remain. The next pass should start here.</p>
         <div class="table-wrap wide is-tall">
           <table data-sortable class="table--compact mtab">
             <thead><tr><th scope="col">Claim</th><th scope="col">Layer</th><th scope="col">Why it is open</th><th scope="col">Status</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Anthropic run-rate passed $100B (mid-Sep 2026, NYT via Axios)</th><td>W09, W10</td><td>Axios URL rate-limited; no trace in other archives checked</td><td><span class="status status--critical">Low, unverified</span></td></tr>
-              <tr><th scope="row">Anthropic "≥$517B of compute leases in 11 months"</th><td>W01</td><td>Source unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">Google pays SpaceX ~$920M/month and Anthropic ~$1.25B/month for Colossus capacity</th><td>W01</td><td>Single encyclopedia source, unreachable; flows re-tagged R → E</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">NextEra to buy Dominion for ~$67B, all-stock (May 2026)</th><td>W03</td><td>Sources unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">New York enacted the first statewide data-center moratorium (Jul 2026)</th><td>W01</td><td>Not echoed in W03/W04, which track moratoria</td><td><span class="status status--critical">Doubtful</span></td></tr>
-              <tr><th scope="row">GE Vernova FY26 free-cash-flow guide of $11.5–12.5B</th><td>W03</td><td>Conflicts with the checker's recollection of a lower Dec-2025 guide</td><td><span class="status status--critical">Doubtful</span></td></tr>
-              <tr><th scope="row">Texas permit halt with a 474 GW ERCOT queue; Oracle force majeure on Project Jupiter</th><td>W01, W03</td><td>Sources unreachable; the Jupiter claim comes via a stock-data site</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">Berkshire's $10B Alphabet private placement within a $90B equity programme</th><td>W02</td><td>The sum checks; the event is not confirmed</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">OpenAI ≈ 25% of Nvidia's FY28 revenue; Nvidia's $105B residual-value guarantee for OpenAI's Ohio site</th><td>W05</td><td>Unreachable, though corroborated across dossiers</td><td><span class="status status--warning">Corroborated</span></td></tr>
-              <tr><th scope="row">Microsoft building lives 15 → 25 years, cutting CY26 capex from $190B to $175B</th><td>W01, W02</td><td>Call transcript unreachable</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">SK hynix 2Q26 revenue KRW 79.3tn and operating profit KRW 60.5tn</th><td>W06</td><td>Secondary aggregator only; no IR release found</td><td><span class="status status--warning">Conf: med</span></td></tr>
-              <tr><th scope="row">AWS backlog $496B; Oracle GPU utilization 97.9%</th><td>W08</td><td>Not in the releases; from transcripts and press</td><td><span class="status status--warning">Widely reported</span></td></tr>
-              <tr><th scope="row">Anthropic IPO exchange and underwriters (Nasdaq; Goldman, JPMorgan, Morgan Stanley)</th><td>W09</td><td>Not in any fetched source</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">2026 ARR and valuations of Harvey, Lovable, Sierra, OpenEvidence, Perplexity, ElevenLabs, Replit</th><td>W10</td><td>Sacra pages not fetched; already tagged [E]</td><td><span class="status status--warning">Estimate</span></td></tr>
-              <tr><th scope="row">Stanford "Canaries" revision to 19% below trend (Aug 2026); Census BTOS 22%</th><td>W10</td><td>Not fetched</td><td><span class="status status--serious">Unverified</span></td></tr>
-              <tr><th scope="row">Nscale ~$45B and AMD 2 GW / $5B deal terms with Anthropic</th><td>W05, W09</td><td>Deal terms from secondary reports</td><td><span class="status status--warning">Conf: low–med</span></td></tr>
-              <tr><th scope="row">IEA ~485 TWh of 2025 data-center electricity; PJM 2028/29 auction; JLL 66 GW under construction</th><td>W03, W04</td><td>Sources unreachable in pass 1; arithmetic checks</td><td><span class="status status--warning">Consistent</span></td></tr>
+              <tr><th scope="row">Anthropic run-rate above $100B (18 Sep 2026)</th><td>W09, W10, W11</td><td>The NYT report is real (Axios quotes it; Bloomberg frames it as "to top $100B in 2026"), but it is unclear whether it is a current pace or a projection, and Anthropic has not confirmed it. The firm figure is &gt;$65B at end-July; the September point is drawn dashed</td><td><span class="status status--warning">Conf: med, not confirmed</span></td></tr>
+              <tr><th scope="row">Colossus 1 online date: Sep 2024 or Dec 2024</th><td>W01, W04</td><td>Edition 1 changed it to Sep 2024 from the checker's memory; the encyclopedia summary says Dec 2024. No primary source was fetched</td><td><span class="status status--serious">Unverified</span></td></tr>
+              <tr><th scope="row">Abilene JPMorgan loan split ($2.3B + $7.1B = $9.6B)</th><td>W02</td><td>The fetched report gives the $11.6B total and the $15B joint venture, but no loan split</td><td><span class="status status--serious">Open</span></td></tr>
+              <tr><th scope="row">Claude Code run-rate</th><td>W10</td><td>Nothing newer than $2.5B (Feb 2026) outside aggregator pages; the 17 Aug reports give no product split. Waits for the S-1</td><td><span class="status status--serious">Open</span></td></tr>
+              <tr><th scope="row">HBM share of SK hynix's DRAM revenue, 2026</th><td>W06</td><td>Not disclosed in the 2Q26 release or on the call</td><td><span class="status status--serious">Open</span></td></tr>
+              <tr><th scope="row">GB200/GB300 rack share by ODM (Jun 2026: Foxconn ~48%, Quanta ~34%, Wistron ~18%)</th><td>W07</td><td>Morgan Stanley figures seen only second-hand; primary rack data unavailable (DigiTimes blocked)</td><td><span class="status status--warning">Conf: med–low</span></td></tr>
+              <tr><th scope="row">Nscale S-1: $103.4B contracted value, up to ~$44.6B from Anthropic, H1-2026 revenue $140.6M</th><td>W01, W02, W04, W08, W09</td><td>Read through press summaries (Tech Times, Fierce Network); the filing on EDGAR was not fetched. The "10+ GW pipeline" was not found verbatim</td><td><span class="status status--warning">Filing via press</span></td></tr>
+              <tr><th scope="row">Anthropic pays SpaceX ~$1.25B/month; 90-day termination clauses</th><td>W02, W08, W09</td><td>From summaries of the SpaceX S-1. Google's ~$920M/month is now confirmed from the filing itself</td><td><span class="status status--warning">Conf: med</span></td></tr>
+              <tr><th scope="row">Apollo and Blackstone ~$35B chip-backed SPV for Anthropic; Goldman's ~$420B of hyperscaler debt in 2027</th><td>W02, W09</td><td>Each rests on a single trade-press or secondary source</td><td><span class="status status--warning">Conf: med</span></td></tr>
+              <tr><th scope="row">Optics prices in the rack bill of materials ($600–900 per 800G module)</th><td>W07, W11</td><td>InnoLight's blended price of ~$305 per module suggests the assumption is high. The bill of materials has not been changed yet</td><td><span class="status status--critical">Doubtful</span></td></tr>
+              <tr><th scope="row">Amazon's stake in Anthropic; Workday's AI ARR (~$0.5–0.6B)</th><td>W02, W10</td><td>Amazon's stake is undisclosed (mid-to-high teens estimated; Google ~14% from court documents). Workday call summaries disagree</td><td><span class="status status--warning">Estimate</span></td></tr>
+              <tr><th scope="row">OpenAI's share of Oracle's backlog; the labs' 40–50% share of all backlog</th><td>W01</td><td>Oracle does not name OpenAI; Microsoft's is the only hard disclosure</td><td><span class="status status--warning">Estimate</span></td></tr>
+              <tr><th scope="row">Figures resting on low-tier sources</th><td>W02, W04</td><td>El Paso "+40bp vs Hyperion" (Substack), PIMCO's ~$18B Hyperion allocation, Meta's CDS record, used-H100 prices, OpenAI's $14–17B loss projection, Siemens' €3.1B data-center revenue (call summary), QTS financing figures, Switch "~$80B"</td><td><span class="status status--serious">Low-tier source</span></td></tr>
+              <tr><th scope="row">2026 ARR and valuations of Harvey, Lovable, Sierra, OpenEvidence, Perplexity, ElevenLabs, Replit; Stanford "Canaries" revision (Aug 2026)</th><td>W10</td><td>Edition-1 items not re-checked in Edition 2; already tagged <span class="prov" data-prov="E">E</span></td><td><span class="status status--warning">Estimate</span></td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Status labels summarize the fact-check logs. "Doubtful" means the checker had a specific reason to think the claim is wrong. Click a column header to sort.</p>
+        <p class="table-note">Status labels summarize the fact-check logs and the §16 status tables in <code>factcheck-W01-W05-v2.md</code> and <code>hardening-2026-09-25.md</code>. "Doubtful" means the checker had a specific reason to think the claim is wrong. Click a column header to sort.</p>
       </section>
 
       <!-- ============================================================ 5 RECONCILIATION -->
       <section>
         <h2 id="reconciliation"><span class="kicker">05 · Reconciliation</span>Where the dossiers disagreed, and the value we use</h2>
-        <p>The synthesis compared every headline metric across the ten dossiers. Where they differed, it chose one canonical value and recorded the reason. Most differences were about scope, such as calendar versus fiscal year, whether leases count, or whether developer-built shells count as capex. A few were stale figures the fact-checks caught.</p>
+        <p>The synthesis compared every headline metric across the ten dossiers. Where they differed, it chose one canonical value and recorded the reason. Most differences were about scope, such as calendar versus fiscal year, whether leases count, or whether developer-built shells count as capex. A few were stale figures the fact-checks caught. The Edition-2 re-check (25 Sep 2026) reopened several rows: Hyperion's SPV equity is now $7.0B, the OpenAI chip codename is "Jalapeño" (conf: high), OpenAI's AWS commitment is ~$138B, CoreWeave's power figures carry dates, and Anthropic's &gt;$100B figure is shown as an NYT-reported pace. It also added six rows, among them Oracle's FY27 capex guide and the MediaTek claim, so the table now has 42 rows.</p>
         <div class="table-wrap wide is-tall">
           <table data-sortable class="table--compact mtab">
             <thead><tr><th scope="col">Metric</th><th scope="col">What the dossiers said</th><th scope="col">Canonical value</th><th scope="col">Why</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Big-4 2026 capex guidance</th><td>W01 ~$733B; W02 ~$730B; W10 $720-745B</td><td>~$733B (MSFT 175 new basis; GOOGL 195-205; AMZN ~220; META 130-145)</td><td>Resolved: fact-check W06-W10 confirmed Meta $130-145B (Jul); W02's $135-145B stale; Alphabet $175-185B was the Feb guide.</td></tr>
-              <tr><th scope="row">Meta Hyperion SPV equity</th><td>W02 ~$7B (Blue Owl 80%); W04 ~$2.5B</td><td>~$2.5B Blue Owl cash equity (conf med); $27.3B bond at 6.58%</td><td>Resolved toward W04: ~$27B project almost fully bond-funded plus ~$3B distribution to Meta; $7B does not reconcile.</td></tr>
-              <tr><th scope="row">CoreWeave power</th><td>W01 1.5 GW active / 3.7 GW contracted; W02 '4.2 GW active contracted'</td><td>1.5 GW active, 3.7 GW contracted (Q2-26)</td><td>Resolved: CoreWeave Q2 release (fact-check W06-W10 #99).</td></tr>
-              <tr><th scope="row">OpenAI custom-chip codename</th><td>W01 'Jalapeno'; W05 'Titan'</td><td>Omit from site; if needed 'Jalapeno' (conf low-med)</td><td>Resolved: only 'Jalapeno' traced (secondary source).</td></tr>
+              <tr><th scope="row">Big-4 2026 capex guidance</th><td>W01 ~$733B; W02 ~$730B; W10 $720-745B</td><td>~$733B (MSFT 175 new basis; GOOGL 195-205; AMZN ~220; META 130-145)</td><td>Resolved: fact-check W06-W10 confirmed Meta $130-145B (Jul); W02's $135-145B stale; Alphabet $175-185B was the Feb guide. Re-confirmed from Meta's Q2-26 release in the 2026-09-25 re-check.</td></tr>
+              <tr><th scope="row">Meta Hyperion SPV equity</th><td>W02 ~$7B (Blue Owl 80%); W04 ~$2.5B (Edition 1; corrected to $7.0B)</td><td>~$7.0B Blue Owl cash for 80% (R, Meta Q3-25 10-Q); $27.3B bond at 6.58%; Meta initial lease commitment ~$12.3B over 4 yrs (R)</td><td>Reversed 2026-09-25 (was '~$2.5B, resolved toward W04'). The 10-Q says the Investor contributed $7.0B in cash; bonds + equity (27.3 + 7.0 = 34.3) fund ~$27B development cost + ~$3B distribution to Meta + ~$4B reserves/capitalised interest [A]. The ~$12.3B lease figure, dropped in Edition 1, is reinstated.</td></tr>
+              <tr><th scope="row">CoreWeave power</th><td>W01 1.5 GW active / 3.7 GW contracted; W02 '4.2 GW active contracted'</td><td>~1.5 GW active, ~3.7 GW contracted (30 Jun 2026); ~4.2 GW contracted (11 Aug 2026)</td><td>Resolved: Q2 release; 17-Sep business update gives ~4.2 GW contracted at 11 Aug (&gt;$25B new commitments; ~$40M/MW short-dated). 4.2 GW is contracted, not active.</td></tr>
+              <tr><th scope="row">OpenAI custom-chip codename</th><td>W01 'Jalapeño'; W05 'Titan' (Edition 1; corrected)</td><td>'Jalapeño' (OpenAI-Broadcom inference XPU), conf high</td><td>Resolved 2026-09-25 from OpenAI's announcement of 24 Jun 2026; 'Titan' was wrong; 'omit from site copy' withdrawn.</td></tr>
               <tr><th scope="row">Microsoft-OpenAI Apr-2026 amendment</th><td>W09 original: Microsoft stops taking a share of OpenAI revenue</td><td>OpenAI stops receiving a share of Microsoft revenue; AGI clause dropped</td><td>Fact-check W06-W10 #42 (direction reversed); no margin uplift for OpenAI.</td></tr>
               <tr><th scope="row">Oracle debt</th><td>W02 $125-130B; W08 $125B</td><td>~$129.5B notes payable (FY26, May-2026)</td><td>Fact-check W06-W10.</td></tr>
               <tr><th scope="row">OpenAI 2025 gross margin</th><td>W09 ~33%; leaked lines imply ~43%</td><td>~33% reported / ~43% implied</td><td>Show both.</td></tr>
@@ -366,39 +436,45 @@
               <tr><th scope="row">Western AI data-center investment, CY2026</th><td>W01 ~$0.95T; W02 ~$1.075T total build; W10 ~$0.9T; W05 $1.0-1.2T global</td><td>~$1.0T (range 0.9-1.1T)</td><td>W01 excludes developer-built shells leased to tenants (~$70B); W02 includes Amazon non-DC capex and non-AI capex; W10 is a rough top-down.</td></tr>
               <tr><th scope="row">Western AI capex, CY2025</th><td>W02 ~$575B; W10 ~$500B</td><td>~$550B</td><td>Big-4 $413B company basis + Oracle ~$40B CY + neoclouds/xAI/sovereign/developer shells ~$100B.</td></tr>
               <tr><th scope="row">Contracted backlog (5 companies)</th><td>All ~$2.46T; CoreWeave $104B (Jun) vs ~$129B (Aug)</td><td>$2.46T (Jun/Aug-2026)</td><td>Use period-consistent disclosures; ~$2.48T if CoreWeave's Aug figure is used.</td></tr>
-              <tr><th scope="row">OpenAI + Anthropic share of backlog</th><td>W01 40-50% (JSON 43%); W02 ~40%; W08 45-55% of hyperscaler RPO</td><td>~43% (~$1.05T); conf low-med</td><td>Only hard datapoint: OpenAI ~45% of Microsoft RPO (Dec-2025).</td></tr>
-              <tr><th scope="row">Anthropic run-rate</th><td>W10 $65B (end-Jul, re-tagged [E]); W09 &gt;$100B (18-Sep, NYT/Axios); W02 '$47-65B'</td><td>$65B at end-Jul [E] (Reuters, confirmed); '&gt;$100B (Sep)' UNVERIFIED, conf low</td><td>Fact-check W06-W10 found no trace of the Sep figure; confirmed vs OpenAI: $65B vs $40B (Jul) = ~1.6x.</td></tr>
-              <tr><th scope="row">Anthropic 2026 revenue</th><td>W09 $60-70B (JSON 65); W10 ~$56B</td><td>~$60B (range $56-65B)</td><td>Fact-check range; upper half needs the unverified Sep run-rate.</td></tr>
-              <tr><th scope="row">OpenAI 2026 revenue</th><td>W09 $36B (company plan, FT); W10 ~$35B</td><td>~$36B</td><td>Company plan; H2 needs ~$3.9B/month.</td></tr>
+              <tr><th scope="row">OpenAI + Anthropic share of backlog</th><td>W01 40-50% (JSON 43%); W02 ~40%; W08 45-55% of hyperscaler RPO</td><td>~43% (~$1.05T); conf low-med (range to ~46%)</td><td>Only hard datapoint: OpenAI ~45% of Microsoft RPO (Dec-2025). W01 puts ~$60B of OpenAI in AWS's $496B; if the full ~$138B sits there: (1,047 + 78) / 2,456 = ~46%. Keep 43% until AWS discloses more.</td></tr>
+              <tr><th scope="row">Anthropic run-rate</th><td>W10 &gt;$65B (end-Jul, [E]); W09 &gt;$100B (18-Sep, NYT/Axios); W02 '$47-65B'</td><td>&gt;$65B at end-Jul [E] (Bloomberg/CNBC 17 Aug) = firm figure; '&gt;$100B (Sep)' = NYT-reported annualized pace (18 Sep; Bloomberg: 'to top $100B in 2026'), not company-confirmed, [E] conf med</td><td>Report verified to exist in the 2026-09-25 sweep (Axios quote). Vs OpenAI (&gt;$40B): ~1.6x on firm data, ~2.5x if the pace holds. Plot Sep as dashed.</td></tr>
+              <tr><th scope="row">Anthropic 2026 revenue</th><td>W09 $60-70B (JSON 65); W10 ~$56B</td><td>~$60B (range $56-65B)</td><td>Fact-check range; upper half needs the NYT-reported pace to be real (not company-confirmed). Monthly sum with a flat ~$100B pace from Sep = ~0.9+1.2+1.8+2.5+3.9+4.7+5.4+6.8+4x8.3 = ~$60B.</td></tr>
+              <tr><th scope="row">OpenAI 2026 revenue</th><td>W09 $36B (company plan, FT); W10 ~$35B</td><td>~$36B</td><td>Company plan; H2 needs ~$3.9B/month. &gt;$40B ARR (Bloomberg 13 Aug) verified; nothing newer as of 25 Sep.</td></tr>
               <tr><th scope="row">OpenAI Mar-2026 round</th><td>W01 ~$120B; W02/W09 $122B at $852B</td><td>$122B at $852B post (closed 31-Mar-2026)</td><td>Primary close figure.</td></tr>
-              <tr><th scope="row">OpenAI -&gt; AWS commitment</th><td>W02 $100B incl. the Nov-2025 $38B; W09 $38B + $100B = $138B</td><td>$100B (conservative; up to $138B if additive)</td><td>Primary release ambiguity; flagged conf low.</td></tr>
+              <tr><th scope="row">OpenAI -&gt; AWS commitment</th><td>W02 $100B incl. the Nov-2025 $38B (Edition 1; corrected); W09 $38B + $100B = $138B</td><td>~$138B ($38B + $100B over 8 yrs), R, conf high</td><td>Resolved 2026-09-25 (was '$100B, up to $138B; conf low'): Amazon release 'expanding ... $38 billion agreement by $100 billion over 8 years'.</td></tr>
               <tr><th scope="row">Anthropic 2026 equity raised</th><td>W02/W09 $95B (G $30B + H $65B); W09 +$5B Amazon (Apr) = $100B</td><td>$95B in rounds (+$5B Amazon if separate from Series H)</td><td>W02's H1 total ($217B for both labs) = 122 + 30 + 65.</td></tr>
               <tr><th scope="row">Nvidia CY2026 data-center revenue</th><td>W01 ~$370B; W05 FY27E DC $378B (flows imply ~$385B); W07 ~$356B run-rate (floor); W10 ~$400B run-rate</td><td>~$365B CY2026 (exit run-rate ~$400B+)</td><td>FY27 DC $378B - Jan-2027 (~$37B) + Jan-2026 (~$21B); fact-check asked W11 to pick one.</td></tr>
               <tr><th scope="row">Nvidia operating profit, 2026</th><td>W05 ~$255B annualised (Q2 x4); W08 '~$200B+'</td><td>~$250B total CY2026 (~$240B data center)</td><td>Q1 53.5 + Q2 63.7 + Q3/Q4 at guided ~66% OM.</td></tr>
               <tr><th scope="row">Oracle uncommenced leases</th><td>W02 ~$260B (FY26 10-K); W04 $288B (31-Aug-2026)</td><td>$288B (Aug-2026)</td><td>Most recent filing.</td></tr>
-              <tr><th scope="row">SpaceX IPO proceeds</th><td>W02 $75B at $1.77T; W09 ~$86B (since fixed)</td><td>~$75B at $135/share, ~$1.77T (12-Jun-2026, SPCX)</td><td>Confirmed by fact-check W06-W10.</td></tr>
+              <tr><th scope="row">SpaceX IPO proceeds</th><td>W02 $75B at $1.77T; W09 ~$86B (since fixed)</td><td>~$75B at $135/share, ~$1.75-1.77T (12-Jun-2026, SPCX), R</td><td>Confirmed by fact-check W06-W10 and the 2026-09-25 re-check (NPR); ~$86B only incl. options.</td></tr>
               <tr><th scope="row">Memory's share of AI capex</th><td>W01 ~6% ($55B direct, ex-HBM); W06 via TrendForce 47% of CSP capex</td><td>~15% direct ($150B) + ~6% HBM inside accelerators = ~21% ($207B)</td><td>Buy-side evidence: Microsoft ~$25B and Amazon ~$20B of 2026 capex is memory inflation alone. TrendForce's 47% likely uses a different denominator.</td></tr>
               <tr><th scope="row">Direct end-customer gen-AI spend 2026E</th><td>W10 ~$126B (110-150)</td><td>~$130B; plus ~$20B enterprise AI cloud infra and ~$50B AI ad uplift = ~$200B end-customer AI money</td><td>Anthropic 2026 revenue raised to $60B.</td></tr>
               <tr><th scope="row">Cost per GW (all-in)</th><td>W01 $50-60B (Nvidia ~$35B); W02 $45-50B; W04 $50-60B; W05 $55-65B (Rubin, Nvidia ~$40B)</td><td>Blackwell-era ~$50-60B/GW; Vera Rubin-era ~$60-70B/GW</td><td>Rising Nvidia content per GW ($18B -&gt; $25B -&gt; $40B).</td></tr>
-              <tr><th scope="row">Nvidia capital committed to customers</th><td>W02 ~$62B since Sep-2025; W05 '~$50B into frontier labs'; W05 ~$99B equity held</td><td>~$60B committed since Sep-2025 (+$6.3B backstop, $105B guarantee cap)</td><td>Different scopes: labs only vs all customers vs total portfolio.</td></tr>
+              <tr><th scope="row">Nvidia capital committed to customers</th><td>W02 ~$62B since Sep-2025; W05 '~$50B into frontier labs'; W05 ~$94-99B equity held</td><td>~$60B committed since Sep-2025 (+$6.3B backstop, $105B guarantee cap now R in the Q2 FY27 10-Q; max guarantee exposure $108.5B)</td><td>Different scopes: labs only vs all customers vs total portfolio.</td></tr>
               <tr><th scope="row">Hyperscaler AI cloud operating profit 2026</th><td>W08 $40-60B</td><td>~$33B (range 25-50)</td><td>Fresh depreciation and Oracle's thin AI margins pull the AI slice below segment averages.</td></tr>
-              <tr><th scope="row">Lab share of 2026 equity from vendors</th><td>W02 ~45% (H1: ~$100B of $217B); W09 45-50%; W02 bear case '~66% of OpenAI round'</td><td>~40-60% (strict ~45%, broad ~60%)</td><td>Fact-check range; depends on SoftBank and Amazon's $35B conditional tranche.</td></tr>
+              <tr><th scope="row">Lab share of 2026 equity from vendors</th><td>W02 ~45% (H1: ~$100B of $217B); W09 45-50%; W02 bear case '~66% of OpenAI round'</td><td>~40-60% (strict ~45%, broad ~60%)</td><td>Fact-check range; depends on SoftBank and Amazon's $35B conditional tranche. Holds after the 2026-09-25 re-check (W09 §5.3 now $90-125B, ~40-60%).</td></tr>
               <tr><th scope="row">Stargate scale</th><td>W01 ~7 GW (Sep-2025); W04 9+ GW across 7 sites</td><td>~9 GW planned; ~1.2 GW (Abilene) substantially live</td><td>Latest site count.</td></tr>
-              <tr><th scope="row">2027 capex</th><td>W01 Street $1.0-1.14T (Big-4); W02 ~$1.1T industry; W05 Nvidia cites top-5 ~$1.3T</td><td>Big-5 ~$1.1-1.3T; Western AI total ~$1.35T (base case)</td><td>Guidance ratchet history supports the upper half.</td></tr>
+              <tr><th scope="row">2027 capex</th><td>W01 Street $1.0T; Goldman ~$1.14T (Big-4 + Oracle, Jul-2026; ~35% debt-funded); W02 ~$1.1T industry; W05 Nvidia cites top-5 ~$1.3T</td><td>Big-5 ~$1.1-1.3T; Western AI total ~$1.35T (base case)</td><td>Guidance ratchet history supports the upper half. Oracle FY27 $90-95B gross / ~$70B net guided Jun, reaffirmed Sep (not a raise). Goldman: ~$420B hyperscaler debt issuance in 2027.</td></tr>
+              <tr><th scope="row">Broadcom AI outlook</th><td>W05 '&gt;$100B FY27' (prior knowledge)</td><td>~$115B FY27; ~$230B FY28 [G]; six XPU customers</td><td>Broadcom Q3 FY26 call (2/3 Sep 2026).</td></tr>
+              <tr><th scope="row">Google/Broadcom TPU capacity for Anthropic</th><td>W09 ~5 GW (Sep call); SW ~3.5 GW (Apr filing)</td><td>~3.5 GW (Apr-2026 filing) / ~5 GW (Sep call), both dated</td><td>Probably upsized between April and September.</td></tr>
+              <tr><th scope="row">Nscale-Anthropic</th><td>W01/W09 ~$45B (conf med)</td><td>up to ~$44.6B; 460 MW (R via E)</td><td>Nscale S-1, 18 Sep 2026 (press summary; EDGAR not fetched).</td></tr>
+              <tr><th scope="row">NVIDIA 'quarter of FY28' remark</th><td>W05 (Edition 1) 'OpenAI ~25% of NVIDIA FY28'</td><td>AI labs NVIDIA backs with its balance sheet, as a group, ~a quarter of FY28</td><td>Call-transcript wording; OpenAI alone ~12 GW of commitments.</td></tr>
+              <tr><th scope="row">NVIDIA-MediaTek</th><td>W05 (Edition 1) 'NVIDIA to acquire MediaTek for $110bn'</td><td>FABRICATED-LIKELY; removed. Real: NVIDIA buys $3.5bn of MediaTek convertible bonds (31 Aug 2026)</td><td>Only trace was one unsourced encyclopedia sentence (FC2). Never used in W11 numbers.</td></tr>
+              <tr><th scope="row">Oracle FY27 capex</th><td>W01 (Edition 1) '~$90B in Jun, raised to $90-95B in Sep'</td><td>$90-95B gross / ~$70B net, guided Jun-2026, reaffirmed Sep-2026 [G]</td><td>Not a raise (FC1).</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Source: <code>data/western/W11-synthesis.json → reconciliation</code> (W11 §9), as of 2026-09-25. Values are exactly as recorded there.</p>
+        <p class="table-note">Source: <code>data/western/W11-synthesis.json → reconciliation</code> (W11 §9), as updated in the 2026-09-25 re-check. Canonical values match <code>data/western/_canonical.json</code>.</p>
       </section>
 
       <!-- ============================================================ 6 LIMITATIONS -->
       <section>
         <h2><span class="kicker">06 · Limitations</span>Known limitations</h2>
-        <p>These are the ways this edition could be wrong. They are listed in rough order of how much they could move the conclusions.</p>
+        <p>These are the ways the atlas could still be wrong after the Edition-2 re-check. They are listed in rough order of how much they could move the conclusions.</p>
         <ol>
-          <li><strong>The web-search budget ran out partway through the research.</strong> Several analyst sessions (W01, W02, W04, W06, W09 among them) hit the limit, and sites such as openai.com, Wikipedia, CNBC, Bloomberg and some IR pages were rate-limited or blocked. Some 2025-era facts therefore come from the analysts' prior knowledge of filings. They are labelled "(prior knowledge)" or "not re-fetched" in the dossiers and on the <a href="sources.html">sources page</a>.</li>
-          <li><strong>The first fact-check pass could not open any source.</strong> Its confirmations rest on knowledge up to early 2026 and on arithmetic. Events after about March 2026 in W01–W05 were only partly re-checked by the second pass.</li>
-          <li><strong>Private-company financials come from leaks and press reports.</strong> Neither OpenAI nor Anthropic has a public S-1. OpenAI's 2025 figures ($13.07B revenue, −$20.9B operating loss) come from leaked audited statements that the FT confirmed. Lab run-rates come from Reuters, Axios and The Information. These figures are tagged <span class="prov" data-prov="E">E</span> and can move by billions when filings appear.</li>
+          <li><strong>The re-check was uneven across layers.</strong> In Edition 1 the web-search budget ran out partway through the research, and the first fact-check pass could not open any source. The Edition-2 re-check fixed that for W01–W05, which were re-verified row by row against fetched sources. W06–W10 rest on the second Edition-1 pass (about 60 sources fetched), plus targeted thin-spot research and a news sweep; they were not re-checked row by row. Some 2025-era facts still come from the analysts' prior knowledge of filings and are labelled "(prior knowledge)" or "not re-fetched" in the dossiers and on the <a href="sources.html">sources page</a>.</li>
+          <li><strong>Some filings were read only through summaries.</strong> Nscale's S-1 figures come from press write-ups, and SpaceX's compute contracts from summaries of its S-1. Bloomberg, Seeking Alpha, DigiTimes and some LightCounting pages were blocked, so a few figures rest on headlines or reprints. Each carries a confidence tag.</li>
+          <li><strong>Private-company financials come from leaks and press reports.</strong> Neither OpenAI nor Anthropic has a public S-1 yet. Anthropic is targeting a November 2026 IPO; Altman has said OpenAI will not list in 2026. OpenAI's 2025 figures ($13.07B revenue, −$20.9B operating loss) come from leaked audited statements that the FT confirmed. Lab run-rates come from Bloomberg, CNBC and the NYT (via Axios). These figures are tagged <span class="prov" data-prov="E">E</span> and can move by billions when filings appear.</li>
           <li><strong>"AI-attributable" is our judgment.</strong> No company reports "AI profit". The atlas attributes slices itself: TSMC ~35% of revenue, memory's AI-direct ~$149B against an AI-induced ~$390B windfall (conf: low), and ad uplift ~$50B, which assumes ~40% of Meta's post-2023 growth came from AI. The layer profit pools are right in order of magnitude, not precise.</li>
           <li><strong>The legacy-cash figure is a residual.</strong> The ~$547B from Big Tech's existing businesses is whatever the money map needs to balance, so errors elsewhere land there. Its range is about $480–600B.</li>
           <li><strong>Calendar-year conversions add error.</strong> Fiscal years are shifted to calendar years (Nvidia's FY27 ≈ CY2026 less a month). Growth is so fast that this adds about ±5% even to reported figures.</li>
@@ -409,7 +485,7 @@
         </ol>
         <aside class="callout callout--note">
           <p class="callout-label">What would change the story</p>
-          <p>If Anthropic's September run-rate turns out to be ~$65–80B rather than above $100B, lab revenue in 2026 falls by ~$4–7B and the exit-2026 run-rate of end-customer AI money falls to ~$255–265B <span class="prov" data-prov="A">A</span>. The broad conclusions still hold: suppliers mint the profit, labs lose money, and revenue must roughly double to justify what has been built (W11 §16).</p>
+          <p>If Anthropic's September run-rate proves to be ~$65–80B rather than the NYT-reported &gt;$100B pace, lab revenue in 2026 falls by ~$4–8B (Anthropic toward ~$52–56B) and the exit-2026 run-rate of end-customer AI money falls to ~$255–265B <span class="prov" data-prov="A">A</span>. The broad conclusions still hold: suppliers mint the profit, labs lose money, and revenue must roughly double to justify what has been built (W11 §16).</p>
         </aside>
       </section>
 
@@ -420,16 +496,18 @@
         <ol>
           <li><strong>Refresh the dossier</strong> in <code>research/&lt;track&gt;/Wxx-*.md</code>: change its <code>as_of</code> date, add new facts with tags and <code>[n]</code> citations, and append new sources to the numbered list without renumbering the old ones.</li>
           <li><strong>Update the data</strong> in <code>data/&lt;track&gt;/Wxx-*.json</code>. If a headline number changes, update <code>_canonical.json</code> as well, so every page picks up the same value.</li>
-          <li><strong>Fact-check the changes.</strong> Log the verdicts in <code>methodology/qa/</code> and list any correction that affects other layers.</li>
-          <li><strong>Rebuild the pages.</strong> Update the layer page in <code>docs/</code>, register any new page in <code>docs/assets/js/nav.js</code>, then regenerate this site's source list with <code>python3 tools/build_sources.py</code> (use <code>--check</code> to see counts first).</li>
-          <li><strong>QA</strong> each page in light and dark themes at 1440px and 375px wide, with no console errors and no sideways scroll. The checklist is in <code>methodology/html-style-guide.md</code> §9.</li>
+          <li><strong>Fact-check the changes.</strong> Log the verdicts in <code>methodology/qa/</code> and list any correction that affects other layers, with an old → new propagation list. The Edition-2 logs, <code>factcheck-W01-W05-v2.md</code> and <code>hardening-2026-09-25.md</code>, show the format.</li>
+          <li><strong>Rebuild the pages.</strong> Update the layer page in <code>docs/</code>, register any new page in <code>docs/assets/js/nav.js</code>, then regenerate this site's source list with <code>python3 tools/build_sources.py</code> (use <code>--check</code> to see counts first) and the companies, glossary and timeline pages with <code>python3 tools/build_reference_pages.py</code>.</li>
+          <li><strong>QA</strong> each changed page with <code>python3 tools/qa_pages.py &lt;page&gt;</code>. It opens the page in light and dark themes at 1440px and 375px and reports console errors, sideways scroll, SVG labels that overlap or spill out of their chart, and charts that failed to render. It exits with an error if anything fails, so it can gate a commit. Then look at screenshots of what changed. The full checklist is in <code>methodology/html-style-guide.md</code> §9.</li>
+          <li><strong>Work in your own lane.</strong> Parallel chats follow the working-copy protocol in <code>CLAUDE.md</code>: pull a tarball of the Mac repo into a cloud working copy, touch only the paths your chat owns, give scratch files a unique prefix, and push back a tarball of only those paths through <code>.transfer/</code>, committing only them on the Mac. Never overwrite another chat's files.</li>
           <li><strong>Record the change</strong> in <code>CHANGELOG.md</code> and <code>ROADMAP.md</code>, and add an entry to "What's new" on the <a href="index.html">home page</a>. Don't silently overwrite history: add dated timeline entries instead.</li>
         </ol>
         <aside class="callout callout--watch">
           <p class="callout-label">Natural refresh points</p>
           <ul>
             <li><strong>Quarterly earnings</strong> (late Oct to Nov 2026 for calendar Q3): hyperscaler capex guides, Nvidia Q3 FY27 (guided to $108B ±2%), cloud backlogs.</li>
-            <li><strong>Lab filings:</strong> the Anthropic and OpenAI S-1s would replace leaked figures with reported ones.</li>
+            <li><strong>Lab filings:</strong> Anthropic's public S-1 (IPO targeted for November 2026, roadshow from mid-October) would replace press figures with reported ones and settle the &gt;$100B question. OpenAI's would follow later.</li>
+            <li><strong>Dated prints:</strong> Micron FQ4 FY26 (30 Sep 2026), Tokyo Electron's first full-year guide (late Oct–mid Nov), Nscale's IPO pricing.</li>
             <li><strong>Monthly indicators:</strong> lab run-rates, DRAM contract prices, H100 and GB200 rental prices, and TSMC monthly revenue.</li>
             <li><strong>New tracks:</strong> add <code>research/china/</code> and <code>docs/china/</code> with C-prefixed IDs. The sources generator picks up new track folders automatically.</li>
           </ul>

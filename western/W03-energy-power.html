@@ -128,7 +128,7 @@
         <dl class="hero-meta">
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
-          <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>Status</dt><dd>Draft · re-checked 25 Sep 2026</dd></div>
           <div><dt>Related</dt><dd><a href="W01-demand-capex.html">W01</a> · <a href="W02-capital-financing.html">W02</a> · <a href="W04-datacenters.html">W04</a> · <a href="W05-compute-silicon.html">W05</a> · <a href="W08-cloud.html">W08</a> · <a href="W11-synthesis.html">W11</a></dd></div>
         </dl>
       </header>
@@ -192,6 +192,7 @@
           <li><strong>Scarcity shows up as price, and ordinary customers pay part of it.</strong> PJM's capacity price rose from $28.92 to ~$330/MW-day and still left the grid ~6.6–6.8 GW short <a class="cite" href="#src-23">23</a><a class="cite" href="#src-24">24</a>. Retail prices rose 9% y/y in Feb 2026, 26% in Virginia <a class="cite" href="#src-22">22</a>. Politics has flipped: pledges, a 417–3 House vote, and FERC rule rewrites <a class="cite" href="#src-33">33</a><a class="cite" href="#src-34">34</a><a class="cite" href="#src-37">37</a>.</li>
           <li><strong>Buyers pay almost any price for speed.</strong> Electricity is only ~8–12% of the annual cost of running AI compute <span class="prov" data-prov="A">A</span>, while one idle GW of GPUs burns ~$500m a month in depreciation <span class="prov" data-prov="A">A</span>. So hyperscalers sign 17–25-year contracts, fund plants up front, and build on-site gas.</li>
           <li><strong>Profit goes to the scarce assets.</strong> Turbine and grid-equipment makers (GE Vernova: $176bn backlog) and regulated utilities ($1.3–1.4tn of 2026–30 capex) are the volume winners <a class="cite" href="#src-38">38</a><a class="cite" href="#src-65">65</a><a class="cite" href="#src-66">66</a>. Nuclear-heavy IPPs won in 2024–25 and de-rated in 2026 <a class="cite" href="#src-83">83</a>. SMRs are a 2030s story.</li>
+          <li><strong>Outside the US, every region is short of something different.</strong> Europe lacks grid (connection queues of 7–10 years) and pays ~2× US power prices; the Gulf has cheap gas and sovereign money but now war risk; Canadian provinces ration large loads; Japan's nuclear restarts keep slipping <a class="cite" href="#src-102">102</a><a class="cite" href="#src-103">103</a><a class="cite" href="#src-110">110</a><a class="cite" href="#src-113">113</a><a class="cite" href="#src-120">120</a>.</li>
         </ol>
       </div>
 
@@ -404,11 +405,11 @@
             <div class="rb-row" style="--lo:8.3; --hi:8.5; --k: var(--cat-1)"><span class="rb-label">Non-hyperscaler DC, announce → operate<small>BNEF average</small></span><span class="rb-track"><span class="rb-bar"></span></span><span class="rb-val">8.4 yrs</span></div>
             <div class="rb-row" style="--lo:4; --hi:7; --k: var(--cat-7)"><span class="rb-label">New gas plant</span><span class="rb-track"><span class="rb-bar"></span></span><span class="rb-val">4–7 yrs</span></div>
             <div class="rb-row" style="--lo:7; --hi:10; --k: var(--cat-2)"><span class="rb-label">New high-voltage transmission line</span><span class="rb-track"><span class="rb-bar"></span></span><span class="rb-val">7–10+ yrs</span></div>
-            <div class="rb-row" style="--lo:0; --hi:13; --k: var(--cat-2)"><span class="rb-label">Grid connection in Europe's FLAP-D hubs<small>"up to"</small></span><span class="rb-track"><span class="rb-bar is-open"></span></span><span class="rb-val">up to 13 yrs</span></div>
+            <div class="rb-row" style="--lo:7; --hi:10; --k: var(--cat-2)"><span class="rb-label">Grid connection in Europe's FLAP-D hubs<small>IEA average; Ember: up to 13</small></span><span class="rb-track"><span class="rb-bar"></span></span><span class="rb-val">7–10 yrs</span></div>
             <div class="rb-row" style="--lo:8; --hi:15; --k: var(--cat-7)"><span class="rb-label">Large nuclear plant</span><span class="rb-track"><span class="rb-bar"></span></span><span class="rb-val">8–15 yrs</span></div>
             <div class="rb-axis" aria-hidden="true"><span></span><span class="rb-ticks"><span style="--v:0">0</span><span style="--v:2">2</span><span style="--v:4">4</span><span style="--v:6">6</span><span style="--v:8">8</span><span style="--v:10">10</span><span style="--v:12">12</span><span style="--v:14">14</span><span style="--v:16">16</span></span><span></span></div>
           </div>
-          <figcaption class="chart-foot"><span class="cf-item">Source: W03 dossier §1, §2.4–2.5, §8.6; BNEF [12]; Ember [82]; Wood Mackenzie [85]</span><span class="cf-item">As of 2026-09-25</span><span class="cf-item">Unit: years</span><span class="cf-item"><span class="prov" data-prov="E">E</span></span><span class="cf-item cf-note">Hatched bar = an upper bound only. GPU install time is approximate ("months").</span></figcaption>
+          <figcaption class="chart-foot"><span class="cf-item">Source: W03 dossier §1, §2.4–2.5, §8.6; BNEF [12]; Ember [82]; IEA [102]; Wood Mackenzie [85]</span><span class="cf-item">As of 2026-09-25</span><span class="cf-item">Unit: years</span><span class="cf-item"><span class="prov" data-prov="E">E</span></span><span class="cf-item cf-note">Hatched bar = an upper bound only. GPU install time is approximate ("months").</span></figcaption>
         </figure>
       </section>
 
@@ -562,6 +563,139 @@
 
         <h3>What data centers actually pay for electricity</h3>
         <p>Our estimate <span class="prov" data-prov="A">A</span>: <strong>US 2026</strong> ≈ 244 TWh × an all-in average of $80–95/MWh (a blend of industrial rates near 9.8¢/kWh <a class="cite" href="#src-20">20</a>, commercial near 14.5¢, and wholesale-indexed hyperscale contracts) ≈ <strong>$20–23bn a year</strong>. <strong>Global 2025</strong> ≈ 485 TWh × ~$85–100/MWh ≈ <strong>$41–49bn</strong>. Big-tech capex was over $400bn in 2025 and is forecast to rise ~75% in 2026 <a class="cite" href="#src-6">6</a>, so the annual power bill is only ~5–8% of a single year's AI capex. That asymmetry (section 06) is why buyers pay nearly any price for <em>speed</em>.</p>
+
+        <h3>Outside the US: Europe, the Gulf, Canada and Japan</h3>
+        <p>Each region is short of something different. <strong>Europe</strong> has the demand but not the grid, and its power costs about twice the US price. <strong>The Gulf</strong> has cheap gas and sovereign money, and since March 2026 it also carries war risk. <strong>Canada</strong> has hydro and gas, but every province now rations large loads. <strong>Japan</strong> has demand concentrated in Tokyo and Osaka, and its nuclear restarts keep slipping <a class="cite" href="#src-102">102</a><a class="cite" href="#src-103">103</a><a class="cite" href="#src-110">110</a><a class="cite" href="#src-116">116</a><a class="cite" href="#src-120">120</a>.</p>
+        <p class="table-caption">Data-center power outside the US, 2026 (added on the 25 Sep 2026 re-check)</p>
+        <div class="table-wrap wide">
+          <table class="table--sticky-col table--compact">
+            <thead><tr><th scope="col">Region</th><th scope="col">Data-center load today</th><th scope="col">2030E or latest forecast</th><th scope="col">Power price</th><th scope="col">Key constraint</th><th scope="col">Flagship projects and policy</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">United States <span class="sub">reference</span></th><td>176 TWh (2023) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-1">1</a>; ~50 GW online end-2025 <a class="cite" href="#src-15">15</a></td><td>6.7–12% of US electricity (2028) <a class="cite" href="#src-1">1</a>; BNEF 118 GW (2030) <a class="cite" href="#src-12">12</a></td><td>Wholesale ≈ $48/MWh (2025) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-103">103</a></td><td>Interconnection, turbines, ratepayer politics (section 11)</td><td>See the deal ledger (section 08)</td></tr>
+              <tr><th scope="row">Europe <span class="sub">EU + UK + Nordics</span></th><td>IEA ≈ 62 TWh (2024) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-3">3</a>; Ember 96 TWh (wider definition) <a class="cite" href="#src-82">82</a>; CBRE ~13 GW of capacity by end-2026 (+20%) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-106">106</a></td><td>IEA +45 TWh (+70%) → ≈107 TWh (2030) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-4">4</a>; Ember 236 TWh (2035) <a class="cite" href="#src-82">82</a></td><td>EU wholesale ≈ $95/MWh (2025, +10% y/y; ~2× US) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-103">103</a></td><td>Grid-connection queues averaging <strong>7–10 years</strong> in FLAP-D hubs <a class="cite" href="#src-102">102</a>; AWS cites "up to seven years" <a class="cite" href="#src-108">108</a>; Frankfurt's central grid sees no meaningful upgrade until the 2030s <a class="cite" href="#src-106">106</a></td><td>EU <strong>Cloud and AI Development Act</strong> (proposed 3 Jun 2026): triple EU capacity in 5–7 years <a class="cite" href="#src-104">104</a>; Ireland's CRU policy (12 Dec 2025) <a class="cite" href="#src-105">105</a>; Nordic AI signings 420 MW in Q2-26 vs 89 MW a year earlier; 63% of new capacity now outside FLAP-D <a class="cite" href="#src-106">106</a>; Dutch hyperscale sites confined to two zones <a class="cite" href="#src-107">107</a></td></tr>
+              <tr><th scope="row">Gulf <span class="sub">UAE, Saudi Arabia, Qatar</span></th><td>Saudi Arabia 467 MW (Q1-26; 68 MW in 2021) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-111">111</a>; Stargate UAE's first 200 MW due in 2026 <a class="cite" href="#src-109">109</a></td><td>Stargate UAE 1 GW within the 5 GW UAE–US AI Campus <a class="cite" href="#src-109">109</a>; Humain 1.9 GW by 2030, &gt;6 GW by 2034 <span class="prov" data-prov="G">G</span><a class="cite" href="#src-111">111</a></td><td>~$40–70/MWh (gas + solar industrial tariffs) <span class="tag">conf: med</span></td><td>US chip-export licences and now <strong>physical security</strong>: Iranian drones hit two AWS data centers in the UAE in Mar 2026; the UAE is spreading the 5 GW campus across several hardened sites (Reuters, 11 Sep 2026) <a class="cite" href="#src-110">110</a><a class="cite" href="#src-111">111</a></td><td>Stargate UAE (G42/Khazna, OpenAI, Oracle, NVIDIA, Cisco, SoftBank) <a class="cite" href="#src-109">109</a>; Humain, with up to $42bn of project capital by 2030 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-111">111</a>; Brookfield–Qai $20bn JV in Qatar (9 Dec 2025) <a class="cite" href="#src-112">112</a></td></tr>
+              <tr><th scope="row">Canada</th><td>Alberta ~449 MW drawing power <span class="tag">conf: med</span><a class="cite" href="#src-116">116</a>; &gt;20.6 GW requested vs a ~13 GW provincial peak <a class="cite" href="#src-114">114</a></td><td>Alberta 1.2 GW interim (fully assigned) + a proposed 1.6 GW "bridging" pool <a class="cite" href="#src-113">113</a><a class="cite" href="#src-116">116</a>; BC cap of 400 MW over two years <a class="cite" href="#src-116">116</a></td><td>Québec proposed DC rate ~13¢/kWh CAD ≈ $95/MWh <span class="prov" data-prov="A">A</span><a class="cite" href="#src-115">115</a></td><td>Rationing: bring-your-own gas in Alberta (Data Centre Regulation AR 117/2026, in force 9 Jun 2026) <a class="cite" href="#src-113">113</a><a class="cite" href="#src-114">114</a>; Québec authorization for ≥5 MW; Ontario's Bill 40 lets the province refuse large loads <a class="cite" href="#src-116">116</a></td><td><strong>Meta C$13bn</strong> in Sturgeon County, Alberta, with the 932 MW, C$4.6bn Greenlight gas plant (Jul 2026) <a class="cite" href="#src-114">114</a>; Darlington BWRX-300 SMR <span class="tag">conf: med</span></td></tr>
+              <tr><th scope="row">Japan</th><td>~19 TWh (2024) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-118">118</a></td><td>IEA ≈ 34 TWh (2030) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-4">4</a>; OCCTO ~6.6 GW / ~49 TWh by FY2035 <a class="cite" href="#src-117">117</a>; WoodMac 57–66 TWh by 2034 <a class="cite" href="#src-118">118</a></td><td>Wholesale ≈ $76/MWh (2025) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-103">103</a></td><td>Land and grid in Tokyo and Osaka; only 15 of 33 operable reactors running, Tomari-3 slipped to 2028, BNEF expects just 9 more restarts by 2040 <a class="cite" href="#src-120">120</a></td><td><strong>Kashiwazaki-Kariwa 6</strong> (1,356 MW) back in commercial operation 16 Apr 2026 <a class="cite" href="#src-119">119</a>; SoftBank Tomakomai 50 MW → 300 MW+ <a class="cite" href="#src-121">121</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="w03-pair wide">
+          <figure>
+            <script type="application/json" data-chart>
+{
+ "type": "bar",
+ "horizontal": true,
+ "title": "Power for data centers costs about twice as much in Europe as in the US",
+ "subtitle": "USD per MWh, 2025–26: wholesale (Europe, Japan, US), proposed data-center tariff (Québec), industrial tariffs (Gulf)",
+ "valueFormat": {
+  "prefix": "$",
+  "decimals": 0
+ },
+ "unit": "USD/MWh",
+ "xKey": "r",
+ "series": [
+  {
+   "key": "v",
+   "label": "USD/MWh"
+  }
+ ],
+ "data": [
+  {
+   "r": "Europe",
+   "v": 95,
+   "note": "Europe (EU wholesale, 2025): ~$95/MWh, +10% y/y; ~2× the US (IEA) [E]"
+  },
+  {
+   "r": "Québec DC rate",
+   "v": 95,
+   "note": "Québec (proposed DC rate): ~13¢/kWh CAD × 0.73 ≈ $95/MWh; about double the large-power rate [A]"
+  },
+  {
+   "r": "Japan",
+   "v": 76,
+   "note": "Japan (wholesale, 2025): EU ≈ $95 ÷ 1.25 (IEA relative statement) [A]"
+  },
+  {
+   "r": "Gulf",
+   "v": 55,
+   "note": "Gulf (industrial tariffs): Range ~$40–70; older knowledge, conf: med"
+  },
+  {
+   "r": "United States",
+   "v": 48,
+   "note": "United States (wholesale, 2025): EU ≈ $95 ÷ ~2 (IEA) [A]"
+  }
+ ],
+ "source": "IEA Electricity 2026 [103]; The Logic [115]; dossier §3.5",
+ "asOf": "2026-09-25",
+ "provenance": [
+  "E",
+  "A"
+ ],
+ "note": "Different price bases (wholesale vs tariff); treat as orders of magnitude. US and Japan are derived from IEA's relative statements; the Gulf bar is the midpoint of a $40–70 range (conf: med)."
+}
+</script>
+          </figure>
+          <figure>
+            <script type="application/json" data-chart>
+{
+ "type": "bar",
+ "title": "Japan's data-center demand could double by 2030 and triple by the mid-2030s",
+ "subtitle": "Japan data-center electricity, TWh a year: actual and forecasts",
+ "valueFormat": {
+  "suffix": " TWh",
+  "decimals": 0
+ },
+ "unit": "TWh",
+ "xKey": "f",
+ "series": [
+  {
+   "key": "v",
+   "label": "TWh"
+  }
+ ],
+ "data": [
+  {
+   "f": "2024 actual",
+   "v": 19,
+   "note": "Wood Mackenzie [E]"
+  },
+  {
+   "f": "IEA 2030",
+   "v": 34,
+   "note": "+15 TWh (+80%) on ~19 TWh [A]"
+  },
+  {
+   "f": "OCCTO 2035",
+   "v": 49,
+   "note": "~6.6 GW peak by FY2035 (Jan 2026)"
+  },
+  {
+   "f": "WoodMac 2034 low",
+   "v": 57
+  },
+  {
+   "f": "WoodMac 2034 high",
+   "v": 66
+  }
+ ],
+ "source": "IEA [4]; OCCTO via Shulman Advisory [117]; Wood Mackenzie [118]",
+ "asOf": "2026-09-25",
+ "provenance": [
+  "E",
+  "A"
+ ],
+ "labels": true
+}
+</script>
+          </figure>
+        </div>
+        <ul>
+          <li><strong>Europe's problem is wires, not demand.</strong> Queues of 7–10 years and power at ~2× US levels push AI training to the Nordics and new hubs. Ireland shows the end state: new data centers must bring dispatchable generation or storage equal to 100% of their maximum import capacity and match ≥80% of annual demand with new Irish renewables within six years; the CRU sees Irish DC demand rising from 9.4 TWh (2025) to 14.6 TWh (2034) <a class="cite" href="#src-105">105</a>.</li>
+          <li><strong>The Gulf's pitch now carries a war-risk premium.</strong> Hardened, dispersed campuses cost more and take longer than the single site first planned; treat the 5 GW UAE figure as an aspiration <span class="tag">conf: med on timing</span>.</li>
+          <li><strong>Canada's cheap power comes with conditions.</strong> Every province rations large loads: a cap (BC), a tariff (Québec), a legal veto (Ontario) or bring-your-own gas (Alberta). Only Alberta offers GW scale, and only with gas plants attached.</li>
+          <li><strong>Japan ties data centers to nuclear.</strong> Restarts such as KK-6 and Tomari-3 are what make Hokkaido and Niigata siting work; each setback pushes load back onto LNG.</li>
+        </ul>
       </section>
 
       <!-- =========================================================== 04 -->
@@ -745,11 +879,11 @@
               <tr><th scope="row">OpenAI → Georgia Power</th><td>3.2 GW service</td><td>25-yr tariff (value n/d)</td><td>from 2028</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-56">56</a></td></tr>
               <tr><th scope="row">Hyperscalers → Constellation (Crane + Clinton)</th><td>Nuclear PPAs</td><td data-sort="1.75">≈$1.5–2.0bn/yr <span class="tag">conf: low</span></td><td>from 2027</td><td><span class="prov" data-prov="A">A</span></td></tr>
               <tr><th scope="row">Hyperscalers / utilities → GE Vernova</th><td>Turbines, grid, services</td><td data-sort="5">DC orders &gt;$5bn</td><td>H1-26</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-38">38</a></td></tr>
-              <tr><th scope="row">Oracle, AEP, Equinix, Brookfield → Bloom</th><td>Fuel cells</td><td data-sort="4.05">$3.9–4.2bn FY26 revenue guide</td><td>2026</td><td><span class="prov" data-prov="G">G</span> <a class="cite" href="#src-71">71</a></td></tr>
+              <tr><th scope="row">Oracle, AEP, Equinix, Brookfield → Bloom</th><td>Fuel cells (Brookfield partnership raised to $25bn, Jun 2026)</td><td data-sort="4.05">$3.9–4.2bn FY26 revenue guide</td><td>2026</td><td><span class="prov" data-prov="G">G</span> <a class="cite" href="#src-71">71</a></td></tr>
               <tr><th scope="row">US Treasury (DOE) → Southern</th><td>Low-cost loans</td><td data-sort="26.5">$26.5bn</td><td>from Feb 2026</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-57">57</a></td></tr>
               <tr><th scope="row">DOE → Constellation</th><td>Crane restart loan</td><td data-sort="1">$1bn</td><td>Nov 2025</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-48">48</a></td></tr>
-              <tr><th scope="row">DOE → AEP</th><td>Transmission loan guarantee</td><td data-sort="3.3">$3.3bn</td><td>2026</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-55">55</a></td></tr>
-              <tr><th scope="row">NextEra → Dominion shareholders</th><td>Merger</td><td data-sort="67">~$67bn (stock) + $2.25bn bill credits</td><td>close 2027</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-59">59</a><a class="cite" href="#src-88">88</a> <span class="tag">unverified</span></td></tr>
+              <tr><th scope="row">DOE → AEP</th><td>Transmission loan guarantee (AEP cites $5bn of DOE loans in total)</td><td data-sort="3.3">$3.3bn</td><td>2026</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-55">55</a></td></tr>
+              <tr><th scope="row">NextEra → Dominion shareholders</th><td>Merger</td><td data-sort="67">~$67bn (stock) + $2.25bn bill credits</td><td>close 2027</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-59">59</a><a class="cite" href="#src-88">88</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -835,14 +969,14 @@
             "valueFormat": { "prefix": "$", "decimals": 0 }, "unit": "USD per kW",
             "xKey": "b", "series": [{ "key": "v", "label": "Existing plant sold", "color": 1 }, { "key": "n", "label": "New build", "color": 2 }],
             "data": [
-              { "b": "NRG buys LS Power portfolio (May 2025)", "v": 920, "note": "~13 GW, ~$12bn incl. VPP (older knowledge)" },
+              { "b": "NRG buys LS Power portfolio (closed Jan 2026)", "v": 920, "note": "~13 GW, ~$12bn incl. VPP; announced May 2025, closed 30 Jan 2026 [122]" },
               { "b": "Constellation buys Calpine (Jan 2026)", "v": 1000, "note": "~27 GW, $26.6bn EV [A]" },
-              { "b": "Talen buys Freedom + Guernsey (2025)", "v": 1200, "note": "~2.9 GW, ~$3.5bn (older knowledge, conf: med)" },
+              { "b": "Talen buys Freedom + Guernsey (Nov 2025)", "v": 1200, "note": "~2.9 GW, ~$3.5bn; closed 25 Nov 2025 [123]" },
               { "b": "Constellation sells Brazos Valley (Q2-26)", "v": 1420, "note": "606 MW for $860m to LS Power [R]" },
               { "b": "New-build CCGT, full plant (low)", "n": 2000, "note": "Industry commentary (conf: med)" },
               { "b": "New-build CCGT, full plant (high)", "n": 2800, "note": "Industry commentary (conf: med)" }
             ],
-            "source": "Constellation [43][44]; POWER [45]; Wikipedia [86]; dossier §6.2", "asOf": "2026-09-25", "provenance": ["R", "E", "A"],
+            "source": "Constellation [43][44]; POWER [45]; Wikipedia [86]; NRG [122]; Talen [123]; dossier §6.2", "asOf": "2026-09-25", "provenance": ["R", "E", "A"],
             "note": "Turbine equipment alone: ~$950/kW HA-class CC, ~$790 heavy-duty, ~$1,800 aeroderivative (GE Vernova, conf: med) [39]." }
           </script>
         </figure>
@@ -916,11 +1050,11 @@
               <tr><th scope="row">Mitsubishi Heavy</th><td>Turbine OEM</td><td>—</td><td>Historically #1 in large gas turbines; expanding capacity <span class="tag">conf: med</span></td><td>—</td><td data-sort="-1">—</td></tr>
               <tr><th scope="row">Constellation <span class="sub ticker">CEG</span></th><td>IPP: nuclear + gas (Calpine)</td><td>Q2-26 (Aug 5)</td><td>Crane for Microsoft (835 MW, 2027); Clinton for Meta (1,121 MW); 920 MW of new PPAs in Q2 <a class="cite" href="#src-43">43</a><a class="cite" href="#src-44">44</a></td><td>FY26 EPS guide $11.50–12.50 <a class="cite" href="#src-43">43</a></td><td data-sort="92.69">92.7</td></tr>
               <tr><th scope="row">Bloom Energy <span class="sub ticker">BE</span></th><td>Fuel cells (on-site)</td><td>Q2-26</td><td>Oracle 2.8 GW; AEP 1 GW; backlog ~$20bn <a class="cite" href="#src-71">71</a></td><td>TTM revenue $3.11bn; FY26 guide $3.9–4.2bn <a class="cite" href="#src-71">71</a><a class="cite" href="#src-83">83</a></td><td data-sort="78.54">78.5</td></tr>
-              <tr><th scope="row">Vistra <span class="sub ticker">VST</span></th><td>IPP: nuclear, gas, retail</td><td>Q2-26 (Aug 7)</td><td>Meta PPAs 2.1–2.6 GW; AWS–Comanche Peak up to 1.2 GW <a class="cite" href="#src-50">50</a><a class="cite" href="#src-51">51</a></td><td>Q2 adj. EBITDA $1.77bn (+30%); FY26 $6.8–7.6bn <a class="cite" href="#src-52">52</a></td><td data-sort="46.3">46.3</td></tr>
+              <tr><th scope="row">Vistra <span class="sub ticker">VST</span></th><td>IPP: nuclear, gas, retail</td><td>Q2-26 (Aug 7)</td><td>Meta PPAs 2,609 MW (2,176 existing + 433 uprates); AWS–Comanche Peak up to 1.2 GW <a class="cite" href="#src-97">97</a><a class="cite" href="#src-51">51</a></td><td>Q2 adj. EBITDA $1.77bn (+30%); FY26 $6.8–7.6bn <a class="cite" href="#src-52">52</a></td><td data-sort="46.3">46.3</td></tr>
               <tr><th scope="row">Talen <span class="sub ticker">TLN</span></th><td>IPP: nuclear + gas</td><td>—</td><td>Amazon 1.92 GW by 2032, $18bn <a class="cite" href="#src-49">49</a></td><td>TTM revenue $3.74bn (+76%) <a class="cite" href="#src-83">83</a></td><td data-sort="14.37">14.4</td></tr>
               <tr><th scope="row">Oklo <span class="sub ticker">OKLO</span></th><td>Advanced fission (pre-revenue)</td><td>Q2-26 (Aug 7)</td><td>Meta 1.2 GW (Ohio); INL Aurora 75 MWe target 2028 <a class="cite" href="#src-77">77</a></td><td>Liquidity $3.0bn <a class="cite" href="#src-77">77</a></td><td data-sort="7.12">7.1</td></tr>
-              <tr><th scope="row">NRG</th><td>IPP + retail</td><td>—</td><td>Bought LS Power gas (13 GW, ~$12bn; 2025) <span class="tag">conf: med</span></td><td>—</td><td data-sort="-1">—</td></tr>
-              <tr><th scope="row">NextEra <span class="sub ticker">NEE</span></th><td>Utility (FPL) + renewables developer</td><td>Q2-26 (Jul 24)</td><td>Backlog 35.1 GW; FPL 21 GW large-load interest, 12 GW advanced <a class="cite" href="#src-60">60</a></td><td>Buying Dominion (~$67bn) <a class="cite" href="#src-59">59</a> <span class="tag">unverified</span></td><td data-sort="-1">—</td></tr>
+              <tr><th scope="row">NRG</th><td>IPP + retail</td><td>—</td><td>Bought LS Power's 13 GW gas fleet (18 plants) + CPower VPP, ~$12bn; closed 30 Jan 2026 <a class="cite" href="#src-122">122</a></td><td>—</td><td data-sort="-1">—</td></tr>
+              <tr><th scope="row">NextEra <span class="sub ticker">NEE</span></th><td>Utility (FPL) + renewables developer</td><td>Q2-26 (Jul 24)</td><td>Backlog 35.1 GW; FPL 21 GW large-load interest, 12 GW advanced <a class="cite" href="#src-60">60</a></td><td>Buying Dominion (~$67bn, all-stock) <a class="cite" href="#src-59">59</a></td><td data-sort="-1">—</td></tr>
               <tr><th scope="row">Dominion <span class="sub ticker">D</span></th><td>Regulated utility (VA)</td><td>Q2-26</td><td>53.8 GW contracted DC load (Jul-26) <a class="cite" href="#src-58">58</a></td><td>Being acquired by NEE</td><td data-sort="-1">—</td></tr>
               <tr><th scope="row">AEP</th><td>Regulated utility (OH, TX…)</td><td>Q2-26 (Jul 30)</td><td>69 GW contracted load to 2030 (TX 45, OH 12, other 12) <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a></td><td>Capex $78bn 2026–30, to be raised <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a></td><td data-sort="-1">—</td></tr>
               <tr><th scope="row">Southern <span class="sub ticker">SO</span></th><td>Regulated utility (GA, AL)</td><td>Q2-26 (Jul 30)</td><td>17 GW contracted large load; OpenAI 3.2 GW <a class="cite" href="#src-56">56</a></td><td>Capex $81bn; DOE loan $26.5bn <a class="cite" href="#src-56">56</a><a class="cite" href="#src-57">57</a></td><td data-sort="-1">—</td></tr>
@@ -950,7 +1084,7 @@
           </article>
           <article class="company-card">
             <header><h3>Siemens Energy</h3><span class="ticker">ENR</span><span class="chip role"><span class="chip-id">W03</span> Turbines · grid</span></header>
-            <p>The second of the gas oligopoly. Q3 FY26 orders €17.9bn (record), revenue €11.4bn (+18.5% comparable), profit before special items €1.62bn (vs €0.50bn), pre-tax FCF €2.3bn <a class="cite" href="#src-41">41</a>. A reported rebrand to "Omterra" (Jul 2026) is unverified <span class="tag">conf: low</span>.</p>
+            <p>The second of the gas oligopoly. Q3 FY26 orders €17.9bn (record), revenue €11.4bn (+18.5% comparable), profit before special items €1.62bn (vs €0.50bn), pre-tax FCF €2.3bn <a class="cite" href="#src-41">41</a>. In July 2026 it announced that Siemens Energy and Siemens Gamesa will be united under a new name, <strong>"Omterra"</strong>, phased in from later in 2026 (confirmed on the 25 Sep 2026 re-check) <a class="cite" href="#src-41">41</a>.</p>
             <dl class="metrics">
               <div><dt>Backlog</dt><dd>€162bn</dd></div>
               <div><dt>Book-to-bill</dt><dd>1.57</dd></div>
@@ -961,7 +1095,7 @@
           </article>
           <article class="company-card">
             <header><h3>Bloom Energy</h3><span class="ticker">BE</span><span class="chip role"><span class="chip-id">W03</span> On-site fuel cells</span></header>
-            <p>Solid-oxide fuel cells on natural gas, deployable in months. Oracle's 2.8 GW (Apr 2026) includes "Project Jupiter", a 2.45 GW New Mexico campus powered entirely by Bloom <a class="cite" href="#src-71">71</a>. Risk flag: a reported Oracle force-majeure notice to the developer, Blue Owl, and pending class actions <a class="cite" href="#src-83">83</a> <span class="tag">conf: med</span>.</p>
+            <p>Solid-oxide fuel cells on natural gas, deployable in months. Oracle's 2.8 GW (Apr 2026) includes "Project Jupiter", a 2.45 GW New Mexico campus powered entirely by Bloom <a class="cite" href="#src-71">71</a>. The Brookfield partnership ($5bn, Oct 2025) was expanded fivefold to <strong>$25bn</strong> on 30 Jun 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-99">99</a>. Risk flag: on <strong>24 Sep 2026 Oracle sent a force-majeure notice</strong> to Blue Owl, the Jupiter developer, because the gas pipeline slipped to 1 Feb 2027 and Bloom's air permit is still pending; Oracle says the project remains on schedule <span class="prov" data-prov="R">R</span><a class="cite" href="#src-95">95</a>. Securities class actions are pending <a class="cite" href="#src-83">83</a>.</p>
             <dl class="metrics">
               <div><dt>Q2-26 revenue</dt><dd>$1.07bn <small>+165%</small></dd></div>
               <div><dt>FY26 guide</dt><dd>$3.9–4.2bn</dd></div>
@@ -987,7 +1121,7 @@
           </article>
           <article class="company-card">
             <header><h3>Vistra</h3><span class="ticker">VST</span><span class="chip role"><span class="chip-id">W03</span> Texas gas + PJM nuclear</span></header>
-            <p>Meta 20-year PPAs for 2.1+ GW <a class="cite" href="#src-50">50</a> (2.6 GW per <a class="cite" href="#src-51">51</a>, likely uprates) from Perry, Davis-Besse and Beaver Valley; AWS–Comanche Peak up to 1.2 GW. Bought Cogentrix (5.5 GW gas); up to $1.0–1.5bn as founding investor in Helix, a "rack-to-grid" platform with KKR, NVIDIA and the Kuwait Investment Authority <a class="cite" href="#src-51">51</a><a class="cite" href="#src-52">52</a>. ERCOT at ~$30/MWh caps merchant upside <a class="cite" href="#src-53">53</a>.</p>
+            <p>Meta 20-year PPAs for <strong>2,609 MW</strong> (2,176 MW of existing output plus 433 MW of uprates) from Perry, Davis-Besse and Beaver Valley <a class="cite" href="#src-97">97</a>; the "2.1 GW" in press <a class="cite" href="#src-50">50</a> is the existing-output piece; AWS–Comanche Peak up to 1.2 GW. Bought Cogentrix (5.5 GW gas); up to $1.0–1.5bn as founding investor in Helix, a "rack-to-grid" platform with KKR, NVIDIA and the Kuwait Investment Authority <a class="cite" href="#src-51">51</a><a class="cite" href="#src-52">52</a>. ERCOT at ~$30/MWh caps merchant upside <a class="cite" href="#src-53">53</a>.</p>
             <dl class="metrics">
               <div><dt>Q2 adj. EBITDA</dt><dd>$1.767bn <small>+30%</small></dd></div>
               <div><dt>FY26 guide</dt><dd>$6.8–7.6bn</dd></div>
@@ -1008,7 +1142,7 @@
             <footer><span class="prov" data-prov="R">R</span> 2025–26 · as of 2026-09-24</footer>
           </article>
         </div>
-        <p class="note">Talen implied price <span class="prov" data-prov="A">A</span>: up to $1.4bn/yr ÷ (1,920 MW × 8,760 h × ~95% capacity factor ≈ 16.0 TWh) ≈ ~$88/MWh; ≈$83 at 100%. Talen also bought Caithness's Freedom (~1.0 GW) and Guernsey (~1.8 GW) CCGTs for ~$3.5bn in 2025 (~$1,200/kW) <span class="tag">conf: med</span>.</p>
+        <p class="note">Talen implied price <span class="prov" data-prov="A">A</span>: up to $1.4bn/yr ÷ (1,920 MW × 8,760 h × ~95% capacity factor ≈ 16.0 TWh) ≈ ~$88/MWh; ≈$83 at 100%. Talen also bought the Freedom (PA) and Guernsey (OH) CCGTs (~2.9 GW) for ~$3.5bn, closed 25 Nov 2025 and financed with $2.7bn of notes and a $1.2bn term loan (~$1,200/kW <span class="prov" data-prov="A">A</span>) <a class="cite" href="#src-123">123</a>.</p>
 
         <h3>Regulated utilities: volume without merchant risk</h3>
         <p>Utilities' "contracted" data-center load is enormous, but definitions differ (firm electric service agreements, construction letters, substation engineering, "interest"). Read the chart as orders of magnitude.</p>
@@ -1038,7 +1172,7 @@
             <tbody>
               <tr><th scope="row">Duke</th><td>103</td><td>2026–30</td><td>7.8 GW ESAs with Microsoft, Amazon, Digital Realty; 26 GE Vernova turbines for ~15 GW by 2031; $5–10bn upside <a class="cite" href="#src-62">62</a></td></tr>
               <tr><th scope="row">Southern</th><td>81</td><td>2026–30</td><td>OpenAI: 3.2 GW near Savannah, 25 yrs from 2028, 1 GW flexible; DC usage +55% y/y; largest DOE loan ever, $26.5bn for ~5 GW gas, ~6 GW nuclear uprates, 1,300+ mi of lines (saves ~$300m/yr interest) <a class="cite" href="#src-56">56</a><a class="cite" href="#src-57">57</a></td></tr>
-              <tr><th scope="row">AEP</th><td>78</td><td>2026–30</td><td>13 GW of turbines secured to 2031 (+10 GW options to 2035) with GE Vernova and Mitsubishi; $3.3bn DOE guarantee for 2,800 mi of 765 kV lines; Ohio ROE 9.84%; FY26 EPS guide $6.25–6.55 <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a></td></tr>
+              <tr><th scope="row">AEP</th><td>78</td><td>2026–30</td><td>13 GW of turbines secured to 2031 (+10 GW options to 2035) with GE Vernova and Mitsubishi; $3.3bn DOE guarantee for 2,800 mi of 765 kV lines (AEP's Q2 release cites $5bn of DOE loans in total); Ohio ROE 9.84%; FY26 EPS guide $6.25–6.55 <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a></td></tr>
               <tr><th scope="row">Xcel</th><td>70</td><td>through 2030</td><td>Rate base $56bn → $94bn (11% CAGR, 13%+ with upside); 1,700 mi of lines; large-load tariffs pending in 4 states <a class="cite" href="#src-63">63</a></td></tr>
               <tr><th scope="row">Entergy</th><td>57</td><td>2026–29</td><td>+30%, incl. $27bn generation; Meta Hyperion 7 CCGTs (5.2+ GW, up from 3 plants / ~2.3 GW), $15bn capex, $2bn customer benefits; $9bn transmission <a class="cite" href="#src-61">61</a></td></tr>
               <tr><th scope="row">Dominion</th><td data-sort="-1">—</td><td>—</td><td>53.8 GW contracted (+5.3 GW since Dec 2025); VA GS-5 class: 14-yr minimum contracts <a class="cite" href="#src-36">36</a><a class="cite" href="#src-58">58</a></td></tr>
@@ -1047,15 +1181,15 @@
           </table>
         </div>
         <aside class="callout callout--note">
-          <p class="callout-label">Low confidence: NextEra–Dominion</p>
-          <p>NextEra agreed to buy Dominion in an all-stock deal (~$67bn, announced 18 May 2026): 0.8138 NEE shares per D share plus ~$360m cash (~$76/share); NEE 74.5% / D 25.5%; $2.25bn of bill credits (~$562 per customer in VA/NC/SC); close expected mid-to-late 2027 <a class="cite" href="#src-59">59</a><a class="cite" href="#src-88">88</a>. The logic: NextEra's development machine and balance sheet plus Dominion's position in the world's largest data-center market. <strong>This could not be verified in the fact-check pass; treat it as an extraordinary claim to re-confirm against both companies' 8-Ks.</strong></p>
+          <p class="callout-label">Confirmed: NextEra–Dominion</p>
+          <p>NextEra agreed to buy Dominion in an all-stock deal (~$67bn, announced 18 May 2026): 0.8138 NEE shares per D share plus ~$360m cash (~$76/share); NEE 74.5% / D 25.5%; $2.25bn of bill credits (~$562 per customer in VA/NC/SC); close expected mid-to-late 2027 <a class="cite" href="#src-59">59</a><a class="cite" href="#src-88">88</a>. The logic: NextEra's development machine and balance sheet plus Dominion's position in the world's largest data-center market. <strong>Confirmed on the 25 Sep 2026 re-check</strong> against NextEra's release: close is subject to FERC, NRC and Virginia, North Carolina and South Carolina approvals. The ~$67bn ($66.8bn) value is the press figure <a class="cite" href="#src-58">58</a>; the release itself gives no total.</p>
         </aside>
 
         <h3>On-site and behind-the-meter specialists</h3>
         <ul>
           <li><strong>xAI Colossus (Memphis):</strong> the archetype of "build first, permit later". ~35 mobile gas turbines (~422 MW nameplate) by April 2025, 168 Tesla Megapacks, then a 150 MW+ grid connection via MLGW/TVA. The EPA tightened rules in Jan 2026 so large "temporary" turbines need permits <a class="cite" href="#src-68">68</a> <span class="tag">conf: med on counts</span>.</li>
           <li><strong>Crusoe / OpenAI Stargate Abilene:</strong> ~1.2 GW served by an ERCOT connection plus on-site gas turbines and batteries <span class="tag">conf: med</span>. Stargate reached "nearly 7 GW" of planned sites by Sep 2025 toward a 10 GW / $500bn goal <a class="cite" href="#src-69">69</a><a class="cite" href="#src-89">89</a>.</li>
-          <li><strong>Oil, gas and midstream "power-as-a-service":</strong> Chevron + Engine No.1 + GE Vernova (up to 4 GW of on-site gas), Williams' ~$1.6bn "Socrates" project for Meta in Ohio, ExxonMobil's 1.5 GW proposal <span class="tag">conf: med</span>.</li>
+          <li><strong>Oil, gas and midstream "power-as-a-service":</strong> Chevron + Engine No.1 + GE Vernova (up to 4 GW of on-site gas), Williams' "Socrates" project for Meta in New Albany, Ohio (400 MW across two 200 MW sites, targeting service in Q3 and Q4 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-101">101</a>; the ~$1.6bn cost is older knowledge), ExxonMobil's 1.5 GW proposal <span class="tag">conf: med</span>.</li>
         </ul>
         <figure class="wide">
           <script type="application/json" data-chart>
@@ -1067,7 +1201,7 @@
               { "c": "Hyperion (Meta, LA)", "gw": 5.0, "note": "Entergy 7 CCGTs (5.2+ GW) + renewables" },
               { "c": "Homer City (PA)", "gw": 4.4, "note": "On-site gas at an ex-coal site" },
               { "c": "Savannah (OpenAI, GA)", "gw": 3.2, "note": "Georgia Power tariff, 1 GW flexible" },
-              { "c": "Project Jupiter (Oracle/OpenAI, NM)", "gw": 2.45, "note": "Bloom fuel cells; 2.2–2.5 GW depending on basis" },
+              { "c": "Project Jupiter (Oracle/OpenAI, NM)", "gw": 2.45, "note": "Bloom fuel cells; 2.2–2.5 GW depending on basis; force-majeure notice 24 Sep 2026 [95]" },
               { "c": "Project Rainier (Amazon/Anthropic, IN)", "gw": 2.2, "note": "Grid (NIPSCO)" },
               { "c": "Pecos (Microsoft, TX)", "gw": 2.0, "note": "Self-funded energy infrastructure" },
               { "c": "Stargate Abilene (TX)", "gw": 1.2, "note": "Grid + on-site gas + batteries" },
@@ -1099,8 +1233,8 @@
             "data": [
               { "d": "Meta · Entergy Hyperion", "gas": 5.2, "note": "7 CCGTs; 2028–32; $15bn capex via tariff" },
               { "d": "OpenAI · Georgia Power", "tariff": 3.2, "note": "25 yrs from 2028; 1 GW flexible" },
-              { "d": "Oracle · Bloom", "fc": 2.8, "note": "2026–28; force-majeure notice reported" },
-              { "d": "Meta · Vistra (3 plants)", "nuc": 2.1, "note": "2.1–2.6 GW, 20 yrs, 'above-market'" },
+              { "d": "Oracle · Bloom", "fc": 2.8, "note": "2026–28; Jupiter force-majeure notice 24 Sep 2026 (gas pipeline delay)" },
+              { "d": "Meta · Vistra (3 plants)", "nuc": 2.609, "note": "2,176 MW existing + 433 MW uprates; 20 yrs, 'above-market'" },
               { "d": "Microsoft · Pecos self-funded", "tariff": 2.0, "note": "Announced Jun 22, 2026" },
               { "d": "Amazon · Talen Susquehanna", "nuc": 1.92, "note": "17 yrs to 2042; $18bn; ~$83–88/MWh [A]" },
               { "d": "Amazon · Vistra Comanche Peak", "nuc": 1.2, "note": "Up to 1.2 GW, 20 yrs" },
@@ -1108,12 +1242,12 @@
               { "d": "Meta · Constellation Clinton", "nuc": 1.121, "note": "20 yrs from Jun 2027, +30 MW uprate" },
               { "d": "Microsoft · Crane (TMI-1)", "nuc": 0.835, "note": "Restart, 20 yrs; target 2027 (grid delay risk to 2031)" },
               { "d": "Meta · TerraPower Natrium", "smr": 0.69, "note": "2 × 345 MW ≥2032, rights to 6 more (2.1 GW)" },
-              { "d": "Google · Duane Arnold restart", "nuc": 0.615, "note": "~2029 (older knowledge, conf: med)" },
+              { "d": "Google · Duane Arnold restart", "nuc": 0.615, "note": "25-yr PPA; restart by early 2029 or Q4 2028 [100]" },
               { "d": "Amazon · X-energy Cascade", "smr": 0.32, "note": "320 → 960 MW; up to 5 GW by 2039" },
               { "d": "Google · Kairos Hermes 2", "smr": 0.05, "note": "50 MW of a 500 MW program; 2030" }
             ],
             "height": 520,
-            "source": "Utility Dive [31][50][56][61]; Constellation [46][47]; POWER [49]; 24/7 Wall St. [51]; Bloom [71]; X-energy [78]; Kairos [79]", "asOf": "2026-09-25", "provenance": ["R", "E"] }
+            "source": "Utility Dive [31][50][56][61][100]; Constellation [46][47]; POWER [49]; Vistra [97]; 24/7 Wall St. [51]; Bloom [71]; X-energy [78]; Kairos [79]", "asOf": "2026-09-25", "provenance": ["R", "E"] }
           </script>
         </figure>
         <div class="table-wrap wide">
@@ -1124,17 +1258,17 @@
               <tr><th scope="row">Meta</th><td>Constellation – Clinton <a class="cite" href="#src-46">46</a></td><td>Existing nuclear</td><td data-sort="1151">1,121 + 30 uprate</td><td>20 yr from Jun 2027</td><td>Undisclosed</td></tr>
               <tr><th scope="row">Amazon</th><td>Talen – Susquehanna <a class="cite" href="#src-49">49</a></td><td>Existing nuclear</td><td data-sort="1920">1,920 by 2032</td><td>17 yr to 2042</td><td><strong>$18bn</strong> total; ~$83–88/MWh <span class="prov" data-prov="A">A</span></td></tr>
               <tr><th scope="row">Amazon</th><td>Vistra – Comanche Peak <a class="cite" href="#src-51">51</a></td><td>Existing nuclear</td><td data-sort="1200">up to 1,200</td><td>20 yr</td><td>Undisclosed</td></tr>
-              <tr><th scope="row">Meta</th><td>Vistra – Perry, Davis-Besse, Beaver Valley <a class="cite" href="#src-50">50</a><a class="cite" href="#src-51">51</a><a class="cite" href="#src-52">52</a></td><td>Existing nuclear + uprates</td><td data-sort="2100">2,100–2,600</td><td>20 yr</td><td>"Above-market"</td></tr>
+              <tr><th scope="row">Meta</th><td>Vistra – Perry, Davis-Besse, Beaver Valley <a class="cite" href="#src-97">97</a><a class="cite" href="#src-50">50</a><a class="cite" href="#src-52">52</a></td><td>Existing nuclear + uprates</td><td data-sort="2609">2,609 (2,176 existing + 433 uprates)</td><td>20 yr; deliveries from late 2026, full by 2034</td><td>"Above-market"</td></tr>
               <tr><th scope="row">Meta</th><td>Oklo – Pike County, OH <a class="cite" href="#src-50">50</a></td><td>Advanced fission</td><td data-sort="1200">up to 1,200</td><td>~2030 → 2034</td><td>Prepayment (n/d)</td></tr>
               <tr><th scope="row">Meta</th><td>TerraPower – Natrium <a class="cite" href="#src-50">50</a></td><td>Sodium fast reactor</td><td data-sort="690">2 × 345 + rights to 6 more</td><td>≥2032, to 2035</td><td>Undisclosed</td></tr>
               <tr><th scope="row">Google</th><td>Kairos – Hermes 2 → TVA <a class="cite" href="#src-79">79</a></td><td>Molten-salt SMR</td><td>50</td><td>2030</td><td>Undisclosed</td></tr>
               <tr><th scope="row">Amazon</th><td>X-energy / Energy Northwest – Cascade <a class="cite" href="#src-78">78</a></td><td>HTGR SMR</td><td data-sort="320">320 → 960</td><td>Construction by ~2030</td><td>Amazon equity in X-energy</td></tr>
               <tr><th scope="row">OpenAI</th><td>Southern / Georgia Power – Savannah <a class="cite" href="#src-56">56</a></td><td>Utility tariff (new gas + grid)</td><td data-sort="3200">3,200 (1,000 flexible)</td><td>25 yr from 2028</td><td>Tariff</td></tr>
               <tr><th scope="row">Meta</th><td>Entergy – Hyperion (LA) <a class="cite" href="#src-61">61</a><a class="cite" href="#src-67">67</a></td><td>7 new CCGTs</td><td data-sort="5200">5,200+</td><td>2028–32</td><td>$15bn capex; Meta tariff</td></tr>
-              <tr><th scope="row">Oracle</th><td>Bloom – incl. Project Jupiter (NM) <a class="cite" href="#src-71">71</a><a class="cite" href="#src-83">83</a></td><td>On-site fuel cells</td><td>2,800</td><td>2026–28</td><td>Undisclosed; FM notice reported</td></tr>
+              <tr><th scope="row">Oracle</th><td>Bloom – incl. Project Jupiter (NM) <a class="cite" href="#src-71">71</a><a class="cite" href="#src-83">83</a></td><td>On-site fuel cells</td><td>2,800</td><td>2026–28</td><td>Undisclosed; Jupiter force-majeure notice 24 Sep 2026 <a class="cite" href="#src-95">95</a></td></tr>
               <tr><th scope="row">Microsoft</th><td>Self-funded – Pecos, TX <a class="cite" href="#src-31">31</a></td><td>Grid + self-funded infrastructure</td><td>2,000</td><td>Announced Jun 22, 2026</td><td>Microsoft pays all energy infrastructure</td></tr>
-              <tr><th scope="row">Google</th><td>NextEra – Duane Arnold restart (IA)</td><td>Nuclear restart</td><td data-sort="615">~615</td><td>~2029</td><td><span class="tag">conf: med</span></td></tr>
-              <tr><th scope="row">Google</th><td>Intersect Power (acquisition)</td><td>Co-located solar / storage / gas parks</td><td data-sort="0">multi-GW</td><td>Dec 2025</td><td>~$4.75bn <span class="tag">conf: med</span></td></tr>
+              <tr><th scope="row">Google</th><td>NextEra – Duane Arnold restart (IA) <a class="cite" href="#src-100">100</a></td><td>Nuclear restart</td><td data-sort="615">615</td><td>25-yr PPA; restart by early 2029 or Q4 2028</td><td>Undisclosed; subject to regulatory approval</td></tr>
+              <tr><th scope="row">Google</th><td>Intersect (acquisition) <a class="cite" href="#src-98">98</a></td><td>Co-located solar / storage / gas parks, incl. a Haskell County, TX data-center site</td><td data-sort="0">"multiple gigawatts" in development</td><td>Agreed 22 Dec 2025; close expected H1 2026</td><td><strong>$4.75bn cash + assumed debt</strong> <span class="prov" data-prov="R">R</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1279,7 +1413,7 @@
         <p><span class="term" data-term="PJM">PJM</span> is the largest US grid operator (13 states plus DC, including Northern Virginia's "Data Center Alley"). Its capacity price went up elevenfold, has cleared at the negotiated price collar in three straight auctions, and in the last two <strong>still came up ~6.6–6.8 GW short</strong> of the reliability target, which had never happened before <a class="cite" href="#src-23">23</a><a class="cite" href="#src-24">24</a><a class="cite" href="#src-26">26</a>. Without the cap, 2027/28 would have cleared at ~$530 <a class="cite" href="#src-23">23</a><a class="cite" href="#src-25">25</a>.</p>
         <figure class="wide">
           <script type="application/json" data-chart>
-          { "type": "bar", "title": "PJM's capacity price jumped ~11× and has sat at the cap for three auctions",
+          { "type": "bar", "horizontal": false, "title": "PJM's capacity price jumped ~11× and has sat at the cap for three auctions",
             "subtitle": "Base Residual Auction clearing price, RTO-wide, USD per MW-day, by delivery year; 2026/27 onward at the negotiated price collar",
             "valueFormat": { "prefix": "$", "decimals": 0 }, "unit": "USD/MW-day",
             "xKey": "dy", "series": [{ "key": "p", "label": "Clearing price" }],
@@ -1293,7 +1427,7 @@
               { "dy": "2028/29", "p": 325.0, "note": "$16.4bn; at cap; 6,831 MW short; 14.7% margin; only 525 MW new generation" }
             ],
             "yMax": 600,
-            "annotations": [{ "y": 555, "label": "Backstop auction cap $555 (Sep–Oct 2026)" }],
+            "annotations": [{ "y": 555, "label": "Backstop cap $555" }],
             "source": "PJM Inside Lines [23][24]; Modo Energy [25]; mGrid [26]; IEEFA [27]", "asOf": "2026-07-14", "provenance": "R",
             "note": "2022/23–2023/24 prices and 2024/25–2026/27 totals are older knowledge (conf: med). The 2028/29 auction itself was not re-verified in the fact-check pass." }
           </script>
@@ -1338,7 +1472,7 @@
             </tbody>
           </table>
         </div>
-        <p>By February 2026, <strong>300+ data-center bills had been filed in 30 states</strong>, 18 of them requiring separate rate classes; by March, 11 states had bills for temporary data-center moratoria <a class="cite" href="#src-36">36</a>.</p>
+        <p>By February 2026, <strong>300+ data-center bills had been filed in 30 states</strong>, 18 of them requiring separate rate classes; by March, 11 states had bills for temporary data-center moratoria <a class="cite" href="#src-36">36</a>. On <strong>14 Jul 2026 New York</strong> became the first state to impose one: an executive order pausing discretionary environmental permits for new hyperscale data centers for up to a year while the state writes a generic environmental impact statement <span class="prov" data-prov="R">R</span><a class="cite" href="#src-96">96</a>.</p>
 
         <h3>Retail prices and the political backlash</h3>
         <p>US average retail electricity prices rose <strong>9.0% y/y in February 2026</strong>, with Virginia +26.3%, Ohio +21.9% and Pennsylvania +19.5% <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-22">22</a>. In July 2026 the all-sector average was <strong>14.99¢/kWh (+4.4%)</strong>; residential 18.31¢ (+4.9%); Ohio +15.2%, Maryland +14.8% <a class="cite" href="#src-20">20</a>. Is it data centers? Partly. In PJM the capacity channel is well documented <a class="cite" href="#src-26">26</a><a class="cite" href="#src-27">27</a>. Nationally, gas prices, wildfire and storm costs, grid replacement and equipment inflation (which data-center demand for turbines and transformers itself worsens) all contribute. ICF projects residential rates +15–40% by 2030 without new tariff structures <a class="cite" href="#src-36">36</a> <span class="tag">conf: med</span>.</p>
@@ -1400,7 +1534,7 @@
             <thead><tr><th scope="col">Layer</th><th scope="col">How it depends on W03, or W03 on it</th></tr></thead>
             <tbody>
               <tr><th scope="row"><a href="W01-demand-capex.html">W01</a> / <a href="W08-cloud.html">W08</a> Demand</th><td>Every GW here is backed by hyperscaler capex. A capex pause turns 2027–30 gas orders into stranded risk, mitigated by take-or-pay tariffs.</td></tr>
-              <tr><th scope="row"><a href="W02-capital-financing.html">W02</a> Financing</th><td>Hyperion's $27bn Blue Owl SPV with Meta's four-year lease shows power increasingly financed off hyperscaler balance sheets <a class="cite" href="#src-67">67</a>; DOE loans ($26.5bn to Southern) are the new public-finance lever <a class="cite" href="#src-57">57</a>. (A "~$12.3bn lease" figure was removed as a likely mix-up with the El Paso SPV bond.)</td></tr>
+              <tr><th scope="row"><a href="W02-capital-financing.html">W02</a> Financing</th><td>Hyperion's $27bn Blue Owl SPV, with Meta's four-year lease (initial lease commitment <strong>~$12.3bn</strong>, renewals up to 20 years) and <strong>$7.0bn</strong> of Blue Owl cash for 80%, per Meta's Q3-2025 10-Q <span class="prov" data-prov="R">R</span><a class="cite" href="#src-94">94</a>, shows power increasingly financed off hyperscaler balance sheets <a class="cite" href="#src-67">67</a>; DOE loans ($26.5bn to Southern) are the new public-finance lever <a class="cite" href="#src-57">57</a>. (The $12.3bn figure was reinstated on the 25 Sep 2026 re-check; Edition 1 had removed it as a suspected El Paso mix-up.)</td></tr>
               <tr><th scope="row"><a href="W04-datacenters.html">W04</a> Data centers</th><td>800 VDC, liquid cooling, batteries and UPS design decide how "flexible" a load can be, and so how fast it can connect <a class="cite" href="#src-72">72</a>.</td></tr>
               <tr><th scope="row"><a href="W05-compute-silicon.html">W05</a> Chips</th><td>Performance per watt (Blackwell → Rubin) lowers TWh per unit of AI output, but Jevons dynamics have dominated so far.</td></tr>
             </tbody>
@@ -1459,7 +1593,7 @@
         </ol>
 
         <h3>The rest of the West</h3>
-        <p><strong>Ireland</strong> is the extreme case: data centers used <strong>23% of metered electricity in 2025</strong>, up from 5% in 2015 <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-81">81</a><a class="cite" href="#src-92">92</a>. EirGrid's de facto Dublin moratorium on new connections has run since ~2022, and new connection rules (late 2025) require on-site or nearby dispatchable generation or storage matching demand <span class="tag">conf: med</span>.</p>
+        <p><strong>Ireland</strong> is the extreme case: data centers used <strong>23% of metered electricity in 2025</strong>, up from 5% in 2015 <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-81">81</a><a class="cite" href="#src-92">92</a>. EirGrid's de facto Dublin moratorium on new connections has run since ~2022. The CRU's large-energy-user decision (12 Dec 2025) requires new data centers to provide dispatchable generation or storage covering 100% of their maximum import capacity (de-rated), to take part in the wholesale market, and to match at least 80% of annual demand with additional Irish renewables within six years <span class="prov" data-prov="R">R</span><a class="cite" href="#src-105">105</a>. See section 03 for the 2026 comparison table.</p>
         <figure>
           <script type="application/json" data-chart>
           { "type": "area", "title": "Ireland: data centers went from 5% to 23% of electricity in a decade",
@@ -1471,11 +1605,11 @@
           </script>
         </figure>
         <ul>
-          <li><strong>Europe:</strong> data-center demand of 96 TWh (2024) → 236 TWh (2035) (Ember). The FLAP-D hubs (Frankfurt, London, Amsterdam, Paris, Dublin) already use 33–42% of local electricity, Dublin ~80%, and <strong>grid connections can take up to 13 years</strong>. Nordic and Southern European demand grows +110% by 2030 vs +55% in FLAP-D; by 2035 half of Europe's capacity may sit outside the old hubs <a class="cite" href="#src-82">82</a>. EU total demand grew &lt;1% in 2025 <a class="cite" href="#src-8">8</a>. Industrial power costs roughly 2–3× US levels <span class="tag">conf: med</span>; Nordic hydro, French nuclear and Iberian solar are the openings.</li>
+          <li><strong>Europe:</strong> data-center demand of 96 TWh (2024) → 236 TWh (2035) (Ember). The FLAP-D hubs (Frankfurt, London, Amsterdam, Paris, Dublin) already use 33–42% of local electricity, Dublin ~80%, and <strong>grid connections take 7–10 years on average</strong> (IEA <a class="cite" href="#src-102">102</a>; Ember: up to 13 years). Nordic and Southern European demand grows +110% by 2030 vs +55% in FLAP-D; by 2035 half of Europe's capacity may sit outside the old hubs <a class="cite" href="#src-82">82</a>. EU total demand grew &lt;1% in 2025 <a class="cite" href="#src-8">8</a>. EU wholesale power averaged ~$95/MWh in 2025, about twice the US level <a class="cite" href="#src-103">103</a>; the proposed Cloud and AI Development Act aims to triple EU capacity in 5–7 years <a class="cite" href="#src-104">104</a>. Nordic hydro, French nuclear and Iberian solar are the openings.</li>
           <li><strong>UK:</strong> "AI Growth Zones" with prioritized grid connections, plus 2025's Gate 2 queue reform <span class="tag">conf: med</span>.</li>
-          <li><strong>Middle East:</strong> cheap gas and solar (industrial tariffs ~$0.04–0.07/kWh <span class="tag">conf: med</span>) plus sovereign capital. Stargate UAE: 1 GW, first 200 MW in 2026 (G42, Oracle, NVIDIA, Cisco, SoftBank) within a 5 GW UAE–US campus <a class="cite" href="#src-70">70</a>. Saudi Humain targets ~1.9 GW by 2030 <span class="tag">conf: med</span>. The binding constraint is US chip-export licensing, not power.</li>
-          <li><strong>Canada:</strong> hydro provinces ration new large loads; Alberta capped interim large-load allocations (~1.2 GW in 2025) against 15+ GW of proposals; Ontario's Darlington BWRX-300 is the West's first grid-scale SMR under construction <span class="tag">conf: med</span>.</li>
-          <li><strong>Japan:</strong> +~15 TWh (+80%) by 2030 <a class="cite" href="#src-4">4</a>; the "watt-bit" policy steers data centers to Hokkaido and Kyushu near renewables and restarted nuclear <span class="tag">conf: med</span>.</li>
+          <li><strong>Middle East:</strong> cheap gas and solar (industrial tariffs ~$0.04–0.07/kWh <span class="tag">conf: med</span>) plus sovereign capital. Stargate UAE: 1 GW, first 200 MW in 2026 (G42/Khazna, OpenAI, Oracle, NVIDIA, Cisco, SoftBank) within a 5 GW UAE–US campus <a class="cite" href="#src-70">70</a><a class="cite" href="#src-109">109</a>. After Iranian drone strikes on AWS data centers in the UAE (Mar 2026), the campus is being dispersed across several hardened sites <a class="cite" href="#src-110">110</a>. Saudi Humain targets 1.9 GW by 2030 and &gt;6 GW by 2034, and is raising outside capital as PIF tightens <a class="cite" href="#src-111">111</a>; Qatar has a $20bn Brookfield–Qai JV <a class="cite" href="#src-112">112</a>. The binding constraints are US chip-export licensing and now physical security, not power.</li>
+          <li><strong>Canada:</strong> every province now rations large loads. Alberta's 1.2 GW interim allocation is fully assigned, a 1.6 GW gas "bridging" pool was proposed in Jun 2026, and requested load exceeds 20.6 GW against a ~13 GW peak; Meta committed C$13bn in Sturgeon County (Jul 2026) <a class="cite" href="#src-113">113</a><a class="cite" href="#src-114">114</a>. Québec proposes a ~13¢/kWh data-center rate, BC caps new load at 400 MW, and Ontario's Bill 40 allows refusals <a class="cite" href="#src-115">115</a><a class="cite" href="#src-116">116</a>; Ontario's Darlington BWRX-300 is the West's first grid-scale SMR under construction <span class="tag">conf: med</span>.</li>
+          <li><strong>Japan:</strong> +~15 TWh (+80%) by 2030 <a class="cite" href="#src-4">4</a>; OCCTO sees a ~6.6 GW data-center peak by FY2035 <a class="cite" href="#src-117">117</a>. The "watt-bit" policy steers data centers to Hokkaido and Kyushu near renewables and restarted nuclear <span class="tag">conf: med</span>; SoftBank's Tomakomai campus is the flagship <a class="cite" href="#src-121">121</a>. Kashiwazaki-Kariwa 6 returned to commercial operation on 16 Apr 2026 <a class="cite" href="#src-119">119</a>, but Tomari-3 has slipped to 2028 <a class="cite" href="#src-120">120</a>.</li>
         </ul>
       </section>
 
@@ -1491,7 +1625,7 @@
               <li><strong>Scarcity is locked in to ~2030.</strong> Turbines sold out <a class="cite" href="#src-40">40</a>, transformers in deficit <a class="cite" href="#src-85">85</a>, PJM short 6.6–6.8 GW even at the cap <a class="cite" href="#src-23">23</a><a class="cite" href="#src-24">24</a>, only 6.3 GW of US gas in 2026 <a class="cite" href="#src-21">21</a>.</li>
               <li><strong>Buyers are price-insensitive.</strong> Power is ~10% of AI TCO and delay costs ~$500m per GW-month <span class="prov" data-prov="A">A</span>; 17–25-year contracts and collateral (AEP $2bn) <a class="cite" href="#src-49">49</a><a class="cite" href="#src-55">55</a><a class="cite" href="#src-56">56</a>.</li>
               <li><strong>Utility earnings compound.</strong> $1.3–1.4tn capex <a class="cite" href="#src-65">65</a><a class="cite" href="#src-66">66</a>, 11–13% rate-base growth (Xcel) <a class="cite" href="#src-63">63</a>, cheap DOE money <a class="cite" href="#src-57">57</a>, M&amp;A premiums <a class="cite" href="#src-59">59</a>.</li>
-              <li><strong>OEM pricing power.</strong> GEV guides FY26 FCF to $11.5–12.5bn <a class="cite" href="#src-38">38</a> <span class="tag">conf: low</span> (the claimed step-up from $6.5–7.5bn is doubted), and its output reaches only 30 GW/yr by 2030.</li>
+              <li><strong>OEM pricing power.</strong> In its Q2-26 release GEV raised its FY26 FCF guide to $11.5–12.5bn, up from $6.5–7.5bn (confirmed on the 25 Sep 2026 re-check) <a class="cite" href="#src-38">38</a>, and its output reaches only 30 GW/yr by 2030.</li>
               <li><strong>Existing nuclear is irreplaceable.</strong> New nuclear costs $120–220/MWh <a class="cite" href="#src-84">84</a> vs contracted existing nuclear at ~$85–115 <span class="prov" data-prov="A">A</span>.</li>
             </ul>
           </aside>
@@ -1504,7 +1638,7 @@
               <li><strong>Politics caps the upside.</strong> PJM capped at $325–333 <a class="cite" href="#src-23">23</a><a class="cite" href="#src-24">24</a>; pledges and legislation shift costs to data centers <a class="cite" href="#src-34">34</a><a class="cite" href="#src-37">37</a>; FERC declared BTM netting unjust <a class="cite" href="#src-33">33</a>; IPPs de-rated (VST −33% y/y, TLN −26%, CEG ~37% off its high) <a class="cite" href="#src-83">83</a>.</li>
               <li><strong>Merchant prices aren't rising.</strong> ERCOT ~$30/MWh, flat <a class="cite" href="#src-44">44</a><a class="cite" href="#src-53">53</a>; Constellation's 920 MW of Q2 contracts were mostly non-hyperscaler <a class="cite" href="#src-43">43</a><a class="cite" href="#src-44">44</a>.</li>
               <li><strong>Nuclear timelines slip.</strong> Crane may face a grid delay to 2031 <a class="cite" href="#src-47">47</a>; SMR first power 2028–31 at best <a class="cite" href="#src-74">74</a><a class="cite" href="#src-77">77</a><a class="cite" href="#src-79">79</a>; Oklo ~80% off its high <a class="cite" href="#src-83">83</a>.</li>
-              <li><strong>On-site is expensive and dirty.</strong> ~$90–120/MWh <span class="prov" data-prov="A">A</span>, permitting pushback (xAI/EPA) <a class="cite" href="#src-68">68</a>, overbuild risk, and the reported Oracle force-majeure notice <a class="cite" href="#src-83">83</a>.</li>
+              <li><strong>On-site is expensive and dirty.</strong> ~$90–120/MWh <span class="prov" data-prov="A">A</span>, permitting pushback (xAI/EPA) <a class="cite" href="#src-68">68</a>, overbuild risk, and counterparty risk: Oracle's 24-Sep-2026 force-majeure notice on Project Jupiter, triggered by a delayed gas pipeline <a class="cite" href="#src-95">95</a>.</li>
             </ul>
           </aside>
         </div>
@@ -1534,7 +1668,7 @@
               <tr><th scope="row">RTO responses to FERC large-load orders; FERC final action</th><td>Filed ~Aug 2026; orders late 2026–2027</td><td>Defines co-location, BTM and flexible service nationwide <a class="cite" href="#src-33">33</a></td><td><span class="status status--warning">Pending</span></td></tr>
               <tr><th scope="row">Ratepayer Protection Act in the Senate</th><td>Q4 2026</td><td>Federal cost-allocation standard <a class="cite" href="#src-37">37</a></td><td><span class="status status--warning">Pending</span></td></tr>
               <tr><th scope="row">US midterm elections</th><td>Nov 3, 2026</td><td>Power bills are a campaign issue; state PSC races</td><td><span class="status status--serious">Political risk</span></td></tr>
-              <tr><th scope="row">NextEra–Dominion: Virginia SCC hearings</th><td>Nov 17, 2026</td><td>Merger conditions, bill credits <a class="cite" href="#src-58">58</a><a class="cite" href="#src-59">59</a></td><td><span class="status status--warning">Unverified deal</span></td></tr>
+              <tr><th scope="row">NextEra–Dominion: Virginia SCC hearings</th><td>Nov 17, 2026</td><td>Merger conditions, bill credits <a class="cite" href="#src-58">58</a><a class="cite" href="#src-59">59</a></td><td><span class="status status--warning">Approvals pending</span></td></tr>
               <tr><th scope="row">GE Vernova Q3-26; investor update</th><td>Oct 2026; Dec 2026</td><td>Gas GW, slot pricing, 2031 fill: leading indicator of generation build <a class="cite" href="#src-38">38</a></td><td><span class="status status--good">Tight = bullish OEMs</span></td></tr>
               <tr><th scope="row">AEP new capital plan</th><td>Q3-26 call (late Oct)</td><td>Capex step-up after 69 GW contracted <a class="cite" href="#src-55">55</a></td><td><span class="status status--good">Upside</span></td></tr>
               <tr><th scope="row">ERCOT Batch Zero study results / transmission plan</th><td>2026–fall 2027</td><td>Converts 438 GW of requests into real load <a class="cite" href="#src-31">31</a></td><td><span class="status status--warning">Key unknown</span></td></tr>
@@ -1544,7 +1678,7 @@
               <tr><th scope="row">Hyperion CCGTs; OpenAI–Georgia Power 2028 start</th><td>2027–2030</td><td>Utility-built gas for single campuses <a class="cite" href="#src-56">56</a><a class="cite" href="#src-61">61</a></td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Kemmerer Natrium; Oklo Aurora; Kairos Hermes 2</th><td>2028–2031</td><td>SMR reality check <a class="cite" href="#src-74">74</a><a class="cite" href="#src-77">77</a><a class="cite" href="#src-79">79</a></td><td><span class="status status--serious">Slip risk</span></td></tr>
               <tr><th scope="row">EIA monthly retail prices (VA, OH, PA, MD)</th><td>Monthly (~24th)</td><td>Backlash barometer <a class="cite" href="#src-20">20</a><a class="cite" href="#src-22">22</a></td><td><span class="status status--critical">Rising</span></td></tr>
-              <tr><th scope="row">Bloom Q3-26 results; Oracle / Jupiter status</th><td>Oct 27, 2026</td><td>Health of on-site power demand <a class="cite" href="#src-83">83</a></td><td><span class="status status--serious">FM notice reported</span></td></tr>
+              <tr><th scope="row">Bloom Q3-26 results; Oracle / Jupiter status; Bloom air-permit deadline</th><td>Oct 27, 2026; Nov 23, 2026</td><td>Health of on-site power demand; whether Jupiter keeps its 2028 date <a class="cite" href="#src-83">83</a><a class="cite" href="#src-95">95</a></td><td><span class="status status--serious">FM notice issued</span></td></tr>
               <tr><th scope="row">BNEF / EPRI / LBNL forecast refresh</th><td>2026–27</td><td>Direction of revisions; LBNL update mandated by the Energy Act</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Hyperscaler capex guides (<a href="W01-demand-capex.html">W01</a>)</th><td>Late Oct 2026 earnings</td><td>Demand for all of the above</td><td><span class="status status--good">Rising</span></td></tr>
             </tbody>
@@ -1571,18 +1705,18 @@
           <li><time datetime="2025-06">Jun 2025</time><div class="tl-body"><h4>Meta–Clinton 1,121 MW; Talen–Amazon restructured to an $18bn front-of-meter PPA</h4><p><a class="cite" href="#src-46">46</a><a class="cite" href="#src-49">49</a></p></div></li>
           <li><time datetime="2025-07">Jul 2025</time><div class="tl-body"><h4>PJM 2026/27 clears at $329.17, the cap</h4><p>The federal tax law phasing down wind and solar credits is signed on 4 Jul <a class="cite" href="#src-26">26</a><a class="cite" href="#src-57">57</a>.</p></div></li>
           <li><time datetime="2025-09">Sep 2025</time><div class="tl-body"><h4>Stargate adds five sites (~7 GW); TVA–ENTRA1 6 GW NuScale framework</h4><p><a class="cite" href="#src-69">69</a><a class="cite" href="#src-80">80</a></p></div></li>
-          <li><time datetime="2025-10">Oct 2025</time><div class="tl-body"><h4>US government–Westinghouse $80bn AP1000 partnership; DOE directs FERC rulemaking</h4><p><a class="cite" href="#src-76">76</a><a class="cite" href="#src-33">33</a></p></div></li>
-          <li><time datetime="2025-11">Nov 2025</time><div class="tl-body"><h4>DOE lends $1bn for Crane; Grid Strategies: 166 GW of growth</h4><p>Utility capex plans pass $1tn <a class="cite" href="#src-48">48</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-64">64</a>.</p></div></li>
-          <li class="is-key"><time datetime="2025-12">Dec 2025</time><div class="tl-body"><h4>PJM 2027/28: $333.44 and the first-ever RTO-wide shortfall (6.6 GW)</h4><p>FERC orders PJM co-location rules; BNEF sees 106 GW by 2035 <a class="cite" href="#src-23">23</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-14">14</a>.</p><span class="tag">Turning point</span></div></li>
-          <li><time datetime="2026-01">Jan 2026</time><div class="tl-body"><h4>Constellation closes Calpine; Meta's 6.6 GW nuclear package</h4><p>ERCOT queue 233 GW; White House and governors call for an emergency PJM auction <a class="cite" href="#src-45">45</a><a class="cite" href="#src-50">50</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-28">28</a>.</p></div></li>
+          <li><time datetime="2025-10">Oct 2025</time><div class="tl-body"><h4>US government–Westinghouse $80bn AP1000 partnership; DOE directs FERC rulemaking</h4><p>Google–NextEra 615 MW Duane Arnold restart PPA; Bloom–Brookfield $5bn partnership <a class="cite" href="#src-76">76</a><a class="cite" href="#src-33">33</a><a class="cite" href="#src-100">100</a><a class="cite" href="#src-99">99</a></p></div></li>
+          <li><time datetime="2025-11">Nov 2025</time><div class="tl-body"><h4>DOE lends $1bn for Crane; Grid Strategies: 166 GW of growth</h4><p>Talen closes Freedom + Guernsey (~2.9 GW, 25 Nov) <a class="cite" href="#src-123">123</a>; utility capex plans pass $1tn <a class="cite" href="#src-48">48</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-64">64</a>.</p></div></li>
+          <li class="is-key"><time datetime="2025-12">Dec 2025</time><div class="tl-body"><h4>PJM 2027/28: $333.44 and the first-ever RTO-wide shortfall (6.6 GW)</h4><p>FERC orders PJM co-location rules; BNEF sees 106 GW by 2035. Brookfield–Qai $20bn AI JV (9 Dec); Ontario's Bill 40 (11 Dec); Ireland's CRU large-energy-user decision (12 Dec); Alphabet agrees to buy Intersect for $4.75bn (22 Dec) <a class="cite" href="#src-23">23</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-14">14</a><a class="cite" href="#src-112">112</a><a class="cite" href="#src-116">116</a><a class="cite" href="#src-105">105</a><a class="cite" href="#src-98">98</a>.</p><span class="tag">Turning point</span></div></li>
+          <li><time datetime="2026-01">Jan 2026</time><div class="tl-body"><h4>Constellation closes Calpine; Meta's 6.6 GW nuclear package</h4><p>Vistra's share is 2,609 MW (9 Jan); ERCOT queue 233 GW; White House and governors call for an emergency PJM auction; TEPCO restarts Kashiwazaki-Kariwa 6 and OCCTO forecasts a ~6.6 GW data-center peak by FY2035 (both 21 Jan); NRG closes the 13 GW LS Power purchase (30 Jan) <a class="cite" href="#src-45">45</a><a class="cite" href="#src-50">50</a><a class="cite" href="#src-97">97</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-28">28</a><a class="cite" href="#src-119">119</a><a class="cite" href="#src-117">117</a><a class="cite" href="#src-122">122</a>.</p></div></li>
           <li><time datetime="2026-02">Feb 2026</time><div class="tl-body"><h4>Southern closes a $26.5bn DOE loan; EPRI: 9–17% by 2030</h4><p>EIA: 86 GW of planned 2026 additions; retail prices +9% y/y <a class="cite" href="#src-57">57</a><a class="cite" href="#src-9">9</a><a class="cite" href="#src-21">21</a><a class="cite" href="#src-22">22</a>.</p></div></li>
-          <li class="is-key"><time datetime="2026-03">Mar 2026</time><div class="tl-body"><h4>Ratepayer Protection Pledge</h4><p>Seven AI firms pledge to pay their way (4 Mar); NRC permits TerraPower Natrium; FERC counts ~50 GW of DCs online; Meta–Entergy Hyperion expands to 7 CCGTs <a class="cite" href="#src-34">34</a><a class="cite" href="#src-74">74</a><a class="cite" href="#src-15">15</a><a class="cite" href="#src-61">61</a>.</p><span class="tag">Turning point</span></div></li>
-          <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>IEA: 485 TWh in 2025 (+17%); Oracle–Bloom 2.8 GW</h4><p>X-energy IPO $1.02bn and Kemmerer construction start (both 24 Apr); GEV gas at 100 GW <a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a><a class="cite" href="#src-71">71</a><a class="cite" href="#src-78">78</a><a class="cite" href="#src-74">74</a><a class="cite" href="#src-40">40</a>.</p></div></li>
-          <li><time datetime="2026-05">May 2026</time><div class="tl-body"><h4>NextEra–Dominion ~$67bn merger (unverified); Goldman: 66 GW of US DC demand by 2027</h4><p><a class="cite" href="#src-59">59</a><a class="cite" href="#src-16">16</a></p></div></li>
-          <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>FERC show-cause orders to all RTOs; ERCOT Batch Zero approved (both 18 Jun)</h4><p>Queue 438 GW; Microsoft Pecos 2 GW <a class="cite" href="#src-33">33</a><a class="cite" href="#src-31">31</a>.</p></div></li>
-          <li class="is-key"><time datetime="2026-07">Jul 2026</time><div class="tl-body"><h4>PJM 2028/29 at the cap, 6.8 GW short; BNEF raises to 194 GW by 2035</h4><p>Four DOE microreactors critical by 4 Jul; GEV at 116 GW (22 Jul); AEP 69 GW, Southern 17 GW incl. OpenAI 3.2 GW <a class="cite" href="#src-73">73</a><a class="cite" href="#src-24">24</a><a class="cite" href="#src-38">38</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-54">54</a><a class="cite" href="#src-56">56</a>.</p><span class="tag">Turning point</span></div></li>
+          <li class="is-key"><time datetime="2026-03">Mar 2026</time><div class="tl-body"><h4>Ratepayer Protection Pledge</h4><p>Seven AI firms pledge to pay their way (4 Mar); NRC permits TerraPower Natrium; FERC counts ~50 GW of DCs online; Meta–Entergy Hyperion expands to 7 CCGTs; Iranian drones strike two AWS data centers in the UAE <a class="cite" href="#src-34">34</a><a class="cite" href="#src-74">74</a><a class="cite" href="#src-15">15</a><a class="cite" href="#src-61">61</a><a class="cite" href="#src-110">110</a>.</p><span class="tag">Turning point</span></div></li>
+          <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>IEA: 485 TWh in 2025 (+17%); Oracle–Bloom 2.8 GW</h4><p>Kashiwazaki-Kariwa 6 enters commercial operation (16 Apr) <a class="cite" href="#src-119">119</a>; X-energy IPO $1.02bn and Kemmerer construction start (both 24 Apr); GEV gas at 100 GW <a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a><a class="cite" href="#src-71">71</a><a class="cite" href="#src-78">78</a><a class="cite" href="#src-74">74</a><a class="cite" href="#src-40">40</a>.</p></div></li>
+          <li><time datetime="2026-05">May 2026</time><div class="tl-body"><h4>NextEra–Dominion ~$67bn all-stock merger (18 May); Goldman: 66 GW of US DC demand by 2027</h4><p><a class="cite" href="#src-59">59</a><a class="cite" href="#src-16">16</a></p></div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>FERC show-cause orders to all RTOs; ERCOT Batch Zero approved (both 18 Jun)</h4><p>Queue 438 GW; Microsoft Pecos 2 GW. EU Cloud and AI Development Act proposed (3 Jun); Alberta's Data Centre Regulation in force (9 Jun); Alberta proposes a 1.6 GW gas "bridging" pool (24 Jun); Bloom–Brookfield raised to $25bn (30 Jun) <a class="cite" href="#src-33">33</a><a class="cite" href="#src-31">31</a><a class="cite" href="#src-104">104</a><a class="cite" href="#src-114">114</a><a class="cite" href="#src-113">113</a><a class="cite" href="#src-99">99</a>.</p></div></li>
+          <li class="is-key"><time datetime="2026-07">Jul 2026</time><div class="tl-body"><h4>PJM 2028/29 at the cap, 6.8 GW short; BNEF raises to 194 GW by 2035</h4><p>Four DOE microreactors critical by 4 Jul; New York orders a one-year statewide pause on permits for new hyperscale data centers (14 Jul) <a class="cite" href="#src-96">96</a>; Siemens Energy announces the "Omterra" rebrand <a class="cite" href="#src-41">41</a>; GEV at 116 GW (22 Jul); Meta commits C$13bn to an Alberta campus with a 932 MW gas plant <a class="cite" href="#src-114">114</a>; AEP 69 GW, Southern 17 GW incl. OpenAI 3.2 GW <a class="cite" href="#src-73">73</a><a class="cite" href="#src-24">24</a><a class="cite" href="#src-38">38</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-54">54</a><a class="cite" href="#src-56">56</a>.</p><span class="tag">Turning point</span></div></li>
           <li><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Oklo's Groves reactor critical; IPP and utility Q2 prints</h4><p>Constellation 920 MW of PPAs; Vistra's Helix; Duke's $103bn plan <a class="cite" href="#src-77">77</a><a class="cite" href="#src-43">43</a><a class="cite" href="#src-52">52</a><a class="cite" href="#src-62">62</a>.</p></div></li>
-          <li class="is-key"><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>House passes the Ratepayer Protection Act 417–3</h4><p>EIA expects record generation in 2026–27 (9 Sep); the vote (16 Sep); PJM's backstop auction opens 30 Sep <a class="cite" href="#src-18">18</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-28">28</a>.</p><span class="tag">This page's as-of date</span></div></li>
+          <li class="is-key"><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>House passes the Ratepayer Protection Act 417–3</h4><p>EIA expects record generation in 2026–27 (9 Sep); Reuters: the UAE will disperse and harden its 5 GW AI campus (11 Sep) <a class="cite" href="#src-110">110</a>; the vote (16 Sep); Oracle's force-majeure notice on Project Jupiter over the gas-pipeline delay (24 Sep) <a class="cite" href="#src-95">95</a>; PJM's backstop auction opens 30 Sep <a class="cite" href="#src-18">18</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-28">28</a>.</p><span class="tag">This page's as-of date</span></div></li>
         </ol>
       </section>
 
@@ -1711,16 +1845,17 @@
       <!-- =========================================================== 18 -->
       <section>
         <h2><span class="kicker">18 · Confidence notes</span>What is low-confidence or unverified</h2>
+        <p class="note"><strong>Updated 2026-09-25 (Edition 2 re-check):</strong> NextEra–Dominion, GE Vernova's $11.5–12.5bn FCF guide, the "Omterra" rebrand, New York's moratorium and Oracle's Project Jupiter force-majeure notice are now confirmed; Vistra–Meta is 2,609 MW; Meta's ~$12.3bn Hyperion lease commitment is reinstated; older deals (Intersect, Duane Arnold, Bloom–Brookfield, Talen, NRG, Williams) are sourced; and a new comparison of Europe, the Gulf, Canada and Japan is added in section 03.</p>
         <p>This page follows the dossier and the independent fact-check (<code>methodology/qa/factcheck-W01-W05.md</code>). The fact-check could not open live sources, so several 2026 figures rest on a single secondary source. The items below are the ones to treat with care.</p>
         <aside class="callout callout--note">
           <p class="callout-label">Unverified or corrected in the fact-check</p>
           <ul>
-            <li><strong>NextEra–Dominion (~$67bn, May 2026)</strong> is an extraordinary claim that could not be verified <a class="cite" href="#src-59">59</a><a class="cite" href="#src-88">88</a>. Re-confirm against both companies' 8-Ks.</li>
-            <li><strong>GE Vernova's FY26 FCF guide "$11.5–12.5bn, up from $6.5–7.5bn"</strong> is doubted: the checker recalls a Dec-2025 guide nearer $4.5–5bn. The "from" figure and the size of the step-up need re-checking.</li>
+            <li><strong>Resolved: NextEra–Dominion</strong> (all-stock, 18 May 2026; 0.8138 NEE per D share) is confirmed by NextEra's release <a class="cite" href="#src-59">59</a>; the ~$67bn value is a press figure <a class="cite" href="#src-58">58</a>.</li>
+            <li><strong>Resolved: GE Vernova's FY26 FCF guide</strong> was raised to $11.5–12.5bn from $6.5–7.5bn in its Q2-26 release <a class="cite" href="#src-38">38</a>.</li>
             <li><strong>Oklo's drawdown</strong> was corrected from −66% to <strong>~−80%</strong> ($38.29 vs a $193.84 52-week high).</li>
-            <li><strong>Hyperion lease:</strong> a "~$12.3bn four-year lease" figure was removed; it matches the El Paso SPV bond size in W02 and is likely a mix-up.</li>
+            <li><strong>Resolved: Hyperion lease.</strong> Meta's Q3-2025 10-Q gives an initial lease commitment of ~$12.3bn and $7.0bn of Blue Owl cash; the figure removed in Edition 1 as a suspected El Paso mix-up is reinstated <a class="cite" href="#src-94">94</a>.</li>
             <li><strong>Entergy's "5.2 GW"</strong> is new generation (7 CCGTs) for Hyperion, not contracted data-center load; it is shown that way here. Entergy's plan grew from 3 CCGTs (~2.3 GW) to 7 (5.2+ GW) in Mar 2026.</li>
-            <li><strong>Project Jupiter's size</strong> is reported three ways: 2.2 GW (Epoch/W04), 2.45 GW (Bloom, used here) and 2.5 GW (DCD/W01).</li>
+            <li><strong>Project Jupiter's size</strong> is reported three ways: 2.2 GW (Epoch/W04), 2.45 GW (Bloom and TechCrunch, used here) and 2.5 GW (DCD/W01).</li>
             <li><strong>IEA 2025 (485 TWh), BNEF Jul-26 levels (118/194 GW), PJM 2028/29 auction, Ireland 2025 (23%)</strong>: sources were unreachable in the fact-check pass; arithmetic checks passed where applicable.</li>
           </ul>
         </aside>
@@ -1731,14 +1866,14 @@
             <li><strong>Full-plant CCGT cost</strong> ($2,000–2,800/kW) comes from industry commentary; GE Vernova's per-kW figures are equipment prices with an unclear basis <span class="tag">conf: med</span>.</li>
             <li><strong>PJM 2022/23–2023/24 prices and the 2025/26–2026/27 totals</strong> are older knowledge <span class="tag">conf: med</span>.</li>
             <li><strong>Transformer deficit and lead times</strong> (Wood Mackenzie 2025) were not re-verified <a class="cite" href="#src-85">85</a>.</li>
-            <li><strong>Older-knowledge deals:</strong> Google–Intersect ($4.75bn), Google–Duane Arnold, Talen's Freedom/Guernsey, NRG–LS Power, Bloom–Brookfield $5bn, Chevron–GEV, Williams Socrates, Crusoe/Abilene on-site turbines.</li>
-            <li><strong>Oracle's force-majeure notice to Blue Owl</strong> is reported via a stock-data site <a class="cite" href="#src-83">83</a> with no primary source; its effect on Bloom's 2.8 GW is unclear.</li>
-            <li><strong>Siemens Energy's "Omterra" rename</strong> (Jul 2026) is unverified <span class="tag">conf: low</span>.</li>
-            <li><strong>Vistra–Meta size:</strong> 2.1 GW <a class="cite" href="#src-50">50</a> vs 2.6 GW <a class="cite" href="#src-51">51</a>; likely uprates <span class="tag">conf: med</span>.</li>
+            <li><strong>Older deals, partly resolved:</strong> Google–Intersect <a class="cite" href="#src-98">98</a>, Google–Duane Arnold <a class="cite" href="#src-100">100</a>, Bloom–Brookfield ($5bn → $25bn) <a class="cite" href="#src-99">99</a>, Williams Socrates <a class="cite" href="#src-101">101</a>, Talen's Freedom/Guernsey <a class="cite" href="#src-123">123</a> and NRG–LS Power <a class="cite" href="#src-122">122</a> are now sourced. Still unverified: Chevron–GEV and Crusoe/Abilene on-site turbines <span class="tag">conf: med</span>.</li>
+            <li><strong>Resolved: Oracle's force-majeure notice</strong> to Blue Owl was sent on 24 Sep 2026 because the gas pipeline slipped to 1 Feb 2027; Oracle says Jupiter is on schedule <a class="cite" href="#src-95">95</a>. What it means for Bloom's 2.8 GW is still open.</li>
+            <li><strong>Resolved: Siemens Energy's "Omterra" rebrand</strong> is confirmed on the company's IR page <a class="cite" href="#src-41">41</a>.</li>
+            <li><strong>Resolved: Vistra–Meta</strong> is 2,609 MW: 2,176 MW of existing output plus 433 MW of uprates <a class="cite" href="#src-97">97</a>. The press "2.1 GW" is the existing-output piece.</li>
             <li><strong>US capacity baselines differ</strong> (25 vs 47.5 vs 50 GW) by definition: IT vs facility vs average demand.</li>
             <li><strong>The share of queued load that is real</strong> is unknown: somewhere in 25–60%. This is the central uncertainty for the whole layer.</li>
             <li><strong>China's 2025 capacity additions</strong> need NEA/CEC data (C03).</li>
-            <li><strong>Europe, Ireland, UK, Canada, Japan and Gulf policy</strong> details are mostly older knowledge.</li>
+            <li><strong>International policy, partly resolved:</strong> Europe, the Gulf, Canada and Japan are now sourced (section 03). Still open: Gulf power prices (older knowledge), UK AI Growth Zones, an Alberta pool price, and a primary per-province Canadian tracker (the tracker used <a class="cite" href="#src-116">116</a> is secondary, <span class="tag">conf: med</span>).</li>
             <li><strong>Microsoft and Google 2026 emissions</strong> could not be extracted; figures are from 2025 reports.</li>
           </ol>
         </aside>
@@ -1848,6 +1983,36 @@
           <li id="src-91"><span class="src-pub">Wikipedia</span>, “Talen Energy”, accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/Talen_Energy">en.wikipedia.org</a></li>
           <li id="src-92"><span class="src-pub">Central Statistics Office (Ireland)</span>, “Data Centres Metered Electricity Consumption 2024”, 2025-06-10, <a href="https://www.cso.ie/en/releasesandpublications/ep/p-dcmec/datacentresmeteredelectricityconsumption2024/">cso.ie</a></li>
           <li id="src-93"><span class="src-pub">Uptime Institute Intelligence</span>, “US capacity growth stumbled in 2025: what happened?”, 2026, <a href="https://intelligence.uptimeinstitute.com/resource/us-capacity-growth-stumbled-2025-what-happened">intelligence.uptimeinstitute.com</a></li>
+          <li id="src-94"><span class="src-pub">Meta Platforms</span>, Form 10-Q for the quarter ended 2025-09-30 (Hyperion JV subsequent-event note: “initial lease commitment”, $7.0 bn investor cash), filed 2025-10-30, <a href="https://www.sec.gov/Archives/edgar/data/1326801/000162828025047240/meta-20250930.htm">sec.gov</a></li>
+          <li id="src-95"><span class="src-pub">TechCrunch</span>, “Oracle sends force majeure notice on its New Mexico Stargate data center”, 2026-09-24, <a href="https://techcrunch.com/2026/09/24/oracle-sends-force-majeure-notice-on-its-new-mexico-stargate-data-center/">techcrunch.com</a></li>
+          <li id="src-96"><span class="src-pub">Governor of New York</span>, “First Statewide Moratorium on New Hyperscale Data Centers Launched by Governor Kathy Hochul”, 2026-07-14, <a href="https://www.governor.ny.gov/news/first-statewide-moratorium-new-hyperscale-data-centers-launched-governor-kathy-hochul">governor.ny.gov</a></li>
+          <li id="src-97"><span class="src-pub">Vistra</span>, “Vistra and Meta Announce Agreements to Support Nuclear Plants in PJM and Add New Nuclear Generation to the Grid”, 2026-01-09, <a href="https://investor.vistracorp.com/2026-01-09-Vistra-and-Meta-Announce-Agreements-to-Support-Nuclear-Plants-in-PJM-and-Add-New-Nuclear-Generation-to-the-Grid">investor.vistracorp.com</a></li>
+          <li id="src-98"><span class="src-pub">Alphabet</span>, “Alphabet Announces Agreement to Acquire Intersect to Advance U.S. Energy Innovation”, 2025-12-22, <a href="https://abc.xyz/investor/news/news-details/2025/Alphabet-Announces-Agreement-to-Acquire-Intersect-to-Advance-U-S--Energy-Innovation-2025-DVIuVDM9wW/default.aspx">abc.xyz</a></li>
+          <li id="src-99"><span class="src-pub">Bloom Energy</span>, “Brookfield and Bloom Energy Expand AI Infrastructure Partnership to $25 Billion; Fivefold Increase to Build and Finance Rapid Power for AI Infrastructure”, 2026-06-30, <a href="https://investor.bloomenergy.com/press-releases/press-release-details/2026/Brookfield-and-Bloom-Energy-Expand-AI-Infrastructure-Partnership-to-25-Billion-Fivefold-Increase-to-Build-and-Finance-Rapid-Power-for-AI-Infrastructure/default.aspx">investor.bloomenergy.com</a></li>
+          <li id="src-100"><span class="src-pub">Utility Dive</span>, “NextEra aims to restart Iowa nuclear plant by early 2029”, 2025-11-03, <a href="https://www.utilitydive.com/news/nextera-google-nuclear-earnings/804308/">utilitydive.com</a></li>
+          <li id="src-101"><span class="src-pub">Williams</span>, “Socrates Power Solution Facilities” (project page), accessed 2026-09-25, <a href="https://www.williams.com/expansion-project/socrates-power-solution-facilities/">williams.com</a></li>
+          <li id="src-102"><span class="src-pub">IEA</span>, “Overcoming energy constraints is key to delivering on Europe's data centre goals”, 2025-11-16, <a href="https://www.iea.org/commentaries/overcoming-energy-constraints-is-key-to-delivering-on-europe-s-data-centre-goals">iea.org</a></li>
+          <li id="src-103"><span class="src-pub">IEA</span>, “Electricity 2026 – Prices”, 2026-02, <a href="https://www.iea.org/reports/electricity-2026/prices">iea.org</a></li>
+          <li id="src-104"><span class="src-pub">European Commission</span>, “Cloud and AI Development Act” (proposal COM(2026) 502, 2026-06-03), accessed 2026-09-25, <a href="https://digital-strategy.ec.europa.eu/en/policies/cloud-and-ai-development-act">digital-strategy.ec.europa.eu</a></li>
+          <li id="src-105"><span class="src-pub">Commission for Regulation of Utilities (Ireland)</span>, “The CRU publishes its decision on new electricity connection policy for data centres”, 2025-12-12, <a href="https://www.cru.ie/about-us/news/the-cru-publishes-its-decision-on-new-electricity-connection-policy-for-data-centres/">cru.ie</a></li>
+          <li id="src-106"><span class="src-pub">The Next Web (citing CBRE)</span>, “63% of Europe's new data centre capacity is now going somewhere other than the big five”, 2026-08-19, <a href="https://thenextweb.com/news/europe-data-centres-leaving-flap-d-grid-queues-land">thenextweb.com</a></li>
+          <li id="src-107"><span class="src-pub">Data Center Knowledge</span>, “Grid Constraints Steer Dutch Data Centers Beyond Amsterdam”, 2026-09-21, <a href="https://www.datacenterknowledge.com/data-center-site-selection/grid-constraints-steer-dutch-data-centers-beyond-amsterdam">datacenterknowledge.com</a></li>
+          <li id="src-108"><span class="src-pub">The Register</span>, “Amazon's European datacenter buildout blows a breaker as grid connection wait list hits 7 years”, 2026-02-03, <a href="https://www.theregister.com/2026/02/03/amazon_power_europe/">theregister.com</a></li>
+          <li id="src-109"><span class="src-pub">G42 / PR Newswire</span>, “G42 Provides Update on Construction of Stargate UAE AI Infrastructure Cluster”, 2025-10-16, <a href="https://www.prnewswire.com/news-releases/g42-provides-update-on-construction-of-stargate-uae-ai-infrastructure-cluster-302586430.html">prnewswire.com</a></li>
+          <li id="src-110"><span class="src-pub">Reuters (via US News; text read in the Türkiye Today reprint)</span>, “Exclusive: UAE Revises AI Data Center Plan After Iranian Attacks, Sources Say”, 2026-09-11, <a href="https://www.usnews.com/news/world/articles/2026-09-11/exclusive-uae-revises-ai-data-center-plan-after-iranian-attacks-sources-say">usnews.com</a> (reprint: <a href="https://www.turkiyetoday.com/business/iran-attacks-push-uae-to-spread-out-5-gw-ai-campus-project-report-3227916">turkiyetoday.com</a>)</li>
+          <li id="src-111"><span class="src-pub">Fortune</span>, “Saudi AI giant races to fund data center expansion” (Humain), 2026-09-09, <a href="https://fortune.com/2026/09/09/saudis-humain-turns-to-outside-investment-as-the-kingdom-reins-in-fiscal-spending/">fortune.com</a></li>
+          <li id="src-112"><span class="src-pub">Qatar Investment Authority</span>, “Brookfield and Qai Form $20 Billion Strategic Investment Partnership for AI Infrastructure”, 2025-12-09, <a href="https://www.qia.qa/en/Newsroom/Pages/Brookfield-and-Qai-Form-$20-Billion-Strategic-Investment-Partnership-for-AI-Infrastructure.aspx">qia.qa</a></li>
+          <li id="src-113"><span class="src-pub">The Logic</span>, “Alberta to free up a huge amount of power to attract Big Tech and its data centres”, 2026-06-24, <a href="https://thelogic.co/news/alberta-byog-large-load-plan/">thelogic.co</a></li>
+          <li id="src-114"><span class="src-pub">Bennett Jones</span>, “Data Centre West 2026: Alberta's Digital Infrastructure Moment Has Arrived”, 2026-09, <a href="https://www.bennettjones.com/Insights/Blogs/2026/09/Albertas-Digital-Infrastructure-Moment-Has-Arrived">bennettjones.com</a></li>
+          <li id="src-115"><span class="src-pub">The Logic</span>, “Hydro-Québec looks to double electricity rates for large data centres”, 2026-02-19, <a href="https://thelogic.co/briefing/hydro-quebec-looks-to-double-electricity-rates-for-large-data-centres/">thelogic.co</a></li>
+          <li id="src-116"><span class="src-pub">McCord Investments</span>, “Dispatch: What changed in Canadian data centre power” (provincial tracker), 2026, <a href="https://www.mccordinvestments.com/dispatch">mccordinvestments.com</a></li>
+          <li id="src-117"><span class="src-pub">Shulman Advisory</span>, “Data Center Market Update 2: OCCTO's 10-Year Demand Forecast” (OCCTO release of 2026-01-21), 2026-01-27, <a href="https://shulman-advisory.com/data-center-market-update-2-occtos-10-year-demand-forecast/">shulman-advisory.com</a></li>
+          <li id="src-118"><span class="src-pub">Wood Mackenzie</span>, “Japan data centres to more than triple power demand by 2034”, 2025-08-26, <a href="https://www.woodmac.com/press-releases/japan-data-centers-power-demand/">woodmac.com</a></li>
+          <li id="src-119"><span class="src-pub">World Nuclear News</span>, “Kashiwazaki-Kariwa 6 resumes commercial operation”, 2026-04-16, <a href="https://www.world-nuclear-news.org/articles/kashiwazaki-kariwa-6-resumes-commercial-operation">world-nuclear-news.org</a></li>
+          <li id="src-120"><span class="src-pub">Energy Connects (Bloomberg)</span>, “Japan's Nuclear Revival Hits Setbacks After Scandals, Accidents”, 2026-09-17, <a href="https://www.energyconnects.com/news/renewables/2026/september/japan-s-nuclear-revival-hits-setbacks-after-scandals-accidents">energyconnects.com</a></li>
+          <li id="src-121"><span class="src-pub">DatacenterDynamics</span>, “SoftBank breaks ground on data center campus in Hokkaido, Japan”, 2025-04-18, <a href="https://www.datacenterdynamics.com/en/news/softbank-breaks-ground-on-data-center-campus-in-hokkaido-japan/">datacenterdynamics.com</a></li>
+          <li id="src-122"><span class="src-pub">NRG Energy</span>, “NRG Energy Completes Acquisition of 13 GW of Power Generation and C&amp;I VPP Portfolio from LS Power”, 2026-01-30, <a href="https://investors.nrg.com/news-releases/news-release-details/nrg-energy-completes-acquisition-13-gw-power-generation-and-ci">investors.nrg.com</a></li>
+          <li id="src-123"><span class="src-pub">Talen Energy</span>, “Talen Energy Completes Freedom and Guernsey Acquisitions”, 2025-11-25 (deal announced 2025-07-17 at ~$3.5 bn: <a href="https://ir.talenenergy.com/news-releases/news-release-details/talen-energy-expands-and-enhances-portfolio-best-class-ccgt">ir.talenenergy.com</a>), <a href="https://ir.talenenergy.com/news-releases/news-release-details/talen-energy-completes-freedom-and-guernsey-acquisitions">ir.talenenergy.com</a></li>
         </ol>
       </section>
 

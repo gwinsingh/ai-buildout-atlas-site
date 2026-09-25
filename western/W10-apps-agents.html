@@ -116,7 +116,7 @@
     .score .sc-val { font-size: 1.9rem; font-weight: 650; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
     .score .sc-dir { font-size: 0.72rem; font-weight: 650; letter-spacing: 0.05em; text-transform: uppercase; }
     .score .sc-dir.is-pro { color: var(--up); } .score .sc-dir.is-con { color: var(--down); } .score .sc-dir.is-mix { color: var(--ink-2); }
-    .lowconf { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); border: 1px dashed var(--ink-3); border-radius: 3px; padding: 0 0.3rem; white-space: nowrap; vertical-align: 0.1em; }
+    .lowconf, .medconf { font-family: var(--font-sans); font-size: 0.68rem; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-2); border: 1px dashed var(--ink-3); border-radius: 3px; padding: 0 0.3rem; white-space: nowrap; vertical-align: 0.1em; }
   </style>
 </head>
 <body>
@@ -137,7 +137,7 @@
         <dl class="hero-meta">
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
-          <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>Status</dt><dd>Draft · Edition 2 re-check 25 Sep 2026</dd></div>
           <div><dt>Related</dt><dd><a href="W09-model-labs.html">W09</a> · <a href="W08-cloud.html">W08</a> · <a href="W02-capital-financing.html">W02</a> · <a href="W01-demand-capex.html">W01</a> · <a href="W11-synthesis.html">W11</a></dd></div>
         </dl>
       </header>
@@ -157,15 +157,15 @@
         </div>
         <div class="kpi">
           <span class="kpi-label">Anthropic revenue run-rate</span>
-          <span class="kpi-value">$65<small>bn</small></span>
+          <span class="kpi-value">&gt;$65<small>bn</small></span>
           <span class="kpi-delta is-up">~7x <span>vs $9bn, Dec 2025</span></span>
-          <span class="kpi-foot"><span class="prov" data-prov="E">E</span> end-Jul 2026 · &gt;$100bn Sep report unverified</span>
+          <span class="kpi-foot"><span class="prov" data-prov="E">E</span> end-Jul 2026 (Bloomberg, 17 Aug) · NYT-reported &gt;$100bn pace not company-confirmed</span>
         </div>
         <div class="kpi">
           <span class="kpi-label">OpenAI revenue run-rate</span>
-          <span class="kpi-value">$40<small>bn</small></span>
+          <span class="kpi-value">&gt;$40<small>bn</small></span>
           <span class="kpi-delta is-up">~2x <span>vs ~$21bn, Dec 2025</span></span>
-          <span class="kpi-foot"><span class="prov" data-prov="E">E</span> Jul 2026 (reported 13 Aug)</span>
+          <span class="kpi-foot"><span class="prov" data-prov="E">E</span> Jul 2026 (Bloomberg, 13 Aug)</span>
         </div>
         <div class="kpi">
           <span class="kpi-label">Cursor ARR</span>
@@ -177,7 +177,7 @@
           <span class="kpi-label">Microsoft 365 Copilot paid seats</span>
           <span class="kpi-value">30<small>M+</small></span>
           <span class="kpi-delta is-up">+10M <span>vs Mar 2026</span></span>
-          <span class="kpi-foot"><span class="prov" data-prov="R">R</span> 30 Jun 2026 · ~6.5% of seats</span>
+          <span class="kpi-foot"><span class="prov" data-prov="R">R</span> 30 Jun 2026 (Microsoft IR) · ~6.5% of seats</span>
         </div>
         <div class="kpi">
           <span class="kpi-label">AI capex per $1 of end-customer AI money</span>
@@ -196,12 +196,12 @@
       <div class="summary" role="note" aria-labelledby="sixty">
         <p class="eyebrow" id="sixty">The 60-second version</p>
         <ol>
-          <li><strong>The thesis is largely right: agents, led by coding agents, are where the new money is arriving.</strong> Anthropic's run-rate went from $9bn to $65bn in seven months <span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a>, OpenAI's re-accelerated to $40bn on Codex, business sales and ads <span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a>, and Cursor quadrupled to $4bn ARR in seven months <span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a>.</li>
+          <li><strong>The thesis is largely right: agents, led by coding agents, are where the new money is arriving.</strong> Anthropic's run-rate went from $9bn to &gt;$65bn in seven months <span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a> (the NYT reported a &gt;$100bn pace on 18 Sep; not company-confirmed<a class="cite" href="#src-89">89</a>), OpenAI's re-accelerated to &gt;$40bn on Codex, business sales and ads <span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a>, and Cursor quadrupled to $4bn ARR in seven months <span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a>.</li>
           <li><strong>But the money is not landing in an independent "app layer".</strong> The fastest-growing agent products belong to the model labs (Claude Code, Codex, Cowork), to incumbents (Microsoft, Salesforce, ServiceNow), or were bought by labs: SpaceX/xAI paid $60bn for Cursor <span class="prov" data-prov="R">R</span><a class="cite" href="#src-23">23</a>. Apps and models are merging.</li>
           <li><strong>The biggest and most profitable AI money is still advertising.</strong> Meta's AI-driven Advantage+ suite runs at $75bn a year <span class="prov" data-prov="R">R</span><a class="cite" href="#src-40">40</a>, and we attribute ~$50bn of 2026 ad growth at Meta and Google to AI <span class="prov" data-prov="A">A</span> <span class="lowconf">Low confidence</span>. That money funds capex directly, with no lab in between.</li>
           <li><strong>Direct end-customer spending on generative AI is roughly tripling every year</strong>: ~$11bn (2024) to ~$37bn (2025) to ~$130bn (2026E), with a ~$200bn direct exit run-rate <span class="prov" data-prov="A">A</span>. No software category has grown this fast.</li>
           <li><strong>It still does not pay for the build-out.</strong> About $1.0tn of Western AI capex in 2026 runs ~5x ahead of all end-customer AI money. On a depreciation basis the build-out needs ~$600bn a year of revenue; ~$280bn is arriving <span class="prov" data-prov="A">A</span>. Closing the gap needs revenue to roughly double in 2027 and grow ~1.5x in 2028.</li>
-          <li><strong>Watch</strong> the Anthropic and OpenAI IPO filings (the first audited agent economics), Microsoft's Copilot seat count, and Ramp's monthly AI index, which in Aug–Sep 2026 showed the first "cracks": flat adoption and a 41% fall in the effective price per token <span class="prov" data-prov="E">E</span><a class="cite" href="#src-35">35</a>.</li>
+          <li><strong>Watch</strong> Anthropic's S-1 and November IPO (the first audited agent economics; OpenAI says it will not list in 2026)<a class="cite" href="#src-93">93</a><a class="cite" href="#src-94">94</a>, OpenAI's 12 Nov cut-off of Cursor<a class="cite" href="#src-90">90</a>, Microsoft's Copilot seat count, and Ramp's monthly AI index, which in Aug–Sep 2026 showed the first "cracks": flat adoption and a 41% fall in the effective price per token <span class="prov" data-prov="E">E</span><a class="cite" href="#src-35">35</a>.</li>
         </ol>
       </div>
 
@@ -210,7 +210,7 @@
         <h2><span class="kicker">01 · What this layer is</span>The storefront of the AI economy</h2>
         <p class="lede">This is the layer where someone outside the industry finally pays. Everything below it, from power plants to chips to clouds to model labs, is a supplier.</p>
         <p>The products are familiar: a ChatGPT subscription, a Microsoft 365 Copilot seat, a Cursor license, an API bill for <span class="term" data-term="Token">tokens</span>, a per-ticket fee to a customer-service agent, or an Instagram ad whose targeting was chosen by a recommendation model. Unless money eventually arrives here, the build-out is financed only by investors' hopes and by hyperscalers' existing profits (see <a href="W02-capital-financing.html">W02</a>).</p>
-        <p>One distinction matters for every number on this page. <span class="term" data-term="Run-rate">Run-rate</span> (or <span class="term" data-term="ARR">ARR</span>) is the latest month or quarter multiplied up to a year; it is <em>not</em> calendar-year revenue. In a market growing 3–7x a year, the two differ a lot. Anthropic's $65bn run-rate at the end of July <span class="prov" data-prov="E">E</span> sits alongside roughly $60bn of expected calendar-2026 revenue <span class="prov" data-prov="A">A</span>.</p>
+        <p>One distinction matters for every number on this page. <span class="term" data-term="Run-rate">Run-rate</span> (or <span class="term" data-term="ARR">ARR</span>) is the latest month or quarter multiplied up to a year; it is <em>not</em> calendar-year revenue. In a market growing 3–7x a year, the two differ a lot. Anthropic's &gt;$65bn run-rate at the end of July <span class="prov" data-prov="E">E</span> sits alongside roughly $60bn of expected calendar-2026 revenue <span class="prov" data-prov="A">A</span>.</p>
 
         <aside class="callout callout--analogy">
           <p class="callout-label">Analogy</p>
@@ -603,7 +603,7 @@
         <figure class="chart diagram wide" aria-labelledby="race-title">
           <div class="chart-head"><div class="chart-titles">
             <p class="chart-title" id="race-title">The ARR speed race: labs and coding agents compound faster than any software before them</p>
-            <p class="chart-sub" id="race-desc">Annualized revenue run-rate, USD, log scale (each gridline is 10x). Solid dots are reported or press-reported figures; hollow dots and dashed lines are estimates, unverified reports or projections.</p>
+            <p class="chart-sub" id="race-desc">Annualized revenue run-rate, USD, log scale (each gridline is 10x). Solid dots are reported or press-reported figures; hollow dots and dashed lines are estimates, press-reported paces not confirmed by the company, or projections.</p>
           </div></div>
           <ul class="chart-legend" aria-label="Legend">
             <li><span class="lg-sw is-line" style="--sw:var(--cat-1)" aria-hidden="true"></span><span>Anthropic (company)</span></li>
@@ -613,7 +613,7 @@
           </ul>
           <svg class="race is-wide" viewBox="0 0 780 420" role="img" aria-labelledby="race-title" aria-describedby="race-desc">
 <rect class="d-shade" x="531.1" y="26" width="59.9" height="360"/>
-<text class="d-tiny" x="536.1" y="18">Unverified / projected</text>
+<text class="d-tiny" x="536.1" y="18">Reported pace / projected</text>
 <line class="d-grid" x1="46" x2="585" y1="355.9" y2="355.9"/>
 <text class="d-tick" x="40" y="355.9" dy="0.32em" text-anchor="end">$0.1B</text>
 <line class="d-grid" x1="46" x2="585" y1="256.0" y2="256.0"/>
@@ -649,14 +649,14 @@
 <circle class="d-pt c1" cx="446.4" cy="128.2" r="3.6"><title>Anthropic (company run-rate): $19B, Mar 2026 (reported)</title></circle>
 <circle class="d-pt c1" cx="461.8" cy="108.3" r="3.6"><title>Anthropic (company run-rate): $30B, Apr 2026 (reported)</title></circle>
 <circle class="d-pt c1" cx="477.2" cy="88.9" r="3.6"><title>Anthropic (company run-rate): $47B, May 2026 (reported)</title></circle>
-<circle class="d-pt c1" cx="508.0" cy="74.8" r="3.6"><title>Anthropic (company run-rate): $65B, Jul 2026 (press-reported estimate)</title></circle>
-<circle class="d-pt c1 is-hollow" cx="538.8" cy="56.1" r="3.6"><title>Anthropic (company run-rate): $100B, Sep 2026 (reported by press, UNVERIFIED)</title></circle>
+<circle class="d-pt c1" cx="508.0" cy="74.8" r="3.6"><title>Anthropic (company run-rate): &gt;$65B, end-Jul 2026 (investor letter reported by Bloomberg, 17 Aug)</title></circle>
+<circle class="d-pt c1 is-hollow" cx="538.8" cy="56.1" r="3.6"><title>Anthropic (company run-rate): &gt;$100B pace, 18 Sep 2026 (NYT-reported; not company-confirmed; medium confidence)</title></circle>
 <circle class="d-pt c1 is-hollow" cx="585.0" cy="51.9" r="3.6"><title>Anthropic (company run-rate): $110B, Dec 2026 (projection)</title></circle>
 <path class="d-line c2" d="M400.2,123.0 L446.4,116.3 L492.6,116.3 L508.0,95.9"/>
 <circle class="d-pt c2" cx="400.2" cy="123.0" r="3.6"><title>OpenAI (company run-rate): $21B, Dec 2025 (press-reported estimate)</title></circle>
 <circle class="d-pt c2" cx="446.4" cy="116.3" r="3.6"><title>OpenAI (company run-rate): $25B, Mar 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c2" cx="492.6" cy="116.3" r="3.6"><title>OpenAI (company run-rate): $25B, Jun 2026 (press-reported estimate)</title></circle>
-<circle class="d-pt c2" cx="508.0" cy="95.9" r="3.6"><title>OpenAI (company run-rate): $40B, Jul 2026 (press-reported estimate)</title></circle>
+<circle class="d-pt c2" cx="508.0" cy="95.9" r="3.6"><title>OpenAI (company run-rate): &gt;$40B, Jul 2026 (Bloomberg, 13 Aug)</title></circle>
 <path class="d-line c4" d="M354.0,286.1 L384.8,256.0 L431.0,216.2"/>
 <path class="d-line c4 is-dash" d="M431.0,216.2 L477.2,165.7 L523.4,138.4"/>
 <circle class="d-pt c4" cx="354.0" cy="286.1" r="3.6"><title>Claude Code (product inside Anthropic): $500M, Sep 2025 (press-reported estimate)</title></circle>
@@ -674,10 +674,10 @@
 <circle class="d-pt c3" cx="461.8" cy="208.3" r="3.6"><title>Cursor (app company): $3.0B, Apr 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c3" cx="492.6" cy="195.8" r="3.6"><title>Cursor (app company): $4.0B, Jun 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c3 is-hollow" cx="585.0" cy="178.2" r="3.6"><title>Cursor (app company): $6.0B, Dec 2026 (projection)</title></circle>
-<text class="d-end t1" x="595.0" y="37.9" dy="0.32em">Anthropic $65B (Jul)</text>
-<text class="d-end t1" x="595.0" y="53.9" dy="0.32em">>$100B Sep (unverified)</text>
+<text class="d-end t1" x="595.0" y="37.9" dy="0.32em">Anthropic &gt;$65B (Jul)</text>
+<text class="d-end t1" x="595.0" y="53.9" dy="0.32em">&gt;$100B pace? (NYT, Sep)</text>
 <line class="d-lead" x1="513.0" x2="592.0" y1="95.9" y2="95.9"/>
-<text class="d-end t2" x="595.0" y="95.9" dy="0.32em">OpenAI $40B (Jul)</text>
+<text class="d-end t2" x="595.0" y="95.9" dy="0.32em">OpenAI &gt;$40B (Jul)</text>
 <text class="d-end t4" x="595.0" y="138.4" dy="0.32em">Claude Code ~$15B (est.)</text>
 <text class="d-end t3" x="595.0" y="178.2" dy="0.32em">Cursor $4B (Jun)</text>
 <text class="d-note" x="392.2" y="130.6" text-anchor="end">Anthropic: $9B → $65B</text>
@@ -687,9 +687,9 @@
 <text class="d-note" x="519.4" y="300.3" dy="0.6em" text-anchor="end">SpaceX/xAI closes $60B</text>
 <text class="d-note" x="519.4" y="313.3" dy="0.6em" text-anchor="end">Cursor purchase, 14 Aug</text>
 </svg>
-<svg class="race is-narrow" viewBox="0 0 360 400" role="img" aria-labelledby="race-title" aria-describedby="race-desc">
+<svg class="race is-narrow" viewBox="-8 0 368 400" role="img" aria-labelledby="race-title" aria-describedby="race-desc">
 <rect class="d-shade" x="313.6" y="26" width="36.4" height="340"/>
-<text class="d-tiny" x="344.0" y="18" text-anchor="end">Projected</text>
+<text class="d-tiny" x="344.0" y="18" text-anchor="end">Pace / proj.</text>
 <line class="d-grid" x1="40" x2="344" y1="337.6" y2="337.6"/>
 <text class="d-tick" x="34" y="337.6" dy="0.32em" text-anchor="end">$0.1B</text>
 <line class="d-grid" x1="40" x2="344" y1="243.2" y2="243.2"/>
@@ -717,14 +717,14 @@
 <circle class="d-pt c1" cx="265.8" cy="122.5" r="3"><title>Anthropic (company run-rate): $19B, Mar 2026 (reported)</title></circle>
 <circle class="d-pt c1" cx="274.5" cy="103.8" r="3"><title>Anthropic (company run-rate): $30B, Apr 2026 (reported)</title></circle>
 <circle class="d-pt c1" cx="283.2" cy="85.4" r="3"><title>Anthropic (company run-rate): $47B, May 2026 (reported)</title></circle>
-<circle class="d-pt c1" cx="300.6" cy="72.1" r="3"><title>Anthropic (company run-rate): $65B, Jul 2026 (press-reported estimate)</title></circle>
-<circle class="d-pt c1 is-hollow" cx="317.9" cy="54.4" r="3"><title>Anthropic (company run-rate): $100B, Sep 2026 (reported by press, UNVERIFIED)</title></circle>
+<circle class="d-pt c1" cx="300.6" cy="72.1" r="3"><title>Anthropic (company run-rate): &gt;$65B, end-Jul 2026 (investor letter reported by Bloomberg, 17 Aug)</title></circle>
+<circle class="d-pt c1 is-hollow" cx="317.9" cy="54.4" r="3"><title>Anthropic (company run-rate): &gt;$100B pace, 18 Sep 2026 (NYT-reported; not company-confirmed; medium confidence)</title></circle>
 <circle class="d-pt c1 is-hollow" cx="344.0" cy="50.5" r="3"><title>Anthropic (company run-rate): $110B, Dec 2026 (projection)</title></circle>
 <path class="d-line c2" d="M239.8,117.6 L265.8,111.2 L291.9,111.2 L300.6,92.0"/>
 <circle class="d-pt c2" cx="239.8" cy="117.6" r="3"><title>OpenAI (company run-rate): $21B, Dec 2025 (press-reported estimate)</title></circle>
 <circle class="d-pt c2" cx="265.8" cy="111.2" r="3"><title>OpenAI (company run-rate): $25B, Mar 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c2" cx="291.9" cy="111.2" r="3"><title>OpenAI (company run-rate): $25B, Jun 2026 (press-reported estimate)</title></circle>
-<circle class="d-pt c2" cx="300.6" cy="92.0" r="3"><title>OpenAI (company run-rate): $40B, Jul 2026 (press-reported estimate)</title></circle>
+<circle class="d-pt c2" cx="300.6" cy="92.0" r="3"><title>OpenAI (company run-rate): &gt;$40B, Jul 2026 (Bloomberg, 13 Aug)</title></circle>
 <path class="d-line c4" d="M213.7,271.6 L231.1,243.2 L257.1,205.6"/>
 <path class="d-line c4 is-dash" d="M257.1,205.6 L283.2,158.0 L309.3,132.2"/>
 <circle class="d-pt c4" cx="213.7" cy="271.6" r="3"><title>Claude Code (product inside Anthropic): $500M, Sep 2025 (press-reported estimate)</title></circle>
@@ -742,8 +742,8 @@
 <circle class="d-pt c3" cx="274.5" cy="198.2" r="3"><title>Cursor (app company): $3.0B, Apr 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c3" cx="291.9" cy="186.4" r="3"><title>Cursor (app company): $4.0B, Jun 2026 (press-reported estimate)</title></circle>
 <circle class="d-pt c3 is-hollow" cx="344.0" cy="169.7" r="3"><title>Cursor (app company): $6.0B, Dec 2026 (projection)</title></circle>
-<text class="d-end t1" x="292.6" y="62.1" dy="0.32em" text-anchor="end">$65B</text>
-<text class="d-end t2" x="307.6" y="95.0" dy="0.32em" text-anchor="start">$40B</text>
+<text class="d-end t1" x="292.6" y="62.1" dy="0.32em" text-anchor="end">&gt;$65B</text>
+<text class="d-end t2" x="307.6" y="95.0" dy="0.32em" text-anchor="start">&gt;$40B</text>
 <text class="d-end t4" x="316.3" y="132.2" dy="0.32em" text-anchor="start">~$15B</text>
 <text class="d-end t3" x="293.9" y="199.4" dy="0.32em" text-anchor="start">$4B</text>
 </svg>
@@ -766,23 +766,23 @@
                     <tr><th scope="row">Apr 2026</th><td>Anthropic · Cursor</td><td>30 · 3.0</td><td><span class="prov" data-prov="R">R</span> · <span class="prov" data-prov="E">E</span></td></tr>
                     <tr><th scope="row">May 2026</th><td>Anthropic · Claude Code (est.)</td><td>47 · ~8</td><td><span class="prov" data-prov="R">R</span> · <span class="prov" data-prov="E">E</span> low confidence</td></tr>
                     <tr><th scope="row">Jun 2026</th><td>OpenAI · Cursor</td><td>25 · 4.0</td><td><span class="prov" data-prov="E">E</span></td></tr>
-                    <tr><th scope="row">Jul 2026</th><td>Anthropic · OpenAI</td><td>65 · 40</td><td><span class="prov" data-prov="E">E</span> <a class="cite" href="#src-1">1</a> <a class="cite" href="#src-8">8</a></td></tr>
+                    <tr><th scope="row">Jul 2026</th><td>Anthropic · OpenAI</td><td>&gt;65 · &gt;40</td><td><span class="prov" data-prov="E">E</span> Bloomberg, 17 / 13 Aug <a class="cite" href="#src-1">1</a> <a class="cite" href="#src-8">8</a></td></tr>
                     <tr><th scope="row">Aug 2026</th><td>Claude Code (est.)</td><td>~15</td><td><span class="prov" data-prov="E">E</span> low confidence <a class="cite" href="#src-6">6</a></td></tr>
-                    <tr><th scope="row">Sep 2026</th><td>Anthropic (reported, unverified)</td><td>&gt;100</td><td><span class="prov" data-prov="E">E</span> unverified</td></tr>
+                    <tr><th scope="row">Sep 2026</th><td>Anthropic (NYT-reported pace, not company-confirmed)</td><td>&gt;100</td><td><span class="prov" data-prov="E">E</span> <span class="medconf">Medium conf.</span> <a class="cite" href="#src-89">89</a></td></tr>
                     <tr><th scope="row">Dec 2026</th><td>Anthropic · Cursor (projections)</td><td>110 · 6</td><td><span class="prov" data-prov="E">E</span> <a class="cite" href="#src-1">1</a> <a class="cite" href="#src-20">20</a></td></tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </details>
-          <figcaption class="chart-foot"><span class="cf-item">Source: Anthropic via VentureBeat, Simon Willison, TechCrunch <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a><a class="cite" href="#src-4">4</a>; Bloomberg <a class="cite" href="#src-8">8</a>; ValueAdd <a class="cite" href="#src-14">14</a>; Dealroom, Sacra, Wikipedia <a class="cite" href="#src-19">19</a><a class="cite" href="#src-20">20</a><a class="cite" href="#src-21">21</a>; FutureSearch <a class="cite" href="#src-6">6</a></span><span class="cf-item">As of 2026-09-25</span><span class="cf-item">Unit: USD bn annualized</span><span class="cf-item"><span class="prov" data-prov="R">R</span><span class="prov" data-prov="E">E</span></span><span class="cf-item cf-note">Hover a dot for its value. The &gt;$100bn September figure for Anthropic (NYT via Axios, 18 Sep 2026) could not be verified by the fact-check pass; the last confirmed figure is $65bn at end-July. OpenAI's $40bn is for July, reported 13 Aug.</span></figcaption>
+          <figcaption class="chart-foot"><span class="cf-item">Source: Anthropic via VentureBeat, Simon Willison, TechCrunch <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a><a class="cite" href="#src-4">4</a>; Bloomberg <a class="cite" href="#src-8">8</a>; ValueAdd <a class="cite" href="#src-14">14</a>; Dealroom, Sacra, Wikipedia <a class="cite" href="#src-19">19</a><a class="cite" href="#src-20">20</a><a class="cite" href="#src-21">21</a>; FutureSearch <a class="cite" href="#src-6">6</a></span><span class="cf-item">As of 2026-09-25</span><span class="cf-item">Unit: USD bn annualized</span><span class="cf-item"><span class="prov" data-prov="R">R</span><span class="prov" data-prov="E">E</span></span><span class="cf-item cf-note">Hover a dot for its value. The &gt;$100bn September point for Anthropic is an NYT-reported pace (18 Sep 2026, via Axios; Bloomberg words it as "to top $100 billion in 2026"), not a company figure, so it is drawn hollow and dashed<a class="cite" href="#src-89">89</a>. The last firm figure is &gt;$65bn at end-July (Bloomberg, 17 Aug). OpenAI's &gt;$40bn is for July, reported by Bloomberg on 13 Aug.</span></figcaption>
         </figure>
 
         <h3>Anthropic: the fastest revenue ramp on record</h3>
-        <p>Anthropic's run-rate went <strong>$1bn (Dec 2024) → $9bn (Dec 2025) → $30bn (6 Apr 2026) → $47bn (May) → $65bn (end-July)</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-4">4</a><a class="cite" href="#src-2">2</a> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a>. The $65bn is a press-reported investor-letter figure, not company-published; a mid-September report of more than $100bn is unverified <span class="lowconf">Low confidence</span>. Quarterly revenue went $0.79bn (Q2 2025) → $4.73bn (Q1 2026) → $11.5bn+ (Q2 2026, preliminary), and Q2 2026 reportedly brought a first positive adjusted operating income of about $0.56bn <span class="prov" data-prov="E">E</span><a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a>. About 70–75% of revenue is API and 10–15% subscriptions <span class="prov" data-prov="E">E</span><a class="cite" href="#src-5">5</a>. More than 1,000 customers spend over $1M a year, a number that doubled in under two months (Apr 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-4">4</a>; eight of the Fortune 10 are customers <span class="prov" data-prov="E">E</span><a class="cite" href="#src-5">5</a>. By May 2026 commentators were projecting that Anthropic would out-earn every public software company except Microsoft by year-end <span class="prov" data-prov="E">E</span><a class="cite" href="#src-86">86</a>.</p>
+        <p>Anthropic's run-rate went <strong>$1bn (Dec 2024) → $9bn (Dec 2025) → $30bn (6 Apr 2026) → $47bn (May) → &gt;$65bn (end-July)</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-4">4</a><a class="cite" href="#src-2">2</a> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a>. The &gt;$65bn is an investor-letter figure reported by Bloomberg and CNBC on 17 Aug, not company-published. On 18 Sep the NYT reported that Anthropic is "now pacing to generate more than $100 billion in annual revenue, up 50% from just two months ago" (as quoted by Axios); Bloomberg words the same report as "to top $100 billion in 2026", so it may be a year-end projection rather than a current pace. The report is real but <strong>not company-confirmed</strong> <span class="prov" data-prov="E">E</span> <span class="medconf">Medium conf.</span><a class="cite" href="#src-89">89</a> Quarterly revenue went $0.79bn (Q2 2025) → $4.73bn (Q1 2026) → $11.5bn+ (Q2 2026, preliminary), and Q2 2026 reportedly brought a first positive adjusted operating income of about $0.56bn <span class="prov" data-prov="E">E</span><a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a>. About 70–75% of revenue is API and 10–15% subscriptions <span class="prov" data-prov="E">E</span><a class="cite" href="#src-5">5</a>. More than 1,000 customers spend over $1M a year, a number that doubled in under two months (Apr 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-4">4</a>; eight of the Fortune 10 are customers <span class="prov" data-prov="E">E</span><a class="cite" href="#src-5">5</a>. By May 2026 commentators were projecting that Anthropic would out-earn every public software company except Microsoft by year-end <span class="prov" data-prov="E">E</span><a class="cite" href="#src-86">86</a>.</p>
 
         <h3>OpenAI: consumer scale, re-accelerating on agents and ads</h3>
-        <p>OpenAI's revenue was $3.7bn in 2024 and $13.07bn in 2025, with an operating loss of $20.9bn (leaked audited figures) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-14">14</a>. Its run-rate sat on a ~$25bn "plateau" from February to June 2026 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-14">14</a>, then jumped to <strong>$40bn</strong> with July revenue up 20% month on month, credited to Codex, business sales and ads <span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a><a class="cite" href="#src-9">9</a>. Q1 2026 revenue was $5.7bn at an adjusted operating margin of <strong>−122%</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-10">10</a>; Q2 was ~$6.7bn <span class="prov" data-prov="E">E</span><a class="cite" href="#src-15">15</a>.</p>
+        <p>OpenAI's revenue was $3.7bn in 2024 and $13.07bn in 2025, with an operating loss of $20.9bn (leaked audited figures) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-14">14</a>. Its run-rate sat on a ~$25bn "plateau" from February to June 2026 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-14">14</a>, then jumped to <strong>&gt;$40bn</strong> (as of July; Bloomberg, 13 Aug) with July revenue up 20% month on month, credited to Codex, business sales and ads <span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a><a class="cite" href="#src-9">9</a>. Q1 2026 revenue was $5.7bn at an adjusted operating margin of <strong>−122%</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-10">10</a>; Q2 was ~$6.7bn <span class="prov" data-prov="E">E</span><a class="cite" href="#src-15">15</a>.</p>
         <p>Users went from 900M weekly actives (Feb 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-11">11</a> to more than 1bn (Aug 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-12">12</a>; paid subscribers from 47M (end-2025) to 50M (Feb) to 55M (Q1) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-10">10</a><a class="cite" href="#src-11">11</a>. On the business side it had 1M+ business customers and 7M ChatGPT-for-Work seats in Nov 2025 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-16">16</a>, and 9M+ paying business users by Feb 2026 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-15">15</a>. Management targets enterprise at 50% of revenue by year-end <span class="prov" data-prov="E">E</span><a class="cite" href="#src-9">9</a>.</p>
 
         <div class="cards wide" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr))">
@@ -835,7 +835,7 @@
 
         <aside class="callout callout--why">
           <p class="callout-label">The crossover</p>
-          <p>Anthropic's Q2 2026 revenue (~$11.5bn) was roughly <strong>1.7x</strong> OpenAI's (~$6.7bn), and its July run-rate ($65bn) ~1.6x OpenAI's ($40bn) <span class="prov" data-prov="E">E</span>. Two years earlier OpenAI was about eight times larger. The enterprise, API and agent customer, not the consumer, drove the reversal. <em>Caveat:</em> Anthropic reportedly books some cloud-marketplace sales (Bedrock, Vertex) gross while OpenAI's Microsoft revenue share is netted, and neither has published audited statements. The IPO filings should settle it.</p>
+          <p>Anthropic's Q2 2026 revenue (~$11.5bn) was roughly <strong>1.7x</strong> OpenAI's (~$6.7bn), and its July run-rate (&gt;$65bn) ~1.6x OpenAI's (&gt;$40bn) <span class="prov" data-prov="E">E</span>; the gap would be ~2.5x only if the NYT-reported &gt;$100bn pace holds <span class="prov" data-prov="A">A</span>. Two years earlier OpenAI was about eight times larger. The enterprise, API and agent customer, not the consumer, drove the reversal. <em>Caveat:</em> Anthropic reportedly books some cloud-marketplace sales (Bedrock, Vertex) gross while OpenAI's Microsoft revenue share is netted, and neither has published audited statements. The IPO filings should settle it: Anthropic is reported to target a November 2026 listing, while Altman says OpenAI will not list in 2026<a class="cite" href="#src-93">93</a><a class="cite" href="#src-94">94</a>.</p>
         </aside>
 
         <h3>Cursor: the fastest-growing application company</h3>
@@ -1058,7 +1058,7 @@
             </tbody>
           </table>
         </div>
-        <p class="table-note">Fact-check note (25 Sep 2026): W09 puts Anthropic 2026 at ~$60–70bn using the unverified &gt;$100bn September run-rate. If that figure holds, Anthropic 2026E is ~$60–65bn, the lab subtotal ~$112–117bn and direct spend ~$130–135bn, still inside the range. The canonical cross-layer value is ~$130bn.</p>
+        <p class="table-note">Fact-check note (25 Sep 2026): W09 puts Anthropic 2026 at ~$60–70bn using the NYT-reported &gt;$100bn September pace (the report exists, but it is not company-confirmed and may be a year-end projection). If that figure holds, Anthropic 2026E is ~$60–65bn, the lab subtotal ~$112–117bn and direct spend ~$130–135bn, still inside the range. The canonical cross-layer value is ~$130bn.</p>
 
         <details class="eli5">
           <summary>How we estimate the AI-driven ad uplift</summary>
@@ -1094,13 +1094,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr><th scope="row">Anthropic</th><td>Lab + agents (Claude Code, Cowork)</td><td data-sort="65">$65bn run-rate</td><td>End-Jul 2026</td><td>~7x in 7 months</td><td>$965bn post (May 2026); IPO filed confidentially</td><td data-sort="14.8">~15x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a></td></tr>
-              <tr><th scope="row">OpenAI</th><td>Lab + consumer + agents (Codex, ChatGPT agent)</td><td data-sort="40">$40bn run-rate</td><td>Jul 2026</td><td>~2x vs end-2025</td><td>$852bn (Mar 2026 round)</td><td data-sort="21.3">~21x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a><a class="cite" href="#src-10">10</a></td></tr>
+              <tr><th scope="row">Anthropic</th><td>Lab + agents (Claude Code, Cowork)</td><td data-sort="65">&gt;$65bn run-rate</td><td>End-Jul 2026</td><td>~7x in 7 months</td><td>$965bn post (May 2026); IPO targeted for Nov 2026 at ~$2tn (WSJ)<a class="cite" href="#src-93">93</a></td><td data-sort="14.8">~15x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a></td></tr>
+              <tr><th scope="row">OpenAI</th><td>Lab + consumer + agents (Codex, ChatGPT agent)</td><td data-sort="40">&gt;$40bn run-rate</td><td>Jul 2026</td><td>~2x vs end-2025</td><td>$852bn (Mar 2026 round); no IPO in 2026 (Altman)<a class="cite" href="#src-94">94</a></td><td data-sort="21.3">~21x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-8">8</a><a class="cite" href="#src-10">10</a></td></tr>
               <tr><th scope="row">Microsoft <span class="sub ticker">MSFT</span></th><td>Incumbent (Copilot family, Azure AI)</td><td data-sort="37">AI business $37bn run-rate; M365 Copilot 30M+ seats</td><td>Apr / Jun 2026</td><td>+123% y/y</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-24">24</a><a class="cite" href="#src-25">25</a></td></tr>
               <tr><th scope="row">Google <span class="sub ticker">GOOGL</span></th><td>Lab + consumer + ads</td><td data-sort="0">Gemini app 950M MAU; AI Mode 1bn+ MAU; Cloud +82%</td><td>Q2 2026</td><td>—</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-42">42</a><a class="cite" href="#src-43">43</a></td></tr>
               <tr><th scope="row">Meta <span class="sub ticker">META</span></th><td>Ads (AI ranking)</td><td data-sort="75">Advantage+ $75bn run-rate; ad revenue +27%</td><td>Q2 2026</td><td>—</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-39">39</a><a class="cite" href="#src-40">40</a></td></tr>
-              <tr><th scope="row">Cursor (SpaceX/xAI)</th><td>Coding agent</td><td data-sort="4">$4bn ARR</td><td>Early Jun 2026</td><td>~4x in 6 months</td><td>Acquired for $60bn (closed 14 Aug 2026)</td><td data-sort="15">15x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-23">23</a></td></tr>
+              <tr><th scope="row">Cursor (SpaceX/xAI)</th><td>Coding agent</td><td data-sort="4">$4bn ARR</td><td>Early Jun 2026</td><td>~4x in 6 months</td><td>Acquired for $60bn (closed 14 Aug 2026); OpenAI models cut off 12 Nov<a class="cite" href="#src-90">90</a></td><td data-sort="15">15x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-23">23</a></td></tr>
               <tr><th scope="row">Salesforce <span class="sub ticker">CRM</span></th><td>Incumbent SaaS</td><td data-sort="1.5">Agentforce ARR &gt;$1.5bn; with Data 360 $3.9bn</td><td>Q2 FY27 (Jul 2026)</td><td>+240% / +210%</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-29">29</a></td></tr>
+              <tr><th scope="row">Adobe <span class="sub ticker">ADBE</span></th><td>Incumbent SaaS (creative)</td><td data-sort="0.65">AI-first ARR &gt;$650M; total ARR $27.50bn</td><td>Q3 FY26 (to Aug 2026)</td><td>+150% y/y</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a></td></tr>
+              <tr><th scope="row">Workday <span class="sub ticker">WDAY</span></th><td>Incumbent SaaS (HR, finance)</td><td data-sort="0.55">AI &gt;25% of new ACV (&gt;$100M in the quarter); AI ARR ~$0.5–0.6bn <span class="prov" data-prov="E">E</span></td><td>Q2 FY27 (to Jul 2026)</td><td>Agent customers +35% q/q</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-96">96</a><a class="cite" href="#src-97">97</a></td></tr>
               <tr><th scope="row">ServiceNow <span class="sub ticker">NOW</span></th><td>Incumbent SaaS</td><td data-sort="1">AI ACV &gt;$1bn</td><td>Q2 2026</td><td>~2x</td><td>Public</td><td data-sort="-1">n/a</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-31">31</a></td></tr>
               <tr><th scope="row">Cognition (Devin + Windsurf)</th><td>Coding agent</td><td data-sort="0.9">$900M ARR</td><td>Aug 2026</td><td>~2x in 3 months</td><td>$26bn (May 2026)</td><td data-sort="28.9">~29x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-76">76</a></td></tr>
               <tr><th scope="row">Perplexity</th><td>Answer engine / browser agent</td><td data-sort="0.75">$750M ARR</td><td>Aug 2026</td><td>~3x vs end-2025</td><td>$20bn (Sep 2025)</td><td data-sort="26.7">~27x</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-65">65</a></td></tr>
@@ -1200,7 +1202,7 @@
             <thead><tr><th scope="col">Product</th><th scope="col">Owner</th><th scope="col">Run-rate / ARR</th><th scope="col">Model dependence</th><th scope="col" data-nosort>Prov.</th></tr></thead>
             <tbody>
               <tr><th scope="row">Claude Code</th><td>Anthropic</td><td>≥$2.5bn (Feb 2026; ~18% of Anthropic's $14bn); est. ~$8bn (May), ~$15bn (Aug)</td><td>Own models</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-4">4</a> / <span class="prov" data-prov="E">E</span><a class="cite" href="#src-6">6</a> <span class="lowconf">Low conf.</span></td></tr>
-              <tr><th scope="row">Cursor</th><td>SpaceX/xAI (since Aug 2026)</td><td>$4bn (Jun 2026)</td><td>Anthropic, OpenAI, Google, xAI plus its own Composer models (Composer 2, Mar 2026, built on Moonshot's Kimi 2.5, a China-origin open-weight model)</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a><a class="cite" href="#src-21">21</a></td></tr>
+              <tr><th scope="row">Cursor</th><td>SpaceX/xAI (since Aug 2026)</td><td>$4bn (Jun 2026)</td><td>Anthropic, OpenAI (access ends 12 Nov 2026), Google, xAI plus its own Composer models (Composer 2, Mar 2026, built on Moonshot's Kimi 2.5, a China-origin open-weight model)</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-19">19</a><a class="cite" href="#src-21">21</a> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-90">90</a></td></tr>
               <tr><th scope="row">OpenAI Codex</th><td>OpenAI</td><td>Undisclosed; 5M weekly users (Jun 2026, 20% non-developers); 2M+ in Mar</td><td>Own models</td><td><span class="prov" data-prov="R">R</span> (press)<a class="cite" href="#src-17">17</a><a class="cite" href="#src-18">18</a></td></tr>
               <tr><th scope="row">GitHub Copilot</th><td>Microsoft</td><td>~$1–2bn est.; 4.7M paid subscribers (+75% y/y, Jan 2026); ~50M total users (Jul 2026)</td><td>OpenAI, Anthropic, Google (multi-model); usage-based pricing from Jun 2026</td><td><span class="prov" data-prov="E">E</span> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-26">26</a><a class="cite" href="#src-27">27</a><a class="cite" href="#src-28">28</a></td></tr>
               <tr><th scope="row">Cognition (Devin + Windsurf)</th><td>Independent</td><td>$900M (Aug 2026)</td><td>Multi-model plus own SWE models</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-76">76</a></td></tr>
@@ -1216,7 +1218,7 @@
         <div class="cards wide">
           <article class="company-card">
             <header><h3>Cursor</h3><span class="ticker">Anysphere</span><span class="chip role"><span class="chip-id">W10</span> Coding agent</span></header>
-            <p>An AI-first fork of VS Code, founded in 2022 by four MIT graduates; possibly the fastest SaaS ramp ever. Enterprise business tripled quarter on quarter in Q1 2026; 50,000+ engineering teams and ~70% of the Fortune 1000 use it <a class="cite" href="#src-19">19</a><a class="cite" href="#src-20">20</a>. It only reached "slight gross-margin profitability" by Apr 2026 through its own models and routing: enterprise accounts are profitable, individual plans lose money <a class="cite" href="#src-20">20</a>. A July 2025 switch to metered usage caused a backlash and was partly rolled back <a class="cite" href="#src-21">21</a>.</p>
+            <p>An AI-first fork of VS Code, founded in 2022 by four MIT graduates; possibly the fastest SaaS ramp ever. Enterprise business tripled quarter on quarter in Q1 2026; 50,000+ engineering teams and ~70% of the Fortune 1000 use it <a class="cite" href="#src-19">19</a><a class="cite" href="#src-20">20</a>. It only reached "slight gross-margin profitability" by Apr 2026 through its own models and routing: enterprise accounts are profitable, individual plans lose money <a class="cite" href="#src-20">20</a>. A July 2025 switch to metered usage caused a backlash and was partly rolled back <a class="cite" href="#src-21">21</a>. After the SpaceX deal, OpenAI said it will end Cursor's access to its models on 12 Nov 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-90">90</a>.</p>
             <dl class="metrics">
               <div><dt>ARR, Jun 2026</dt><dd>$4bn</dd></div>
               <div><dt>Enterprise share</dt><dd>60–75%</dd></div>
@@ -1285,6 +1287,7 @@
         <aside class="callout callout--insight">
           <p class="callout-label">The hidden twist</p>
           <p>SpaceX (which had merged with xAI in Feb 2026 <a class="cite" href="#src-79">79</a>) took an option on Cursor in Apr 2026, exercised it on 16 Jun and closed the $60bn all-stock deal on 14 Aug 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-21">21</a><a class="cite" href="#src-22">22</a><a class="cite" href="#src-23">23</a>. The pre-deal story was that a planned $2bn raise "wasn't going to be enough to help it break even" <a class="cite" href="#src-22">22</a>. The most successful independent AI application <strong>became part of a lab</strong> because it needed a hedge on its cost of goods (its own model and compute) and capital.</p>
+          <p><strong>The cost of switching sides.</strong> On 28 Aug 2026 OpenAI said it will terminate model access for Cursor on 12 Nov 2026, citing "our experience with Elon Musk's companies violating contracts" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-90">90</a>. From then on Cursor relies on Anthropic, Google, SpaceXAI's Grok and its own Composer models. When an app joins one lab, rival labs can cut off its supply.</p>
         </aside>
 
         <h3>Other agent categories</h3>
@@ -1319,16 +1322,39 @@
             <thead><tr><th scope="col">Company</th><th scope="col">AI metric</th><th scope="col">Latest</th><th scope="col">Comment</th></tr></thead>
             <tbody>
               <tr><th scope="row">Microsoft</th><td>AI business run-rate</td><td>$37bn, +123% y/y (Q3 FY26, Apr 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-25">25</a></td><td>Includes Azure AI infrastructure (much of it OpenAI's compute), so not all end-customer app revenue. Not restated in Q4 <a class="cite" href="#src-27">27</a></td></tr>
-              <tr><th scope="row">Microsoft</th><td>M365 Copilot paid seats</td><td>30M+ (30 Jun 2026); ~20M in Mar; customers with 50K+ seats up 7x y/y <span class="prov" data-prov="R">R</span><a class="cite" href="#src-24">24</a><a class="cite" href="#src-26">26</a></td><td>~6.5% of ~464M M365 commercial seats <span class="prov" data-prov="E">E</span>. Implied ARR ≈ 30M × ~$25–28 net × 12 ≈ $9–10bn <span class="prov" data-prov="A">A</span></td></tr>
+              <tr><th scope="row">Microsoft</th><td>M365 Copilot paid seats</td><td>30M+ (30 Jun 2026; "net seat adds more than doubling quarter-over-quarter"); ~20M in Mar; customers with 50K+ seats up 7x y/y <span class="prov" data-prov="R">R</span><a class="cite" href="#src-24">24</a><a class="cite" href="#src-26">26</a><a class="cite" href="#src-95">95</a></td><td>~6.5% of ~464M M365 commercial seats <span class="prov" data-prov="E">E</span>. Implied ARR ≈ 30M × ~$25–28 net × 12 ≈ $9–10bn <span class="prov" data-prov="A">A</span></td></tr>
               <tr><th scope="row">Salesforce</th><td>Agentforce ARR</td><td>&gt;$1.5bn (+240%); with Data 360 $3.9bn (+210%); 3.2bn Agentic Work Units in Q2 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-29">29</a></td><td>Total revenue still grows only +11%; AI is ~3% of revenue. From Q2 FY27 the Agentforce ARR definition also includes Slackbot and Headless 360, so part of the +240% is a broader definition</td></tr>
               <tr><th scope="row">ServiceNow</th><td>AI ACV</td><td>&gt;$1bn (Q2 2026); agentic deployments 9x in 9 months <span class="prov" data-prov="R">R</span><a class="cite" href="#src-31">31</a></td><td>Subscription gross margin guided to 81% for FY26, pressured by AI usage and hyperscaler hosting</td></tr>
-              <tr><th scope="row">Adobe</th><td>AI-influenced / AI-first ARR</td><td>Not re-verified for 2026 (older: AI-first ARR target of &gt;$250M exceeded in FY25)</td><td>CEO Shantanu Narayen hands over to Anil Chakravarthy on 1 Dec 2026 (announced 3 Sep 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-85">85</a></td></tr>
-              <tr><th scope="row">Workday, Intuit</th><td>AI agents (Illuminate, Intuit Assist)</td><td>Not verified this cycle <span class="lowconf">Low conf.</span></td><td>Workday −39.7% YTD at 31 Mar 2026 <a class="cite" href="#src-81">81</a></td></tr>
+              <tr><th scope="row">Adobe</th><td>AI-first ARR</td><td><strong>&gt;$650M, +150% y/y</strong> (exiting Q3 FY26, reported 10 Sep 2026). Total ARR $27.50bn; revenue $6.76bn (+13%); &gt;1bn MAU; FY26 revenue guide raised to $26.58–26.63bn; stock −4.5% on the print <span class="prov" data-prov="R">R</span><a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a></td><td>AI-first ARR is still only ~2.4% of total ARR <span class="prov" data-prov="A">A</span> (0.65 ÷ 27.5). CEO Shantanu Narayen hands over to Anil Chakravarthy on 1 Dec 2026 (announced 3 Sep 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-85">85</a></td></tr>
+              <tr><th scope="row">Workday</th><td>AI share of new ACV; agent adoption</td><td>Q2 FY27 (to Jul 2026, reported 27 Aug): AI products drove <strong>&gt;$100M of new ACV, &gt;25% of all new ACV</strong>; <strong>5,500+ customers</strong> use Workday's own agents (+35% q/q). Revenue $2.649bn (+12.8%); FY27 subscription guide $9.94–9.95bn (+13%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-96">96</a>. AI ARR ~$0.5–0.6bn per call summaries <span class="prov" data-prov="E">E</span><a class="cite" href="#src-97">97</a> <span class="medconf">Medium conf.</span></td><td>The two call summaries disagree on AI ARR. AI is still only ~5–6% of revenue <span class="prov" data-prov="A">A</span> (~$0.55bn ARR ÷ ~$10.6bn annualized revenue). Workday −39.7% YTD at 31 Mar 2026 <a class="cite" href="#src-81">81</a></td></tr>
+              <tr><th scope="row">Intuit</th><td>AI agents in QuickBooks and Intuit Enterprise Suite; AI plus human experts (TurboTax Live)</td><td>FY26 (to Jul 2026, reported 25 Aug): <strong>&gt;75% of Intuit Enterprise Suite customers use its AI agents every month</strong>; TurboTax Live customers +38%; revenue $21.4bn (+14%); FY27 guide $23.3–23.5bn (+9–10%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-98">98</a><a class="cite" href="#src-99">99</a></td><td>No AI revenue disclosed. Intuit monetizes AI inside existing products and assisted-tax pricing, not as a separate line</td></tr>
               <tr><th scope="row">Google</th><td>Gemini Enterprise</td><td>Used by ~90% of the Fortune 100 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-43">43</a></td><td>No revenue disclosed</td></tr>
               <tr><th scope="row">Meta</th><td>Advantage+</td><td>$75bn run-rate <span class="prov" data-prov="R">R</span><a class="cite" href="#src-40">40</a></td><td>End-to-end AI ad-campaign automation</td></tr>
             </tbody>
           </table>
         </div>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "horizontal": true,
+            "title": "Outside Microsoft, each incumbent's AI line is still only $0.5–1.5bn",
+            "subtitle": "Latest disclosed AI revenue metric by incumbent, USD bn (metrics differ: ARR, ACV, implied ARR)",
+            "valueFormat": "$bn", "unit": "USD bn, annualized",
+            "xKey": "c",
+            "series": [{ "key": "v", "label": "AI revenue metric", "color": 1 }],
+            "data": [
+              { "c": "M365 Copilot", "v": 9.5, "note": "Implied ARR: 30M+ seats × ~$25–28 net × 12 (Atlas estimate; Microsoft does not disclose it). Jun 2026" },
+              { "c": "Salesforce", "v": 1.5, "note": "Agentforce ARR >$1.5bn (+240%); $3.9bn with Data 360. Q2 FY27; definition now includes Slackbot and Headless 360" },
+              { "c": "ServiceNow", "v": 1.0, "note": "AI ACV >$1bn. Q2 2026" },
+              { "c": "Adobe", "v": 0.65, "note": "AI-first ARR >$650M (+150% y/y), ~2.4% of $27.5bn total ARR. Q3 FY26" },
+              { "c": "Workday", "v": 0.55, "note": "AI ARR ~$0.5–0.6bn from call summaries that disagree (estimate). AI was >25% of new ACV in Q2 FY27" }
+            ],
+            "source": "Microsoft [24][95]; Salesforce [29]; ServiceNow [31]; Adobe [91][92]; Workday [96][97]", "asOf": "2026-09-25", "provenance": ["R", "E", "A"],
+            "note": "Excludes Microsoft's $37bn AI business run-rate (it includes Azure AI infrastructure) and Meta's $75bn Advantage+ run-rate (ad revenue, not an AI product line). Intuit discloses no AI revenue: >75% of Intuit Enterprise Suite customers use its agents monthly."
+          }
+          </script>
+        </figure>
 
         <figure class="wide">
           <script type="application/json" data-chart>
@@ -1345,7 +1371,7 @@
               { "d": "Jun 2026", "v": 30, "note": "30M+" }
             ],
             "height": 230,
-            "source": "Microsoft FY26 Q4 release and call", "asOf": "2026-06-30", "provenance": "R",
+            "source": "Microsoft FY26 Q4 release, call and IR page [24][95]", "asOf": "2026-06-30", "provenance": "R",
             "note": "Net adds more than doubled quarter on quarter. Implied ARR ~$9–10bn at ~$25–28 net per seat per month (Atlas estimate; Microsoft does not disclose pricing)."
           }
           </script>
@@ -1427,7 +1453,7 @@
             <tbody>
               <tr><th scope="row">AI-native apps</th><td>Model labs (API)</td><td data-sort="10">~$8–12bn</td><td>Coding and vibe-coding apps spend ~60–100% of revenue on tokens <a class="cite" href="#src-62">62</a><a class="cite" href="#src-75">75</a></td></tr>
               <tr><th scope="row">Incumbent SaaS</th><td>Labs / clouds</td><td data-sort="4">~$3–5bn</td><td>Salesforce, ServiceNow and others route to OpenAI, Anthropic and Google; Microsoft uses its OpenAI IP on Azure</td></tr>
-              <tr><th scope="row">Labs</th><td>Clouds and neoclouds (inference + training)</td><td data-sort="90">~$80–100bn <span class="lowconf">Low conf.</span></td><td>OpenAI inference ~$8.4bn (2025) → ~$14.1bn (2026E) <a class="cite" href="#src-15">15</a>; training is much larger. Anthropic compute deals: Amazon up to 5 GW, Google/Broadcom multi-GW, SpaceX Colossus 1, Nscale ~$45bn <a class="cite" href="#src-3">3</a><a class="cite" href="#src-83">83</a></td></tr>
+              <tr><th scope="row">Labs</th><td>Clouds and neoclouds (inference + training)</td><td data-sort="90">~$80–100bn <span class="lowconf">Low conf.</span></td><td>OpenAI inference ~$8.4bn (2025) → ~$14.1bn (2026E) <a class="cite" href="#src-15">15</a>; training is much larger. Anthropic compute deals: Amazon up to 5 GW, Google/Broadcom ~3.5 GW (Apr-2026 filing) to ~5 GW (Sep call), SpaceX Colossus 1, Nscale up to ~$44.6bn (S-1) <a class="cite" href="#src-3">3</a><a class="cite" href="#src-83">83</a></td></tr>
               <tr><th scope="row">Labs</th><td>Investors' capital → compute</td><td data-sort="0">The gap</td><td>OpenAI adj. operating margin −122% (Q1 2026) <a class="cite" href="#src-10">10</a>; 2026 cash burn ~$25–30bn (canonical; W10 had ~$27bn <a class="cite" href="#src-15">15</a>)</td></tr>
             </tbody>
           </table>
@@ -1721,7 +1747,7 @@
           {
             "type": "bar",
             "title": "Revenue is growing faster than capex, but capex still runs ~5x ahead",
-            "subtitle": "Western AI data-center capex vs end-customer AI money, USD bn",
+            "subtitle": "Western AI data-center capex vs end-customer AI money, USD bn. 'Exit 2026' is the annualized December 2026 run-rate.",
             "valueFormat": "$bn", "unit": "USD bn",
             "xKey": "y",
             "series": [
@@ -1733,7 +1759,7 @@
               { "y": "2024", "capex": 290, "total": 24, "direct": 11 },
               { "y": "2025", "capex": 550, "total": 70, "direct": 37 },
               { "y": "2026E", "capex": 1000, "total": 200, "direct": 130 },
-              { "y": "Exit-2026 run-rate", "total": 280, "direct": 200, "note": "Annualized December 2026" }
+              { "y": "Exit 2026", "total": 280, "direct": 200, "note": "Exit-2026 run-rate: annualized December 2026" }
             ],
             "height": 340,
             "source": "Canonical cross-layer values (W11 §7; end_customer_revenue_vs_capex)", "asOf": "2026-09-25", "provenance": "A",
@@ -1936,7 +1962,7 @@
       <section>
         <h2><span class="kicker">11 · Bottlenecks</span>What limits the growth</h2>
         <ol>
-          <li><strong>Compute availability.</strong> Rate limits and capacity shortages capped agent usage throughout 2025–26. Anthropic signed compute deals of up to 5 GW with Amazon, multiple gigawatts with Google/Broadcom, SpaceX's Colossus 1 (300 MW+, 220K+ GPUs), a ~$45bn Nscale deal (460 MW) and a 2 GW AMD MI450 partnership <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a><a class="cite" href="#src-4">4</a><a class="cite" href="#src-83">83</a>. App growth is literally gated by layers <a href="W03-energy-power.html">W03</a>–<a href="W08-cloud.html">W08</a>.</li>
+          <li><strong>Compute availability.</strong> Rate limits and capacity shortages capped agent usage throughout 2025–26. Anthropic signed compute deals of up to 5 GW with Amazon, multiple gigawatts with Google/Broadcom, SpaceX's Colossus 1 (300 MW+, 220K+ GPUs), an up-to-~$44.6bn Nscale deal (460 MW) and a 2 GW AMD MI450 partnership <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a><a class="cite" href="#src-4">4</a><a class="cite" href="#src-83">83</a>. App growth is literally gated by layers <a href="W03-energy-power.html">W03</a>–<a href="W08-cloud.html">W08</a>.</li>
           <li><strong>Model dependence and platform risk.</strong> Most AI-native apps depend on two or three labs for 60–100% of their cost of goods. Labs can re-price (priority tiers), rate-limit or cut access: Anthropic cut Windsurf's direct access in Jun 2025 (older) and revoked OpenAI's access in Aug 2025 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-84">84</a>.</li>
           <li><strong>Reliability and trust.</strong> Agents fail silently. The METR slowdown result <a class="cite" href="#src-50">50</a>, prompt-injection risk in computer-use agents and hallucination in regulated fields (legal, health) keep humans in the loop and slow outcome pricing.</li>
           <li><strong>Security and misuse.</strong> Anthropic disclosed a threat actor (GTG-2002) that automated 80–90% of an espionage campaign with Claude Code <span class="prov" data-prov="E">E</span><a class="cite" href="#src-84">84</a>. Security reviews lengthen enterprise sales cycles (Glean: 4–5 months <a class="cite" href="#src-70">70</a>).</li>
@@ -1991,13 +2017,13 @@
               { "n": "HubSpot", "mar": -39.5 },
               { "n": "Salesforce", "jul": -35.0 },
               { "n": "ServiceNow", "mar": -31.6 },
-              { "n": "SEG SaaS Index", "mar": -25.7 },
-              { "n": "IGV software ETF", "jul": -10.5 },
-              { "n": "S&P 500 (31 Mar)", "mar": -4.8 },
-              { "n": "S&P 500 (6 Jul)", "jul": 10.8 },
-              { "n": "XLK tech ETF", "jul": 26.0 }
+              { "n": "SEG SaaS", "mar": -25.7, "note": "SEG SaaS Index" },
+              { "n": "IGV ETF", "jul": -10.5, "note": "iShares software ETF (IGV)" },
+              { "n": "S&P 500 (Mar)", "mar": -4.8, "note": "YTD to 31 Mar 2026" },
+              { "n": "S&P 500 (Jul)", "jul": 10.8, "note": "YTD to 6 Jul 2026" },
+              { "n": "XLK ETF", "jul": 26.0, "note": "Technology Select Sector SPDR (XLK)" }
             ],
-            "height": 360, "yMin": -75,
+            "height": 360, "yMin": -120,
             "source": "Long Angle (Q1 2026); 24/7 Wall St. (Jul 2026) (saas_selloff_2026)", "asOf": "2026-07-06", "provenance": "E",
             "note": "Salesforce then rose 22.6% on 27 Aug 2026 after raising guidance on Agentforce."
           }
@@ -2025,7 +2051,7 @@
             <p class="callout-label">Bull case</p>
             <h3>The fastest revenue ramp in history, now reaching labor budgets</h3>
             <ul>
-              <li><strong>It is real and cash-paid.</strong> Anthropic went from $1bn to $65bn in ~19 months <a class="cite" href="#src-1">1</a><a class="cite" href="#src-4">4</a> (reportedly &gt;$100bn by mid-September, unverified), was around break-even in Q2 2026 <a class="cite" href="#src-7">7</a>, and has 1,000+ customers paying over $1M a year.</li>
+              <li><strong>It is real and cash-paid.</strong> Anthropic went from $1bn to &gt;$65bn in ~19 months <a class="cite" href="#src-1">1</a><a class="cite" href="#src-4">4</a> (and a &gt;$100bn pace by mid-September per the NYT, not company-confirmed<a class="cite" href="#src-89">89</a>), was around break-even in Q2 2026 <a class="cite" href="#src-7">7</a>, and has 1,000+ customers paying over $1M a year.</li>
               <li><strong>Agents unlock labor budgets.</strong> Outcome pricing (Fin, Sierra) sells labor, not software. Support, junior coding, paralegal, medical scribing and back-office work are a multi-trillion-dollar wage pool.</li>
               <li><strong>Token volume beats price deflation.</strong> Agents use 4–15x the tokens <a class="cite" href="#src-55">55</a>; Google's API throughput rose from 16bn to 22bn tokens a minute in one quarter <a class="cite" href="#src-44">44</a>. Every 10x cost decline opens new uses.</li>
               <li><strong>Distribution is already there.</strong> ChatGPT 1bn+ weekly users, Gemini 950M, AI Mode 1bn+ monthly <a class="cite" href="#src-12">12</a><a class="cite" href="#src-43">43</a>; M365 Copilot net adds more than doubled. Monetization per user (ads, commerce, agents) is early.</li>
@@ -2072,7 +2098,7 @@
         <aside class="callout callout--watch">
           <p class="callout-label">Watch list (thresholds are Atlas judgments)</p>
           <ul>
-            <li><strong>Anthropic's S-1</strong> (target around Oct–Nov 2026; confidential draft submitted 1 Jun 2026): audited revenue, gross margin and revenue recognition. A gross margin below ~40%, or a large gross-versus-net restatement, would weaken the agent-economics case.</li>
+            <li><strong>Anthropic's S-1</strong> (listing targeted for November 2026, roadshow from mid-October per the WSJ<a class="cite" href="#src-93">93</a>; confidential draft submitted 1 Jun 2026): audited revenue, gross margin and revenue recognition. A gross margin below ~40%, or a large gross-versus-net restatement, would weaken the agent-economics case.</li>
             <li><strong>Microsoft FY27 Q1</strong> (late Oct 2026): M365 Copilot seats. Another +10M quarter keeps the enterprise-seat curve intact; net adds below ~5M would signal a plateau.</li>
             <li><strong>Ramp AI Index</strong> (second week of each month): adoption above 56% and spend per employee recovering from −9.7% would ease the "cracks" narrative; a second monthly fall would confirm it.</li>
             <li><strong>NVIDIA Q3 FY27</strong> (~late Nov 2026, vs $108bn guidance): the denominator of the Sequoia question.</li>
@@ -2082,8 +2108,9 @@
           <table class="table--compact">
             <thead><tr><th scope="col">Indicator / catalyst</th><th scope="col">Why it matters</th><th scope="col">Timing</th><th scope="col">Signal now</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Anthropic IPO (S-1 financials)</th><td>First audited view of agent economics; settles the gross-vs-net revenue debate</td><td>Target Oct–Nov 2026 <a class="cite" href="#src-9">9</a>; confidential draft 1 Jun 2026 (see <a href="W09-model-labs.html">W09</a>)</td><td><span class="status status--warning">Pending</span></td></tr>
-              <tr><th scope="row">OpenAI IPO filing</th><td>Consumer vs enterprise vs ads mix; true burn</td><td>Confidential draft announced 8 Jun 2026; listing likely 2027</td><td><span class="status status--warning">Pending</span></td></tr>
+              <tr><th scope="row">Anthropic IPO (S-1 financials)</th><td>First audited view of agent economics; settles the gross-vs-net revenue debate and the &gt;$100bn run-rate question</td><td>WSJ (18/21 Sep): listing targeted for <strong>November 2026</strong> at ~$2tn, roadshow from mid-October<a class="cite" href="#src-93">93</a>; earlier target Oct–Nov <a class="cite" href="#src-9">9</a>; confidential draft 1 Jun 2026 (see <a href="W09-model-labs.html">W09</a>)</td><td><span class="status status--warning">Pending</span></td></tr>
+              <tr><th scope="row">OpenAI IPO filing</th><td>Consumer vs enterprise vs ads mix; true burn</td><td>Confidential draft announced 8 Jun 2026; Altman to Fortune (13 Sep 2026): "not 2026"<a class="cite" href="#src-94">94</a>; a private round at &gt;$1.2tn is under discussion instead (see <a href="W09-model-labs.html">W09</a>)</td><td><span class="status status--warning">Not in 2026</span></td></tr>
+              <tr><th scope="row">OpenAI cuts Cursor off from its models</th><td>Tests how much coding-agent spend follows the model versus the app</td><td>12 Nov 2026<a class="cite" href="#src-90">90</a></td><td><span class="status status--warning">Announced</span></td></tr>
               <tr><th scope="row">Microsoft FY27 Q1: Copilot seats; does the AI run-rate return?</th><td>Enterprise-seat adoption (6.5% penetration)</td><td>Late Oct 2026</td><td><span class="status status--good">Accelerating</span></td></tr>
               <tr><th scope="row">Salesforce Q3 FY27 (Agentforce ARR, AWUs)</th><td>Incumbent agent monetization</td><td>Late Nov / early Dec 2026</td><td><span class="status status--good">Inflecting</span></td></tr>
               <tr><th scope="row">ServiceNow Q3 2026 (AI ACV; subscription GM vs 81% guide)</th><td>AI margin dilution</td><td>Late Oct 2026</td><td><span class="status status--warning">Watch</span></td></tr>
@@ -2136,9 +2163,11 @@
           <li><time datetime="2026-05">May 2026</time><div class="tl-body"><h4>Anthropic at $47bn; Series H $65bn at $965bn</h4><p>Sierra valued at $15.8bn <a class="cite" href="#src-3">3</a><a class="cite" href="#src-67">67</a>.</p></div></li>
           <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>Cursor at $4bn ARR; SpaceX exercises its option (16 Jun)</h4><p>Codex at 5M weekly users; GitHub Copilot goes usage-based <a class="cite" href="#src-19">19</a><a class="cite" href="#src-21">21</a><a class="cite" href="#src-17">17</a><a class="cite" href="#src-27">27</a>.</p></div></li>
           <li><time datetime="2026-07-29">22–29 Jul 2026</time><div class="tl-body"><h4>Q2 earnings week</h4><p>ServiceNow AI ACV &gt;$1bn; Alphabet (AI Mode 1bn MAU, Cloud +82%); Meta (Advantage+ $75bn); Microsoft (Copilot 30M+ seats) <a class="cite" href="#src-31">31</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-40">40</a><a class="cite" href="#src-24">24</a>.</p></div></li>
-          <li class="is-key"><time datetime="2026-07-31">End Jul 2026</time><div class="tl-body"><h4>Anthropic at $65bn, ~1.6x OpenAI</h4><p><a class="cite" href="#src-1">1</a></p><span class="tag">Turning point</span></div></li>
-          <li class="is-key"><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Cursor acquisition closes (14 Aug)</h4><p>OpenAI at $40bn; Agentforce $1.5bn and Salesforce +22.6% (27 Aug); NVIDIA DC $89bn a quarter (26 Aug); ChatGPT ads $1bn run-rate (31 Aug); Harvey $400M ARR <a class="cite" href="#src-23">23</a><a class="cite" href="#src-8">8</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-30">30</a><a class="cite" href="#src-47">47</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-66">66</a>.</p><span class="tag">Turning point</span></div></li>
-          <li><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>Ramp: "cracks in the AI thesis" (9 Sep)</h4><p>Adobe CEO transition announced (3 Sep); Harvey $15.5bn, OpenEvidence $15bn; Anthropic Opus 5.5 (22 Sep) <a class="cite" href="#src-35">35</a><a class="cite" href="#src-85">85</a><a class="cite" href="#src-66">66</a><a class="cite" href="#src-72">72</a><a class="cite" href="#src-88">88</a>.</p></div></li>
+          <li class="is-key"><time datetime="2026-07-31">End Jul 2026</time><div class="tl-body"><h4>Anthropic at &gt;$65bn (reported 17 Aug), ~1.6x OpenAI</h4><p><a class="cite" href="#src-1">1</a></p><span class="tag">Turning point</span></div></li>
+          <li class="is-key"><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Cursor acquisition closes (14 Aug)</h4><p>OpenAI at &gt;$40bn (13 Aug); Intuit Q4 FY26: &gt;75% of Enterprise Suite customers use AI agents monthly (25 Aug)<a class="cite" href="#src-98">98</a>; Workday Q2 FY27: AI &gt;25% of new ACV (27 Aug)<a class="cite" href="#src-96">96</a>; Agentforce $1.5bn and Salesforce +22.6% (27 Aug); NVIDIA DC $89bn a quarter (26 Aug); ChatGPT ads $1bn run-rate (31 Aug); Harvey $400M ARR <a class="cite" href="#src-23">23</a><a class="cite" href="#src-8">8</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-30">30</a><a class="cite" href="#src-47">47</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-66">66</a>.</p><span class="tag">Turning point</span></div></li>
+          <li><time datetime="2026-08-28">28 Aug 2026</time><div class="tl-body"><h4>OpenAI to end Cursor's model access on 12 Nov</h4><p>After the SpaceX acquisition<a class="cite" href="#src-90">90</a>.</p></div></li>
+          <li><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>Ramp: "cracks in the AI thesis" (9 Sep)</h4><p>Adobe CEO transition announced (3 Sep); Adobe Q3 FY26: AI-first ARR &gt;$650M, +150% (10 Sep)<a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a>; Altman: no OpenAI IPO in 2026 (13 Sep)<a class="cite" href="#src-94">94</a>; Harvey $15.5bn, OpenEvidence $15bn; Anthropic Opus 5.5 (22 Sep) <a class="cite" href="#src-35">35</a><a class="cite" href="#src-85">85</a><a class="cite" href="#src-66">66</a><a class="cite" href="#src-72">72</a><a class="cite" href="#src-88">88</a>.</p></div></li>
+          <li class="is-key"><time datetime="2026-09-18">18–21 Sep 2026</time><div class="tl-body"><h4>NYT: Anthropic on a &gt;$100bn pace; WSJ: November IPO target</h4><p>The run-rate report is not company-confirmed<a class="cite" href="#src-89">89</a><a class="cite" href="#src-93">93</a>.</p><span class="tag">As-of month</span></div></li>
         </ol>
       </section>
 
@@ -2207,18 +2236,20 @@
       <!-- ============================================================ 18 -->
       <section>
         <h2><span class="kicker">18 · Confidence notes</span>What is low-confidence or unverified</h2>
+        <p><strong>Updated 2026-09-25 (Edition 2 re-check):</strong> Anthropic's &gt;$100bn is re-tagged as an NYT-reported pace (18 Sep), not company-confirmed (medium confidence), with &gt;$65bn (end-July) and OpenAI &gt;$40bn (July) now verified; added Adobe, Workday and Intuit AI metrics, confirmed Copilot's 30M+ seats, and added OpenAI's Cursor cut-off and the IPO timing (Anthropic November; OpenAI not in 2026).</p>
         <aside class="callout callout--note">
           <p class="callout-label">Read these before quoting the page</p>
           <ul>
-            <li><strong>Anthropic's &gt;$100bn September run-rate</strong> (NYT via Axios, 18 Sep 2026) could not be verified by the fact-check pass. The page uses the last confirmed $65bn (end-July), itself a press-reported investor figure <span class="prov" data-prov="E">E</span>.</li>
-            <li><strong>Claude Code's current run-rate.</strong> The last company-disclosed figure is $2.5bn+ (Feb 2026). FutureSearch estimates ~$8bn (May) and ~$15bn (Aug) <a class="cite" href="#src-6">6</a>. Low confidence.</li>
+            <li><strong>Anthropic's &gt;$100bn September run-rate: partly resolved.</strong> The NYT report of 18 Sep 2026 exists (Axios quotes it; Bloomberg words it as "to top $100 billion in 2026"), but it is not company-confirmed and may be a year-end projection rather than a current pace <span class="prov" data-prov="E">E</span> <span class="medconf">Medium conf.</span><a class="cite" href="#src-89">89</a>. The page uses the last firm figure, &gt;$65bn (end-July), an investor-letter number reported by Bloomberg and CNBC on 17 Aug <span class="prov" data-prov="E">E</span><a class="cite" href="#src-1">1</a>.</li>
+            <li><strong>Claude Code's current run-rate (still open).</strong> The last company-disclosed figure is $2.5bn+ (Feb 2026). FutureSearch estimates ~$8bn (May) and ~$15bn (Aug) <a class="cite" href="#src-6">6</a>. Low confidence. Two more searches on 25 Sep found only aggregator pages, and the 17 Aug run-rate reports give no product split; the S-1 should resolve it.</li>
             <li><strong>Revenue recognition</strong> may differ between Anthropic (reportedly gross on some cloud-marketplace sales) and OpenAI (net of the Microsoft share), which could move the "crossover" modestly. Awaiting the S-1s.</li>
             <li><strong>Google's direct gen-AI revenue</strong> (Gemini subscriptions, API, Gemini Enterprise) is undisclosed; ~$12bn (2026E) is a placeholder.</li>
             <li><strong>AI-driven ad uplift</strong> (~$30–70bn, 2026E) rests on attributing ~40% of Meta's incremental revenue since 2023 to AI.</li>
             <li><strong>Intermediate versus end spend.</strong> The share of lab API revenue paid by app startups (assumed 15–25%) is not disclosed.</li>
-            <li><strong>OpenAI Q2 2026 revenue (~$6.7bn)</strong> is from an aggregator <a class="cite" href="#src-15">15</a>. OpenAI's reported "July &gt; all of Q2" claim is inconsistent with a $40bn run-rate and was not used.</li>
+            <li><strong>OpenAI Q2 2026 revenue (~$6.7bn)</strong> is from an aggregator <a class="cite" href="#src-15">15</a>. OpenAI's reported "July &gt; all of Q2" claim is inconsistent with a &gt;$40bn run-rate and was not used.</li>
             <li><strong>M365 Copilot net pricing</strong> (~$25–28 a seat a month) is our assumption; Microsoft does not disclose it.</li>
-            <li><strong>Workday, Intuit and Adobe 2026 AI metrics</strong>, and <strong>Bolt.new, Ambience and Abridge 2026 ARR</strong>, were not verified this cycle.</li>
+            <li><strong>Workday, Intuit and Adobe 2026 AI metrics: resolved.</strong> Adobe's AI-first ARR (&gt;$650M) and Workday's and Intuit's metrics come from company releases<a class="cite" href="#src-91">91</a><a class="cite" href="#src-96">96</a><a class="cite" href="#src-98">98</a>. Workday's AI ARR (~$0.5–0.6bn) comes only from call summaries that disagree <span class="prov" data-prov="E">E</span><a class="cite" href="#src-97">97</a>; Intuit discloses no AI revenue. M365 Copilot's 30M+ seats are confirmed on Microsoft's FY26 Q4 IR page<a class="cite" href="#src-95">95</a>.</li>
+            <li><strong>Bolt.new, Ambience and Abridge 2026 ARR</strong> were not verified this cycle.</li>
             <li><strong>Harvey, Lovable, Sierra, OpenEvidence, Perplexity, ElevenLabs and Replit</strong> 2026 figures come from Sacra pages the fact-checker could not fetch; they stay tagged <span class="prov" data-prov="E">E</span>.</li>
             <li><strong>Stanford "Canaries" (−19%)</strong> and <strong>Census BTOS (22%)</strong> were not re-fetched by the fact-check pass.</li>
             <li><strong>Capex and revenue totals.</strong> This page uses the canonical cross-layer values (~$290bn / ~$550bn / ~$1.0tn capex; ~$130bn direct revenue in 2026E). W10's own rougher build had ~$270bn / ~$500bn / ~$900bn and ~$126bn.</li>
@@ -2327,6 +2358,17 @@
           <li id="src-86"><span class="src-pub">SaaStr</span>, “By Year-End, Anthropic Will Out-Earn Every Public Software Company Except Microsoft”, 2026-05, <a href="https://www.saastr.com/by-year-end-anthropic-will-out-earn-every-public-software-company-except-microsoft/">saastr.com/by-year-end-anthropic-will-out-earn-every-publ…</a></li>
           <li id="src-87"><span class="src-pub">MindStudio</span>, “Claude Code Is Doing $2.5B in Annualized Revenue”, 2026-05-09, <a href="https://www.mindstudio.ai/blog/claude-code-2-5-billion-annualized-revenue-saas-comparison">mindstudio.ai/blog/claude-code-2-5-billion-annualized-rev…</a></li>
           <li id="src-88"><span class="src-pub">Anthropic Newsroom</span>, (Opus 5.5, 22 Sep 2026; Fable 5.1 / Mythos 5.1, 1 Sep 2026), accessed 2026-09-25, <a href="https://www.anthropic.com/news">anthropic.com/news</a></li>
+          <li id="src-89"><span class="src-pub">Axios</span>, "Anthropic tops $100 billion revenue pace, report says" (citing NYT; Bloomberg headline: "Anthropic's Annualized Revenue to Top $100 Billion in 2026, NYT Says"), 2026-09-18, <a href="https://www.axios.com/2026/09/18/anthropic-100-billion-revenue">axios.com/2026/09/18/anthropic-100-billion-revenue</a></li>
+          <li id="src-90"><span class="src-pub">OpenAI</span>, "Our decision on Cursor following its acquisition by SpaceX," 2026-08-28, <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</a></li>
+          <li id="src-91"><span class="src-pub">Adobe (via StockTitan)</span>, "Adobe Reports Record Q3 Fiscal 2026 Revenue," 2026-09-10, <a href="https://www.stocktitan.net/news/ADBE/adobe-reports-record-q3-eqfptdv2yclp.html">stocktitan.net/news/ADBE/adobe-reports-record-q3-eqfptdv2yclp.html</a></li>
+          <li id="src-92"><span class="src-pub">Investing.com</span>, "Adobe Q3 FY2026 slides: AI revenue soars, stock falls on caution," 2026-09-10, <a href="https://www.investing.com/news/company-news/adobe-q3-fy2026-slides-ai-revenue-soars-stock-falls-on-caution-93CH-4897029">investing.com/news/company-news/adobe-q3-fy2026-slides-ai-revenue-soars-stock-falls-on-caution-93CH-4897029</a></li>
+          <li id="src-93"><span class="src-pub">PYMNTS</span>, "Anthropic Targets November IPO as Revenue Surges" (citing WSJ, NYT, Bloomberg), 2026-09, <a href="https://www.pymnts.com/news/investment-tracker/ipo/2026/anthropic-targets-november-ipo-revenue-surges/">pymnts.com/news/investment-tracker/ipo/2026/anthropic-targets-november-ipo-revenue-surges/</a></li>
+          <li id="src-94"><span class="src-pub">Yahoo Finance</span>, "Altman tells Fortune OpenAI will not go public in 2026," 2026-09-13, <a href="https://finance.yahoo.com/technology/ai/articles/altman-tells-fortune-openai-not-082102598.html">finance.yahoo.com/technology/ai/articles/altman-tells-fortune-openai-not-082102598.html</a></li>
+          <li id="src-95"><span class="src-pub">Microsoft Investor Relations</span>, "Earnings Release FY26 Q4" (over 30 million paid Microsoft 365 Copilot seats; GitHub Copilot 50 million users), 2026-07-29, <a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4">microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4</a></li>
+          <li id="src-96"><span class="src-pub">Workday</span>, "Workday Announces Fiscal 2027 Second Quarter Financial Results," 2026-08-27, <a href="https://newsroom.workday.com/2026-08-27-Workday-Announces-Fiscal-2027-Second-Quarter-Financial-Results">newsroom.workday.com/2026-08-27-Workday-Announces-Fiscal-2027-Second-Quarter-Financial-Results</a></li>
+          <li id="src-97"><span class="src-pub">BigGo Finance</span>, "WDAY Q2 FY2027 earnings call," 2026-08-27, <a href="https://finance.biggo.com/quote/WDAY/earnings-call/US_WDAY_2026-08-27">finance.biggo.com/quote/WDAY/earnings-call/US_WDAY_2026-08-27</a>; Pomegra News, "Workday Q2 FY2027: Earnings Beat, AI ARR Nears…", 2026-08, <a href="https://pomegra.io/news/workday-q2-fy2027-earnings-beat-ai-arr-nears-500m">pomegra.io/news/workday-q2-fy2027-earnings-beat-ai-arr-nears-500m</a></li>
+          <li id="src-98"><span class="src-pub">Intuit</span>, "Intuit Reports Fourth Quarter and Full Year Fiscal 2026 Results; Sets Fiscal 2027 Guidance," 2026-08-25, <a href="https://investors.intuit.com/news-events/press-releases/detail/1320/intuit-reports-fourth-quarter-and-full-year-fiscal-2026-results-sets-fiscal-2027-guidance">investors.intuit.com/news-events/press-releases/detail/1320/intuit-reports-fourth-quarter-and-full-year-fiscal-2026-results-sets-fiscal-2027-guidance</a></li>
+          <li id="src-99"><span class="src-pub">Intuit</span>, "Fourth-quarter Fiscal 2026 Conference Call Remarks," 2026-08-25, <a href="https://investors.intuit.com/_assets/_b47bef62c2922576cfc0ce6fc96bb015/intuit/db/946/10378/webcast_transcript/Q4+FY26+Earnings+Script.pdf">investors.intuit.com/_assets/_b47bef62c2922576cfc0ce6fc96bb015/intuit/db/946/10378/webcast_transcript/Q4+FY26+Earnings+Script.pdf</a></li>
         </ol>
       </section>
 

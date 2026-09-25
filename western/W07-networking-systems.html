@@ -82,6 +82,7 @@
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
           <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>Updated</dt><dd><a href="#edition-2-update">25 Sep 2026 · Edition 2 re-check</a></dd></div>
           <div><dt>Related</dt><dd><a href="W01-demand-capex.html">W01</a> · <a href="W02-capital-financing.html">W02</a> · <a href="W04-datacenters.html">W04</a> · <a href="W05-compute-silicon.html">W05</a> · <a href="W06-semi-supply-chain.html">W06</a> · <a href="W08-cloud.html">W08</a> · <a href="W11-synthesis.html">W11</a></dd></div>
         </dl>
       </header>
@@ -142,9 +143,10 @@
           <li><strong>AI chips are useless alone; the network makes them one machine.</strong> NVIDIA's networking revenue went from about $3bn a quarter in late 2024 to about $17.5bn in May–Jul 2026, roughly a $70bn annual run-rate and a fifth of its data-center sales <span class="prov" data-prov="A">A</span><a class="cite" href="#src-5">5</a><a class="cite" href="#src-3">3</a>.</li>
           <li><strong>Ethernet has won the between-rack network; the fight has moved inside the rack.</strong> Ethernet is about two-thirds of AI back-end switch sales <span class="prov" data-prov="E">E</span><a class="cite" href="#src-53">53</a>, and Dell'Oro expects in-rack (scale-up) networking to be over half of a nearly $1 trillion five-year market by 2030 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-52">52</a>.</li>
           <li><strong>Lasers are the tightest bottleneck, and their makers are winning.</strong> Lumentum's revenue doubled to $1.006bn a quarter at a 36.6% operating margin <span class="prov" data-prov="R">R</span><a class="cite" href="#src-35">35</a>; Broadcom says laser demand is "far surpassing supply" <a class="cite" href="#src-17">17</a>; Arista expects shortages "until 2028" <a class="cite" href="#src-12">12</a>.</li>
-          <li><strong>Servers are a huge business with thin margins.</strong> Dell has a $95bn AI backlog <span class="prov" data-prov="R">R</span><a class="cite" href="#src-49">49</a> and Supermicro guides $65–72bn of revenue <span class="prov" data-prov="G">G</span><a class="cite" href="#src-46">46</a>, but Foxconn earns a 3.75% operating margin <span class="prov" data-prov="R">R</span><a class="cite" href="#src-51">51</a> because most of a rack's value is NVIDIA silicon passing through.</li>
+          <li><strong>The optics market roughly triples in two years.</strong> Datacom optics went from about $11bn (2024) to $19bn+ (2025) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-75">75</a>, and the Atlas triangulates <strong>~$31–37bn for 2026 (central ~$34bn)</strong> <span class="prov" data-prov="A">A</span><a class="cite" href="#src-74">74</a>. Two China-headquartered module makers, InnoLight and Eoptolink, sold about $8.8bn in H1-26 alone <span class="prov" data-prov="R">R</span><a class="cite" href="#src-83">83</a><a class="cite" href="#src-86">86</a>.</li>
+          <li><strong>Servers are a huge business with thin margins.</strong> Dell has a $95bn AI backlog <span class="prov" data-prov="R">R</span><a class="cite" href="#src-49">49</a> and Supermicro guides $65–72bn of revenue <span class="prov" data-prov="G">G</span><a class="cite" href="#src-46">46</a>. Foxconn earns a 3.75% operating margin <span class="prov" data-prov="R">R</span><a class="cite" href="#src-51">51</a>, and Quanta doubled its revenue in Q2-26 at 3.3% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-88">88</a>, because most of a rack's value is NVIDIA silicon passing through.</li>
           <li><strong>NVIDIA keeps about 6 of every 7 gross-profit dollars in a GB300 rack</strong> (~86%) <span class="prov" data-prov="A">A</span>. Outside NVIDIA, the fattest margins are in connectivity chips (Astera 73.7%, Credo 68%) and scarce lasers <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a><a class="cite" href="#src-29">29</a>.</li>
-          <li><strong>Watch</strong> NVIDIA's networking growth vs compute, Broadcom's networking share of AI revenue, Arista's deferred revenue, laser lead times, 1.6T module prices and Dell's backlog.</li>
+          <li><strong>Watch</strong> NVIDIA's networking growth vs compute, Broadcom's networking share of AI revenue, Arista's deferred revenue and its reliance on Microsoft and Meta (42% of FY25 revenue <a class="cite" href="#src-71">71</a>), laser lead times, 1.6T module prices and Dell's backlog.</li>
         </ol>
       </div>
 
@@ -608,7 +610,7 @@
           </script>
         </figure>
         <p>Reality sits in between: rails, oversubscription at the upper tiers, and <span class="term" data-term="AEC">AECs</span> inside rows. Industry rules of thumb of <strong>~2.5–3.5 800G modules per Blackwell GPU</strong> fit the 2–6 range (older knowledge, conf: med). With Rubin's 1.6T network cards, <strong>module count per GPU stays similar but each module doubles in speed</strong>, so optics dollars per GPU rise about 1.5–1.8× (a 1.6T module costs roughly 1.6–1.8× an 800G one; older knowledge, conf: low) <span class="prov" data-prov="A">A</span>. <strong>Co-packaged optics removes the switch-side pluggables</strong> (about half the modules) but not the network-card side until card-level CPO arrives.</p>
-        <p><strong>Unit prices</strong> (older knowledge, directional): 400G ~$300–400 → 800G ~$600–900 → 1.6T ~$1,100–1,500 per module at volume. Cost per bit falls ~30–40% per generation while dollars per GPU rise.</p>
+        <p><strong>Unit prices</strong> (older knowledge, directional): 400G ~$300–400 → 800G ~$600–900 → 1.6T ~$1,100–1,500 per module at volume. Cost per bit falls ~30–40% per generation while dollars per GPU rise. <em>Caution:</em> InnoLight's H1-26 blended price was only ~$305 per module <span class="prov" data-prov="A">A</span><a class="cite" href="#src-85">85</a>, which suggests 2026 street prices for 800G sit below this range (see the optics market section).</p>
       </section>
 
       <!-- ============================================================ 06 OPTICS 101 -->
@@ -947,38 +949,133 @@
         </aside>
 
         <h3>The optics market</h3>
+        <p>Rebuilt on the 25 Sep 2026 re-check. Edition 1 sized the market bottom-up only (~$18–22bn in 2025, ~$32–40bn in 2026). It is now triangulated against three research houses (Cignal AI, LightCounting, TrendForce) and the 2026 results of the big module makers. The answer: datacom optics goes from <strong>~$11bn (2024) to ~$19bn (2025) to ~$34bn (2026E)</strong>, roughly 3× in two years and ~+75–80% in 2026 <span class="prov" data-prov="E">E</span><span class="prov" data-prov="A">A</span><a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a>.</p>
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar",
+            "title": "Datacom optics roughly triples in two years, to ~$34bn in 2026",
+            "subtitle": "Optical market by source and scope, USD bn, calendar years; 2026E datacom is the Atlas central estimate (range $31–37bn)",
+            "valueFormat": { "prefix": "$", "suffix": "bn", "decimals": 1 }, "unit": "USD bn",
+            "xKey": "y",
+            "series": [
+              { "key": "dc", "label": "Datacom optics (Cignal; 2026E Atlas)" },
+              { "key": "ai", "label": "AI optical transceivers (LightCounting / TrendForce)" },
+              { "key": "lc", "label": "All optical transceivers (LightCounting)" }
+            ],
+            "data": [
+              { "y": "2024", "dc": 11, "lc": 15.3, "note": "Both back-solved from reported 2025 growth [A]: 19 ÷ 1.7 and 23 ÷ 1.5" },
+              { "y": "2025", "dc": 19, "ai": 16.5, "lc": 23, "note": "Cignal: datacom components $19bn+ (+70%); LightCounting all transceivers ~$23bn (+50%)" },
+              { "y": "2026E", "dc": 34, "ai": 26, "note": "Datacom: Atlas triangulated, $31–37bn. AI transceivers: LightCounting (Jan) and TrendForce (Apr) forecast $26bn. Cignal 1Q26 alone: $7.7bn" }
+            ],
+            "labels": true,
+            "source": "Cignal AI [74][75]; LightCounting [77][78]; TrendForce [80]; Atlas triangulation", "asOf": "2026-09-25", "provenance": ["E", "A"],
+            "note": "LightCounting and TrendForce publish an identical $16.5bn → $26bn AI-optics path, so we treat them as one data point. It is narrower (AI-cluster optics only) and was set in Jan–Apr 2026, before InnoLight and Eoptolink reported their H1 upside."
+          }
+          </script>
+        </figure>
+
+        <p class="table-caption">Third-party anchors for the optics market</p>
+        <div class="table-wrap wide">
+          <table class="table--compact">
+            <thead><tr><th scope="col">Metric</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">2026E</th><th scope="col">Tag</th><th scope="col">Source</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Datacom optical component revenue, all datacom (Cignal AI)</th><td>~$11.2bn <span class="sub">[A] 19 ÷ 1.7</span></td><td><strong>$19bn+ (+70%)</strong></td><td><strong>1Q26: $7.7bn</strong> (more than 2× y/y)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a></td></tr>
+              <tr><th scope="row">Optical transceivers, all markets (LightCounting)</th><td>~$15.3bn <span class="sub">[A] 23 ÷ 1.5</span></td><td>~$23bn (+50%)</td><td>Sep-2026 update paywalled</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-78">78</a></td></tr>
+              <tr><th scope="row">Ethernet optical transceivers (LightCounting)</th><td>~$10.6bn</td><td>~$17bn (+60%)</td><td>n/a</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-78">78</a></td></tr>
+              <tr><th scope="row">AI optical transceivers (LightCounting, Jan 2026; TrendForce, Apr 2026)</th><td>n/a</td><td>$16.5bn</td><td><strong>$26bn</strong> (+57–60%)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-77">77</a><a class="cite" href="#src-80">80</a></td></tr>
+              <tr><th scope="row">400G+ datacom module shipments (Cignal)</th><td>~23m <span class="sub">[A] 42 ÷ 1.8</span></td><td><strong>~42m (+80%)</strong></td><td><strong>1Q26: ~20m</strong> (+145% y/y)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a><a class="cite" href="#src-76">76</a></td></tr>
+              <tr><th scope="row">800G shipments</th><td>small</td><td>&gt;20m 800GbE (Cignal); <strong>24m 800G+</strong> (TrendForce)</td><td>800GbE "more than double" (&gt;40m, Cignal); <strong>~63m 800G+</strong> (TrendForce, Dec 2025)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-74">74</a><a class="cite" href="#src-76">76</a><a class="cite" href="#src-81">81</a></td></tr>
+              <tr><th scope="row">1.6T shipments</th><td>~0</td><td>first volume</td><td><strong>&gt;10m</strong> (Cignal, Jun 2026; raised from &gt;5m in Jan)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-74">74</a><a class="cite" href="#src-76">76</a></td></tr>
+              <tr><th scope="row">800G+ share of all transceiver units</th><td>19.5%</td><td>n/a</td><td><strong>&gt;60%</strong></td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-82">82</a></td></tr>
+              <tr><th scope="row">Google 800G+ module demand</th><td></td><td></td><td><strong>&gt;6m</strong> (for ~4m TPUs); InnoLight + Eoptolink ~80% of Google's orders</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-82">82</a></td></tr>
+              <tr><th scope="row">Optics as % of top-5 cloud capex (LightCounting)</th><td></td><td>2.7%</td><td>3.1% (4.1% by 2031)</td><td><span class="prov" data-prov="E">E</span></td><td><a class="cite" href="#src-77">77</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Vendor ranking (Cignal, 2025 datacom revenue): <strong>InnoLight #1 ($5bn+), Eoptolink #2, Coherent #3</strong>; InnoLight also led 1Q26 revenue and high-speed shipments <span class="prov" data-prov="E">E</span><a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a>. LightCounting notes buyers now qualify <strong>5–7 suppliers per product instead of 2–3</strong>, and that component shortages are still capping growth (Aug 2026) <a class="cite" href="#src-79">79</a>.</p>
+
         <div class="dg-grid is-2 wide">
           <figure style="margin:0">
             <script type="application/json" data-chart>
             {
-              "type": "bar",
-              "title": "Datacom optical modules roughly double in 2026, to ~$32–40bn",
-              "subtitle": "Datacom optical module revenue, all vendors, USD bn; low and high ends of the Atlas range",
-              "valueFormat": "$bn", "unit": "USD bn",
-              "xKey": "y",
+              "type": "bar", "horizontal": true,
+              "title": "Three methods land on ~$31–37bn for 2026",
+              "subtitle": "2026 datacom optics market by estimation method, low and high end, USD bn",
+              "valueFormat": { "prefix": "$", "suffix": "bn", "decimals": 0 }, "unit": "USD bn",
+              "xKey": "m",
               "series": [ { "key": "low", "label": "Low end" }, { "key": "high", "label": "High end" } ],
-              "data": [ { "y": "2025", "low": 18, "high": 22 }, { "y": "2026E", "low": 32, "high": 40 } ],
-              "labels": true,
-              "source": "Atlas bottom-up from supplier revenues (§3.3)", "asOf": "2026-09-25", "provenance": "A",
-              "note": "Confidence low-medium: LightCounting, Cignal AI and 2026 TrendForce data were not accessible."
+              "data": [
+                { "m": "Cignal run-rate", "low": 31, "high": 36, "note": "1Q26 $7.7bn × 4.0–4.64 (Q2–Q4 growing 0–10% q/q)" },
+                { "m": "Units × price", "low": 25, "high": 44, "note": "800G 40–45m × $350–550; 1.6T 10–12m × $800–1,200; other $3–5bn. Midpoint ~$34bn" },
+                { "m": "Supplier revenue", "low": 32, "high": 37, "note": "InnoLight ~12 + Eoptolink ~6 + Coherent D&C 6.5–7 + NVIDIA/Cisco 3–4 + Lumentum/AAOI 1.5–2 + China tier 2 3–4" },
+                { "m": "Triangulated", "low": 31, "high": 37, "note": "Overlap of the three; central ~$34bn (conf: med)" }
+              ],
+              "source": "Atlas estimate from [33][74][76][83][86]", "asOf": "2026-09-25", "provenance": "A"
             }
             </script>
           </figure>
-          <div class="dg-panel">
-            <p class="dg-step">How the estimate is built</p>
-            <h4>Bottom-up from supplier revenue</h4>
-            <ul style="font-family:var(--font-sans);font-size:0.85rem;line-height:1.5;margin:0.3rem 0 0;padding-left:1.1rem">
-              <li>InnoLight ~$5–6bn and Eoptolink ~$3.5–4.5bn in 2025 (older knowledge)</li>
-              <li>Coherent Datacenter &amp; Communications $5.3bn, FY26 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-33">33</a></li>
-              <li>Fabrinet $4.6bn, FY26 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-38">38</a>; Lumentum $3.0bn, FY26 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-35">35</a></li>
-              <li>AAOI ~$0.8bn run-rate <span class="prov" data-prov="R">R</span><a class="cite" href="#src-39">39</a>; plus Hisense, Accelink, TFC, Source Photonics, Intel/Jabil, Cisco/Acacia</li>
-              <li>2026 scaled by the ~2× supplier growth reported in 2026</li>
-              <li>800G+ shipments ~24m (2025) → ~63m (2026) per TrendForce, late 2025 <span class="prov" data-prov="E">E</span> (older, not re-verified)</li>
-              <li>Credo optical target &gt;$600m FY27 <span class="prov" data-prov="G">G</span><a class="cite" href="#src-29">29</a>; Marvell scale-up optics ~$300m (FY28) <span class="prov" data-prov="G">G</span><a class="cite" href="#src-27">27</a></li>
-            </ul>
-          </div>
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar",
+              "title": "800G-and-faster modules more than double in 2026",
+              "subtitle": "High-speed optical module shipments, million units; TrendForce vs Cignal AI by speed",
+              "valueFormat": { "suffix": "m", "decimals": 0 }, "unit": "million units",
+              "xKey": "y",
+              "series": [
+                { "key": "c400", "label": "400G+ datacom (Cignal)" },
+                { "key": "c800", "label": "800GbE (Cignal)" },
+                { "key": "c16", "label": "1.6TbE (Cignal)" },
+                { "key": "tf", "label": "800G+ incl. 1.6T (TrendForce)" }
+              ],
+              "data": [
+                { "y": "2024", "c400": 23, "note": "400G+ back-solved from +80% growth [A]; 800G+ was 19.5% of all units" },
+                { "y": "2025", "c400": 42, "c800": 20, "tf": 24, "note": "800GbE '>20m'" },
+                { "y": "2026E", "c800": 40, "c16": 10, "tf": 63, "note": "800GbE 'more than double' (>40m); 1.6T '>10m'; TrendForce forecast from Dec 2025; 800G+ >60% of all units" }
+              ],
+              "source": "Cignal AI [74][75][76]; TrendForce [81][82]", "asOf": "2026-09-25", "provenance": ["E", "A"]
+            }
+            </script>
+          </figure>
         </div>
 
+        <p class="table-caption">How the 2026 triangulation is built <span class="prov" data-prov="A">A</span></p>
+        <div class="table-wrap wide">
+          <table class="table--compact">
+            <thead><tr><th scope="col">Method</th><th scope="col">Math</th><th scope="col">2026E</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1. Cignal run-rate</th><td>1Q26 $7.7bn, with Q2–Q4 growing 0–10% q/q: 7.7 × (4.0 to 4.64) <a class="cite" href="#src-74">74</a></td><td><strong>$31–36bn</strong></td></tr>
+              <tr><th scope="row">2. Units × price</th><td>800G 40–45m × $350–550 = $14–25bn; 1.6T 10–12m × $800–1,200 = $8–14bn; ≤400G, AOCs and other $3–5bn</td><td>$25–44bn <span class="sub">mid ~$34bn</span></td></tr>
+              <tr><th scope="row">3. Supplier revenue</th><td>InnoLight ~$12bn (H1 RMB 41.8bn + H2 ≈ 2 × Q2 RMB 22.3bn ≈ RMB 86bn ÷ ~7.1) + Eoptolink ~$6bn (H1 RMB 20.9bn × ~2.1 ÷ 7.1) + Coherent D&amp;C ~$6.5–7bn <a class="cite" href="#src-33">33</a> + NVIDIA LinkX/Fabrinet-built and Cisco/Acacia datacom ~$3–4bn + Lumentum and AAOI modules ~$1.5–2bn + Chinese second tier (Hisense, Accelink, others) ~$3–4bn. Some double counting (lasers sold to other module makers)</td><td><strong>$32–37bn</strong></td></tr>
+              <tr><th scope="row">Triangulated</th><td>Overlap of the three methods</td><td><strong>~$31–37bn, central ~$34bn</strong> <span class="sub">conf: med</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dg-grid is-2 wide">
+          <aside class="callout callout--note" style="margin:0">
+            <p class="callout-label">Units sanity check</p>
+            <p>~40–45m 800G plus 10–12m 1.6T in 2026 is ~60–70m 800G-equivalents. Spread over very roughly 15m AI accelerators shipped in 2026 (GPUs, TPUs, Trainium and others; conf: low), that is <strong>~4 per accelerator</strong> including front-end and DCI, inside the 2.5–5 per GPU range in the <a href="#unit-economics">rack math</a> <span class="prov" data-prov="A">A</span>. Google's &gt;6m 800G+ modules for ~4m TPUs (~1.5 each) shows how much lower optics intensity is in torus and optical-circuit-switch designs <span class="prov" data-prov="E">E</span><a class="cite" href="#src-82">82</a>.</p>
+          </aside>
+          <aside class="callout callout--note" style="margin:0">
+            <p class="callout-label">Price caution</p>
+            <p>InnoLight sold <strong>18.99m modules for RMB 41.4bn in H1-26</strong>, a blended <strong>~RMB 2,180 (~$305) per unit</strong> <span class="prov" data-prov="A">A</span><a class="cite" href="#src-85">85</a>. The blend includes lower-speed parts, but it suggests 800G street prices in 2026 sit well below the older $600–900 rule of thumb used in the rack BOM. We have not changed the BOM; its ~$270k of optics per rack may be high (conf: low-med).</p>
+          </aside>
+        </div>
+
+        <p class="table-caption">Other optics metrics</p>
+        <div class="table-wrap wide">
+          <table class="table--compact">
+            <thead><tr><th scope="col">Metric</th><th scope="col">Value</th><th scope="col">Tag</th><th scope="col">Source</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">1.6T ramp speed vs 800G</th><td>≥5× faster</td><td><span class="prov" data-prov="E">E</span></td><td>Dell'Oro <a class="cite" href="#src-52">52</a></td></tr>
+              <tr><th scope="row">OCS (optical circuit switch) market</th><td>&gt;$1bn in 2026</td><td><span class="prov" data-prov="E">E</span></td><td>Cignal <a class="cite" href="#src-74">74</a></td></tr>
+              <tr><th scope="row">Credo optical revenue target</th><td>&gt;$600m FY27</td><td><span class="prov" data-prov="G">G</span></td><td><a class="cite" href="#src-29">29</a></td></tr>
+              <tr><th scope="row">Marvell scale-up optics (incl. Celestial AI)</th><td>~$300m (FY28 target)</td><td><span class="prov" data-prov="G">G</span></td><td><a class="cite" href="#src-27">27</a></td></tr>
+            </tbody>
+          </table>
+        </div>
         <h3>Servers and systems</h3>
         <p class="table-caption">Server and ODM indicators</p>
         <div class="table-wrap wide">
@@ -994,9 +1091,17 @@
               <tr><th scope="row">Celestica revenue</th><td>$20.5bn (+65%); 2027 growth to "accelerate beyond 65%"</td><td>CY2026</td><td><span class="prov" data-prov="G">G</span><a class="cite" href="#src-44">44</a></td></tr>
               <tr><th scope="row">Taiwan ICT export orders</th><td><strong>+100.5% y/y</strong>; total orders $102.96bn (+71.4%)</td><td>Aug 2026</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-66">66</a></td></tr>
               <tr><th scope="row">Taiwan computer &amp; optoelectronics production</th><td><strong>+95.7% y/y</strong></td><td>Aug 2026</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-67">67</a></td></tr>
+              <tr><th scope="row">Foxconn monthly revenue</th><td><strong>NT$921.8bn (~$29.1bn), +52% y/y</strong>; Jan–Aug NT$6.51tn (+39.7%)</td><td>Aug 2026</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-94">94</a></td></tr>
+              <tr><th scope="row">Foxconn cloud &amp; networking share of revenue</th><td><strong>&gt;50%</strong> (first time)</td><td>Q2-26</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-94">94</a></td></tr>
+              <tr><th scope="row">Quanta revenue</th><td><strong>NT$1,036.6bn (~$32.9bn), +105.6% y/y</strong>; servers &gt;80% of sales, AI 75–80% of servers</td><td>Q2-26</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-88">88</a><a class="cite" href="#src-89">89</a></td></tr>
+              <tr><th scope="row">Wistron revenue</th><td><strong>NT$895.4bn (~$28.4bn), +62.4% y/y</strong>; H1 NT$1.74tn (+94%)</td><td>Q2-26</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a></td></tr>
+              <tr><th scope="row">Wiwynn revenue</th><td><strong>NT$278.2bn (~$8.8bn), +26.0% y/y</strong></td><td>Q2-26</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-90">90</a></td></tr>
+              <tr><th scope="row">Inventec revenue</th><td>NT$269.9bn (~$8.6bn), +44.7% y/y; AI servers &gt;50% of 2026 revenue (vs &gt;40% in 2025)</td><td>Q2-26 / CY2026</td><td><span class="prov" data-prov="R">R</span><span class="prov" data-prov="G">G</span><a class="cite" href="#src-92">92</a></td></tr>
+              <tr><th scope="row">GB200/GB300 NVL72 rack shipments</th><td><strong>~70–80k</strong> (vs ~29k in 2025)</td><td>CY2026</td><td><span class="prov" data-prov="E">E</span> Morgan Stanley via <a class="cite" href="#src-95">95</a><a class="cite" href="#src-96">96</a></td></tr>
             </tbody>
           </table>
         </div>
+        <p class="table-note">NT$ converted at ~31.5 per US$ <span class="prov" data-prov="A">A</span>.</p>
       </section>
 
       <!-- ============================================================ 09 KEY PLAYERS -->
@@ -1032,15 +1137,19 @@
               <tr><th scope="row">Ciena</th><td>US</td><td>Coherent DCI optics, WaveLogic, pluggables</td><td data-sort="1670">1,670</td><td data-sort="37">+37%</td><td data-sort="46.4">46.4% <span class="sub">adj.</span></td><td data-sort="-1">n/a</td><td>FQ3-26 (Jul-26)</td><td><a class="cite" href="#src-40">40</a></td></tr>
               <tr><th scope="row">Corning</th><td>US</td><td>Fiber, cable, connectivity</td><td data-sort="2070">2,070 <span class="sub">Optical Comms</span></td><td data-sort="32">+32% <span class="sub">Enterprise +65%</span></td><td data-sort="-1">n/a</td><td data-sort="21">~21% <span class="sub">OC net margin</span></td><td>Q2-26</td><td><a class="cite" href="#src-41">41</a></td></tr>
               <tr><th scope="row">Amphenol</th><td>US</td><td>Copper interconnect (NVLink spine), connectors, fiber</td><td data-sort="8800">8,800</td><td data-sort="55">+55% <span class="sub">30% organic</span></td><td data-sort="-1">n/a</td><td data-sort="29.6">29.5–29.8%</td><td>Q2-26</td><td><a class="cite" href="#src-64">64</a></td></tr>
-              <tr><th scope="row">InnoLight</th><td>China</td><td>#1 800G/1.6T module maker (NVIDIA, Google)</td><td data-sort="-1">n/r</td><td data-sort="-1"></td><td data-sort="40">~40%+ <span class="sub">2025, older</span></td><td data-sort="-1"></td><td>2025</td><td>older</td></tr>
-              <tr><th scope="row">Eoptolink</th><td>China</td><td>#2 Chinese module maker (Amazon, NVIDIA)</td><td data-sort="-1">n/r</td><td data-sort="-1"></td><td data-sort="45">~45%+ <span class="sub">2025, older</span></td><td data-sort="-1"></td><td>2025</td><td>older</td></tr>
+              <tr><th scope="row">InnoLight</th><td>China</td><td>#1 800G/1.6T module maker (NVIDIA, Google)</td><td data-sort="3100">~3,100 <span class="sub">Q2 RMB 22.3bn; H1 RMB 41.8bn (~$5,900)</span></td><td data-sort="182.5">+182% <span class="sub">H1</span></td><td data-sort="46.6">46.6% <span class="sub">optical modules, H1</span></td><td data-sort="-1">n/d <span class="sub">net margin 32.7% (H1)</span></td><td>H1-26</td><td><a class="cite" href="#src-83">83</a><a class="cite" href="#src-84">84</a><a class="cite" href="#src-85">85</a></td></tr>
+              <tr><th scope="row">Eoptolink</th><td>China</td><td>#2 datacom module maker (Amazon, NVIDIA)</td><td data-sort="2950">~2,950 <span class="sub">half-year: H1 RMB 20.9bn</span></td><td data-sort="100.3">+100% <span class="sub">H1</span></td><td data-sort="-1">n/d</td><td data-sort="-1">n/d <span class="sub">net margin 36.0% (H1)</span></td><td>H1-26</td><td><a class="cite" href="#src-86">86</a><a class="cite" href="#src-87">87</a></td></tr>
               <tr><th scope="row">Dell</th><td>US</td><td>AI servers (OEM)</td><td data-sort="47000">47,000 <span class="sub">ISG $31,800; AI servers $16,400</span></td><td data-sort="58">+58%</td><td data-sort="-1">n/a</td><td data-sort="15">15.0% <span class="sub">ISG</span></td><td>Q2 FY27 (Jul-26)</td><td><a class="cite" href="#src-49">49</a></td></tr>
               <tr><th scope="row">Supermicro</th><td>US</td><td>AI servers and racks (OEM)</td><td data-sort="11100">11,100</td><td data-sort="91">~+91%</td><td data-sort="17.5">17.5% <span class="sub">GAAP</span></td><td data-sort="-1">n/a</td><td>Q4 FY26 (Jun-26)</td><td><a class="cite" href="#src-46">46</a></td></tr>
               <tr><th scope="row">Hon Hai / Foxconn</th><td>Taiwan</td><td>#1 AI server and rack ODM</td><td data-sort="80300">~80,300 <span class="sub">NT$2.53tn</span></td><td data-sort="41">+41%</td><td data-sort="6.12">6.12%</td><td data-sort="3.75">3.75%</td><td>Q2-26</td><td><a class="cite" href="#src-51">51</a></td></tr>
+              <tr><th scope="row">Quanta</th><td>Taiwan</td><td>#2 NVIDIA rack ODM; Google, Meta, AWS, Microsoft</td><td data-sort="32900">~32,900 <span class="sub">NT$1,036.6bn</span></td><td data-sort="105.6">+105.6%</td><td data-sort="5.02">5.02%</td><td data-sort="3.3">3.30%</td><td>Q2-26</td><td><a class="cite" href="#src-88">88</a><a class="cite" href="#src-89">89</a></td></tr>
+              <tr><th scope="row">Wistron</th><td>Taiwan</td><td>NVIDIA compute boards and trays (L6–L10), DGX</td><td data-sort="28400">~28,400 <span class="sub">NT$895.4bn</span></td><td data-sort="62.4">+62.4%</td><td data-sort="-1">n/d <span class="sub">standalone 5.66%</span></td><td data-sort="3.7">~3.7% <span class="prov" data-prov="A">A</span><span class="sub">consolidated; standalone 1.92%</span></td><td>Q2-26</td><td><a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a><a class="cite" href="#src-98">98</a><a class="cite" href="#src-99">99</a></td></tr>
+              <tr><th scope="row">Wiwynn</th><td>Taiwan</td><td>Rack ODM for Microsoft, Meta, AWS</td><td data-sort="8830">~8,800 <span class="sub">NT$278.2bn</span></td><td data-sort="26">+26.0%</td><td data-sort="9.3">9.3%</td><td data-sort="7.3">7.3%</td><td>Q2-26</td><td><a class="cite" href="#src-90">90</a></td></tr>
+              <tr><th scope="row">Inventec</th><td>Taiwan</td><td>L6 boards and servers (Google, Microsoft)</td><td data-sort="8570">~8,600 <span class="sub">NT$269.9bn</span></td><td data-sort="44.7">+44.7%</td><td data-sort="4.23">4.23%</td><td data-sort="1.73">1.73%</td><td>Q2-26</td><td><a class="cite" href="#src-92">92</a><a class="cite" href="#src-100">100</a></td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Click a column header to sort. Non-GAAP margins unless noted. n/r = not re-verified this session; n/a = not disclosed. Foxconn converted at ~31.5 NT$/USD <span class="prov" data-prov="A">A</span>.</p>
+        <p class="table-note">Click a column header to sort. Non-GAAP margins unless noted. n/a or n/d = not disclosed. NT$ converted at ~31.5 and RMB at ~7.1 per US$ <span class="prov" data-prov="A">A</span>. InnoLight's figure is Q2-26 alone; Eoptolink's is the whole half-year (H1-26), as it does not give a Q2 split in the sources used.</p>
 
         <!-- ---------------- Networking vendors ---------------- -->
         <h3>Networking vendors</h3>
@@ -1069,7 +1178,7 @@
           </article>
           <article class="company-card">
             <header><h4>Arista Networks</h4><span class="ticker">ANET</span><span class="chip role"><span class="chip-id">W07</span> Switches</span></header>
-            <p>Best-in-class Ethernet switches and software (EOS). More than 100 cumulative AI-fabric customers, up from 4–5 in 2024. Microsoft and Meta are its 10%+ customers.</p>
+            <p>Best-in-class Ethernet switches and software (EOS). More than 100 cumulative AI-fabric customers, up from 4–5 in 2024. Microsoft (26%) and Meta (16%) took 42% of FY25 revenue.</p>
             <dl class="metrics">
               <div><dt>Revenue, Q2-26</dt><dd>$3.036bn</dd></div>
               <div><dt>2026 guide</dt><dd>~$12.6bn <small>+40%</small></dd></div>
@@ -1178,10 +1287,34 @@
         </div>
         <ul>
           <li><strong>AI targets.</strong> "AI fabrics goal of <strong>at least $3.5bn</strong>" and campus ≥$1.25bn for 2026 <span class="prov" data-prov="G">G</span><a class="cite" href="#src-12">12</a>, up from $2.75bn at the Sep 2025 analyst day (older knowledge, conf: med). Scale-across is about 30% of AI revenue <a class="cite" href="#src-13">13</a>.</li>
-          <li><strong>Customer concentration.</strong> Microsoft and Meta are the "2 longest partners" and 10%+ customers; CEO Jayshree Ullal expects "1, maybe 2" more <a class="cite" href="#src-12">12</a>. In FY24 Microsoft was about 20% and Meta about 15% of revenue (older knowledge, conf: med).</li>
+          <li><strong>Customer concentration.</strong> The <strong>FY2025 10-K</strong> (filed 17 Feb 2026) shows two end customers at <strong>26% and 16% of 2025 revenue</strong>, against 20% and 15% in 2024 and 18% and 21% in 2023 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a>. The 10-K does not name them; Bank of America's reading identifies them as <strong>Microsoft (26%) and Meta (16%)</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-72">72</a>. That is ~$2.3bn from Microsoft (+67% y/y) and ~$1.4bn from Meta <span class="prov" data-prov="A">A</span> (0.26 and 0.16 × $9.006bn): <strong>42% of revenue from two buyers</strong>, up from 35% in FY2024. Microsoft's growth was reportedly driven more by front-end switching than by AI back-end fabrics <a class="cite" href="#src-72">72</a>. CEO Jayshree Ullal calls them the "2 longest partners" and expects "1, maybe 2" more 10% customers <a class="cite" href="#src-12">12</a>. The Q2-26 10-Q repeats deferred revenue of <strong>$6,865.9m</strong> and non-cancellable purchase commitments of <strong>$9.7bn</strong> at 30 Jun 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-73">73</a>.</li>
           <li><strong>Constraints.</strong> "The industry is going to have a 2-year problem… until 2028." Memory is secured through 2027. Gross margin is under pressure from mix and component inflation. 1.6T is in trials with single-digit customers, with production in 2027 <a class="cite" href="#src-12">12</a>.</li>
           <li><strong>Scale-up.</strong> "Very little participation" where NVIDIA's vertical stack is used; the opportunity is with AMD MI-series and Google TPUs <a class="cite" href="#src-12">12</a>.</li>
         </ul>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "stacked-bar",
+            "title": "Two buyers now take 42% of Arista's revenue",
+            "subtitle": "Share of Arista revenue from its two 10% end customers, % of fiscal-year revenue",
+            "valueFormat": { "suffix": "%", "decimals": 0 }, "unit": "% of revenue",
+            "xKey": "y",
+            "series": [
+              { "key": "msft", "label": "Microsoft" },
+              { "key": "meta", "label": "Meta" }
+            ],
+            "data": [
+              { "y": "FY2023", "msft": 18, "meta": 21, "note": "Top two = 39%; Meta was the larger customer in 2023" },
+              { "y": "FY2024", "msft": 20, "meta": 15, "note": "Top two = 35%" },
+              { "y": "FY2025", "msft": 26, "meta": 16, "note": "Top two = 42%; ~$2.3bn Microsoft, ~$1.4bn Meta [A]" }
+            ],
+            "labels": true, "yMax": 50,
+            "source": "Arista FY2025 10-K [71]; names per BofA reading of the filing [72]", "asOf": "2026-02-17", "provenance": ["R", "E"],
+            "note": "Bar totals are the two customers' combined share. The 10-K gives the percentages without names; FY2025 revenue was $9.006bn."
+          }
+          </script>
+        </figure>
 
         <h4>Cisco in more detail</h4>
         <p>Q4 FY26 revenue <strong>$17.3bn</strong> (+18%), networking <strong>$9.8bn</strong> (+28%). FY27 guide <strong>$72.2–73.4bn</strong> (~+15%); Q1 FY27 guide $18.0–18.2bn <span class="prov" data-prov="R">R</span><span class="prov" data-prov="G">G</span><a class="cite" href="#src-22">22</a><a class="cite" href="#src-23">23</a>. Q1 FY27 gross margin guide 65–66% (vs 66.3%), with AI mix diluting <a class="cite" href="#src-23">23</a>.</p>
@@ -1291,14 +1424,14 @@
           </article>
           <article class="company-card">
             <header><h4>InnoLight &amp; Eoptolink</h4><span class="ticker">300308 · 300502</span><span class="chip role"><span class="chip-id">C07</span> Modules</span></header>
-            <p>China-headquartered, but major suppliers to US hyperscalers, with plants in Thailand. InnoLight is the world's largest 800G/1.6T module maker (NVIDIA, Google); Eoptolink is big at Amazon and NVIDIA. Figures are older and not re-verified.</p>
+            <p>China-headquartered, but major suppliers to US hyperscalers, with plants in Thailand. InnoLight is the world's largest 800G/1.6T module maker (#1 in 2025 datacom revenue per Cignal; NVIDIA, Google); Eoptolink (#2) is big at Amazon and NVIDIA. ~95% of InnoLight's H1-26 revenue was overseas.</p>
             <dl class="metrics">
-              <div><dt>InnoLight 2024</dt><dd>RMB 23.9bn <small>NP 5.2bn</small></dd></div>
-              <div><dt>InnoLight H1-25</dt><dd>RMB 14.8bn <small>NP 4.0bn</small></dd></div>
-              <div><dt>Eoptolink 2024</dt><dd>RMB 8.6bn <small>NP 2.8bn</small></dd></div>
-              <div><dt>Eoptolink H1-25</dt><dd>RMB 10.4bn <small>NP 3.9bn</small></dd></div>
+              <div><dt>InnoLight H1-26</dt><dd>RMB 41.8bn <small>+182%</small></dd></div>
+              <div><dt>InnoLight net profit</dt><dd>RMB 13.7bn <small>+242%</small></dd></div>
+              <div><dt>Eoptolink H1-26</dt><dd>RMB 20.9bn <small>+100%</small></dd></div>
+              <div><dt>Eoptolink net profit</dt><dd>RMB 7.5bn <small>+91%</small></dd></div>
             </dl>
-            <footer><span class="prov" data-prov="R">R</span> older knowledge (SZSE filings) · conf: med</footer>
+            <footer><span class="prov" data-prov="R">R</span> H1-26 interim reports · <a class="cite" href="#src-83">83</a><a class="cite" href="#src-85">85</a><a class="cite" href="#src-86">86</a></footer>
           </article>
           <article class="company-card">
             <header><h4>Ciena</h4><span class="ticker">CIEN</span><span class="chip role"><span class="chip-id">W07</span> DCI optics</span></header>
@@ -1323,6 +1456,51 @@
             <footer><span class="prov" data-prov="R">R</span> Q2-26 · <a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-43">43</a></footer>
           </article>
         </div>
+        <h4>InnoLight and Eoptolink in more detail</h4>
+        <div class="dg-grid is-2 wide">
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar",
+              "title": "The two biggest module makers sold ~$8.8bn in six months",
+              "subtitle": "H1-2026 revenue and net profit, RMB bn",
+              "valueFormat": { "prefix": "RMB ", "suffix": "bn", "decimals": 1 }, "unit": "RMB bn",
+              "xKey": "co",
+              "series": [ { "key": "rev", "label": "Revenue" }, { "key": "np", "label": "Net profit" } ],
+              "data": [
+                { "co": "InnoLight", "rev": 41.78, "np": 13.65, "note": "Revenue +182.5% y/y, net profit +241.7%; net margin 32.7%; ~$5.9bn revenue" },
+                { "co": "Eoptolink", "rev": 20.91, "np": 7.53, "note": "Revenue +100.3% y/y, net profit +91.0%; net margin ~36%; ~$2.9bn revenue" }
+              ],
+              "labels": true,
+              "source": "InnoLight and Eoptolink H1-26 interim reports via CNR, Sohu, East Money [83][84][85][86][87]", "asOf": "2026-08-24", "provenance": "R",
+              "note": "RMB converted at ~7.1 per US$ [A]. Neither company discloses its 1.6T revenue mix."
+            }
+            </script>
+          </figure>
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar",
+              "title": "InnoLight's profit grew faster than sales; Eoptolink's slower",
+              "subtitle": "H1-2026 growth y/y, %",
+              "valueFormat": { "suffix": "%", "decimals": 0 }, "unit": "% y/y",
+              "xKey": "co",
+              "series": [ { "key": "rev", "label": "Revenue growth" }, { "key": "np", "label": "Net-profit growth" } ],
+              "data": [
+                { "co": "InnoLight", "rev": 182.5, "np": 241.7, "note": "Module gross margin 46.6% vs 39.96% a year earlier" },
+                { "co": "Eoptolink", "rev": 100.3, "np": 91.0, "note": "Net margin slipped to ~36% from ~38% [A]" }
+              ],
+              "labels": true,
+              "source": "[83][84][85][86][87]", "asOf": "2026-08-24", "provenance": "R"
+            }
+            </script>
+          </figure>
+        </div>
+        <ul>
+          <li><strong>InnoLight (中际旭创, 300308.SZ)</strong>, reported 21 Aug 2026: H1-26 revenue <strong>RMB 41.78bn</strong> (+182.5% y/y; ~$5.9bn), net profit <strong>RMB 13.65bn</strong> (+241.7%), net profit excluding one-offs RMB 13.09bn (+229%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-83">83</a><a class="cite" href="#src-84">84</a>. Q2 alone: revenue <strong>RMB 22.28bn</strong> (+14% q/q, a visible slowdown from Q1's pace) and net profit RMB 7.96bn <a class="cite" href="#src-84">84</a><a class="cite" href="#src-85">85</a>. Optical-module gross margin <strong>46.6%</strong> (39.96% a year earlier); <strong>18.99m modules</strong> shipped; <strong>~95% of revenue overseas</strong> (RMB 39.6bn) <a class="cite" href="#src-85">85</a>. 1.6T silicon-photonics modules "entered volume ramp", but the 1.6T revenue mix is not disclosed. Watch points: operating cash flow fell 44% to RMB 1.8bn as receivables (RMB 15.0bn, +139%) and inventory (RMB 19.8bn, +56%) swelled <span class="prov" data-prov="R">R</span><a class="cite" href="#src-85">85</a>.</li>
+          <li><strong>Eoptolink (新易盛, 300502.SZ)</strong>, reported 24 Aug 2026: H1-26 revenue <strong>RMB 20.91bn</strong> (+100.3%; ~$2.9bn), net profit <strong>RMB 7.53bn</strong> (+91.0%), EPS RMB 5.41 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-86">86</a><a class="cite" href="#src-87">87</a>. Profit grew more slowly than revenue, so net margin slipped to ~36% from ~38% <span class="prov" data-prov="A">A</span>. Full 400G/800G/1.6T line-up on silicon photonics and <span class="term" data-term="TFLN">thin-film lithium niobate</span> <a class="cite" href="#src-87">87</a>.</li>
+          <li><strong>Scale.</strong> Together the two sold <strong>~$8.8bn in H1-26</strong>, roughly <strong>half of all datacom optics sold in the half</strong> (vs ~$16–17bn implied by Cignal's 1Q26 $7.7bn plus a slightly larger 2Q) <span class="prov" data-prov="A">A</span>, most of it to non-Chinese buyers. TrendForce estimates they take ~80% of Google's 800G+ orders <span class="prov" data-prov="E">E</span><a class="cite" href="#src-82">82</a>.</li>
+        </ul>
         <p><strong>Why the Chinese module makers matter.</strong> A large share of the 800G/1.6T modules in US AI clusters comes from China-headquartered firms, much of it built in Thailand to limit tariff exposure. That is a policy risk (tariffs, entity list, "trusted supplier" procurement) and one reason NVIDIA is funding US and Western capacity at Corning, Lumentum, Coherent, Fabrinet and AAOI. Lumen's ~$8.5bn of AI "private connectivity fabric" deals with hyperscalers in 2024–25 and Corning's $6bn Meta deal of 2025 are older knowledge (conf: med).</p>
 
         <!-- ---------------- Connectivity silicon ---------------- -->
@@ -1392,10 +1570,10 @@
           <table class="table--sticky-col table--compact">
             <thead><tr><th scope="col">Company</th><th scope="col">Model</th><th scope="col">Latest</th><th scope="col">Margin</th><th scope="col">Notes</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Hon Hai / Foxconn</th><td>ODM (L6–L11), largest NVIDIA rack builder</td><td>Q2-26 revenue <strong>NT$2.53tn (+41%)</strong>; op profit NT$94.8bn (+68%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-51">51</a></td><td>GM <strong>6.12%</strong>, OM <strong>3.75%</strong>, NM 2.37%</td><td>2026 AI-rack shipments "more than double"; 800G+ switch revenue to double; cloud &amp; networking to grow "high double digits" in Q3 <span class="prov" data-prov="G">G</span>. Cloud &amp; networking became its largest segment in 2025 (older). ~40%+ share of GB200/GB300 racks (older sell-side, conf: low-med)</td></tr>
-              <tr><th scope="row">Quanta (QCT)</th><td>ODM; big with Google, Meta, AWS, Microsoft; NVL72</td><td>n/r</td><td>OM ~4–5% (older)</td><td>#2 NVIDIA rack builder (conf: med)</td></tr>
-              <tr><th scope="row">Wistron / Wiwynn</th><td>Wistron: NVIDIA boards (L6) and DGX; Wiwynn: Microsoft/Meta/AWS racks</td><td>n/r</td><td>Wiwynn OM ~7–9% (older)</td><td>Wistron and Foxconn build NVIDIA boards in Texas under NVIDIA's US-manufacturing push (older)</td></tr>
-              <tr><th scope="row">Inventec</th><td>ODM (L6 boards, Google/Microsoft)</td><td>n/r</td><td>low single digits</td><td></td></tr>
+              <tr><th scope="row">Hon Hai / Foxconn</th><td>ODM (L6–L11), largest NVIDIA rack builder</td><td>Q2-26 revenue <strong>NT$2.53tn (+41%)</strong>; op profit NT$94.8bn (+68%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-51">51</a></td><td>GM <strong>6.12%</strong>, OM <strong>3.75%</strong>, NM 2.37%</td><td>2026 AI-rack shipments "more than double"; 800G+ switch revenue to double; cloud &amp; networking to grow "high double digits" in Q3 <span class="prov" data-prov="G">G</span>. Cloud &amp; networking passed <strong>50% of revenue for the first time in Q2-26</strong>; August revenue NT$921.8bn (+52%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-94">94</a>. Morgan Stanley channel checks: ~3,300 of ~6,900 GB-series racks built by the top three in June 2026 (<strong>~48%</strong>) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-95">95</a> (conf: med)</td></tr>
+              <tr><th scope="row">Quanta (QCT)</th><td>ODM; big with Google, Meta, AWS, Microsoft; NVL72</td><td>Q2-26 revenue <strong>NT$1,036.6bn (+105.6% y/y, +28.1% q/q)</strong>; net profit NT$28.7bn; EPS NT$7.43 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-88">88</a><a class="cite" href="#src-89">89</a></td><td>GM <strong>5.02%</strong> (−202 bp y/y), OM <strong>3.30%</strong></td><td>Servers &gt;80% of sales, <strong>AI 75–80% of server revenue</strong> (AI ≈ 60–64% of total <span class="prov" data-prov="A">A</span>); AI-server revenue to double in 2026; capacity to double by end-2026; 2026 capex raised to NT$40bn; bought AUO's Huaya plant (NT$19.7bn) for 2028; "more than a year" of visibility into 2028 <span class="prov" data-prov="G">G</span>. #2 NVIDIA rack builder: ~2,300–2,400 racks in June 2026 (<strong>~34%</strong> of the top three) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-95">95</a></td></tr>
+              <tr><th scope="row">Wistron / Wiwynn</th><td>Wistron: NVIDIA boards (L6) and DGX; Wiwynn: Microsoft/Meta/AWS racks</td><td><strong>Wistron Q2-26 NT$895.4bn (+62.4%)</strong>, net profit NT$14.8bn (+128%); H1 NT$1.74tn (+94%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-91">91</a><a class="cite" href="#src-92">92</a>. <strong>Wiwynn Q2-26 NT$278.2bn (+26.0%)</strong>, net profit NT$15.0bn (+23.5%), EPS NT$80.43; H1 NT$554.7bn (+41.7%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-90">90</a>. Both posted record August revenue <a class="cite" href="#src-97">97</a></td><td><strong>Wiwynn GM 9.3%, OM 7.3%</strong> (H1: 8.4% / 6.8%) <a class="cite" href="#src-90">90</a>. <strong>Wistron consolidated OM ~3.7%</strong> (operating income NT$33.4bn, incl. Wiwynn) <span class="prov" data-prov="A">A</span><a class="cite" href="#src-98">98</a>; IR summary GM 5.66% / OM 1.92%, apparently standalone (conf: med) <a class="cite" href="#src-99">99</a>; net margin ~1.7% <span class="prov" data-prov="A">A</span></td><td>Wistron: "AI server demand… continues to exceed supply"; $700m Texas plant for NVIDIA systems opened July 2026 <a class="cite" href="#src-91">91</a>. Morgan Stanley counts Wistron's compute trays at ~1,200–1,300 rack-equivalents in June 2026 and ~14,100 for 2026 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-95">95</a>. Wiwynn approved $942m of H2-26 capex <a class="cite" href="#src-90">90</a>. AI is now &gt;95% of Wistron's server revenue <span class="prov" data-prov="E">E</span><a class="cite" href="#src-98">98</a></td></tr>
+              <tr><th scope="row">Inventec</th><td>ODM (L6 boards and servers, Google/Microsoft)</td><td>Q2-26 revenue <strong>NT$269.9bn (+44.7%)</strong> <a class="cite" href="#src-92">92</a>; net profit NT$3.90bn <span class="prov" data-prov="R">R</span><a class="cite" href="#src-100">100</a></td><td><strong>GM 4.23%, OM 1.73%</strong> (1Q26: 5.08% / 1.65%) <a class="cite" href="#src-100">100</a> (conf: med-high)</td><td>AI servers <strong>&gt;50% of 2026 revenue</strong> (vs &gt;40% in 2025); notebooks to fall in Q3 on DRAM shortages <span class="prov" data-prov="G">G</span><a class="cite" href="#src-92">92</a></td></tr>
               <tr><th scope="row">Supermicro</th><td>OEM, own designs, DLC-2 liquid cooling; US/Taiwan/NL</td><td>FQ4-26 <strong>$11.1bn</strong>; FY26 <strong>$39.1bn</strong> (vs $22.0bn); FY27 guide <strong>$65–72bn</strong>; Q1 FY27 guide $14.5–15.5bn; orders &gt;$60bn <span class="prov" data-prov="R">R</span><span class="prov" data-prov="G">G</span><a class="cite" href="#src-46">46</a></td><td>FQ4 GAAP GM <strong>17.5%</strong> (historically ~10–14%)</td><td>Capacity <strong>~3,000 racks/month</strong>; shipping Vera Rubin NVL72 from 23 Sep 2026; deploys 1.8 MW in-row CDUs <a class="cite" href="#src-48">48</a></td></tr>
               <tr><th scope="row">Dell</th><td>OEM (neoclouds such as CoreWeave, xAI, sovereigns, enterprise)</td><td>Q2 FY27 revenue <strong>$47.0bn</strong>; <strong>ISG $31.8bn (+89%)</strong>; <strong>AI servers $16.4bn (+100%)</strong>; orders <strong>$60.9bn</strong>; backlog <strong>$95bn</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-49">49</a></td><td>ISG OM <strong>15.0%</strong> (vs 8.8%)</td><td>Topped server OEM revenue in 2Q26 per Dell'Oro, ahead of Supermicro and Lenovo <span class="prov" data-prov="E">E</span><a class="cite" href="#src-55">55</a></td></tr>
               <tr><th scope="row">HPE</th><td>OEM + networking</td><td>Servers <strong>$6.8bn (+35%)</strong> <a class="cite" href="#src-50">50</a></td><td>Cloud &amp; AI OM 17.0%</td><td>Juniper adds networking; Cray/Slingshot HPC fabric</td></tr>
@@ -1404,6 +1582,96 @@
             </tbody>
           </table>
         </div>
+        <h4>Taiwan ODMs in Q2-26: record sales, thin margins</h4>
+        <p>Every big Taiwanese rack and board builder reported record revenue in Q2-26, and none earned more than a 7.3% operating margin. Quanta doubled its sales; Foxconn's cloud &amp; networking business passed half of group revenue for the first time <span class="prov" data-prov="R">R</span><a class="cite" href="#src-88">88</a><a class="cite" href="#src-94">94</a>. Morgan Stanley expects <strong>~70–80k GB200/GB300 NVL72 racks</strong> to ship in 2026, against ~29k in 2025 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-95">95</a><a class="cite" href="#src-96">96</a>.</p>
+        <div class="dg-grid is-2 wide">
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar", "horizontal": true,
+              "title": "Foxconn out-sells the next four ODMs combined",
+              "subtitle": "Q2-2026 revenue, NT$ bn (÷ ~31.5 for US$)",
+              "valueFormat": { "prefix": "NT$", "suffix": "bn", "decimals": 0 }, "unit": "NT$ bn",
+              "xKey": "co",
+              "series": [ { "key": "rev", "label": "Revenue" } ],
+              "data": [
+                { "co": "Foxconn", "rev": 2530, "note": "~$80bn; +41% y/y" },
+                { "co": "Quanta", "rev": 1036.6, "note": "~$32.9bn; +105.6% y/y" },
+                { "co": "Wistron", "rev": 895.4, "note": "~$28.4bn; +62.4% y/y (consolidated, incl. Wiwynn)" },
+                { "co": "Wiwynn", "rev": 278.2, "note": "~$8.8bn; +26.0% y/y" },
+                { "co": "Inventec", "rev": 269.9, "note": "~$8.6bn; +44.7% y/y" }
+              ],
+              "labels": true,
+              "source": "Company results [51][88][90][91][92]", "asOf": "2026-08-13", "provenance": "R",
+              "note": "Wistron consolidates Wiwynn, so the bars overlap."
+            }
+            </script>
+          </figure>
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar", "horizontal": true,
+              "title": "Quanta doubled its sales in a year",
+              "subtitle": "Q2-2026 revenue growth y/y, %",
+              "valueFormat": { "prefix": "+", "suffix": "%", "decimals": 0 }, "unit": "% y/y",
+              "xKey": "co",
+              "series": [ { "key": "g", "label": "Revenue growth y/y" } ],
+              "data": [
+                { "co": "Quanta", "g": 105.6, "note": "+28.1% q/q; AI 75–80% of server revenue" },
+                { "co": "Wistron", "g": 62.4, "note": "Reuters: +64%; H1 +94%" },
+                { "co": "Inventec", "g": 44.7, "note": "AI servers >50% of 2026 revenue [G]" },
+                { "co": "Foxconn", "g": 41, "note": "August revenue +52% y/y" },
+                { "co": "Wiwynn", "g": 26.0, "note": "H1 +41.7%" }
+              ],
+              "labels": true,
+              "source": "Company results [51][88][90][91][92][94]", "asOf": "2026-09-07", "provenance": "R"
+            }
+            </script>
+          </figure>
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar", "horizontal": true,
+              "title": "Rack builders keep 2 to 7 cents of each dollar as operating profit",
+              "subtitle": "Q2-2026 gross and operating margin, %",
+              "valueFormat": { "suffix": "%", "decimals": 2 }, "unit": "%",
+              "xKey": "co",
+              "series": [ { "key": "gm", "label": "Gross margin" }, { "key": "om", "label": "Operating margin" } ],
+              "data": [
+                { "co": "Wiwynn", "gm": 9.3, "om": 7.3 },
+                { "co": "Foxconn", "gm": 6.12, "om": 3.75 },
+                { "co": "Wistron", "om": 3.7, "note": "Consolidated OM incl. Wiwynn [A from R]; consolidated GM not disclosed. IR summary (apparently standalone): GM 5.66%, OM 1.92%" },
+                { "co": "Quanta", "gm": 5.02, "om": 3.3, "note": "GM −202 bp y/y" },
+                { "co": "Inventec", "gm": 4.23, "om": 1.73, "note": "Per filings aggregator (conf: med-high)" }
+              ],
+              "labels": true,
+              "source": "Company results [51][88][90][98][99][100]", "asOf": "2026-09-25", "provenance": ["R", "A"],
+              "note": "For comparison: NVIDIA's gross margin is 75% [1]."
+            }
+            </script>
+          </figure>
+          <figure style="margin:0">
+            <script type="application/json" data-chart>
+            {
+              "type": "bar", "horizontal": true,
+              "title": "Foxconn built about half of June's GB-series racks",
+              "subtitle": "GB200/GB300 rack output by ODM, June 2026, racks (share of the top three)",
+              "valueFormat": { "decimals": 0 }, "unit": "racks",
+              "xKey": "odm",
+              "series": [ { "key": "racks", "label": "Racks (midpoint)" } ],
+              "data": [
+                { "odm": "Foxconn (~48%)", "racks": 3300 },
+                { "odm": "Quanta (~34%)", "racks": 2350, "note": "~2,300–2,400" },
+                { "odm": "Wistron (~18%)", "racks": 1250, "note": "Compute trays counted as rack-equivalents, ~1,200–1,300; ~14,100 for 2026" }
+              ],
+              "labels": true,
+              "source": "Morgan Stanley channel checks as reported by BigGo Finance [95]", "asOf": "2026-07-12", "provenance": "E",
+              "note": "Second-hand report of sell-side estimates; conf: med-low."
+            }
+            </script>
+          </figure>
+        </div>
+
         <aside class="callout callout--note">
           <p class="callout-label">Supermicro governance</p>
           <p><strong>History</strong> (older knowledge): late filings and a Nasdaq delisting in 2018–19; a 2020 SEC settlement ($17.5m) over accounting; an August 2024 short report, EY's resignation as auditor (Oct 2024) and BDO's appointment; the FY24 10-K filed in Feb 2025 with no restatement. <strong>In March 2026 two employees and a contractor were indicted for export-control violations</strong> involving diversion of restricted products; Supermicro was not named as a defendant. A board-led investigation (Munger Tolles; AlixPartners) found "no evidence that current senior management knew of any diversion" and no evidence that prior financials were unreliable; three people were terminated and all recommendations adopted (20 Aug 2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-47">47</a>. Press reports named one of the indicted as a co-founder/SVP (conf: low; not verified).</p>
@@ -1464,7 +1732,7 @@
             ],
             "minWidth": 760, "height": 600, "nodePadding": 12, "labelSmall": true,
             "source": "Company results and guidance [12][19][22][35][38][41][46][49]; Atlas estimates (§5.2)", "asOf": "2026-09-25", "provenance": ["R", "G", "A"],
-            "note": "Periods differ by company fiscal year. Vendors overlap (Broadcom chips sit inside Arista and Celestica switches), so the columns double-count somewhat. Foxconn's cloud & networking segment (~$150bn+ run-rate, conf: low) is excluded because it is mostly NVIDIA pass-through. The 75% pass-through share is an Atlas assumption from the rack BOM."
+            "note": "Periods differ by company fiscal year. Vendors overlap (Broadcom chips sit inside Arista and Celestica switches), so the columns double-count somewhat. Foxconn's cloud & networking segment (~$160bn run-rate, conf: med) and Quanta (~$115–125bn) are excluded because they are mostly NVIDIA pass-through. The 75% pass-through share is an Atlas assumption from the rack BOM."
           }
           </script>
         </figure>
@@ -1489,7 +1757,9 @@
               <tr><th scope="row">Hyperscalers (5) and neoclouds</th><td>Credo</td><td>~2.1–2.3</td><td>FY27</td><td><span class="prov" data-prov="A">A</span></td><td>&gt;85% growth on FY26 ~$1.2bn (older base)</td></tr>
               <tr><th scope="row">Hyperscalers (lead: AWS/Google; conf: med)</th><td>Astera</td><td>~1.8–2.0</td><td>CY2026</td><td><span class="prov" data-prov="A">A</span></td><td>Q1 ~0.31 + Q2 0.39 + Q3 0.55 + Q4 ~0.6</td></tr>
               <tr><th scope="row">Amazon, NVIDIA, hyperscalers</th><td>Corning (Optical Comms)</td><td>~8.5</td><td>CY2026 run-rate</td><td><span class="prov" data-prov="A">A</span></td><td>2.07 × 4 + growth</td></tr>
-              <tr><th scope="row">NVIDIA / ODMs</th><td>Foxconn cloud &amp; networking</td><td>~150+</td><td>CY2026</td><td><span class="prov" data-prov="A">A</span></td><td>~45% of ~NT$10tn annualised ÷ ~32 NT$/USD (conf: low)</td></tr>
+              <tr><th scope="row">NVIDIA / ODM customers</th><td>Foxconn cloud &amp; networking</td><td>~160</td><td>CY2026 run-rate</td><td><span class="prov" data-prov="A">A</span></td><td>&gt;50% of revenue in Q2-26 <a class="cite" href="#src-94">94</a> × ~NT$10tn annualised (Jan–Aug NT$6.51tn) ÷ ~31.5 NT$/USD (conf: med; was ~$150bn at ~45%)</td></tr>
+              <tr><th scope="row">Hyperscalers / neoclouds</th><td>Quanta</td><td>~115–125</td><td>CY2026</td><td><span class="prov" data-prov="A">A</span></td><td>Q1 NT$809bn <a class="cite" href="#src-93">93</a> + Q2 NT$1,037bn <a class="cite" href="#src-88">88</a> + H2 ≈ 2 × Q2 ≈ NT$3.9tn ÷ 31.5; ~60–64% AI servers</td></tr>
+              <tr><th scope="row">Hyperscalers, NVIDIA, module buyers</th><td>InnoLight + Eoptolink</td><td>~18</td><td>CY2026</td><td><span class="prov" data-prov="A">A</span></td><td>InnoLight ~12 + Eoptolink ~6 (H1-26 run-rate) <a class="cite" href="#src-83">83</a><a class="cite" href="#src-86">86</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1626,12 +1896,12 @@
       <!-- ============================================================ 12 PROFIT CAPTURE -->
       <section>
         <h2><span class="kicker">12 · Profit capture</span>Who keeps the profit</h2>
-        <p>Margins in this layer run from 75% at NVIDIA and Broadcom to about 6% at Foxconn. The gradient follows scarcity and intellectual property: whoever owns a protocol, a chip design or a scarce laser earns a rent; whoever assembles earns a fee.</p>
+        <p>Margins in this layer run from 75% at NVIDIA and Broadcom to 4–6% gross (2–4% operating) at the Taiwanese rack builders: Foxconn 6.1%, Quanta 5.0%, Inventec 4.2% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-51">51</a><a class="cite" href="#src-88">88</a><a class="cite" href="#src-100">100</a>. The gradient follows scarcity and intellectual property: whoever owns a protocol, a chip design or a scarce laser earns a rent; whoever assembles earns a fee.</p>
         <figure class="wide">
           <script type="application/json" data-chart>
           {
             "type": "bar", "horizontal": true, "stacked": true,
-            "title": "The margin ladder: from 75% at the chip designers to 6% at the rack assembler",
+            "title": "The margin ladder: from 75% at the chip designers to 4–6% at the rack assemblers",
             "subtitle": "Gross margin, latest quarter, % (non-GAAP except Supermicro), coloured by sub-layer",
             "valueFormat": { "suffix": "%", "decimals": 1 }, "unit": "% gross margin",
             "xKey": "co",
@@ -1652,12 +1922,16 @@
               { "co": "Lumentum", "op": 50.4, "note": "Laser scarcity rent" },
               { "co": "Ciena", "op": 46.4, "note": "DCI coherent leadership (adj.)" },
               { "co": "Coherent", "op": 40.2, "note": "Vertical integration; industrial drag" },
+              { "co": "InnoLight", "op": 46.6, "note": "Optical-module segment, H1-26; scale leader" },
               { "co": "AAOI", "op": 29.8, "note": "Sub-scale module maker" },
               { "co": "Supermicro", "mf": 17.5, "note": "OEM with some design IP (GAAP, FQ4)" },
               { "co": "Fabrinet", "mf": 12.2, "note": "Contract manufacturer" },
-              { "co": "Foxconn", "mf": 6.12, "note": "Pure ODM scale" }
+              { "co": "Wiwynn", "mf": 9.3, "note": "Rack ODM with more design content" },
+              { "co": "Foxconn", "mf": 6.12, "note": "Pure ODM scale" },
+              { "co": "Quanta", "mf": 5.02, "note": "Revenue doubled; GM −202 bp y/y" },
+              { "co": "Inventec", "mf": 4.23, "note": "L6 boards" }
             ],
-            "source": "Company results [1][11][19][23][25][29][30][33][35][38][39][40][46][51]", "asOf": "2026-09-25", "provenance": "R"
+            "source": "Company results [1][11][19][23][25][29][30][33][35][38][39][40][46][51][85][88][90][100]", "asOf": "2026-09-25", "provenance": "R"
           }
           </script>
         </figure>
@@ -1677,12 +1951,17 @@
               <tr><th scope="row">Lumentum</th><td data-sort="50.4">50.4%</td><td data-sort="36.6">36.6%</td><td><strong>Laser scarcity rent</strong> <a class="cite" href="#src-35">35</a></td></tr>
               <tr><th scope="row">Ciena</th><td data-sort="46.4">46.4% (adj.)</td><td data-sort="20">~20%+</td><td>DCI coherent leadership <a class="cite" href="#src-40">40</a></td></tr>
               <tr><th scope="row">Coherent</th><td data-sort="40.2">40.2%</td><td data-sort="20">~20%</td><td>Vertical integration; industrial drag <a class="cite" href="#src-33">33</a></td></tr>
+              <tr><th scope="row">InnoLight</th><td data-sort="46.6">46.6% (modules, H1)</td><td data-sort="-1">n/d <span class="sub">net margin 32.7%</span></td><td>Scale leader in 800G/1.6T modules <a class="cite" href="#src-85">85</a></td></tr>
               <tr><th scope="row">AAOI</th><td data-sort="29.8">29.8%</td><td data-sort="0">~break-even</td><td>Sub-scale module maker <a class="cite" href="#src-39">39</a></td></tr>
               <tr><th scope="row">Supermicro</th><td data-sort="17.5">17.5% (GAAP, FQ4)</td><td data-sort="10">~10%</td><td>OEM with some design IP <a class="cite" href="#src-46">46</a></td></tr>
               <tr><th scope="row">Dell ISG</th><td data-sort="-1">n/a</td><td data-sort="15">15.0%</td><td>OEM with services and financing <a class="cite" href="#src-49">49</a></td></tr>
               <tr><th scope="row">Fabrinet</th><td data-sort="12.2">12.2%</td><td data-sort="11">~11%</td><td>Contract manufacturer <a class="cite" href="#src-38">38</a></td></tr>
               <tr><th scope="row">Celestica CCS</th><td data-sort="-1">n/a</td><td data-sort="8.7">8.7% (segment)</td><td>White-box ODM <a class="cite" href="#src-44">44</a></td></tr>
+              <tr><th scope="row">Wiwynn</th><td data-sort="9.3">9.3%</td><td data-sort="7.3">7.3%</td><td>Rack ODM with more design content <a class="cite" href="#src-90">90</a></td></tr>
               <tr><th scope="row">Foxconn</th><td data-sort="6.1">6.1%</td><td data-sort="3.75">3.75%</td><td>Pure ODM scale <a class="cite" href="#src-51">51</a></td></tr>
+              <tr><th scope="row">Quanta</th><td data-sort="5.02">5.0%</td><td data-sort="3.3">3.3%</td><td>Volume doubled, margin fell <a class="cite" href="#src-88">88</a></td></tr>
+              <tr><th scope="row">Wistron</th><td data-sort="-1">n/d</td><td data-sort="3.7">~3.7% <span class="sub">consolidated [A]</span></td><td>Boards and trays; standalone OM ~1.9% <a class="cite" href="#src-98">98</a><a class="cite" href="#src-99">99</a></td></tr>
+              <tr><th scope="row">Inventec</th><td data-sort="4.23">4.2%</td><td data-sort="1.73">1.7%</td><td>L6 boards <a class="cite" href="#src-100">100</a></td></tr>
             </tbody>
           </table>
         </div>
@@ -1717,7 +1996,9 @@
               { "name": "Celestica", "grp": "srv", "g": 62, "om": 8.4, "note": "Adj. operating margin, FY guide" },
               { "name": "Supermicro", "grp": "srv", "g": 91, "om": 10, "note": "Approximate: ~10%" },
               { "name": "Dell ISG", "grp": "srv", "g": 89, "om": 15.0 },
-              { "name": "Foxconn", "grp": "srv", "g": 41, "om": 3.75 }
+              { "name": "Foxconn", "grp": "srv", "g": 41, "om": 3.75 },
+              { "name": "Quanta", "grp": "srv", "g": 105.6, "om": 3.3 },
+              { "name": "Wiwynn", "grp": "srv", "g": 26.0, "om": 7.3 }
             ],
             "source": "Company results (see table above)", "asOf": "2026-09-25", "provenance": ["R", "A"],
             "note": "AAOI, Ciena and Supermicro operating margins are approximate (not disclosed on a like-for-like basis)."
@@ -1827,9 +2108,9 @@
               <tr><th scope="row">4. Copper reach at 200G and 400G per lane</th><td>Passive copper reach shrinks each generation, pushing optics into the rack (Rubin Ultra/Kyber). Hence CPO/NPO, VCSEL die-to-die demos (Lumentum/Qualcomm/Corning) <a class="cite" href="#src-37">37</a>, Credo's MicroLED cables <a class="cite" href="#src-29">29</a> and Marvell/Celestial's photonic fabric <a class="cite" href="#src-27">27</a>.</td><td>In-rack optics, 2027–29</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">5. Rack integration yield and liquid-cooling leaks</th><td>GB200's ramp in late 2024 to early 2025 was slowed by NVLink backplane and cooling issues (older knowledge). Each new rack generation (GB300 → Vera Rubin → Kyber) repeats the L11 learning curve.</td><td>Experience; Vera Rubin ramp is the next test</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">6. Power per rack</th><td>120–140 kW today, rising to ~200 kW+ (Rubin) and toward 600 kW–1 MW (Kyber, 800 V DC) (older knowledge). Supermicro deploys 1.8 MW in-row CDUs <a class="cite" href="#src-48">48</a>. Drives power-shelf and CDU vendors (<a href="W04-datacenters.html">W04</a>).</td><td>800 V DC, bigger CDUs</td><td><span class="status status--serious">Rising</span></td></tr>
-              <tr><th scope="row">7. Geopolitics of optics</th><td>Most module volume comes from China-headquartered firms (InnoLight, Eoptolink), largely built in Thailand. US reshoring (Corning 10× <a class="cite" href="#src-42">42</a>, AAOI Texas <a class="cite" href="#src-39">39</a>, Lumentum NC <a class="cite" href="#src-36">36</a>) is partly a hedge.</td><td>Years, not quarters</td><td><span class="status status--serious">Policy risk</span></td></tr>
+              <tr><th scope="row">7. Geopolitics of optics</th><td>Most module volume comes from China-headquartered firms (InnoLight, Eoptolink: ~$8.8bn of sales in H1-26, roughly half the datacom market <span class="prov" data-prov="A">A</span><a class="cite" href="#src-83">83</a><a class="cite" href="#src-86">86</a>), largely built in Thailand. US reshoring (Corning 10× <a class="cite" href="#src-42">42</a>, AAOI Texas <a class="cite" href="#src-39">39</a>, Lumentum NC <a class="cite" href="#src-36">36</a>) is partly a hedge.</td><td>Years, not quarters</td><td><span class="status status--serious">Policy risk</span></td></tr>
               <tr><th scope="row">8. Export control</th><td>Server diversion cases (Supermicro, Mar 2026 <a class="cite" href="#src-47">47</a>) put compliance burdens on OEMs.</td><td>Compliance spend</td><td><span class="status status--warning">Watch</span></td></tr>
-              <tr><th scope="row">9. Customer concentration</th><td>Credo's top 4 customers are 84% <a class="cite" href="#src-29">29</a>; Arista depends on Microsoft and Meta <a class="cite" href="#src-12">12</a>; Astera on its lead hyperscalers <a class="cite" href="#src-31">31</a>; Celestica on Google and Meta (conf: med).</td><td>More buyers (neoclouds, sovereigns, labs)</td><td><span class="status status--warning">Watch</span></td></tr>
+              <tr><th scope="row">9. Customer concentration</th><td>Credo's top 4 customers are 84% <a class="cite" href="#src-29">29</a>; Arista gets <strong>42% of revenue from Microsoft (26%) and Meta (16%)</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a><a class="cite" href="#src-72">72</a>; Astera on its lead hyperscalers <a class="cite" href="#src-31">31</a>; Celestica on Google and Meta (conf: med).</td><td>More buyers (neoclouds, sovereigns, labs)</td><td><span class="status status--warning">Watch</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1877,7 +2158,7 @@
             <ul>
               <li><strong>CPO and flatter networks cut module counts.</strong> Switch-side CPO removes about half of pluggables per GPU; higher-radix switches (102.4T → 204.8T) remove tiers. Module makers could see unit growth decouple from GPU growth by 2028.</li>
               <li><strong>NVIDIA vertical bundling.</strong> Spectrum-X + SuperNIC + CPO lets NVIDIA capture switch <em>and</em> optics economics and squeeze merchant vendors and module makers; its multi-year optics agreements <a class="cite" href="#src-5">5</a> could become price leverage.</li>
-              <li><strong>Concentration and in-sourcing.</strong> Credo's top 4 are 84% <a class="cite" href="#src-29">29</a>; Arista rests on two 10% customers <a class="cite" href="#src-12">12</a>. Hyperscalers design their own NICs (AWS Nitro/EFA <a class="cite" href="#src-65">65</a>), switches and even DSPs, and can shift volume overnight.</li>
+              <li><strong>Concentration and in-sourcing.</strong> Credo's top 4 are 84% <a class="cite" href="#src-29">29</a>; Arista gets 42% of revenue from two customers <a class="cite" href="#src-71">71</a>. Hyperscalers design their own NICs (AWS Nitro/EFA <a class="cite" href="#src-65">65</a>), switches and even DSPs, and can shift volume overnight.</li>
               <li><strong>Double-ordering and inventory.</strong> In a shortage customers over-order optics and switches. Record purchase commitments (Arista $9.7bn) become write-down risk if capex slows in 2027–28 (see <a href="W01-demand-capex.html">W01</a>, <a href="W02-capital-financing.html">W02</a>).</li>
               <li><strong>ODM margin trap.</strong> Foxconn's 3.75% operating margin <a class="cite" href="#src-51">51</a> and Supermicro's history show volume does not guarantee profit; a rack problem or price war can wipe out a year's earnings.</li>
               <li><strong>Ethernet commoditisation and policy.</strong> As UEC, ESUN and SUE standardise, switch margins could converge toward white-box levels (Arista's gross margin is already down ~220 bp y/y <a class="cite" href="#src-11">11</a>). Tariffs on Thai- or China-built optics, export enforcement <a class="cite" href="#src-47">47</a> and "trusted supplier" rules add risk.</li>
@@ -1942,15 +2223,16 @@
           <li><time datetime="2025-09">Sep 2025</time><div class="tl-body"><h4>NVIDIA invests $5bn in Intel</h4><p>NVLink comes to x86.</p></div></li>
           <li><time datetime="2025-10">Oct 2025</time><div class="tl-body"><h4>OCP: ESUN launched; Broadcom TH6-Davisson CPO; Meta and Oracle adopt Spectrum-X</h4><p><a class="cite" href="#src-8">8</a></p></div></li>
           <li><time datetime="2025-11">Nov 2025</time><div class="tl-body"><h4>NVIDIA Q3 FY26 networking $8.2bn (+162%)</h4><p><a class="cite" href="#src-8">8</a></p></div></li>
-          <li><time datetime="2026-01">Jan 2026</time><div class="tl-body"><h4>CES: Vera Rubin NVL72 "in full production"</h4><p>NVL144 renamed NVL72 <a class="cite" href="#src-58">58</a>.</p></div></li>
-          <li><time datetime="2026-02">Feb 2026</time><div class="tl-body"><h4>NVIDIA Q4 FY26 networking $11bn; Arista FY25 $9.0bn</h4><p><a class="cite" href="#src-7">7</a><a class="cite" href="#src-14">14</a></p></div></li>
+          <li><time datetime="2025-12">Dec 2025</time><div class="tl-body"><h4>TrendForce: 800G+ transceivers to go from 24m (2025) to ~63m (2026)</h4><p>NVIDIA locks up EML laser capacity (8 Dec); LightCounting puts all optical transceivers at ~$23bn in 2025 <a class="cite" href="#src-81">81</a><a class="cite" href="#src-78">78</a>.</p></div></li>
+          <li><time datetime="2026-01">Jan 2026</time><div class="tl-body"><h4>CES: Vera Rubin NVL72 "in full production"</h4><p>NVL144 renamed NVL72 <a class="cite" href="#src-58">58</a>. Cignal: 42m 400G+ datacom modules shipped in 2025 (7 Jan); LightCounting: AI-cluster optics $16.5bn (2025) → $26bn (2026) <a class="cite" href="#src-76">76</a><a class="cite" href="#src-77">77</a>.</p></div></li>
+          <li><time datetime="2026-02">Feb 2026</time><div class="tl-body"><h4>NVIDIA Q4 FY26 networking $11bn; Arista FY25 $9.0bn</h4><p>TrendForce: 800G+ to pass 60% of transceiver units in 2026 (10 Feb). Arista's FY25 10-K shows two customers at 26% and 16% of revenue (17 Feb) <a class="cite" href="#src-7">7</a><a class="cite" href="#src-14">14</a><a class="cite" href="#src-82">82</a><a class="cite" href="#src-71">71</a>.</p></div></li>
           <li><time datetime="2026-03">Mar 2026</time><div class="tl-body"><h4>Supermicro export-diversion indictments; Lumentum announces Greensboro InP fab (26 Mar)</h4><p><a class="cite" href="#src-47">47</a><a class="cite" href="#src-36">36</a></p></div></li>
-          <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>UALink publishes four new specs; Celestica DS6000 102.4T switch</h4><p><a class="cite" href="#src-61">61</a><a class="cite" href="#src-45">45</a></p></div></li>
+          <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>UALink publishes four new specs; Celestica DS6000 102.4T switch</h4><p>TrendForce: AI optical transceivers $26bn in 2026 (20 Apr); Cignal: 2025 datacom optics $19bn+ (21 Apr) <a class="cite" href="#src-61">61</a><a class="cite" href="#src-45">45</a><a class="cite" href="#src-80">80</a><a class="cite" href="#src-75">75</a>.</p></div></li>
           <li class="is-key"><time datetime="2026-05">May 2026</time><div class="tl-body"><h4>NVIDIA networking hits $14.8bn (+199%); optics pacts with Coherent, Corning and Lumentum</h4><p>Also Astera Scorpio X 320-lane (5 May) and the NVIDIA–Corning partnership (6 May) <a class="cite" href="#src-32">32</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-5">5</a>.</p><span class="tag">Turning point</span></div></li>
-          <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>Dell'Oro: Ethernet ~⅔ of AI back-end (2 Jun); Broadcom networking ~40% of AI; Coherent $50m CHIPS LOI (16 Jun)</h4><p><a class="cite" href="#src-53">53</a><a class="cite" href="#src-20">20</a><a class="cite" href="#src-34">34</a></p></div></li>
-          <li><time datetime="2026-07">Jul 2026</time><div class="tl-body"><h4>Dell'Oro sees ~$1T of AI back-end switching over five years (28 Jul)</h4><p>Also AAOI Pearland expansion (14 Jul), Astera 3.2T Taurus (21 Jul), Celestica Q2 (27 Jul), Corning Q2 with Amazon deal (28 Jul), Amphenol Q2 (29 Jul) <a class="cite" href="#src-39">39</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-44">44</a><a class="cite" href="#src-52">52</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-64">64</a>.</p></div></li>
-          <li class="is-key"><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Earnings wave; NVIDIA stops disclosing networking dollars (26 Aug)</h4><p>Arista and Astera Q2 (4 Aug); AAOI (6 Aug); Supermicro FY26 and Lumentum FQ4 (11 Aug); Coherent, Cisco and Foxconn (12 Aug); Dell'Oro front-end (13 Aug); Fabrinet (17 Aug); Supermicro probe complete and Zayo–Corning (20 Aug); NVIDIA Q2 FY27 and AWS 2m GPUs (26 Aug); Marvell (27 Aug); NVIDIA–MediaTek $3.5bn (31 Aug); UEC 1.0.3 <a class="cite" href="#src-1">1</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-22">22</a><a class="cite" href="#src-65">65</a>.</p><span class="tag">Turning point</span></div></li>
-          <li><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>Supermicro ships Vera Rubin NVL72 (23 Sep); Taiwan export orders top $100bn</h4><p>Dell Q2 FY27 (1 Sep); Broadcom and HPE (2 Sep); Ciena (3 Sep); Credo (8 Sep); Ciena FY29 targets and Dell'Oro capex +92% (16 Sep); ECOC: Coherent PhotonLink, Lumentum ELSFP, VCSEL die-to-die (20–21 Sep) <a class="cite" href="#src-49">49</a><a class="cite" href="#src-16">16</a><a class="cite" href="#src-40">40</a><a class="cite" href="#src-28">28</a><a class="cite" href="#src-55">55</a><a class="cite" href="#src-34">34</a><a class="cite" href="#src-48">48</a><a class="cite" href="#src-66">66</a>.</p></div></li>
+          <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>Dell'Oro: Ethernet ~⅔ of AI back-end (2 Jun); Broadcom networking ~40% of AI; Coherent $50m CHIPS LOI (16 Jun)</h4><p>Cignal: 1Q26 datacom optics $7.7bn, more than double a year earlier, with &gt;10m 1.6T modules forecast for 2026 (18 Jun) <a class="cite" href="#src-53">53</a><a class="cite" href="#src-20">20</a><a class="cite" href="#src-34">34</a><a class="cite" href="#src-74">74</a>.</p></div></li>
+          <li><time datetime="2026-07">Jul 2026</time><div class="tl-body"><h4>Dell'Oro sees ~$1T of AI back-end switching over five years (28 Jul)</h4><p>Also AAOI Pearland expansion (14 Jul), Astera 3.2T Taurus (21 Jul), Celestica Q2 (27 Jul), Corning Q2 with Amazon deal (28 Jul), Amphenol Q2 (29 Jul); Wistron Q2 revenue NT$895bn, a record (10 Jul) <a class="cite" href="#src-92">92</a><a class="cite" href="#src-39">39</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-44">44</a><a class="cite" href="#src-52">52</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-64">64</a>.</p></div></li>
+          <li class="is-key"><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Earnings wave; NVIDIA stops disclosing networking dollars (26 Aug)</h4><p>Arista and Astera Q2 (4 Aug); AAOI (6 Aug); Supermicro FY26 and Lumentum FQ4 (11 Aug); Coherent, Cisco and Foxconn (12 Aug); Dell'Oro front-end (13 Aug); Fabrinet (17 Aug); Supermicro probe complete and Zayo–Corning (20 Aug); NVIDIA Q2 FY27 and AWS 2m GPUs (26 Aug); Marvell (27 Aug); NVIDIA–MediaTek $3.5bn convertible (31 Aug); UEC 1.0.3. Taiwan and China suppliers: Wistron Q2 profit +128% (4 Aug), Wiwynn Q2 (7 Aug), Quanta Q2 revenue +106% (13 Aug), InnoLight H1 revenue +182% (21 Aug), Eoptolink H1 +100% (24 Aug) <a class="cite" href="#src-91">91</a><a class="cite" href="#src-90">90</a><a class="cite" href="#src-88">88</a><a class="cite" href="#src-83">83</a><a class="cite" href="#src-86">86</a><a class="cite" href="#src-1">1</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-22">22</a><a class="cite" href="#src-65">65</a>.</p><span class="tag">Turning point</span></div></li>
+          <li><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>Supermicro ships Vera Rubin NVL72 (23 Sep); Taiwan export orders top $100bn</h4><p>Dell Q2 FY27 (1 Sep); Broadcom and HPE (2 Sep); Ciena (3 Sep); Credo (8 Sep); Ciena FY29 targets and Dell'Oro capex +92% (16 Sep); ECOC: Coherent PhotonLink, Lumentum ELSFP, VCSEL die-to-die (20–21 Sep); Foxconn August revenue NT$921.8bn, +52% (7 Sep); Wistron and Wiwynn record August revenue (9 Sep) <a class="cite" href="#src-94">94</a><a class="cite" href="#src-97">97</a><a class="cite" href="#src-49">49</a><a class="cite" href="#src-16">16</a><a class="cite" href="#src-40">40</a><a class="cite" href="#src-28">28</a><a class="cite" href="#src-55">55</a><a class="cite" href="#src-34">34</a><a class="cite" href="#src-48">48</a><a class="cite" href="#src-66">66</a>.</p></div></li>
         </ol>
       </section>
 
@@ -1959,7 +2241,7 @@
         <h2><span class="kicker">18 · China angle</span>China inside the Western network, and its own</h2>
         <p>This is a teaser for Track 2's layer C07 (planned).</p>
         <ul>
-          <li><strong>Chinese optics firms are embedded in the <em>Western</em> build-out.</strong> InnoLight and Eoptolink are among the largest suppliers of 800G/1.6T modules to NVIDIA, Google and Amazon, much of it built in Thailand. Other Chinese component makers include TFC (passives and optical engines), Accelink and Hisense Broadband. C07 should quantify their overseas revenue share and exposure to US tariffs and "trusted supplier" rules.</li>
+          <li><strong>Chinese optics firms are embedded in the <em>Western</em> build-out.</strong> InnoLight and Eoptolink are among the largest suppliers of 800G/1.6T modules to NVIDIA, Google and Amazon, much of it built in Thailand. Other Chinese component makers include TFC (passives and optical engines), Accelink and Hisense Broadband. C07 should quantify their overseas revenue share and exposure to US tariffs and "trusted supplier" rules. First data point: <strong>~95% of InnoLight's H1-26 revenue (RMB 39.6bn of 41.8bn) was overseas</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-85">85</a>, and the two firms together sold ~$8.8bn in H1-26 <span class="prov" data-prov="A">A</span><a class="cite" href="#src-83">83</a><a class="cite" href="#src-86">86</a>.</li>
           <li><strong>China's own AI networking.</strong> Huawei builds switches and its own CloudMatrix 384 scale-up system with an <strong>all-optical</strong> interconnect (~6,900 optical modules for 384 Ascend chips; older knowledge). H3C, Ruijie and ZTE sell switches; Alibaba, Tencent and ByteDance run their own Ethernet fabrics (Alibaba HPN). NVIDIA's China networking sales are limited by export controls.</li>
           <li><strong>Servers.</strong> Inspur (IEIT), H3C, xFusion, Lenovo and Sugon build domestic AI servers. Foxconn and Wistron make parts of their Western AI hardware in mainland China, Taiwan, Mexico, Vietnam and the US.</li>
           <li><strong>Export diversion.</strong> Supermicro's March 2026 case is an example of Western AI servers leaking into China <a class="cite" href="#src-47">47</a>.</li>
@@ -2005,6 +2287,7 @@
           <dt id="g-spx">Spectrum-X / Spectrum-XGS</dt><dd>NVIDIA's AI Ethernet platform / its scale-across extension.</dd>
           <dt id="g-sue">SUE</dt><dd>Broadcom's Scale-Up Ethernet framework.</dd>
           <dt id="g-ualink">UALink</dt><dd>Ultra Accelerator Link: an open, memory-semantic scale-up standard.</dd>
+          <dt id="g-tfln">TFLN</dt><dd>Thin-film lithium niobate: a modulator material for very fast optical links, an alternative to silicon photonics and EMLs.</dd>
           <dt id="g-uec">UEC / UET</dt><dd>Ultra Ethernet Consortium / its transport protocol.</dd>
           <dt id="g-vcsel">VCSEL</dt><dd>Vertical-cavity surface-emitting laser (cheap, short reach).</dd>
           <dt id="g-wb">White box</dt><dd>Switch hardware from an ODM running the buyer's own software.</dd>
@@ -2042,6 +2325,7 @@
           "SiPh": "Silicon photonics: optical components built with chip-making processes.",
           "Spectrum-X": "NVIDIA's AI Ethernet platform (switches + SuperNICs + software); Spectrum-XGS extends it across sites.",
           "SUE": "Broadcom's Scale-Up Ethernet framework, used with its Tomahawk Ultra switch.",
+          "TFLN": "Thin-film lithium niobate: a modulator material for very fast optical links, an alternative to silicon photonics and EMLs.",
           "UALink": "Ultra Accelerator Link: an open, memory-semantic scale-up standard backed by AMD, Google, Meta, Microsoft, AWS and others.",
           "UEC": "Ultra Ethernet Consortium; its transport protocol is UET.",
           "VCSEL": "Vertical-cavity surface-emitting laser: cheap, short reach.",
@@ -2058,14 +2342,18 @@
           <p class="callout-label">Read with care</p>
           <p>The research ran out of search budget part-way through. Items marked "older knowledge" come from before 2026 and were not re-verified in this session <a class="cite" href="#src-70">70</a>.</p>
         </aside>
+        <aside class="callout callout--note" id="edition-2-update">
+          <p class="callout-label">Updated 2026-09-25 (Edition 2 re-check)</p>
+          <p>The optics market is now triangulated from Cignal AI, LightCounting, TrendForce and supplier results (~$31–37bn in 2026, replacing a bottom-up $32–40bn); InnoLight and Eoptolink H1-26, Taiwan ODM Q2-26 revenue and margins (Quanta, Wistron, Wiwynn, Inventec), Foxconn's &gt;50% cloud &amp; networking share, Morgan Stanley rack-share estimates and Arista's FY2025 customer split (Microsoft 26%, Meta 16%) replace older or unverified figures.</p>
+        </aside>
         <ol>
           <li><strong>NVIDIA Q2 FY27 networking (~$17.5bn)</strong> is derived from "+18% q/q" on a reported $14.8bn. NVIDIA no longer discloses it. Confidence medium-high on the arithmetic; the fact-check confirmed data-center revenue also grew +18% q/q.</li>
           <li><strong>Broadcom AI networking dollars</strong> are inferred from "almost 40%" (FQ2) and "XPU = 73% of AI" (FQ3). Confidence medium.</li>
           <li><strong>Rack BOM line items</strong> are Atlas estimates. GPU/board prices, HBM $/GB in the 2026 memory upcycle and ODM margin per rack are uncertain. Confidence medium for the total, low for individual lines.</li>
-          <li><strong>Optics market size and unit counts.</strong> LightCounting, Cignal AI and 2026 TrendForce data were not accessible, so the market is built bottom-up from supplier revenues. Confidence low-medium.</li>
-          <li><strong>InnoLight and Eoptolink 2026 results</strong> were not re-verified (2024 and H1-25 data used).</li>
-          <li><strong>Taiwan ODM specifics</strong> (Quanta, Wiwynn, Wistron, Inventec 2026 revenue and margins; GB300 rack share by ODM) were not verified.</li>
-          <li><strong>Arista 2025 customer concentration</strong> (FY25 10-K) was not retrieved; FY24 levels are used.</li>
+          <li><strong>Optics market size and unit counts.</strong> <em>Largely resolved 25 Sep 2026:</em> triangulated from Cignal AI (2025 $19bn+, 1Q26 $7.7bn), LightCounting and TrendForce ($16.5bn → $26bn AI optics), unit forecasts and 2026 supplier revenue: ~$31–37bn in 2026 (confidence medium). Still open: LightCounting's September 2026 update and full-year 1.6T actuals are paywalled, and the LightCounting and TrendForce series are identical, so they may not be independent.</li>
+          <li><strong>InnoLight and Eoptolink 2026 results.</strong> <em>Resolved:</em> H1-26 figures from the companies' interim reports as reported by CNR, Sohu and East Money <a class="cite" href="#src-83">83</a>–<a class="cite" href="#src-87">87</a>. Neither discloses its 1.6T revenue mix.</li>
+          <li><strong>Taiwan ODM specifics.</strong> <em>Mostly resolved:</em> Q2-26 revenue for Quanta, Wistron, Wiwynn and Inventec, and margins for Quanta, Wiwynn and Inventec <a class="cite" href="#src-88">88</a>–<a class="cite" href="#src-92">92</a><a class="cite" href="#src-100">100</a>. Wistron's ~3.7% operating margin is consolidated (incl. Wiwynn) <a class="cite" href="#src-98">98</a>; its IR summary (GM 5.66% / OM 1.92%) appears to be standalone (confidence medium) <a class="cite" href="#src-99">99</a>. Still open: Wistron's consolidated gross margin, exact August figures for Wistron and Wiwynn (headline only <a class="cite" href="#src-97">97</a>), and rack share by ODM, which exists only as second-hand Morgan Stanley channel checks (Foxconn ~48%, Quanta ~34%, Wistron ~18%; confidence medium-low) <a class="cite" href="#src-95">95</a>.</li>
+          <li><strong>Arista 2025 customer concentration.</strong> <em>Resolved:</em> the FY25 10-K gives 26% and 16% for its two 10% end customers <a class="cite" href="#src-71">71</a>; the names (Microsoft, Meta) come from BofA's reading of the filing <a class="cite" href="#src-72">72</a>. The 10-K's FY23 figures (Microsoft 18%, Meta 21% by that pattern) differ from our older memory of that year (confidence medium).</li>
           <li><strong>Marvell–NVIDIA "$2bn partnership"</strong> and the <strong>Google $120bn warrant agreement</strong>: secondary reporting only. Confidence medium.</li>
           <li><strong>Supermicro indictment details</strong> (who was indicted): not verified.</li>
           <li><strong>Timing of Rubin Ultra / Kyber and NVL576</strong> after the CES 2026 renaming: confidence medium.</li>
@@ -2073,6 +2361,7 @@
           <li><strong>Profit-pool share.</strong> An earlier draft said "~84% / 5 of every 6"; the fact-check corrected it to ~86% / 6 of 7 to match the column sums.</li>
           <li><strong>Revenue per GW</strong> is tagged as guidance [G] on this page to match the Atlas canonical tag; the dossier tags it as reported management statements.</li>
           <li><strong>Scatter chart:</strong> AAOI (~0%), Ciena (~20%) and Supermicro (~10%) operating margins are approximations.</li>
+          <li><strong>Transceiver prices.</strong> InnoLight's H1-26 blended price is ~RMB 2,180 (~$305) per module <span class="prov" data-prov="A">A</span><a class="cite" href="#src-85">85</a>, well below the $600–900 per 800G module assumed in the rack BOM, which may overstate optics dollars per rack (~$270k). The blend includes lower-speed modules, so the BOM is unchanged (confidence low-medium).</li>
         </ol>
       </section>
 
@@ -2156,6 +2445,36 @@
           <li id="src-68"><span class="src-pub">Plus500 / Webull / REX Shares</span>, NVIDIA Q2 FY27 earnings summaries (cross-checks of DC $89.0bn, Q3 guide $108bn), 2026-08, <a href="https://www.webull.com/blog/304-Nvidia-Q2-FY2027-Earnings-Beats-Revenue-EPS-Estimates-Guides-Q3-to-108B">webull.com</a></li>
           <li id="src-69"><span class="src-pub">FifthPerson</span>, “NVIDIA Q2 2027: Revenue doubles as AI spending accelerates” (segment cross-check), 2026-08, <a href="https://fifthperson.com/nvidia-q2-2027/">fifthperson.com</a></li>
           <li id="src-70"><span class="src-pub">Older-knowledge references</span> not re-fetched this session: NVIDIA–Mellanox close (Apr 2020); HPE–Juniper close (Jul 2025); Broadcom Tomahawk 6 (Jun 2025), Tomahawk Ultra (Jul 2025), Jericho 4 (Aug 2025), TH6-Davisson CPO (Oct 2025); UALink 1.0 (Apr 2025); UEC 1.0 (Jun 2025); OCP ESUN launch (Oct 2025); NVIDIA Spectrum-XGS (Aug 2025); NVIDIA–Intel $5bn (Sep 2025); TrendForce 800G+ transceiver forecasts (2025); InnoLight/Eoptolink 2024 and H1-2025 filings (SZSE); Arista FY24 10-K customer concentration. These are the publishers' primary releases; URLs were not re-verified.</li>
+          <li id="src-71"><span class="src-pub">Arista Networks (SEC)</span>, “Form 10-K for fiscal year 2025”, 2026-02-17, <a href="https://www.sec.gov/Archives/edgar/data/1596532/000159653226000013/anet-20251231.htm">sec.gov</a></li>
+          <li id="src-72"><span class="src-pub">GuruFocus via Yahoo Finance</span>, “Microsoft Drives 26% Of Arista Revenue (BofA reading of the FY25 10-K)”, 2026-02-19, <a href="https://finance.yahoo.com/news/microsoft-drives-26-arista-revenue-185939497.html">finance.yahoo.com</a></li>
+          <li id="src-73"><span class="src-pub">Arista Networks (SEC)</span>, “Form 10-Q for the quarter ended 30 Jun 2026”, 2026-08-05, <a href="https://www.sec.gov/Archives/edgar/data/1596532/000159653226000175/anet-20260630.htm">sec.gov</a></li>
+          <li id="src-74"><span class="src-pub">Cignal AI</span>, “Datacom Optical Component Revenue Doubles to $7.7 Billion in 1Q26”, 2026-06-18, <a href="https://cignal.ai/2026/06/datacom-optical-component-revenue-doubles-to-7-7-billion-in-1q26/">cignal.ai</a></li>
+          <li id="src-75"><span class="src-pub">Cignal AI</span>, “Datacom Optical Component Revenue Surpasses $19B in 2025”, 2026-04-21, <a href="https://cignal.ai/2026/04/datacom-optical-component-revenue-surpasses-19b-in-2025/">cignal.ai</a></li>
+          <li id="src-76"><span class="src-pub">Cignal AI</span>, “Optical Component Revenue Reaches Nearly $25B in 2025”, 2026-01-07, <a href="https://cignal.ai/2026/01/optical-component-revenue-reaches-nearly-25b-in-2025/">cignal.ai</a></li>
+          <li id="src-77"><span class="src-pub">LightCounting</span>, “AI creates a new wave in demand for optical transceivers and accelerates CPO adoption (LightTrends)”, 2026-01, <a href="https://www.lightcounting.com/newsletter/en/january-2026-optics-for-ai-clusters-366">lightcounting.com</a></li>
+          <li id="src-78"><span class="src-pub">LightCounting</span>, “Sales of optical transceivers will reach $23 billion in 2025 (LightTrends)”, 2025-12, <a href="https://www.lightcounting.com/newsletter/en/december-2025-quarterly-market-update-322">lightcounting.com</a></li>
+          <li id="src-79"><span class="src-pub">LightCounting</span>, “More Suppliers Switch to the Fast Lane as AI Boom Continues (research note)”, 2026-08-13, <a href="https://www.lightcounting.com/research-note/august-2026-more-suppliers-switch-to-the-fast-lane-as-ai-boom-continues-452">lightcounting.com</a></li>
+          <li id="src-80"><span class="src-pub">TrendForce</span>, “Global AI Optical Transceiver Market to Reach US$26 Billion in 2026; Component Shortages Identified as Primary Capacity Expansion Bottleneck”, 2026-04-20, <a href="https://www.trendforce.com/presscenter/news/20260420-13017.html">trendforce.com</a></li>
+          <li id="src-81"><span class="src-pub">TrendForce</span>, “AI Data Centers Ignite a Laser Shortage Wave; Nvidia's Strategic Lock-In Reshapes the Global Laser Supply Chain”, 2025-12-08, <a href="https://www.trendforce.com/presscenter/news/20251208-12823.html">trendforce.com</a></li>
+          <li id="src-82"><span class="src-pub">TrendForce</span>, “Google's High-Speed Interconnect Architecture to Push 800G+ Optical Transceiver Share Past 60% by 2026”, 2026-02-10, <a href="https://www.trendforce.com/presscenter/news/20260210-12919.html">trendforce.com</a></li>
+          <li id="src-83"><span class="src-pub">CNR (央广网)</span>, “中际旭创披露2026年半年报：上半年净利润136.51亿元 同比增长241.7% (InnoLight H1-2026 results)”, 2026-08-21, <a href="https://finance.cnr.cn/ycbd/20260821/t20260821_527786020.shtml">finance.cnr.cn</a></li>
+          <li id="src-84"><span class="src-pub">Sohu</span>, “中际旭创股份有限公司2026年半年度报告摘要 (InnoLight H1-2026 report summary)”, 2026-08-22, <a href="https://www.sohu.com/a/1066033227_122014422">sohu.com</a> · <a href="http://static.cninfo.com.cn/finalpage/2026-08-22/1225491753.PDF">filing</a> · <a href="https://www.sina.cn/news/detail/5334449839670033.html">Q2 split via Sina</a></li>
+          <li id="src-85"><span class="src-pub">East Money Caifuhao</span>, “中际旭创2026年半年度报告AI解读 (InnoLight H1-2026 report analysis)”, 2026-08-22, <a href="https://caifuhao.eastmoney.com/news/20260822182650537012330">caifuhao.eastmoney.com</a></li>
+          <li id="src-86"><span class="src-pub">East Money</span>, “新易盛：2026年半年度营收同比增长100.34% 净利润同比增长90.98% (Eoptolink H1-2026 results)”, 2026-08-24, <a href="https://finance.eastmoney.com/a/202608243851382445.html">finance.eastmoney.com</a></li>
+          <li id="src-87"><span class="src-pub">Huacheng (Guangzhou Daily)</span>, “新易盛上半年净利润75.29亿元，光模块三巨头已全部“交卷” (Eoptolink H1-2026)”, 2026-08-24, <a href="https://huacheng.gz-cmc.com/pages/2026/08/24/af2b17fc63234dc6bea9b675dbacb637.html">huacheng.gz-cmc.com</a></li>
+          <li id="src-88"><span class="src-pub">BigGo Finance</span>, “Quanta Computer 2026-08-13 Earnings Call”, 2026-08-13, <a href="https://finance.biggo.com/quote/2382.TW/earnings-call/TW_2382.TW_2026-08-13">finance.biggo.com</a></li>
+          <li id="src-89"><span class="src-pub">FinmoConf</span>, “Quanta (2382.TW) Q2 2026 Earnings Call: servers above 80%, AI visibility talked through 2028”, 2026-08, <a href="https://finmoconf.diveinvest.net/en/quanta/2026-q2">finmoconf.diveinvest.net</a></li>
+          <li id="src-90"><span class="src-pub">Wiwynn</span>, “Wiwynn Reports Second Quarter 2026 Financial Results”, 2026-08-07, <a href="https://www.wiwynn.com/news/wiwynn-reports-second-quarter-2026-financial-results">wiwynn.com</a></li>
+          <li id="src-91"><span class="src-pub">Reuters via Yahoo Finance</span>, “Taiwan's Wistron says AI server demand remains strong, quarterly profit up 128%”, 2026-08-04, <a href="https://finance.yahoo.com/technology/ai/articles/taiwans-wistron-says-ai-server-123337624.html">finance.yahoo.com</a></li>
+          <li id="src-92"><span class="src-pub">Taipei Times</span>, “Wistron sales hit record (Wistron and Inventec Q2-26 revenue)”, 2026-07-11, <a href="https://www.taipeitimes.com/News/biz/archives/2026/07/11/2003860550">taipeitimes.com</a></li>
+          <li id="src-93"><span class="src-pub">TVBS</span>, “Taiwan AI Servers: Q2 2026 Race to Scale (Q1-26 ODM revenue)”, 2026-04-14, <a href="https://news.tvbs.com.tw/english/3177408">news.tvbs.com.tw</a></li>
+          <li id="src-94"><span class="src-pub">EMSNow</span>, “Hon Hai (Foxconn) Reports August Revenue”, 2026-09-07, <a href="https://www.emsnow.com/hon-hai-foxconn-reports-august-revenue/">emsnow.com</a></li>
+          <li id="src-95"><span class="src-pub">BigGo Finance</span>, “GB Racks to Ship 80,000 Units Annually! Morgan Stanley Names Wistron Top AI Manufacturing Pick”, 2026-07-12, <a href="https://finance.biggo.com/news/4123fb83-9dc9-4048-a8c2-b5401b81bc69">finance.biggo.com</a></li>
+          <li id="src-96"><span class="src-pub">Technetbooks</span>, “AI Server Market Shipment Growth 2026: Foxconn, Wistron, Quanta GB200/GB300 Rack Production Forecasts (Morgan Stanley estimates)”, 2026-03, <a href="https://www.technetbooks.com/2026/03/ai-server-market-shipment-growth-2026.html">technetbooks.com</a></li>
+          <li id="src-97"><span class="src-pub">DigiTimes</span>, “Wistron, Wiwynn hit record August revenue as board approves US$200 Million for US, Vietnam expansion (headline only; page returned 403)”, 2026-09-09, <a href="https://www.digitimes.com/news/a20260909PD250/wistron-revenue-wiwynn-2026-expansion.html">digitimes.com</a></li>
+          <li id="src-98"><span class="src-pub">Wistron</span>, “Wistron announces 1st half year of 2026 financial results (Q2-26 revenue NT$895,443m, operating income NT$33,447m, PAT NT$14,827m, EPS NT$4.72)”, 2026-08-04, <a href="https://www.wistron.com/en/Newsroom/2026-08-04">wistron.com</a> · <a href="https://finance.biggo.com/news/TW_3231.TW_2026-08-04">call summary, BigGo Finance</a></li>
+          <li id="src-99"><span class="src-pub">Wistron</span>, “Quarterly Financial Summary (2Q26 GM 5.66%, OM 1.92%; 1Q26 5.21% / 1.77%)”, accessed 2026-09-25, <a href="https://www.wistron.com/en/Investors/Financials/QuarterlyFinancialSummary">wistron.com</a></li>
+          <li id="src-100"><span class="src-pub">StatementDog</span>, “Inventec (2356) income statement (2Q26 revenue NT$269,857m, GM 4.23%, OM 1.73%, net income NT$3,900m)”, accessed 2026-09-25, <a href="https://statementdog.com/analysis/2356/income-statement">statementdog.com</a></li>
         </ol>
       </section>
 

@@ -54,6 +54,7 @@
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
           <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>Updated</dt><dd><a href="#edition-2-update">25 Sep 2026 · Edition 2 re-check</a></dd></div>
           <div><dt>Related</dt><dd><a href="W01-demand-capex.html">W01</a> · <a href="W02-capital-financing.html">W02</a> · <a href="W04-datacenters.html">W04</a> · <a href="W06-semi-supply-chain.html">W06</a> · <a href="W07-networking-systems.html">W07</a> · <a href="W08-cloud.html">W08</a> · <a href="W09-model-labs.html">W09</a> · <a href="W11-synthesis.html">W11</a></dd></div>
         </dl>
       </header>
@@ -99,7 +100,7 @@
           <span class="kpi-label">Broadcom AI semiconductor revenue, FQ3 2026</span>
           <span class="kpi-value">$16.7<small>bn</small></span>
           <span class="kpi-delta is-up">+221% <span>vs FQ3 2025</span></span>
-          <span class="kpi-foot"><span class="prov" data-prov="R">R</span> FQ4 guide $21.7bn <span class="prov" data-prov="G">G</span></span>
+          <span class="kpi-foot"><span class="prov" data-prov="R">R</span> FQ4 guide $21.7bn; FY27 outlook ~$115bn <span class="prov" data-prov="G">G</span></span>
         </div>
         <div class="kpi">
           <span class="kpi-label">Compute silicon's share of the AI operating-profit pool, 2026E</span>
@@ -114,10 +115,10 @@
         <ol>
           <li><strong>NVIDIA just reported the largest quarter in semiconductor history</strong>: $96.2bn of revenue <span class="prov" data-prov="R">R</span> in the quarter to 26 Jul 2026, $89.0bn of it from data centers, at a 66% operating margin <a class="cite" href="#src-1">1</a>. It guides $108bn for the next quarter <span class="prov" data-prov="G">G</span> and about 70% growth for FY28, which implies roughly $690bn of revenue in calendar 2027 <a class="cite" href="#src-2">2</a><a class="cite" href="#src-17">17</a>.</li>
           <li><strong>One company keeps most of the profit.</strong> NVIDIA took about 86% of accelerator dollars in CY2025 and about 82% in CY2026E <span class="prov" data-prov="A">A</span>, and roughly 85–88% of this layer's operating profit <span class="prov" data-prov="A">A</span>. Its operating income ran at about $255bn a year in Q2 FY27 <a class="cite" href="#src-1">1</a>.</li>
-          <li><strong>The biggest buyers are building their own chips</strong>, and custom silicon is the fastest-growing slice: Broadcom's AI revenue grew 221% <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-29">29</a> and Amazon's chip business passed a $25bn run-rate <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-36">36</a>. By units, custom ASICs are already roughly 30–40% of accelerators shipped (low confidence), but only about 13% of dollars, because they are sold near cost.</li>
+          <li><strong>The biggest buyers are building their own chips</strong>, and custom silicon is the fastest-growing slice: Broadcom's AI revenue grew 221% <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-29">29</a> and Broadcom guides ~$115bn of AI revenue for FY27 <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-65">65</a>, while Amazon's chip business passed a $25bn run-rate <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-36">36</a>. By units, custom ASICs are already roughly 30–40% of accelerators shipped (low confidence), but only about 13% of dollars, because they are sold near cost.</li>
           <li><strong>Every frontier lab now runs three or more chip platforms.</strong> OpenAI has lined up NVIDIA, AMD, Broadcom custom chips, Cerebras and Trainium; Anthropic has TPU, Trainium, AMD and NVIDIA. AMD became a gigawatt-scale second source by handing out share warrants <a class="cite" href="#src-19">19</a><a class="cite" href="#src-22">22</a><a class="cite" href="#src-25">25</a>.</li>
           <li><strong>Memory, not logic, is now the chokepoint and the margin threat.</strong> HBM price rises push NVIDIA's gross margin down to a guided 71–72% trough <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>, moving profit from this layer to the memory makers (<a href="W06-semi-supply-chain.html">W06</a>).</li>
-          <li><strong>NVIDIA is now also a financier</strong>: ~$99bn of equity stakes, $279bn of supply commitments and a guarantee capped at $105bn behind OpenAI's Ohio campus <a class="cite" href="#src-7">7</a><a class="cite" href="#src-8">8</a>. Part of its revenue rests on credit it extends itself. That is the core of the bear case.</li>
+          <li><strong>NVIDIA is now also a financier</strong>: ~$94–99bn of equity stakes, $279bn of supply commitments (up from $119bn a quarter earlier, mostly memory) and a guarantee capped at $105bn behind OpenAI's Ohio campus <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a><a class="cite" href="#src-61">61</a><a class="cite" href="#src-66">66</a>. Part of its revenue rests on credit it extends itself. That is the core of the bear case.</li>
         </ol>
       </div>
 
@@ -548,18 +549,19 @@
               ],
               "data": [
                 { "p": "Q2 FY26", "a": 23, "b": 16, "note": "Two customers = 39%" },
-                { "p": "H1 FY27", "a": 16, "b": 15, "c": 13, "note": "Per press summary of the 10-Q (conf: med)" }
+                { "p": "H1 FY27", "a": 16, "b": 15, "c": 13, "note": "44% combined (10-Q concentration table)" },
+                { "p": "Q2 FY27", "a": 16, "note": "Only one direct customer above 10% in the quarter" }
               ],
-              "source": "TechCrunch [53]; BigGo summary of the 10-Q [9]", "asOf": "2026-07-26", "provenance": "R",
+              "source": "NVIDIA 10-Q XBRL concentration table [66]; TechCrunch [53]", "asOf": "2026-07-26", "provenance": "R",
               "note": "Direct customers are mostly ODMs/OEMs (Foxconn, Quanta, Wistron, Dell, Supermicro) building for end users."
             }
             </script>
           </figure>
         </div>
-        <p>Concentration looks high but is <strong>diversifying at the margin</strong>. In FY23 no customer exceeded 10% <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-9">9</a>. In Q2 FY26 two customers made up 39% <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-53">53</a>. In H1 FY27 three direct customers made up 44%, and five customers held 70% of receivables (22/14/13/11/10%) as of 26 Jul 2026 <span class="prov" data-prov="R">R</span> (press summary; conf: med) <a class="cite" href="#src-8">8</a><a class="cite" href="#src-9">9</a>. The direct customers are mostly the <span class="term" data-term="ODM">ODMs</span> and OEMs that build systems; the end customers behind them are Microsoft, Meta, Google, Amazon, Oracle, xAI, OpenAI-linked builders and CoreWeave. Hyperscale is now ~55% of Data Center and growing slower than ACIE <span class="prov" data-prov="A">A</span> <a class="cite" href="#src-4">4</a>.</p>
+        <p>Concentration looks high but is <strong>diversifying at the margin</strong>. In FY23 no customer exceeded 10% <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-9">9</a>. In Q2 FY26 two customers made up 39% <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-53">53</a>. In H1 FY27 three direct customers made up 44% (16/15/13%), but in Q2 FY27 alone only one direct customer passed 10% (16%), against two a year earlier <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a>. Five customers held 70% of receivables (22/14/13/11/10%) as of 26 Jul 2026 <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-61">61</a>, and the $63.1bn of receivables took 60 days to collect, up from 45, "due to extended payment terms on large, multi-quarter agreements with certain investment-grade customers" <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a>. The direct customers are mostly the <span class="term" data-term="ODM">ODMs</span> and OEMs that build systems; the end customers behind them are Microsoft, Meta, Google, Amazon, Oracle, xAI, OpenAI-linked builders and CoreWeave. Hyperscale is now ~55% of Data Center and growing slower than ACIE <span class="prov" data-prov="A">A</span> <a class="cite" href="#src-4">4</a>.</p>
         <aside class="callout callout--note">
           <p class="callout-label">Single-name exposure</p>
-          <p>OpenAI's existing and planned commitments with NVIDIA are about 12 GW through 2030, and NVIDIA expects OpenAI to be <strong>~25% of its FY28 business</strong> <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>. That is a very large exposure to one customer, which NVIDIA also backs with a guarantee (see <a href="#nvidia-financier">NVIDIA as financier</a>). The 25% figure could not be independently re-verified.</p>
+          <p>OpenAI's existing and planned commitments with NVIDIA are about 12 GW through 2030 <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>. NVIDIA expects the <strong>AI labs whose purchases it supports with its balance sheet (OpenAI and others, as a group) to be roughly a quarter of its FY28 business</strong> <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>. The call does not attribute that quarter to OpenAI alone (corrected on the 25 Sep 2026 re-check). OpenAI is still a very large single-name exposure, and NVIDIA also backs it with a guarantee (see <a href="#nvidia-financier">NVIDIA as financier</a>).</p>
         </aside>
 
         <h3>The accelerator market by vendor, CY2023–CY2027E</h3>
@@ -737,7 +739,7 @@
         <ul>
           <li><strong>Hyperscaler capex (demand side, <a href="W01-demand-capex.html">W01</a>):</strong> NVIDIA cites top-5 hyperscaler capex of ~$800bn in 2026 and ~$1.3trn in 2027, and a cloud backlog above $2trn <span class="prov" data-prov="G">G</span>/<span class="prov" data-prov="E">E</span> <a class="cite" href="#src-2">2</a>. The Atlas canonical figure for the Big-5 including Oracle is ~$815bn for CY2026 <span class="prov" data-prov="A">A</span>.</li>
           <li><strong>Server CPU opportunity:</strong> NVIDIA's "preliminary expectation" is a ~$20bn server-CPU TAM for its own Vera-type chips, and it expects CPU revenue (Grace, >$5bn over the trailing twelve months) to more than double in FY28 <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>.</li>
-          <li><strong>Dell, a downstream check (unverified):</strong> a low-quality press summary reports AI server orders of $60.9bn in one quarter, a $95bn backlog and $74bn of FY AI-server revenue guidance <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-9">9</a>. These are several times Dell's late-2025 run-rate and need Dell's own release (conf: low). Most of that value would pass through to NVIDIA.</li>
+          <li><strong>Dell, a downstream check:</strong> Dell's own Q2 FY27 release (1 Sep 2026) confirms AI-server orders of $60.9bn in one quarter, a $95bn AI backlog and $74bn of FY27 AI-server revenue guidance <span class="prov" data-prov="R">R</span>/<span class="prov" data-prov="G">G</span> <a class="cite" href="#src-62">62</a>. Total revenue was a record $47.0bn (+58%), and FY27 revenue guidance is $192bn. Most of the AI-server value passes through to NVIDIA.</li>
         </ul>
       </section>
 
@@ -762,7 +764,7 @@
             </thead>
             <tbody>
               <tr><th scope="row">NVIDIA <span class="sub ticker">NVDA</span></th><td>FY27 Q2 (Jul-26)</td><td data-sort="89.0">89.0 (DC) <span class="prov" data-prov="R">R</span></td><td data-sort="117">+117%</td><td data-sort="75">75.0%</td><td>$108bn total, 74% GM <span class="prov" data-prov="G">G</span></td><td>GB300 NVL72 → Vera Rubin NVL72, Groq 3 LPX, Vera CPU <a class="cite" href="#src-1">1</a></td></tr>
-              <tr><th scope="row">Broadcom <span class="sub ticker">AVGO</span></th><td>FY26 Q3 (Aug-26)</td><td data-sort="16.7">16.7 (AI semi) <span class="prov" data-prov="R">R</span></td><td data-sort="221">+221%</td><td data-sort="69">~69% GAAP <span class="prov" data-prov="A">A</span></td><td>AI $21.7bn, total $34.8bn <span class="prov" data-prov="G">G</span></td><td>TPU v7/v8 (with Google), MTIA, OpenAI custom XPU, Tomahawk 6 <a class="cite" href="#src-29">29</a></td></tr>
+              <tr><th scope="row">Broadcom <span class="sub ticker">AVGO</span></th><td>FY26 Q3 (Aug-26)</td><td data-sort="16.7">16.7 (AI semi) <span class="prov" data-prov="R">R</span></td><td data-sort="221">+221%</td><td data-sort="69">~69% GAAP <span class="prov" data-prov="A">A</span></td><td>AI $21.7bn, total $34.8bn; FY27 AI outlook ~$115bn <span class="prov" data-prov="G">G</span></td><td>TPU v7/v8 (with Google), MTIA, OpenAI "Jalapeño" XPU, Tomahawk 6 <a class="cite" href="#src-29">29</a><a class="cite" href="#src-64">64</a><a class="cite" href="#src-65">65</a></td></tr>
               <tr><th scope="row">AMD <span class="sub ticker">AMD</span></th><td>Q2 2026 (Jun-26)</td><td data-sort="6.7">6.7 (DC; GPU ≈ 2.5–3 <span class="prov" data-prov="A">A</span>) <span class="prov" data-prov="R">R</span></td><td data-sort="107">+107%</td><td data-sort="56">56% non-GAAP</td><td>~$13bn total, ~56% GM <span class="prov" data-prov="G">G</span></td><td>MI355X → MI450/MI455X + Helios (2H26) <a class="cite" href="#src-18">18</a></td></tr>
               <tr><th scope="row">Marvell <span class="sub ticker">MRVL</span></th><td>FY27 Q2 (Jul-26)</td><td data-sort="2.17">2.17 (DC) <span class="prov" data-prov="R">R</span></td><td data-sort="46">+46%</td><td data-sort="58.9">58.9% non-GAAP</td><td>$3.15bn total <span class="prov" data-prov="G">G</span></td><td>Custom XPUs and "attach" chips; NVLink Fusion partner <a class="cite" href="#src-45">45</a><a class="cite" href="#src-46">46</a></td></tr>
               <tr><th scope="row">Amazon (Annapurna) <span class="sub ticker">AMZN</span></th><td>Q2 2026</td><td data-sort="6.25">&gt;$25bn run-rate (Graviton + Trainium + Nitro) <span class="prov" data-prov="R">R</span></td><td data-sort="100">triple-digit</td><td data-sort="0">internal</td><td>—</td><td>Trainium3 (3 nm); Trainium4 announced <a class="cite" href="#src-36">36</a><a class="cite" href="#src-38">38</a></td></tr>
@@ -829,7 +831,7 @@
           </article>
           <article class="company-card">
             <header><h3>Broadcom</h3><span class="ticker">AVGO</span><span class="chip role"><span class="chip-id">W05</span> Custom ASIC partner</span></header>
-            <p>The custom-silicon kingmaker. Co-designs every Google TPU, Meta's MTIA and OpenAI's 10 GW accelerator; also ships Anthropic's TPU racks. Owns the SerDes and packaging know-how buyers lack.</p>
+            <p>The custom-silicon kingmaker. Co-designs every Google TPU, Meta's MTIA and OpenAI's 10 GW accelerator; also ships Anthropic's TPU racks. Owns the SerDes and packaging know-how buyers lack. Guides AI revenue of ~$115bn in FY27 and ~$230bn in FY28 from six XPU customers <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-65">65</a>.</p>
             <dl class="metrics">
               <div><dt>AI semi rev, FQ3 26</dt><dd>$16.7bn</dd></div>
               <div><dt>Growth y/y</dt><dd>+221%</dd></div>
@@ -1037,7 +1039,7 @@
           {
             "type": "line",
             "title": "Margins are at a plateau, and memory costs will push them down",
-            "subtitle": "NVIDIA non-GAAP gross margin and GAAP operating margin by fiscal quarter, %. Shaded quarters are guidance.",
+            "subtitle": "NVIDIA non-GAAP gross margin and GAAP operating margin by fiscal quarter, %. Markers: Q2 FY23 inventory charge, Q1 FY26 H20 charge. Shaded quarters are guidance.",
             "valueFormat": "%", "unit": "% of revenue",
             "xKey": "q",
             "series": [
@@ -1059,7 +1061,7 @@
             ],
             "forecastFrom": "Q3 FY27",
             "yMin": 0, "yMax": 90,
-            "annotations": [{ "x": "Q2 FY23", "label": "Inventory charge" }, { "x": "Q1 FY26", "label": "H20 charge" }],
+            "annotations": [{ "x": "Q2 FY23", "label": "Inventory" }, { "x": "Q1 FY26", "label": "H20" }],
             "source": "NVIDIA releases [1][5][6][60]; Q2 FY27 call [2]", "asOf": "2026-08-26", "provenance": ["R", "G"],
             "note": "FY28 gross margin guided to 72–73% after NVIDIA's own price increases take effect."
           }
@@ -1143,9 +1145,9 @@
         <figure class="wide">
           <script type="application/json" data-chart>
           {
-            "type": "bar", "horizontal": true,
+            "type": "bar", "horizontal": false,
             "title": "Guidance already covers the $1 trillion claim",
-            "subtitle": "Cumulative NVIDIA revenue from CY2025, USD bn (CY ≈ fiscal year ending the following January)",
+            "subtitle": "Cumulative NVIDIA revenue from CY2025, USD bn (CY ≈ fiscal year ending the following January). Dashed lines mark the two bookings claims.",
             "valueFormat": "$bn", "unit": "USD bn, cumulative",
             "xKey": "p",
             "series": [{ "key": "v", "label": "Cumulative revenue", "color": 1 }],
@@ -1207,29 +1209,72 @@
             "xKey": "item",
             "series": [{ "key": "v", "label": "USD bn", "color": 1 }],
             "data": [
-              { "item": "Total commitments", "v": 366, "note": "Includes $36bn AI-cloud commitments" },
-              { "item": "Supply / capacity commitments", "v": 279, "note": "Wafers, HBM, CoWoS, cloud capacity" },
-              { "item": "OpenAI Ohio guarantee (cap)", "v": 105, "note": "A cap, not a cash outlay (8-K, 17 Aug 2026)" },
-              { "item": "Equity investments held", "v": 99, "note": "Incl. $42.8bn marketable, $36.9bn under lock-up" },
+              { "item": "Total commitments", "v": 366, "note": "Supply $279bn + cloud services $29bn + DC leases $25bn + equity $25bn + capex $8bn" },
+              { "item": "Supply / capacity commitments", "v": 279, "note": "Up from $119bn a quarter earlier, 'primarily related to the procurement of memory'" },
+              { "item": "OpenAI Ohio guarantee (cap)", "v": 105, "note": "A cap, not a cash outlay (8-K, 17 Aug 2026); all guarantees max $108.5bn" },
+              { "item": "Equity investments held", "v": 94, "note": "~$94–99bn: 10-Q $42.8bn marketable + $51.2bn non-marketable; a third-party summary says ~$99bn" },
               { "item": "Accounts receivable", "v": 63.1, "note": "DSO 60 days" },
               { "item": "Frontier-lab investments to date", "v": 50, "note": "OpenAI, Anthropic, xAI, Mistral and others (Aug-2026)" },
-              { "item": "AI-cloud (buy-back) commitments", "v": 36 },
+              { "item": "AI-cloud (buy-back) commitments", "v": 36, "note": "Disclosed separately from the $366bn table" },
               { "item": "Inventory", "v": 31.6 },
               { "item": "Additional equity commitments", "v": 25 },
               { "item": "Senior notes issued Jun-2026", "v": 25 }
             ],
-            "source": "NVIDIA 8-K [7]; StockTitan 10-Q summary [8] (conf: med); Q2 FY27 call [2]", "asOf": "2026-08-17", "provenance": "R",
+            "source": "NVIDIA 10-Q [61] and its XBRL tables / CFO commentary [66]; 8-K [7]; Q2 FY27 call [2]; StockTitan 10-Q summary [8]", "asOf": "2026-08-26", "provenance": "R",
             "note": "Categories overlap (supply commitments sit inside total commitments). Atlas canonical: ~$60bn of NVIDIA capital committed to customers since Sep-2025, plus a $6.3bn backstop."
           }
           </script>
         </figure>
+
+        <p>The 10-Q's own tables, read directly on the 25 Sep 2026 re-check, show how fast the supply book grew. Supply and capacity commitments rose from <strong>$119bn to $279bn in one quarter</strong>, "primarily related to the procurement of memory", and $92bn of that falls due in the rest of FY27 <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a>. This is NVIDIA locking up HBM and DRAM ahead of Rubin, and it is the same memory squeeze that pushes its gross margin down (<a href="W06-semi-supply-chain.html">W06</a>).</p>
+        <div class="chart-grid wide">
+          <figure>
+            <script type="application/json" data-chart>
+            {
+              "type": "bar",
+              "title": "Supply commitments more than doubled in one quarter",
+              "subtitle": "NVIDIA supply and capacity purchase commitments at quarter end, USD bn",
+              "valueFormat": "$bn", "unit": "USD bn",
+              "xKey": "q",
+              "series": [{ "key": "v", "label": "Supply / capacity commitments", "color": 1 }],
+              "data": [
+                { "q": "Q1 FY27", "v": 119, "note": "End of April 2026" },
+                { "q": "Q2 FY27", "v": 279, "note": "End of July 2026; 'primarily related to the procurement of memory'; $92bn due in the rest of FY27" }
+              ],
+              "source": "NVIDIA 10-Q XBRL tables and CFO commentary [66]", "asOf": "2026-08-26", "provenance": "R",
+              "note": "Mostly HBM and DRAM bought ahead: a margin cost for NVIDIA and pricing power for the memory makers (W06)."
+            }
+            </script>
+          </figure>
+          <figure>
+            <script type="application/json" data-chart>
+            {
+              "type": "bar", "horizontal": true,
+              "title": "What the $366bn of commitments is made of",
+              "subtitle": "NVIDIA total future commitments by type, USD bn, 26 Jul 2026",
+              "valueFormat": "$bn", "unit": "USD bn",
+              "xKey": "k",
+              "series": [{ "key": "v", "label": "Commitments", "color": 3 }],
+              "data": [
+                { "k": "Supply, capacity", "v": 279 },
+                { "k": "Cloud services", "v": 29, "note": "Multi-year cloud-service agreements" },
+                { "k": "DC leases", "v": 25, "note": "Data-center leases not yet commenced" },
+                { "k": "Equity", "v": 25, "note": "Equity-investment commitments" },
+                { "k": "Capex", "v": 8 }
+              ],
+              "source": "NVIDIA 10-Q XBRL commitments table (R17/R55) [66]", "asOf": "2026-07-26", "provenance": "R",
+              "note": "Sums to $366bn. Disclosed separately: AI-cloud agreements $36bn, third-party DC leases not yet commenced $20bn, and guarantees with maximum exposure of $108.5bn ($105bn SB Energy + $3.5bn other land, power and shell)."
+            }
+            </script>
+          </figure>
+        </div>
 
         <figure class="figure-plain wide dg" aria-labelledby="dg5-cap">
           <p class="dg-hint">Scroll sideways to see the whole diagram.</p>
           <div class="dg-scroll">
           <svg viewBox="0 0 900 360" role="img" aria-labelledby="dg5-t dg5-d">
             <title id="dg5-t">The circular-financing loop</title>
-            <desc id="dg5-d">NVIDIA invests equity in labs and neoclouds (about 50 billion dollars into frontier labs, 99 billion of stakes held). Labs sign compute contracts with clouds and neoclouds, who buy NVIDIA GPUs, which returns as NVIDIA revenue. NVIDIA also rents back capacity from clouds (36 billion of commitments) and guarantees SB Energy leases for OpenAI's Ohio campus up to 105 billion dollars.</desc>
+            <desc id="dg5-d">NVIDIA invests equity in labs and neoclouds (about 50 billion dollars into frontier labs, 94 to 99 billion dollars of stakes held). Labs sign compute contracts with clouds and neoclouds, who buy NVIDIA GPUs, which returns as NVIDIA revenue. NVIDIA also rents back capacity from clouds (36 billion of commitments) and guarantees SB Energy leases for OpenAI's Ohio campus up to 105 billion dollars.</desc>
             <defs>
               <marker id="m5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ar" d="M0,0 L10,5 L0,10 z"/></marker>
               <marker id="m5a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ar-a" d="M0,0 L10,5 L0,10 z"/></marker>
@@ -1243,7 +1288,7 @@
             <rect class="k4" x="340" y="270" width="220" height="74" rx="10"/>
             <text class="t" x="450" y="298" text-anchor="middle">SB Energy leases</text><text class="t2" x="450" y="318" text-anchor="middle">OpenAI Portsmouth, Ohio</text><text class="t2" x="450" y="333" text-anchor="middle">~4.25 GW IT load, from 2028</text>
             <path class="ln-a" d="M350,60 C220,60 150,100 150,156" marker-end="url(#m5a)"/>
-            <text class="ts" x="190" y="104">① Equity</text><text class="t2" x="190" y="120">~$50bn into labs; $99bn held</text>
+            <text class="ts" x="190" y="104">① Equity</text><text class="t2" x="190" y="120">~$50bn into labs; $94–99bn held</text>
             <path class="ln" d="M262,200 L636,200" marker-end="url(#m5)"/>
             <text class="ts" x="285" y="190">② Compute contracts</text>
             <path class="ln-a" d="M750,156 C750,100 680,60 552,60" marker-end="url(#m5a)"/>
@@ -1254,24 +1299,25 @@
             <text class="ts" x="460" y="238">⑤ Guarantee</text><text class="t2" x="460" y="254">capped at $105bn</text>
           </svg>
           </div>
-          <figcaption id="dg5-cap">How NVIDIA's money can come back to it as revenue. Amounts <span class="prov" data-prov="R">R</span> from the 8-K <a class="cite" href="#src-7">7</a>, the 10-Q summary <a class="cite" href="#src-8">8</a> and the Q2 FY27 call <a class="cite" href="#src-2">2</a>. If one large lab fails, the revenue, the receivables and the guarantee go wrong at the same time. See <a href="W02-capital-financing.html">W02</a> for the full financing picture.</figcaption>
+          <figcaption id="dg5-cap">How NVIDIA's money can come back to it as revenue. Amounts <span class="prov" data-prov="R">R</span> from the 8-K <a class="cite" href="#src-7">7</a>, the 10-Q <a class="cite" href="#src-61">61</a><a class="cite" href="#src-66">66</a> and the Q2 FY27 call <a class="cite" href="#src-2">2</a>. If one large lab fails, the revenue, the receivables and the guarantee go wrong at the same time. See <a href="W02-capital-financing.html">W02</a> for the full financing picture.</figcaption>
         </figure>
 
         <div class="table-wrap wide">
           <table class="table--compact">
             <thead><tr><th scope="col">Item</th><th scope="col">Amount</th><th scope="col">Date</th><th scope="col">Nature</th><th scope="col">Source</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Equity investments held</th><td>~$99bn (incl. $42.8bn marketable, $36.9bn locked up)</td><td>26 Jul 2026</td><td>Stakes in labs, neoclouds, suppliers</td><td><span class="prov" data-prov="R">R</span> via summary (med) <a class="cite" href="#src-8">8</a></td></tr>
-              <tr><th scope="row">Further equity commitments</th><td>~$25bn</td><td>26 Jul 2026</td><td></td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-8">8</a></td></tr>
+              <tr><th scope="row">Equity investments held</th><td>~$94–99bn: $42.8bn marketable + $51.2bn non-marketable ≈ $94bn per the 10-Q; ~$99bn per a third-party summary ($36.9bn of the marketable part locked up)</td><td>26 Jul 2026</td><td>Stakes in labs, neoclouds, suppliers</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-61">61</a><a class="cite" href="#src-8">8</a> (med on the total)</td></tr>
+              <tr><th scope="row">Further equity commitments</th><td>~$25bn</td><td>26 Jul 2026</td><td>~$18bn of it in the rest of FY27</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-8">8</a><a class="cite" href="#src-66">66</a></td></tr>
               <tr><th scope="row">"Frontier AI lab" investments</th><td>~$50bn to date</td><td>Aug-2026</td><td>OpenAI, Anthropic, xAI, Mistral and others</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-2">2</a></td></tr>
-              <tr><th scope="row">OpenAI</th><td>LOI "up to $100bn" for 10 GW (Sep-2025), later restructured; took part in OpenAI's 2026 round (reported ~$30bn; conf: low–med)</td><td>2025–26</td><td>Equity for GPU purchases</td><td><span class="prov" data-prov="E">E</span> <a class="cite" href="#src-50">50</a></td></tr>
+              <tr><th scope="row">OpenAI</th><td>LOI "up to $100bn" for 10 GW (Sep-2025), later restructured; put $30bn into OpenAI's 2026 round <span class="prov" data-prov="R">R</span> (OpenAI round release, 31 Mar 2026)</td><td>2025–26</td><td>Equity for GPU purchases</td><td><span class="prov" data-prov="E">E</span> <a class="cite" href="#src-50">50</a></td></tr>
               <tr><th scope="row">Anthropic</th><td>Up to $10bn (alongside Microsoft $5bn); Anthropic committed to up to 1 GW of Grace Blackwell / Vera Rubin on Azure</td><td>Nov-2025</td><td>Equity + compute</td><td>prior knowledge (med)</td></tr>
               <tr><th scope="row">Intel</th><td>$5bn at ~$23.28/sh (~4%); co-develops x86 CPUs with NVLink and x86 SoCs with RTX chiplets</td><td>Sep-2025 (closed Dec-2025)</td><td>Strategic</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-47">47</a><a class="cite" href="#src-50">50</a></td></tr>
               <tr><th scope="row">Marvell</th><td>$2bn</td><td>Mar-2026</td><td>NVLink Fusion ecosystem</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-46">46</a></td></tr>
+              <tr><th scope="row">MediaTek</th><td>$3.5bn of MediaTek <span class="term" data-term="Convertible bond">convertible bonds</span> (part of a $3.9bn issue; Alphabet also took part). MediaTek adopts NVLink Fusion for custom ASICs. <strong>An investment, not an acquisition</strong></td><td>31 Aug 2026</td><td>NVLink Fusion ecosystem; NVIDIA's largest direct investment outside the US</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-63">63</a></td></tr>
               <tr><th scope="row">Groq</th><td>~$20bn non-exclusive licence plus founder Jonathan Ross and president Sunny Madra; Groq stays independent (GroqCloud)</td><td>24 Dec 2025</td><td>NVIDIA's largest deal ever; became Groq 3 LPX</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-16">16</a></td></tr>
               <tr><th scope="row">Others</th><td>Nokia $1bn, Synopsys $2bn, CoreWeave (+$2bn, Jan-2026), Enfabrica acqui-hire (~$0.9bn), xAI, Nscale, Poolside, Crusoe</td><td>2025–26</td><td>Ecosystem seeding</td><td>prior knowledge (med)</td></tr>
               <tr><th scope="row">OpenAI Ohio residual-value guarantee</th><td>Capped at $105bn; ~4.25 GW of IT load, possibly +3.8 GW</td><td>17 Aug 2026 (8-K)</td><td>NVIDIA pays any shortfall on SB Energy leases to OpenAI's affiliate if OpenAI defaults; ends after 20 years or when OpenAI reaches a satisfactory credit rating</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a></td></tr>
-              <tr><th scope="row">Supply / capacity commitments</th><td>$279bn (total $366bn, incl. $36bn AI-cloud commitments)</td><td>26 Jul 2026</td><td>Wafers, HBM, CoWoS, cloud buy-backs</td><td><span class="prov" data-prov="R">R</span> via summary <a class="cite" href="#src-8">8</a></td></tr>
+              <tr><th scope="row">Supply / capacity commitments</th><td>$279bn, up from $119bn a quarter earlier, "primarily related to the procurement of memory"; $92bn falls due in the rest of FY27. Total future commitments $366bn (supply $279bn, cloud services $29bn, uncommenced DC leases $25bn, equity $25bn, capex $8bn). Separately: AI-cloud agreements $36bn, third-party DC leases $20bn, guarantees with maximum exposure of $108.5bn</td><td>26 Jul 2026</td><td>Wafers, HBM, CoWoS, cloud buy-backs</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a></td></tr>
               <tr><th scope="row">Infrastructure-capital partners</th><td>Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs, KKR to "mobilize >$500bn of third-party capital"</td><td>Aug-2026</td><td>Financing for customers' AI factories</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a></td></tr>
               <tr><th scope="row">Debt</th><td>$25bn senior notes</td><td>Jun-2026</td><td>NVIDIA now carries meaningful gross debt</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-8">8</a></td></tr>
             </tbody>
@@ -1434,11 +1480,11 @@
               <tr><th scope="row">v6e Trillium</th><td>2024</td><td>918 TF BF16</td><td>32 GB</td><td>1.64 TB/s</td><td>256</td><td>4.7× v5e</td></tr>
               <tr><th scope="row">v7 Ironwood</th><td>GA Nov-2025</td><td>4,614 TF FP8</td><td>192 GB</td><td>7.37 TB/s</td><td>9,216 chips; 1.77 PB HBM per <span class="term" data-term="Superpod">superpod</span>; 9.6 Tb/s ICI</td><td>"10× v5p peak, 4×+ Trillium per chip" <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-33">33</a><a class="cite" href="#src-35">35</a></td></tr>
               <tr><th scope="row">TPU 8t (training)</th><td>2026</td><td>12.6 PF FP4</td><td>216 GB HBM3e</td><td>6.5 TB/s</td><td>9,600 per superpod</td><td><span class="prov" data-prov="R">R</span> <a class="cite" href="#src-33">33</a></td></tr>
-              <tr><th scope="row">TPU 8i (inference)</th><td>2026</td><td>10.1 PF FP4</td><td>288 GB HBM3e</td><td>8.6 TB/s</td><td>"Boardfly" topology</td><td>MediaTek believed involved on some variants (conf: low)</td></tr>
+              <tr><th scope="row">TPU 8i (inference)</th><td>2026</td><td>10.1 PF FP4</td><td>288 GB HBM3e</td><td>8.6 TB/s</td><td>"Boardfly" topology</td><td>Broadcom is "now shipping the TPU v8i ahead of the MediaTek v8t" <a class="cite" href="#src-65">65</a>, so MediaTek appears tied to 8t (conf: med)</td></tr>
             </tbody>
           </table>
         </div>
-        <p><strong>Roles.</strong> Broadcom co-develops every TPU generation: it turns Google's architecture into manufacturable silicon, supplies SerDes and I/O, and manages TSMC fabrication and packaging <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-32">32</a><a class="cite" href="#src-33">33</a>. Google is Broadcom's largest XPU customer. MediaTek is reported as the partner for some cost-optimised inference variants from v7e/v8 onward, diversifying Google away from Broadcom (conf: low). <strong>Volumes:</strong> sell-side estimates put TPU production at ~2.5m units in 2025, ~3m+ in 2026 and ~5m in 2027 (conf: low); TrendForce expects Google to lead CSP ASIC volume and growth in 2026 <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-51">51</a>.</p>
+        <p><strong>Roles.</strong> Broadcom co-develops every TPU generation: it turns Google's architecture into manufacturable silicon, supplies SerDes and I/O, and manages TSMC fabrication and packaging <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-32">32</a><a class="cite" href="#src-33">33</a>. Google is Broadcom's largest XPU customer. MediaTek is reported as the design partner for some TPU variants from v7e/v8 onward; Broadcom's Q3 FY26 call refers to a "MediaTek v8t" <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-65">65</a>. That diversifies Google away from Broadcom (conf: med). <strong>Volumes:</strong> sell-side estimates put TPU production at ~2.5m units in 2025, ~3m+ in 2026 and ~5m in 2027 (conf: low); TrendForce expects Google to lead CSP ASIC volume and growth in 2026 <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-51">51</a>.</p>
 
         <h3>AWS Trainium and Inferentia (Annapurna Labs; design help from Marvell and Alchip)</h3>
         <ul>
@@ -1456,7 +1502,7 @@
         <p>MTIA v1 (2023) and v2 (2024) handle ranking and recommendation inference and were co-developed with Broadcom <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-32">32</a>. GenAI inference and training versions are on the 2026–27 roadmap, and Meta acquired RISC-V start-up Rivos (2025; conf: med). Meta has become the most multi-sourced buyer in the market: AMD's 6 GW anchor <a class="cite" href="#src-22">22</a>, one of NVIDIA's largest customers, in talks with Google on TPUs <a class="cite" href="#src-33">33</a>, and signed up for Trainium3 and "tens of millions of Graviton cores" <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-37">37</a>.</p>
 
         <h3>OpenAI × Broadcom</h3>
-        <p>OpenAI and Broadcom will deploy <strong>10 GW of OpenAI-designed accelerators</strong> with Broadcom Ethernet for scale-up and scale-out, starting 2H 2026 and completing by end-2029 (announced 13 Oct 2025) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-40">40</a>. Broadcom's earlier "customer #3 with >$10bn of orders" (Sep-2025) is widely believed to be OpenAI (conf: med). The chip is reportedly TSMC 3 nm with HBM and inference-first (conf: low); its codename is unverified and left out here. At ~$15–25bn of Broadcom content per GW, 10 GW ≈ <strong>$150–250bn across 2026–29</strong> <span class="prov" data-prov="A">A</span> (conf: low).</p>
+        <p>OpenAI and Broadcom will deploy <strong>10 GW of OpenAI-designed accelerators</strong> with Broadcom Ethernet for scale-up and scale-out, starting 2H 2026 and completing by end-2029 (announced 13 Oct 2025) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-40">40</a>. Broadcom's earlier "customer #3 with >$10bn of orders" (Sep-2025) is widely believed to be OpenAI (conf: med). The first chip, <strong>"Jalapeño"</strong>, an inference-first, reticle-sized ASIC, was unveiled on 24 Jun 2026 with initial deployment by end-2026 <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-64">64</a>. It is reportedly TSMC 3 nm with HBM (conf: low on process). An earlier press codename, "Titan", is not used by OpenAI or Broadcom. At ~$15–25bn of Broadcom content per GW, 10 GW ≈ <strong>$150–250bn across 2026–29</strong> <span class="prov" data-prov="A">A</span> (conf: low).</p>
 
         <h3>Broadcom: the custom-silicon kingmaker</h3>
         <figure class="wide">
@@ -1484,16 +1530,41 @@
           </script>
         </figure>
         <ul>
-          <li><strong>Customers (conf: med):</strong> the long-standing three are Google, Meta and ByteDance; #4 is Anthropic via TPU racks; #5 placed a ~$1bn order (Dec-2025); OpenAI is under its 10 GW agreement; prospects reportedly include xAI, Apple and SoftBank/Arm (conf: low). Hock Tan has pointed to AI revenue in FY27 well above $100bn (prior knowledge; conf: med).</li>
+          <li><strong>Customers (conf: med):</strong> the long-standing three are Google, Meta and ByteDance; #4 is Anthropic via TPU racks; #5 placed a ~$1bn order (Dec-2025); OpenAI is under its 10 GW agreement; prospects reportedly include xAI, Apple and SoftBank/Arm (conf: low).</li>
+          <li><strong>Outlook (Q3 FY26 call, 2 Sep 2026):</strong> Hock Tan said Broadcom has "secured the supply to again double AI revenue to approximately $115 billion" in FY27, with ~$230bn expected in FY28, from <strong>six XPU customers</strong>. Google, Anthropic (Ironwood TPU racks), OpenAI ("Jalapeño") and Meta (MTIA) were discussed by name <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-65">65</a>. Anthropic volumes were framed as ~1 GW (2026), ~5 GW (2027) and ~10 GW (2028), and OpenAI as ~1.3 GW in 2027 (transcript summary; conf: med).</li>
+          <li><strong>Reconciling the Anthropic gigawatts:</strong> a Broadcom filing on 6 Apr 2026 put the Google-TPU capacity for Anthropic coming online in 2027 at ~3.5 GW <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-67">67</a>. The ~5 GW on the September call is probably an upsizing since April (conf: med).</li>
           <li><strong>Margin note:</strong> rack-level deliveries (Anthropic) include pass-through HBM and system parts, which dilutes gross margin. Q3 FY26 GAAP gross profit was $20.5bn on $29.6bn of revenue (69%) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-29">29</a>.</li>
         </ul>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar",
+            "title": "Broadcom guides AI revenue to double in FY27 and again in FY28",
+            "subtitle": "Broadcom AI semiconductor revenue by fiscal year, USD bn. FY26E includes the Q4 guide; FY27G and FY28G are management's outlook.",
+            "valueFormat": "$bn", "unit": "USD bn",
+            "xKey": "fy",
+            "series": [{ "key": "v", "label": "AI semiconductor revenue", "color": 3 }],
+            "data": [
+              { "fy": "FY24", "v": 12.2 },
+              { "fy": "FY25", "v": 20.2, "note": "Sum of quarters: 4.1 + 4.4 + 5.2 + 6.5" },
+              { "fy": "FY26E", "v": 57.6, "note": "8.4 + 10.8 + 16.7 reported + 21.7 Q4 guide" },
+              { "fy": "FY27G", "v": 115, "note": "'Approximately $115 billion' (Q3 FY26 call)" },
+              { "fy": "FY28G", "v": 230, "note": "~$230bn (Q3 FY26 call); six XPU customers" }
+            ],
+            "labels": true,
+            "source": "Broadcom releases [29][30][31]; Q3 FY26 call transcript [65]", "asOf": "2026-09-02", "provenance": ["R", "G"],
+            "note": "Fiscal year ends ~1 Nov. FY24 and FY25 quarters are prior knowledge. AI semiconductor revenue includes XPUs and AI networking."
+          }
+          </script>
+        </figure>
 
         <h3>Marvell, Alchip, GUC and MediaTek</h3>
         <ul>
           <li><strong>Marvell:</strong> Q2 FY27 revenue $2.739bn (+37%), data center $2.171bn (+46%, 79% of revenue), non-GAAP GM 58.9%, Q3 guide $3.15bn (+15% q/q). CEO: "significant acceleration in our Custom business beginning in the second half of fiscal 2027" <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-45">45</a>. Custom programs include AWS Trainium2 (Trainium3 moving largely to Alchip; conf: med), Microsoft Maia (conf: med) and attach chips (NICs, CXL, scale-up switches). NVIDIA invested $2bn (Mar-2026) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-46">46</a>. Marvell bought Celestial AI (photonic interconnect) and Polariton (Apr-2026) <a class="cite" href="#src-45">45</a>.</li>
           <li><strong>Alchip (Taiwan):</strong> design-services partner, reportedly the lead on AWS Trainium3 (conf: med).</li>
           <li><strong>GUC (Global Unichip, a TSMC affiliate):</strong> design services for several CSP and start-up ASICs (conf: low on names).</li>
-          <li><strong>MediaTek:</strong> TPU variant partner (conf: low). An unverified claim that NVIDIA agreed to buy MediaTek for $110bn (Sep-2026) appears in one encyclopedia entry <a class="cite" href="#src-50">50</a> but not in NVIDIA's newsroom as of 25 Sep 2026. We exclude it.</li>
+          <li><strong>MediaTek:</strong> TPU variant partner (conf: med). On 31 Aug 2026 NVIDIA agreed to buy <strong>$3.5bn of MediaTek convertible bonds</strong> (part of a $3.9bn issue). MediaTek will use NVLink Fusion to design custom ASICs that plug into NVIDIA racks <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-63">63</a>. It is an investment, not an acquisition.</li>
         </ul>
 
         <p class="table-caption">Hyperscaler custom accelerators, 2026 scorecard</p>
@@ -1505,11 +1576,11 @@
               <tr><th scope="row">AWS</th><td>Trainium3</td><td>3 nm</td><td>—</td><td>—</td><td>Alchip / Marvell</td><td>Chips run-rate &gt;$25bn; &gt;1m Trainium in 12 months</td></tr>
               <tr><th scope="row">Microsoft</th><td>Maia 200</td><td>TSMC N3</td><td>10</td><td>216</td><td>GUC / Marvell (conf: low)</td><td>Runs GPT-5.2</td></tr>
               <tr><th scope="row">Meta</th><td>MTIA v2 / next</td><td>TSMC 5 nm+</td><td>—</td><td>—</td><td>Broadcom</td><td>Recommendation inference</td></tr>
-              <tr><th scope="row">OpenAI</th><td>Custom XPU</td><td>TSMC 3 nm (conf: low)</td><td>—</td><td>—</td><td>Broadcom</td><td>10 GW, 2H26–2029</td></tr>
+              <tr><th scope="row">OpenAI</th><td>"Jalapeño" inference XPU</td><td>TSMC 3 nm (conf: low)</td><td>—</td><td>—</td><td>Broadcom</td><td>10 GW, 2H26–2029</td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note"><span class="prov" data-prov="R">R</span> from company posts <a class="cite" href="#src-33">33</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-39">39</a><a class="cite" href="#src-40">40</a>; design partners partly low confidence.</p>
+        <p class="table-note"><span class="prov" data-prov="R">R</span> from company posts <a class="cite" href="#src-33">33</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-39">39</a><a class="cite" href="#src-40">40</a><a class="cite" href="#src-64">64</a>; design partners partly low confidence.</p>
       </section>
 
       <!-- ============================== 08 INTEL, CPUs, STARTUPS ============================== -->
@@ -1549,7 +1620,7 @@
           <table class="table--compact">
             <thead><tr><th scope="col">Company</th><th scope="col">Architecture</th><th scope="col">Funding / status</th><th scope="col">Key customer / deal</th><th scope="col">Notes (conf)</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Cerebras (CBRS)</th><td>Wafer-scale engine (WSE-3: 4trn transistors, 900k cores, 5 nm) <a class="cite" href="#src-44">44</a>; CS-4 unveiled 18 Aug 2026, "up to 30× faster than GPUs" <a class="cite" href="#src-42">42</a></td><td>IPO 14 May 2026 at $185/sh, raising ~$5.55bn (company cites $6.4bn gross, "largest semiconductor IPO"); opened ~68% higher (~$95bn valuation) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-41">41</a><a class="cite" href="#src-43">43</a>. Earlier: Series G $1.1bn at $8.1bn (Sep-2025), Series H $1bn (Feb-2026)</td><td>OpenAI: 750 MW through 2028, "&gt;$20bn" (expanded from "&gt;$10bn" at signing in Jan-2026), plus a $1bn OpenAI working-capital loan; reportedly bars sales to Anthropic during the contract. AWS Bedrock (Mar-2026). Powers GPT-5.6 "Ultrafast" <a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-43">43</a></td><td>2025 revenue $510m, net income $87m <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-43">43</a>. Q1 2026 revenue $193.4m, core +92%, GAAP GM 45%; FY26 core guide $855–865m at 38–41% GM <span class="prov" data-prov="R">R</span>/<span class="prov" data-prov="G">G</span> <a class="cite" href="#src-41">41</a></td></tr>
+              <tr><th scope="row">Cerebras (CBRS)</th><td>Wafer-scale engine (WSE-3: 4trn transistors, 900k cores, 5 nm) <a class="cite" href="#src-44">44</a>; CS-4 unveiled 18 Aug 2026, "up to 30× faster than GPUs" <a class="cite" href="#src-42">42</a></td><td>IPO 14 May 2026 at $185/sh, raising $6.4bn gross including the over-allotment ($5.55bn base: 30m shares × $185; "largest semiconductor IPO"); opened ~68% higher (~$95bn valuation) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-41">41</a><a class="cite" href="#src-43">43</a>. Earlier: Series G $1.1bn at $8.1bn (Sep-2025), Series H $1bn (Feb-2026)</td><td>OpenAI: 750 MW through 2028, "&gt;$20bn" (expanded from "&gt;$10bn" at signing in Jan-2026), plus a $1bn OpenAI working-capital loan; reportedly bars sales to Anthropic during the contract. AWS Bedrock (Mar-2026). Powers GPT-5.6 "Ultrafast" <a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-43">43</a></td><td>2025 revenue $510m, net income $87m <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-43">43</a>. Q1 2026 revenue $193.4m, core +92%, GAAP GM 45%; FY26 core guide $855–865m at 38–41% GM <span class="prov" data-prov="R">R</span>/<span class="prov" data-prov="G">G</span> <a class="cite" href="#src-41">41</a></td></tr>
               <tr><th scope="row">Groq</th><td><span class="term" data-term="LPU">LPU</span> (SRAM-only, deterministic)</td><td>$640m at $2.8bn (Aug-2024); NVIDIA ~$20bn licence + key staff (Dec-2025); $650m raise from existing investors (May-2026) <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-16">16</a></td><td>Saudi $1.5bn (Dammam); tech ships inside NVIDIA's Groq 3 LPX <a class="cite" href="#src-1">1</a><a class="cite" href="#src-16">16</a></td><td>2025 revenue ~$500m <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-16">16</a>. Now a GroqCloud operator; chip IP sits with NVIDIA</td></tr>
               <tr><th scope="row">SambaNova</th><td>Reconfigurable dataflow unit (SN40L; SN50)</td><td>Feb-2026 round led by Vista and Intel <a class="cite" href="#src-48">48</a></td><td>Pivot to inference cloud (OVHcloud and others)</td><td>(med)</td></tr>
               <tr><th scope="row">Etched</th><td>Sohu: transformer-only ASIC, TSMC 4 nm; claims 500k tok/s on Llama-70B per 8-chip server vs ~23k for 8×H100 <a class="cite" href="#src-49">49</a></td><td>$120m Series A (Jun-2024) <a class="cite" href="#src-49">49</a>; reported ~$500m at ~$5bn (early 2026; low)</td><td>—</td><td>Risk if models move beyond transformers</td></tr>
@@ -1769,7 +1840,7 @@
             <li><strong>Time to revenue.</strong> A GW of AI capacity costs ~$50–60bn. A buyer who deploys 6–12 months earlier with a proven stack earns tokens sooner; the premium over an ASIC is cheap next to the cost of idle capex.</li>
             <li><strong>Software and fungibility</strong> (CUDA). The asset can be resold or re-rented, which lowers the buyer's cost of capital.</li>
             <li><strong>Systems engineering.</strong> NVLink, NVL72 racks, networking and reference designs are integration work buyers would otherwise do.</li>
-            <li><strong>Supply lock-up.</strong> NVIDIA holds the largest share of CoWoS and HBM allocations, backed by $279bn of supply commitments <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-8">8</a>. Scarcity sustains price.</li>
+            <li><strong>Supply lock-up.</strong> NVIDIA holds the largest share of CoWoS and HBM allocations, backed by $279bn of supply commitments <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a>. Scarcity sustains price.</li>
             <li><strong>R&amp;D amortisation.</strong> ~$36bn of annual opex spread over ~8–9m GPUs ≈ $4k per GPU <span class="prov" data-prov="A">A</span>: material, but small next to ~$25–100k of gross profit per GPU.</li>
           </ol>
         </aside>
@@ -1946,10 +2017,10 @@
               <tr><th scope="row">1. HBM supply and price</th><td>The #1 bottleneck in 2026. NVIDIA: memory price increases "exceeded our prior expectations… headed even higher into next year" <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>. HBM4 capacity at SK hynix, Samsung and Micron gates Rubin, MI450 and TPU 8 volumes</td><td><a href="W06-semi-supply-chain.html">W06</a></td><td><span class="status status--critical">Binding</span></td></tr>
               <tr><th scope="row">2. TSMC CoWoS-L packaging</th><td>Every leading accelerator (NVIDIA, AMD MI400, AWS/Microsoft from 2027) uses CoWoS-L, mainstream through 2028. Google may adopt Intel's <span class="term" data-term="EMIB-T">EMIB-T</span> <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-51">51</a>, a second-source signal for Intel Foundry</td><td>W06</td><td><span class="status status--serious">Tight</span></td></tr>
               <tr><th scope="row">3. TSMC N3/N2 wafers</th><td>Rubin and Maia 200 on N3; AMD's MI450 compute die and Venice on N2 <a class="cite" href="#src-39">39</a>. Arizona fabs help politically but add cost</td><td>W06</td><td><span class="status status--warning">Watch</span></td></tr>
-              <tr><th scope="row">4. Power at the site</th><td>Chips are useless without energised data centers; NVIDIA frames its business in GW for this reason. Neocloud installed capacity went from ~3 GW at end-2025 toward ~8 GW <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a> (the transcript's timing wording appears garbled; we read end-2026)</td><td><a href="W03-energy-power.html">W03</a> / <a href="W04-datacenters.html">W04</a></td><td><span class="status status--serious">Tight</span></td></tr>
+              <tr><th scope="row">4. Power at the site</th><td>Chips are useless without energised data centers; NVIDIA frames its business in GW for this reason. Neoclouds are expected to "exit the year with 8 gigawatts in total installed capacity, up from approximately 3 gigawatts at the end of 2025" <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>, i.e. ~8 GW by end-2026</td><td><a href="W03-energy-power.html">W03</a> / <a href="W04-datacenters.html">W04</a></td><td><span class="status status--serious">Tight</span></td></tr>
               <tr><th scope="row">5. Rack integration and liquid cooling</th><td>GB200's 2024–25 ramp was delayed by NVLink backplane, thermal and yield issues (prior knowledge). Rubin claims the "fastest product ramp to date" <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-3">3</a></td><td><a href="W07-networking-systems.html">W07</a></td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">6. Export controls and geopolitics</th><td>China is effectively zero for NVIDIA DC compute <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-1">1</a>. Taiwan concentration is the tail risk for the whole layer</td><td>Policy</td><td><span class="status status--serious">Risk</span></td></tr>
-              <tr><th scope="row">7. Customer financing capacity</th><td>DSO rose to 60 days and receivables to $63bn <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-2">2</a><a class="cite" href="#src-8">8</a>. The $105bn OpenAI guarantee <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a> shows demand now leans on credit</td><td><a href="W02-capital-financing.html">W02</a></td><td><span class="status status--warning">Watch</span></td></tr>
+              <tr><th scope="row">7. Customer financing capacity</th><td>DSO rose to 60 days from 45 and receivables to $63bn <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-2">2</a><a class="cite" href="#src-66">66</a>. The $105bn OpenAI guarantee <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a> shows demand now leans on credit</td><td><a href="W02-capital-financing.html">W02</a></td><td><span class="status status--warning">Watch</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1992,7 +2063,7 @@
               { "source": "meta", "target": "amd", "value": 6, "label": "Custom MI450; 160m-share warrant" }
             ],
             "source": "NVIDIA [2]; AMD [19][22][25]; Anthropic [34]; Amazon [37]; OpenAI [40]; Cerebras [41]", "asOf": "2026-09-25", "provenance": "R",
-            "note": "Announced capacity, not deployed. Anthropic–TPU shown at 1 GW (\">1 GW\"). Meta's NVIDIA, MTIA and Trainium3 use is not sized in GW."
+            "note": "Announced capacity, not deployed. Anthropic–TPU shown at its 2026 tranche (\">1 GW\"); 2027 adds ~3.5 GW per Broadcom's Apr-2026 filing, framed as ~5 GW on the Sep-2026 call [65][67]. Meta's NVIDIA, MTIA and Trainium3 use is not sized in GW."
           }
           </script>
         </figure>
@@ -2047,7 +2118,7 @@
             <h3>Buyers substitute, credit props up demand, and old GPUs lose value</h3>
             <ul>
               <li><strong>ASIC share gains at the largest buyers.</strong> Google, Amazon, Meta, Microsoft, OpenAI and Anthropic are all building or buying alternatives; Anthropic alone has lined up ~8 GW+ of non-NVIDIA silicon. I/O Fund sees NVIDIA's share falling toward ~70% <span class="prov" data-prov="E">E</span> <a class="cite" href="#src-17">17</a>. When growth slows, every custom chip already designed becomes a direct substitute.</li>
-              <li><strong>Concentration and circularity.</strong> 44% of H1 FY27 revenue came from three direct customers <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-9">9</a>; OpenAI is expected to be ~25% of FY28 revenue <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a> and its campus leases are backstopped by a $105bn NVIDIA guarantee <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a>; NVIDIA holds ~$99bn of ecosystem equity plus $25bn committed <a class="cite" href="#src-8">8</a>. If one lab fails, revenue, receivables and the guarantee go wrong at once.</li>
+              <li><strong>Concentration and circularity.</strong> 44% of H1 FY27 revenue came from three direct customers <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-66">66</a>; the AI labs NVIDIA backs with its balance sheet are expected, as a group, to be ~25% of FY28 revenue <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>; OpenAI's campus leases are backstopped by a $105bn NVIDIA guarantee <span class="prov" data-prov="R">R</span> <a class="cite" href="#src-7">7</a>; NVIDIA holds ~$94–99bn of ecosystem equity plus $25bn committed <a class="cite" href="#src-61">61</a><a class="cite" href="#src-8">8</a>. If one lab fails, revenue, receivables and the guarantee go wrong at once.</li>
               <li><strong>The "NVIDIA tax" invites substitution.</strong> Each $1 of NVIDIA revenue carries ~66¢ of operating profit that buyers would like to keep. AMD's warrants (up to 160m shares each to OpenAI and Meta) show rivals will pay dearly to break in <a class="cite" href="#src-22">22</a><a class="cite" href="#src-25">25</a>.</li>
               <li><strong>Depreciation of old GPUs.</strong> Hyperscalers depreciate servers over 5–6 years. If Rubin cuts token cost 10–35× <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>, Hopper and early Blackwell lose rental value fast. H100 rental rates fell from ~$8/hr in 2023 to ~$2/hr in 2025 (conf: med), forcing impairments and stress on GPU-backed debt (<a href="W02-capital-financing.html">W02</a>). NVIDIA's own cadence is the cause.</li>
               <li><strong>Memory inflation.</strong> Gross margin guided down ~300 bp to 71–72% <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-2">2</a>; HBM makers now hold pricing power.</li>
@@ -2066,7 +2137,7 @@
           <ul>
             <li><strong>NVIDIA Q3 FY27</strong> (~19 Nov 2026): guide $108bn ±2% at 74% GM; Rubin at ~20% of Data Center; any FY28 update.</li>
             <li><strong>AMD Q3 2026</strong> (~3 Nov 2026): guide ~$13bn; first MI450 revenue; Helios and OpenAI's first GW.</li>
-            <li><strong>Broadcom Q4 FY26</strong> (Dec 2026): guide $21.7bn of AI revenue; FY27 AI outlook (above $100bn?) and customer count.</li>
+            <li><strong>Broadcom Q4 FY26</strong> (Dec 2026): guide $21.7bn of AI revenue; progress against the ~$115bn FY27 AI outlook <span class="prov" data-prov="G">G</span> <a class="cite" href="#src-65">65</a>; customer count (six XPU customers as of Sep-2026).</li>
             <li><strong>NVIDIA GTC 2027</strong> (Mar 2027): Rubin Ultra / Kyber, Feynman, a new bookings figure beyond $1trn.</li>
           </ul>
         </aside>
@@ -2079,7 +2150,7 @@
               <tr><th scope="row">NVIDIA receivables and DSO</th><td>$63.1bn; 60 days</td><td>DSO rising well above 60 days would signal customers leaning harder on NVIDIA credit</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Top-3 direct-customer share</th><td>44% (H1 FY27)</td><td>Above 50% would reverse the diversification trend</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Hyperscale vs ACIE growth</th><td>+101% vs +138% y/y</td><td>ACIE growth falling below hyperscale would mean the long tail is saturating</td><td><span class="status status--good">Diversifying</span></td></tr>
-              <tr><th scope="row">Broadcom AI revenue</th><td>$16.7bn; guide $21.7bn</td><td>An FY27 outlook above $100bn confirms custom silicon's step-up</td><td><span class="status status--good">Accelerating</span></td></tr>
+              <tr><th scope="row">Broadcom AI revenue</th><td>$16.7bn; guide $21.7bn; FY27 outlook ~$115bn <span class="prov" data-prov="G">G</span></td><td>A cut to the ~$115bn FY27 outlook, or fewer than six XPU customers, would mean custom silicon's step-up is stalling</td><td><span class="status status--good">Accelerating</span></td></tr>
               <tr><th scope="row">AMD data-center revenue</th><td>$6.7bn (+107%); Q3 total guide ~$13bn</td><td>A visible MI450/Helios step-up in Q4 2026 proves rack-scale delivery</td><td><span class="status status--warning">Unproven</span></td></tr>
               <tr><th scope="row">HBM contract prices</th><td>Rising, "headed even higher into next year" <span class="prov" data-prov="G">G</span></td><td>Any easing would restore NVIDIA's margin; further rises shift more profit to W06</td><td><span class="status status--critical">Binding</span></td></tr>
               <tr><th scope="row">CoWoS capacity (W06)</th><td>~72.5k wafers/month end-2025 → ~120–130k end-2026E <span class="prov" data-prov="E">E</span></td><td>Slippage would cap 2027 unit growth</td><td><span class="status status--serious">Tight</span></td></tr>
@@ -2097,7 +2168,7 @@
               <tr><th scope="row">~3 Nov 2026</th><td>AMD Q3 2026 results (guide ~$13bn)</td><td>MI450 revenue; any Instinct disclosure</td></tr>
               <tr><th scope="row">~19 Nov 2026</th><td>NVIDIA Q3 FY27 (guide $108bn, 74% GM)</td><td>Rubin ~20% of DC; path to the 71–72% trough; FY28 update</td></tr>
               <tr><th scope="row">Late Nov / early Dec 2026</th><td>Marvell Q3 FY27 (guide $3.15bn)</td><td>Custom ramp "2H FY27"</td></tr>
-              <tr><th scope="row">Dec-2026</th><td>AWS re:Invent (Trainium3 scale, Trainium4); Broadcom Q4 FY26 (guide $21.7bn AI)</td><td>FY27 AI outlook and customer count</td></tr>
+              <tr><th scope="row">Dec-2026</th><td>AWS re:Invent (Trainium3 scale, Trainium4); Broadcom Q4 FY26 (guide $21.7bn AI)</td><td>Progress against the ~$115bn FY27 AI outlook; customer count</td></tr>
               <tr><th scope="row">Dec-2026 / Jan-2027</th><td>CES; Rubin CPX availability; Groq 3 LPX volume</td><td>Disaggregated-inference adoption</td></tr>
               <tr><th scope="row">Mar-2027</th><td>NVIDIA GTC 2027</td><td>Rubin Ultra / Kyber, Feynman, new bookings figure</td></tr>
               <tr><th scope="row">H1 2027</th><td>Anthropic's first AMD GW; OpenAI Trainium (2 GW) start; Broadcom–OpenAI volume</td><td>Multi-sourcing becomes revenue</td></tr>
@@ -2137,17 +2208,21 @@
           <li><time datetime="2026-02">Feb 2026</time><div class="tl-body"><h4>AMD–Meta 6 GW (24 Feb); NVIDIA Q4 FY26 $68.1bn (25 Feb)</h4><p>SambaNova round <a class="cite" href="#src-22">22</a><a class="cite" href="#src-6">6</a><a class="cite" href="#src-48">48</a>.</p></div></li>
           <li class="is-key"><time datetime="2026-03-16">16 Mar 2026</time><div class="tl-body"><h4>GTC 2026: "at least $1trn" through 2027</h4><p>Groq 3 LPX, Vera CPU and the Feynman roadmap <a class="cite" href="#src-11">11</a>.</p><span class="tag">Turning point</span></div></li>
           <li><time datetime="2026-03-31">31 Mar 2026</time><div class="tl-body"><h4>NVIDIA invests $2bn in Marvell (NVLink Fusion)</h4><p><a class="cite" href="#src-46">46</a></p></div></li>
+          <li><time datetime="2026-04-06">6 Apr 2026</time><div class="tl-body"><h4>Broadcom filing: ~3.5 GW of Google TPU capacity for Anthropic in 2027</h4><p>Framed as ~5 GW on Broadcom's September call <a class="cite" href="#src-67">67</a><a class="cite" href="#src-65">65</a>.</p></div></li>
           <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>Amazon: Anthropic up to 5 GW Trainium; OpenAI ~2 GW</h4><p><a class="cite" href="#src-37">37</a></p></div></li>
           <li><time datetime="2026-05-14">14 May 2026</time><div class="tl-body"><h4>Cerebras IPO (CBRS)</h4><p><a class="cite" href="#src-43">43</a></p></div></li>
           <li><time datetime="2026-05-20">20 May 2026</time><div class="tl-body"><h4>NVIDIA Q1 FY27 $81.6bn</h4><p>New segment reporting; dividend to $0.25 <a class="cite" href="#src-5">5</a>.</p></div></li>
           <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>NVIDIA $25bn bond issue</h4><p><a class="cite" href="#src-8">8</a></p></div></li>
+          <li><time datetime="2026-06-24">24 Jun 2026</time><div class="tl-body"><h4>OpenAI and Broadcom unveil "Jalapeño"</h4><p>OpenAI's first custom inference chip; initial deployment by end-2026 <a class="cite" href="#src-64">64</a>.</p></div></li>
           <li><time datetime="2026-07-22">20–22 Jul 2026</time><div class="tl-body"><h4>AMD–Microsoft Helios; AMD–Anthropic up to 2 GW + $5bn</h4><p><a class="cite" href="#src-19">19</a><a class="cite" href="#src-21">21</a></p></div></li>
           <li><time datetime="2026-08-04">4 Aug 2026</time><div class="tl-body"><h4>AMD Q2 2026: DC +107%</h4><p><a class="cite" href="#src-18">18</a></p></div></li>
           <li><time datetime="2026-08-06">6 Aug 2026</time><div class="tl-body"><h4>AMD to acquire Taalas</h4><p><a class="cite" href="#src-20">20</a></p></div></li>
           <li class="is-key"><time datetime="2026-08-17">17 Aug 2026</time><div class="tl-body"><h4>NVIDIA 8-K: up to $105bn OpenAI Ohio guarantee</h4><p>The vendor-financing debate goes mainstream <a class="cite" href="#src-7">7</a>.</p><span class="tag">Turning point</span></div></li>
-          <li class="is-key"><time datetime="2026-08-26">26 Aug 2026</time><div class="tl-body"><h4>NVIDIA Q2 FY27 $96.2bn; FY28 ~+70%</h4><p><a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a></p><span class="tag">Turning point</span></div></li>
+          <li class="is-key"><time datetime="2026-08-26">26 Aug 2026</time><div class="tl-body"><h4>NVIDIA Q2 FY27 $96.2bn; FY28 ~+70%</h4><p>The 10-Q shows supply commitments of $279bn (from $119bn), total commitments of $366bn and H1 direct customers of 16/15/13% <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a><a class="cite" href="#src-66">66</a>.</p><span class="tag">Turning point</span></div></li>
           <li><time datetime="2026-08-27">27 Aug 2026</time><div class="tl-body"><h4>Marvell Q2 FY27</h4><p><a class="cite" href="#src-45">45</a></p></div></li>
-          <li><time datetime="2026-09-02">2 Sep 2026</time><div class="tl-body"><h4>Broadcom Q3 FY26: AI $16.7bn (+221%)</h4><p><a class="cite" href="#src-29">29</a></p></div></li>
+          <li><time datetime="2026-08-31">31 Aug 2026</time><div class="tl-body"><h4>NVIDIA buys $3.5bn of MediaTek convertible bonds</h4><p>MediaTek joins NVLink Fusion to build custom ASICs for NVIDIA racks <a class="cite" href="#src-63">63</a>.</p></div></li>
+          <li><time datetime="2026-09-01">1 Sep 2026</time><div class="tl-body"><h4>Dell Q2 FY27: $60.9bn of AI-server orders</h4><p>$95bn AI backlog; FY27 AI-server guide $74bn <a class="cite" href="#src-62">62</a>.</p></div></li>
+          <li><time datetime="2026-09-02">2 Sep 2026</time><div class="tl-body"><h4>Broadcom Q3 FY26: AI $16.7bn (+221%)</h4><p>FY27 AI outlook ~$115bn and FY28 ~$230bn, from six XPU customers <a class="cite" href="#src-29">29</a><a class="cite" href="#src-65">65</a>.</p></div></li>
         </ol>
       </section>
 
@@ -2173,6 +2248,7 @@
           <dt id="g-asic">ASIC / XPU</dt><dd>Application-specific integrated circuit: a chip built for one job or one customer, such as Google's TPU. Broadcom calls custom AI ASICs "XPUs".</dd>
           <dt id="g-asp">ASP</dt><dd>Average selling price.</dd>
           <dt id="g-bf16">BF16 / FP8 / FP4 / NVFP4 / MXFP4</dt><dd>Number formats with 16, 8 or 4 bits. NVFP4 is NVIDIA's 4-bit format with fine-grained scaling; MXFP4 is the OCP-standard equivalent.</dd>
+          <dt id="g-convertible">Convertible bond</dt><dd>A bond the holder can later swap for the issuer's shares at a set price. NVIDIA's $3.5bn MediaTek purchase (Aug-2026) is this kind of investment, not a takeover.</dd>
           <dt id="g-cowos">CoWoS (-S / -L)</dt><dd>TSMC's 2.5D packaging that puts logic dies and HBM on a silicon interposer or bridge. CoWoS-L supports larger multi-die packages.</dd>
           <dt id="g-cpu">CPU</dt><dd>Central processing unit: a general-purpose processor. In AI systems it orchestrates work, prepares data and runs agent tool calls.</dd>
           <dt id="g-cuda">CUDA</dt><dd>NVIDIA's programming platform and library ecosystem (2006), the core of its software moat.</dd>
@@ -2214,6 +2290,7 @@
           "GPU": "Graphics processing unit: a chip with thousands of parallel arithmetic units; the workhorse of AI.",
           "HBM": "High-bandwidth memory: DRAM dies stacked vertically beside the processor to feed it data fast. Now the largest cost in an accelerator.",
           "CoWoS": "Chip-on-wafer-on-substrate: TSMC's 2.5D packaging that joins logic dies and HBM on one interposer or bridge.",
+          "Convertible bond": "A bond the holder can later swap for the issuer's shares at a set price. NVIDIA's $3.5bn MediaTek purchase (Aug-2026) is this kind of investment, not a takeover.",
           "CUDA": "NVIDIA's programming platform and library ecosystem (2006), the core of its software moat.",
           "FLOP": "A floating-point operation (a multiply or add). TFLOPS = 10^12 per second, PFLOPS = 10^15.",
           "NVFP4": "NVIDIA's 4-bit floating-point format with fine-grained scaling. Halving bits roughly doubles math per clock if accuracy holds.",
@@ -2249,26 +2326,30 @@
       <!-- ============================== 19 CONFIDENCE ============================== -->
       <section>
         <h2><span class="kicker">19 · Confidence notes</span>What is low-confidence or unverified</h2>
+        <aside class="callout callout--note" id="edition-2-update">
+          <p class="callout-label">Edition 2 re-check</p>
+          <p><strong>Updated 2026-09-25 (Edition 2 re-check):</strong> the claimed NVIDIA acquisition of MediaTek is removed as fabricated (the real deal is a $3.5bn convertible-bond purchase), the "~25% of FY28" remark now refers to AI labs as a group rather than OpenAI, OpenAI's chip is named "Jalapeño", Broadcom's FY27 AI outlook is ~$115bn, and NVIDIA's 10-Q concentration and commitment figures, Dell's AI orders and Cerebras's $6.4bn IPO are now verified from primary filings.</p>
+        </aside>
         <aside class="callout callout--note">
           <p class="callout-label">Research method</p>
           <p>The dossier behind this page was researched on 25 Sep 2026 from primary documents (NVIDIA, AMD, Broadcom, Marvell, Amazon, Microsoft, OpenAI, Anthropic and Cerebras releases, NVIDIA's 17-Aug 8-K and Q2 FY27 call). Partway through, the search budget ran out and fetches were rate-limited. Figures marked "prior knowledge" come from the analyst's pre-June-2026 knowledge of filings: believed accurate, not re-fetched.</p>
         </aside>
         <ol>
           <li><strong>NVIDIA compute vs networking</strong> for FY26 Q4 and FY27 Q2 are back-solved <span class="prov" data-prov="A">A</span>; only the 18% quarter-on-quarter networking growth is from the call <a class="cite" href="#src-2">2</a>.</li>
-          <li><strong>Customer concentration (16/15/13%)</strong> comes from a press summary of the 10-Q <a class="cite" href="#src-9">9</a>; the period (Q2 vs H1 FY27) should be confirmed against the filing.</li>
-          <li><strong>"$99bn equity held" and "$366bn total commitments"</strong> come from a third-party 10-Q summary <a class="cite" href="#src-8">8</a>. A "net debt $33.4bn" figure in that summary looked inconsistent and was not used.</li>
-          <li><strong>OpenAI at ~25% of NVIDIA's FY28 business</strong> and the <strong>$105bn guarantee</strong> could not be re-fetched by the fact-check pass; the guarantee is corroborated across W01 and W05.</li>
+          <li><strong>Customer concentration (16/15/13%)</strong> is now verified against the 10-Q's XBRL concentration table <a class="cite" href="#src-66">66</a>: these are H1 FY27 figures, and in Q2 FY27 alone one direct customer was 16%. Resolved on the 25 Sep 2026 re-check.</li>
+          <li><strong>Equity held and commitments.</strong> The $279bn supply and $366bn total commitments are verified from the 10-Q's XBRL tables <a class="cite" href="#src-66">66</a>. Equity holdings are shown as ~$94–99bn: the 10-Q gives $42.8bn marketable + $51.2bn non-marketable (≈$94bn) <a class="cite" href="#src-61">61</a>, and a third-party summary says ~$99bn <a class="cite" href="#src-8">8</a> (conf: med on the total). A "net debt $33.4bn" figure in that summary looked inconsistent and was not used.</li>
+          <li><strong>The "quarter of FY28" remark</strong> refers to the AI labs NVIDIA backs with its balance sheet, as a group, not to OpenAI alone (corrected against the call transcript <a class="cite" href="#src-2">2</a>). The <strong>$105bn guarantee</strong> is in the 8-K <a class="cite" href="#src-7">7</a> and the 10-Q <a class="cite" href="#src-66">66</a>.</li>
           <li><strong>Vera Rubin rack price (~$8–11m NVIDIA content)</strong> is derived from $40bn/GW with assumed power per GPU (conf: low). Per-chip cost stacks are analyst estimates; HBM4 contract pricing is opaque and rising.</li>
-          <li><strong>Broadcom's customer list and its FY27 >$100bn AI outlook</strong> are prior knowledge (conf: med); the Q3 FY26 call transcript could not be fetched.</li>
+          <li><strong>Broadcom's FY27 AI outlook</strong> (~$115bn; ~$230bn in FY28; six XPU customers) now comes from the Q3 FY26 call transcript <a class="cite" href="#src-65">65</a>. Resolved. Customer names beyond the four discussed on the call remain conf: med.</li>
           <li><strong>AMD's Instinct revenue split</strong> is estimated; AMD no longer discloses it.</li>
           <li><strong>Unit shipments</strong> for TPU, Trainium and NVIDIA packages are low-confidence; Epoch AI's chip-sales database <a class="cite" href="#src-52">52</a> notes uncertainty intervals of ~2×.</li>
-          <li><strong>Dell's AI orders ($60.9bn in a quarter, $95bn backlog, $74bn guide)</strong> rest on one low-quality press summary <a class="cite" href="#src-9">9</a> and are several times Dell's late-2025 run-rate. Unverified.</li>
-          <li><strong>"NVIDIA to acquire MediaTek for $110bn"</strong> appears in one encyclopedia summary <a class="cite" href="#src-50">50</a> but not in NVIDIA's newsroom as of 25 Sep 2026. Excluded.</li>
-          <li><strong>OpenAI's Broadcom chip codename</strong> is reported differently in two dossiers; it is left out of this page until verified.</li>
+          <li><strong>Dell's AI orders ($60.9bn in a quarter, $95bn backlog, $74bn guide)</strong> are now confirmed from Dell's own Q2 FY27 release <a class="cite" href="#src-62">62</a>. Resolved.</li>
+          <li><strong>NVIDIA and MediaTek.</strong> An encyclopedia sentence <a class="cite" href="#src-50">50</a> describing an NVIDIA takeover of MediaTek has no support in any NVIDIA or MediaTek release or reputable press report and is treated as fabricated. The real event is NVIDIA's $3.5bn purchase of MediaTek convertible bonds (31 Aug 2026) <a class="cite" href="#src-63">63</a>.</li>
+          <li><strong>OpenAI's Broadcom chip</strong> is "Jalapeño", per OpenAI's own announcement of 24 Jun 2026 <a class="cite" href="#src-64">64</a>. Resolved; the process node (TSMC 3 nm) remains conf: low.</li>
           <li><strong>Rubin Ultra naming</strong> (NVL576 vs 144-package Kyber) and <strong>Feynman timing</strong> (2028) come from roadmap talks and may shift.</li>
           <li><strong>Start-up funding</strong> (Etched, MatX, Positron, d-Matrix) is low-confidence prior knowledge.</li>
-          <li><strong>Cerebras IPO proceeds</strong> differ: $6.4bn per the company (likely including the over-allotment) vs $5.55bn per an encyclopedia summary <a class="cite" href="#src-41">41</a><a class="cite" href="#src-43">43</a>. The OpenAI deal was ">$10bn" at signing and ">$20bn" after expansion.</li>
-          <li><strong>The neocloud "8 GW" comment</strong> on NVIDIA's call appears garbled in the transcript summary ("by year-end 2025").</li>
+          <li><strong>Cerebras IPO proceeds:</strong> $5.55bn = 30m base shares × $185 <a class="cite" href="#src-43">43</a>; the company's $6.4bn gross <a class="cite" href="#src-41">41</a> ≈ 34.5m shares, i.e. including the 15% over-allotment <span class="prov" data-prov="A">A</span>. This page uses $6.4bn gross. The OpenAI deal was ">$10bn" at signing and ">$20bn" after expansion.</li>
+          <li><strong>The neocloud "8 GW" comment</strong> is confirmed from the transcript: ~3 GW at end-2025 to ~8 GW installed by end-2026 <a class="cite" href="#src-2">2</a>. Resolved.</li>
           <li><strong>Cross-layer reconciliation.</strong> This page uses the Atlas canonical CY2026E NVIDIA data-center revenue (~$365bn); the dossier's own arithmetic ranges from ~$378bn (FY27E) to ~$385bn (flows). NVIDIA's share of a greenfield GW's capex is shown as ~60–65% on a $60–70bn cost basis, or ~60–75% on $55–65bn (fact-check correction).</li>
         </ol>
       </section>
@@ -2332,7 +2413,7 @@
           <li id="src-47"><span class="src-pub">Wikipedia</span>, “Intel” (US stake, NVIDIA $5bn, SoftBank), accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/Intel">en.wikipedia.org</a></li>
           <li id="src-48"><span class="src-pub">Wikipedia</span>, “SambaNova Systems”, accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/SambaNova_Systems">en.wikipedia.org</a></li>
           <li id="src-49"><span class="src-pub">Wikipedia</span>, “Etched (company)”, accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/Etched_(company)">en.wikipedia.org</a></li>
-          <li id="src-50"><span class="src-pub">Wikipedia</span>, “Nvidia” (OpenAI LOI, Groq, Intel, $5trn; contains the unverified MediaTek claim), accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/Nvidia">en.wikipedia.org</a></li>
+          <li id="src-50"><span class="src-pub">Wikipedia</span>, “Nvidia” (OpenAI LOI, Groq, Intel, $5trn; also contains an unsupported MediaTek-takeover sentence, treated as fabricated), accessed 2026-09-25, <a href="https://en.wikipedia.org/wiki/Nvidia">en.wikipedia.org</a></li>
           <li id="src-51"><span class="src-pub">TrendForce</span>, “AI Chip Packaging Pushes Beyond Reticle Limits, with CoWoS-L Set to Remain the Mainstream Advanced Packaging Solution Through 2028”, 2026-09-18, <a href="https://www.trendforce.com/presscenter/news/20260918-13241.html">trendforce.com</a></li>
           <li id="src-52"><span class="src-pub">Epoch AI</span>, “AI Chip Sales” database, accessed 2026-09-25, <a href="https://epoch.ai/data/ai-chip-sales">epoch.ai</a></li>
           <li id="src-53"><span class="src-pub">TechCrunch</span>, “Nvidia says two mystery customers accounted for 39% of Q2 revenue”, 2025-08-30, <a href="https://techcrunch.com/2025/08/30/nvidia-says-two-mystery-customers-accounted-for-39-of-q2-revenue">techcrunch.com</a></li>
@@ -2343,6 +2424,13 @@
           <li id="src-58"><span class="src-pub">AMD</span>, press-release index (HUMAIN $10bn 2025-05-13; Venice 2 nm ramp 2026-05-21; TCS Helios 2026-02-16), accessed 2026-09-25, <a href="https://ir.amd.com/news-events/press-releases">ir.amd.com</a></li>
           <li id="src-59"><span class="src-pub">Broadcom</span>, investor home (release list incl. 2026-09-02 results), accessed 2026-09-25, <a href="https://investors.broadcom.com/">investors.broadcom.com</a></li>
           <li id="src-60"><span class="src-pub">NVIDIA Investor Relations</span>, quarterly results archive (source of FY23–FY26 quarterly figures used from prior knowledge), accessed 2026-09-25, <a href="https://investor.nvidia.com/financial-info/quarterly-results/default.aspx">investor.nvidia.com</a></li>
+          <li id="src-61"><span class="src-pub">NVIDIA Corp.</span>, Form 10-Q for the quarter ended 26 Jul 2026 (receivables concentration; equity securities), 2026-08-26, <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm">sec.gov</a></li>
+          <li id="src-62"><span class="src-pub">Dell Technologies</span>, “Dell Technologies Delivers Second Quarter Fiscal 2027 Financial Results”, 2026-09-01, <a href="https://investors.delltechnologies.com/news-releases/news-release-details/dell-technologies-delivers-second-quarter-fiscal-2027-financial">investors.delltechnologies.com</a></li>
+          <li id="src-63"><span class="src-pub">Taipei Times; TechCrunch</span>, “MediaTek coming up in the world with Nvidia buy”, 2026-09-02; “Nvidia's $3.5B MediaTek bet reveals its plan for tackling Big Tech's AI chip buildout”, 2026-08-31, <a href="https://www.taipeitimes.com/News/biz/archives/2026/09/02/2003863515">taipeitimes.com</a> · <a href="https://techcrunch.com/2026/08/31/nvidias-3-5b-mediatek-bet-reveals-its-plan-for-tackling-big-techs-ai-chip-buildout/">techcrunch.com</a></li>
+          <li id="src-64"><span class="src-pub">OpenAI</span>, “OpenAI and Broadcom unveil LLM-optimized inference chip” (Jalapeño), 2026-06-24, <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">openai.com</a></li>
+          <li id="src-65"><span class="src-pub">Investing.com</span>, “Earnings call transcript: Broadcom tops Q3 2026 estimates as AI sales surge”, 2026-09-02/03, <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-broadcom-tops-q3-2026-estimates-as-ai-sales-surge-93CH-4886849">investing.com</a></li>
+          <li id="src-66"><span class="src-pub">NVIDIA Corp.</span>, Form 10-Q XBRL detail tables R17/R55–R58 (commitments and guarantees) and R66 (revenue concentration), 2026-08-26; and “CFO Commentary on Second Quarter Fiscal 2027 Results” (supply commitments $119bn → $279bn; DSO 60 days), 2026-08-26, <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R66.htm">sec.gov (R66)</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/R17.htm">sec.gov (R17)</a> · <a href="https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27cfocommentary.htm">CFO commentary</a></li>
+          <li id="src-67"><span class="src-pub">Silicon Republic</span>, “Anthropic, Google and Broadcom announce 3.5GW TPU deal” (Broadcom filing: ~3.5 GW of TPU capacity for Anthropic online in 2027), 2026-04-06, <a href="https://www.siliconrepublic.com/machines/anthropic-google-broadcom-announce-3-5gw-tpu-deal">siliconrepublic.com</a></li>
         </ol>
       </section>
 

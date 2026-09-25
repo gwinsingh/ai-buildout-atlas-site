@@ -112,6 +112,7 @@
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
           <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>Updated</dt><dd><a href="#edition-2-update">25 Sep 2026 · Edition 2 re-check</a></dd></div>
           <div><dt>Related</dt><dd><a href="W01-demand-capex.html">W01</a> · <a href="W02-capital-financing.html">W02</a> · <a href="W04-datacenters.html">W04</a> · <a href="W05-compute-silicon.html">W05</a> · <a href="W07-networking-systems.html">W07</a> · <a href="W09-model-labs.html">W09</a> · <a href="W10-apps-agents.html">W10</a> · <a href="W11-synthesis.html">W11</a></dd></div>
         </dl>
       </header>
@@ -173,10 +174,10 @@
         <ol>
           <li><strong>Clouds are landlords for AI compute.</strong> They buy the GPUs, lease or build the buildings, and rent out time by the hour, by the multi-year cluster or by the token. Labs and enterprises pay them; they pay NVIDIA, server makers, landlords, utilities and lenders.</li>
           <li><strong>The market is growing at its fastest pace in eight years</strong>: $143.4bn in Q2-2026, +43% <span class="prov" data-prov="E">E</span><a class="cite" href="#src-26">26</a>. All four hyperscalers accelerated in the same quarter, and all say they are short of capacity through 2027.</li>
-          <li><strong>The backlog is enormous and concentrated.</strong> About $2.46tn of contracted future revenue sits at five companies <span class="prov" data-prov="A">A</span>, and a handful of labs, above all OpenAI, own a large share of it.</li>
+          <li><strong>The backlog is enormous and concentrated.</strong> About $2.46tn of contracted future revenue sits at five companies <span class="prov" data-prov="A">A</span>, and a handful of labs, above all OpenAI, own a large share of it. At the neoclouds that is starting to spread: CoreWeave's largest customer fell from 71% to 36% of quarterly revenue in a year <span class="prov" data-prov="R">R</span><a class="cite" href="#src-79">79</a>.</li>
           <li><strong>A GPU cloud is a financing business dressed as a tech business.</strong> Cash margins are 60–75%, but the asset is expensive, depreciates fast and is usually bought with debt. AWS keeps 39% as operating profit; CoreWeave keeps 5% before paying $640m of quarterly interest <span class="prov" data-prov="R">R</span><a class="cite" href="#src-29">29</a>.</li>
-          <li><strong>GPU rental prices bottomed in mid-2025 and are rising again.</strong> The H100 fell from ~$8/hr (2023) to under $2 on spot markets, and is back to $3.39 median; CoreWeave raised prices ~25% in July 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>. A GB200 rack needs about $3.10/GPU-hr for a 10% return <span class="prov" data-prov="A">A</span>.</li>
-          <li><strong>Watch</strong> renewal prices on 2023–24 H100 contracts, Oracle's cash flow and gross margin, and CoreWeave's interest bill against its operating profit.</li>
+          <li><strong>GPU rental prices bottomed in mid-2025 and are rising again.</strong> The H100 fell from ~$8/hr (2023) to under $2 on spot markets, and is back to $3.39 median; CoreWeave raised prices ~25% in July 2026 and now prices short-dated contracts at ~$40m of annual revenue per MW, about double long-term deals <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a><a class="cite" href="#src-71">71</a>. A GB200 rack needs about $3.10/GPU-hr for a 10% return <span class="prov" data-prov="A">A</span>.</li>
+          <li><strong>Watch</strong> renewal prices on 2023–24 H100 contracts, Oracle's cash flow and gross margin, CoreWeave's interest bill against its operating profit, and whether public markets fund the next wave of neoclouds (Nscale filed for an IPO on 18 Sep 2026 <a class="cite" href="#src-74">74</a>).</li>
         </ol>
       </div>
 
@@ -411,7 +412,7 @@
               { "q": "Q2-26", "aws": 42.2, "ic": 39.3, "gcp": 24.8, "oci": 5.8 }
             ],
             "source": "Amazon, Microsoft, Alphabet, Oracle filings and releases [1][3][4][6][8][11][12][14][18]", "asOf": "2026-09-25", "provenance": ["R", "A"],
-            "note": "Microsoft fiscal quarters (FY ends June) and Oracle fiscal quarters (ending Aug/Nov/Feb/May) are mapped to the nearest calendar quarter. OCI Q3 FY26 ($4.9bn) and GCP Q1-26 are derived. OCI's Aug-2026 quarter ($7.4bn) is not shown. GCP Q4-25 conf: med."
+            "note": "Microsoft fiscal quarters (FY ends June) and Oracle fiscal quarters (ending Aug/Nov/Feb/May) are mapped to the nearest calendar quarter. OCI Q3 FY26 ($4.9bn) is derived. OCI's Aug-2026 quarter ($7.4bn) is not shown. GCP Q4-25 and Q1-26 verified against Alphabet 8-Ks [82][83]."
           }
           </script>
         </figure>
@@ -443,7 +444,7 @@
               { "q": "Q2-26", "aws": 36.7, "azure": 43, "gcp": 82, "oci": 93 }
             ],
             "source": "Company releases [1][6][8][11][12][14][18]", "asOf": "2026-09-25", "provenance": ["R", "A"],
-            "note": "Fiscal quarters mapped to the nearest calendar quarter. OCI's Aug-2026 quarter grew +121% (not shown). GCP Q4-25 and OCI Q3 FY26 are approximate."
+            "note": "Fiscal quarters mapped to the nearest calendar quarter. OCI's Aug-2026 quarter grew +121% (not shown). OCI Q3 FY26 is approximate."
           }
           </script>
         </figure>
@@ -464,18 +465,18 @@
               { "q": "Q1-24", "aws": 37.6, "gcp": 9.4 }, { "q": "Q2-24", "aws": 35.5, "gcp": 11.3 },
               { "q": "Q3-24", "aws": 38.1, "gcp": 17.1 }, { "q": "Q4-24", "aws": 36.9, "gcp": 17.5 },
               { "q": "Q1-25", "aws": 39.5, "gcp": 17.8 }, { "q": "Q2-25", "aws": 32.9, "gcp": 20.7 },
-              { "q": "Q3-25", "aws": 34.6, "gcp": 23.7 }, { "q": "Q4-25", "aws": 35.0, "gcp": 30.0, "note": "GCP Q4-25 approximate (conf: med)" },
-              { "q": "Q1-26", "aws": 37.7, "gcp": null, "note": "GCP Q1-26 operating income not available" },
+              { "q": "Q3-25", "aws": 34.6, "gcp": 23.7 }, { "q": "Q4-25", "aws": 35.0, "gcp": 30.1, "note": "GCP: $5.31bn on $17.66bn (Alphabet 8-K)" },
+              { "q": "Q1-26", "aws": 37.7, "gcp": 32.9, "note": "GCP: $6.60bn on $20.03bn (Alphabet 8-K)" },
               { "q": "Q2-26", "aws": 39.4, "gcp": 35.6, "note": "AWS includes a derivative-accounting gain" }
             ],
             "annotations": [{ "x": "Q2-25", "label": "AI depreciation dip" }],
-            "source": "Amazon and Alphabet filings [1][2][11][12]", "asOf": "2026-09-25", "provenance": "R"
+            "source": "Amazon and Alphabet filings [1][2][11][12][82][83]", "asOf": "2026-09-25", "provenance": "R"
           }
           </script>
         </figure>
 
         <h3>AWS</h3>
-        <p>AWS's annualized run-rate is <strong>$169bn</strong>. Q2-26 added $4.6bn of revenue quarter on quarter, about 80% more than the prior record. The AI business run-rate is <strong>above $25bn</strong>, growing triple digits, and the custom-chip business (Trainium and Graviton) is <strong>also above $25bn</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-2">2</a><a class="cite" href="#src-5">5</a>. The 39.4% margin includes a derivative-accounting gain; excluding it, margin expanded 520 bp. Backlog jumped from $364bn to <strong>$496bn</strong> in one quarter.</p>
+        <p>AWS's annualized run-rate is <strong>$169bn</strong>. Q2-26 added $4.6bn of revenue quarter on quarter, about 80% more than the prior record. The AI business run-rate is <strong>above $25bn</strong>, growing triple digits, and the custom-chip business (Trainium, Graviton and Nitro) is <strong>also above $25bn</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-2">2</a><a class="cite" href="#src-5">5</a><a class="cite" href="#src-86">86</a>. The 39.4% margin includes a derivative-accounting gain; excluding it, margin expanded 520 bp. Backlog jumped from $364bn to <strong>$496bn</strong> in one quarter.</p>
         <p class="table-caption">AWS segment, calendar quarters (USD bn)</p>
         <div class="table-wrap wide">
           <table data-sortable class="table--compact">
@@ -518,6 +519,21 @@
 
         <h3>Google Cloud</h3>
         <p>Google Cloud's <strong>+82%</strong> in Q2-26 is the fastest growth of any major hyperscaler in its history <span class="prov" data-prov="R">R</span><a class="cite" href="#src-11">11</a><a class="cite" href="#src-26">26</a>. Operating income was <strong>$8.8bn vs $2.8bn a year earlier</strong>, and the margin has gone from 9% in Q1-24 to 36%. Gemini model APIs process about <strong>22bn tokens a minute</strong>, up from 16bn the prior quarter; about 500 customers each processed more than a trillion tokens in 12 months, and customers are "exceeding their commitments by more than 50%" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-13">13</a>. Backlog is <strong>$514bn</strong>, just over half of it recognized within 24 months <span class="prov" data-prov="R">R</span><a class="cite" href="#src-12">12</a>. Alphabet raised 2026 capex guidance to <strong>$195–205bn</strong> <span class="prov" data-prov="G">G</span><a class="cite" href="#src-11">11</a>, and its free cash flow turned negative in Q2-26 (−$5.9bn, the first negative quarter since its IPO) <span class="prov" data-prov="R">R</span>.</p>
+        <p class="table-caption">Google Cloud segment, calendar quarters (USD bn)</p>
+        <div class="table-wrap wide">
+          <table data-sortable class="table--compact">
+            <thead><tr><th scope="col">Quarter</th><th scope="col" class="num">Revenue</th><th scope="col" class="num">Growth y/y</th><th scope="col" class="num">Operating income</th><th scope="col" class="num">Op. margin</th><th scope="col" class="num">Backlog</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Q1-25</th><td>12.3</td><td data-sort="28">+28%</td><td>2.2</td><td>17.8%</td><td>–</td></tr>
+              <tr><th scope="row">Q2-25</th><td>13.6</td><td data-sort="32">+32%</td><td>2.8</td><td>20.7%</td><td>106</td></tr>
+              <tr><th scope="row">Q3-25</th><td>15.2</td><td data-sort="34">+34%</td><td>3.6</td><td>23.7%</td><td>155</td></tr>
+              <tr><th scope="row">Q4-25</th><td>17.7</td><td data-sort="48">+48%</td><td>5.3</td><td>30.1%</td><td data-sort="240">~240 (conf: low–med)</td></tr>
+              <tr><th scope="row">Q1-26</th><td>20.0</td><td data-sort="63">+63%</td><td>6.6</td><td>32.9%</td><td data-sort="460">&gt;460</td></tr>
+              <tr><th scope="row">Q2-26</th><td><strong>24.8</strong></td><td data-sort="82"><strong>+82%</strong></td><td><strong>8.8</strong></td><td><strong>35.6%</strong></td><td><strong>514</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Source: Alphabet releases <a class="cite" href="#src-11">11</a><a class="cite" href="#src-12">12</a> <span class="prov" data-prov="R">R</span>. Q4-25 ($17.66bn revenue, $5.31bn operating income) and Q1-26 ($20.03bn, $6.60bn) re-checked on 25 Sep 2026 against Alphabet's 8-K exhibits <a class="cite" href="#src-82">82</a><a class="cite" href="#src-83">83</a>; the Q1-26 release says backlog "nearly doubl[ed] quarter on quarter to over $460 billion". The Q4-25 backlog is not stated in the release.</p>
 
         <h3>Oracle Cloud Infrastructure</h3>
         <p>OCI revenue was <strong>$18.1bn in FY26 (+77%)</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-18">18</a>, and <strong>$7.4bn (+121%)</strong> in Q1 FY27; "CPU and GPU infrastructure revenue" alone was $6.5bn (+151%) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-15">15</a>. FY27 guidance: revenue of at least $90bn, capex of <strong>$90–95bn</strong>, and net capex (after customer prepayments and supplier financing) of at most $70bn <span class="prov" data-prov="G">G</span><a class="cite" href="#src-15">15</a>.</p>
@@ -576,15 +592,16 @@
           <table class="table--sticky-col table--compact">
             <thead><tr><th scope="col">Company</th><th scope="col">Latest quarter revenue</th><th scope="col">Growth y/y</th><th scope="col">Full-year guide / run-rate</th><th scope="col">Backlog / contracted</th></tr></thead>
             <tbody>
-              <tr><th scope="row">CoreWeave</th><td>$2.575bn (Q2-26)</td><td>+112%</td><td>FY26 $12.4–13.2bn; exit-ARR $18.5–19.5bn <span class="prov" data-prov="G">G</span></td><td>$104.2bn (30 Jun); ~$129bn (11 Aug)</td></tr>
-              <tr><th scope="row">Nebius</th><td>$582m (Q2-26)</td><td>+454%</td><td>TTM $1.36bn</td><td>Microsoft $17.4–19.4bn; Meta $3bn (2025 deals)</td></tr>
+              <tr><th scope="row">CoreWeave</th><td>$2.575bn (Q2-26)</td><td>+112%</td><td>FY26 $12.4–13.2bn; exit-ARR $18.5–19.5bn <span class="prov" data-prov="G">G</span></td><td>$104.2bn (30 Jun); ~$129bn (11 Aug); &gt;$25bn of net new commitments early in Q3. Contracted power ~4.2 GW (11 Aug) vs ~3.7 GW (30 Jun), with ~1.5 GW active at 30 Jun <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a></td></tr>
+              <tr><th scope="row">Nebius</th><td>$582m (Q2-26)</td><td>+454%</td><td>TTM $1.36bn; ARR $3.0bn (Jun-26); <strong>FY26 guide $3.0–3.4bn revenue, $7–9bn year-end ARR</strong> <span class="prov" data-prov="G">G</span><a class="cite" href="#src-80">80</a><a class="cite" href="#src-81">81</a></td><td>Microsoft $17.4–19.4bn (Sep-2025); Meta $3bn (Nov-2025) <strong>plus Meta up to ~$27bn over 5 years</strong> (16 Mar 2026: $12bn dedicated + $15bn optional; Vera Rubin, delivery from early 2027) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-77">77</a></td></tr>
               <tr><th scope="row">IREN (AI cloud)</th><td>$128.8m (FY to Jun-26)</td><td>~8×</td><td>$1bn operating ARR; <strong>$4bn contracted ARR</strong> for 2026 capacity</td><td>Microsoft $9.7bn (2025); +$2.8bn (Jul-26)</td></tr>
               <tr><th scope="row">Crusoe</th><td>private</td><td>"Cloud bookings 20×+"</td><td>Managed Inference &gt;$100m ARR</td><td><strong>$140bn+ total contract value</strong>, 6 GW contracted</td></tr>
-              <tr><th scope="row">Lambda</th><td>private</td><td>n.d.</td><td>n.d.</td><td>"growing backlog of multi-year contracts"</td></tr>
+              <tr><th scope="row">Lambda</th><td>private</td><td>n.d.</td><td>&gt;$1.5bn expected 2026 revenue (Bloomberg) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-76">76</a></td><td>"growing backlog of multi-year contracts"</td></tr>
+              <tr><th scope="row">Nscale</th><td>$140.6m (H1-26, S-1)</td><td>n.d.</td><td>–</td><td><strong>$103.4bn</strong> active + contracted value (31 Aug 2026); 25k active / 461k active + contracted GPUs <span class="prov" data-prov="R">R</span><a class="cite" href="#src-74">74</a></td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Sources <a class="cite" href="#src-29">29</a><a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-47">47</a> <span class="prov" data-prov="R">R</span>. Our estimate: listed and major neoclouds book <strong>about $16–18bn of 2026 revenue</strong> against a total market of about $550–600bn <span class="prov" data-prov="A">A</span> (CoreWeave 12.8 + Nebius ~2.5 + others ~2–3; conf: low).</p>
+        <p class="table-note">Sources <a class="cite" href="#src-29">29</a><a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-37">37</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-47">47</a> <span class="prov" data-prov="R">R</span>. Our estimate: listed and major neoclouds book <strong>about $18–19bn of 2026 revenue</strong> (revised from $16–18bn on 25 Sep 2026 after Nebius's guide) against a total market of about $550–600bn <span class="prov" data-prov="A">A</span> (CoreWeave 12.8 + Nebius 3.2 at the guide midpoint + others ~2–3; conf: low–med).</p>
 
         <aside class="callout callout--note">
           <p class="callout-label">Forecast sketch (Atlas estimate)</p>
@@ -613,11 +630,11 @@
               { "co": "Microsoft", "oai": 305, "rest": 373, "note": "OpenAI was ~45% of RPO at Dec-2025 (conf: med); applied to Jun-2026 RPO. Ex-OpenAI RPO grew 25% y/y." },
               { "co": "Oracle", "oai": 332, "rest": 332, "note": "About half reportedly OpenAI ($300bn, ~5 yrs from FY28) [E]" },
               { "co": "Google Cloud", "oai": 0, "rest": 514, "note": "OpenAI capacity deal exists but value undisclosed; Anthropic and Meta are large" },
-              { "co": "AWS", "oai": 38, "rest": 458, "note": "OpenAI $38bn / 7 yrs (Nov-2025); Anthropic up to 5 GW Trainium" },
+              { "co": "AWS", "oai": 138, "rest": 358, "note": "OpenAI $38bn / 7 yrs (Nov-2025) + $100bn / 8 yrs (Feb-2026) ≈ $138bn; Anthropic up to 5 GW Trainium" },
               { "co": "CoreWeave", "oai": 22.4, "rest": 81.8, "note": "OpenAI ~$22.4bn; Meta ~$35bn; ~$129bn total by 11 Aug 2026" }
             ],
-            "source": "Company filings [1][6][12][14][29]; OpenAI shares [9][17][33]", "asOf": "2026-09-25", "provenance": ["R", "E", "A"],
-            "note": "Totals are reported RPO. The OpenAI split is an Atlas estimate: Microsoft 45% × $678bn; Oracle ~50%; AWS and CoreWeave = disclosed OpenAI contract values; Google = not disclosed (shown as 0)."
+            "source": "Company filings [1][6][12][14][29]; OpenAI shares [9][17][33][85]", "asOf": "2026-09-25", "provenance": ["R", "E", "A"],
+            "note": "Totals are reported RPO. The OpenAI split is an Atlas estimate: Microsoft 45% × $678bn; Oracle ~50%; AWS and CoreWeave = disclosed OpenAI contract values; Google = not disclosed (shown as 0). AWS assumes the Feb-2026 $100bn expansion sits in the Jun-2026 RPO."
           }
           </script>
         </figure>
@@ -644,31 +661,32 @@
               { "q": "Q2-26", "msft": 678, "orcl": 638, "gcp": 514, "aws": 496 }
             ],
             "source": "Company releases [1][6][9][12][14][18][19]", "asOf": "2026-09-25", "provenance": ["R", "A"],
-            "note": "Oracle quarters (Aug/Nov/Feb/May) mapped to the nearest calendar quarter; Oracle reached $664bn in Aug-2026. Values before 2026 for AWS, Microsoft and Google are conf: med; GCP Q4-25 conf: low–med; GCP Q1-26 derived."
+            "note": "Oracle quarters (Aug/Nov/Feb/May) mapped to the nearest calendar quarter; Oracle reached $664bn in Aug-2026. Values before 2026 for AWS, Microsoft and Google are conf: med; GCP Q4-25 conf: low–med; GCP Q1-26 '>$460bn' per Alphabet's release [83]."
           }
           </script>
         </figure>
 
-        <p>The backlog is <strong>concentrated in a handful of labs</strong>. About 45% of Microsoft's RPO was OpenAI at December 2025 (conf: med), and excluding OpenAI, Microsoft's RPO grew only 25% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-9">9</a>. About half of Oracle's $664bn is reportedly OpenAI <span class="prov" data-prov="E">E</span><a class="cite" href="#src-17">17</a>. Microsoft was about <strong>67% of CoreWeave's 2025 revenue</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-33">33</a>. The Atlas's cross-layer figure is that OpenAI and Anthropic alone owe about <strong>43% (~$1.05tn)</strong> of the five-company backlog <span class="prov" data-prov="A">A</span> (range 40–50%, conf: low–med); counting Meta, Microsoft-as-reseller and xAI too, <strong>more than half</strong> traces to five buyers <span class="prov" data-prov="A">A</span> (conf: med).</p>
+        <p>The backlog is <strong>concentrated in a handful of labs</strong>. About 45% of Microsoft's RPO was OpenAI at December 2025 (conf: med), and excluding OpenAI, Microsoft's RPO grew only 25% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-9">9</a>. About half of Oracle's $664bn is reportedly OpenAI <span class="prov" data-prov="E">E</span><a class="cite" href="#src-17">17</a>. Microsoft was about <strong>67% of CoreWeave's 2025 revenue</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-33">33</a>. That share is falling: CoreWeave's Q2-26 10-Q shows its largest (unnamed) customer at <strong>36%</strong> of quarterly revenue (71% a year earlier), the second at <strong>26%</strong> and a third at 10% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-79">79</a>. The Atlas's cross-layer figure is that OpenAI and Anthropic alone owe about <strong>43% (~$1.05tn)</strong> of the five-company backlog <span class="prov" data-prov="A">A</span> (range 40–50%, conf: low–med); counting Meta, Microsoft-as-reseller and xAI too, <strong>more than half</strong> traces to five buyers <span class="prov" data-prov="A">A</span> (conf: med).</p>
 
         <figure class="wide">
           <script type="application/json" data-chart>
           {
             "type": "bar", "horizontal": false,
             "title": "Concentration: a few buyers stand behind most of the contracted revenue",
-            "subtitle": "Percent. Left to right: neocloud backlog tied to top labs and hyperscalers; Microsoft's share of CoreWeave 2025 revenue; OpenAI's share of Oracle RPO; top labs' share of big-4 hyperscaler RPO; OpenAI's share of Microsoft RPO (Dec-25); OpenAI + Anthropic share of the $2.46tn five-company backlog",
+            "subtitle": "Percent. Left to right: neocloud backlog tied to top labs and hyperscalers; Microsoft's share of CoreWeave 2025 revenue; CoreWeave's top customer in Q2-26; OpenAI's share of Oracle RPO; top labs' share of big-4 hyperscaler RPO; OpenAI's share of Microsoft RPO (Dec-25); OpenAI + Anthropic share of the $2.46tn five-company backlog",
             "valueFormat": "%", "unit": "percent",
             "xKey": "m",
             "series": [{ "key": "v", "label": "Share" }],
             "data": [
               { "m": "Neocloud backlog", "v": 85, "note": "Share of neocloud backlog tied to top labs and hyperscalers. Atlas estimate, range 80–90% (conf: med)" },
               { "m": "MSFT in CoreWeave", "v": 67, "note": "Microsoft share of CoreWeave 2025 revenue. From the 10-K via Sacra [33]" },
+              { "m": "CRWV top customer", "v": 36, "note": "CoreWeave's largest customer (unnamed) in Q2-26, down from 71% in Q2-25. 10-Q [79]" },
               { "m": "OpenAI in Oracle", "v": 50, "note": "OpenAI share of Oracle RPO. Reported estimate [17]" },
               { "m": "Labs in big-4", "v": 50, "note": "Top-lab share of big-4 hyperscaler RPO. Atlas estimate, range 45–55% (conf: med)" },
               { "m": "OpenAI in Microsoft", "v": 45, "note": "OpenAI share of Microsoft commercial RPO at Dec-2025. conf: med" },
               { "m": "OpenAI + Anthropic", "v": 43, "note": "OpenAI + Anthropic share of the five-company backlog. Atlas canonical estimate, ~$1.05tn (range 40–50%)" }
             ],
-            "source": "Microsoft [9]; ERP Today [17]; Sacra [33]; Atlas estimates", "asOf": "2026-09-25", "provenance": ["R", "E", "A"]
+            "source": "Microsoft [9]; ERP Today [17]; Sacra [33]; CoreWeave 10-Q [79]; Atlas estimates", "asOf": "2026-09-25", "provenance": ["R", "E", "A"]
           }
           </script>
         </figure>
@@ -679,7 +697,7 @@
             <thead><tr><th scope="col">Metric</th><th scope="col">Estimate</th><th scope="col">Basis</th><th scope="col">Conf.</th></tr></thead>
             <tbody>
               <tr><th scope="row">Share of big-4 hyperscaler RPO tied to top AI labs (OpenAI, Anthropic, Meta, xAI)</th><td><strong>~45–55%</strong></td><td>Microsoft: OpenAI ~45% of $625bn (Dec-25), ex-OpenAI growth only 25% <a class="cite" href="#src-9">9</a>; Oracle ~50% OpenAI plus Meta/xAI <a class="cite" href="#src-17">17</a>; GCP: Anthropic and Meta large; AWS: Anthropic 5 GW + OpenAI</td><td>med</td></tr>
-              <tr><th scope="row">Share of neocloud backlog tied to top labs and hyperscalers</th><td><strong>~80–90%</strong></td><td>CoreWeave: Microsoft 67% of 2025 revenue, Meta $35bn, OpenAI $22bn vs $104bn backlog; Nebius: Microsoft $19bn + Meta $3bn; IREN: Microsoft plus "leading AI developers"</td><td>med</td></tr>
+              <tr><th scope="row">Share of neocloud backlog tied to top labs and hyperscalers</th><td><strong>~80–90%</strong></td><td>CoreWeave: Microsoft 67% of 2025 revenue (top customer 36% in Q2-26 <a class="cite" href="#src-79">79</a>), Meta $35bn, OpenAI $22bn vs $104bn backlog; Nebius: Microsoft $19bn + Meta $3bn + Meta up to $27bn <a class="cite" href="#src-77">77</a>; IREN: Microsoft plus "leading AI developers"</td><td>med</td></tr>
               <tr><th scope="row">Share of current hyperscaler AI revenue from labs</th><td>Labs <strong>~50–60%</strong> of AI IaaS; enterprises dominate MaaS and Copilot</td><td>Microsoft's $37bn AI run-rate includes OpenAI consumption and Copilot; AWS's $25bn includes Anthropic Trainium; Google: 500 customers above 1T tokens</td><td>low</td></tr>
               <tr><th scope="row">Inference share of cloud AI compute</th><td><strong>~50–60%</strong> and rising in 2026</td><td>Token growth (Google 22bn tokens/min, +37% q/q <a class="cite" href="#src-13">13</a>); CoreWeave and Crusoe expanding inference products; NVIDIA commentary (<a href="W05-compute-silicon.html">W05</a>)</td><td>low–med</td></tr>
             </tbody>
@@ -719,15 +737,16 @@
               <tr><th scope="row">Microsoft IC / Azure <span class="sub ticker">MSFT</span></th><td>FY26 Q4 (Jun-26)</td><td data-sort="39.3">39.3 (IC)</td><td data-sort="32">+32% (Azure +43%)</td><td>45% (co.); MS Cloud GM ~65–67%</td><td>678</td><td>$41bn/qtr; Q1 FY27 &gt;$50bn <span class="prov" data-prov="G">G</span></td><td>AAA</td><td data-sort="0">–</td></tr>
               <tr><th scope="row">Google Cloud <span class="sub ticker">GOOGL</span></th><td>Q2-26</td><td>24.8</td><td data-sort="82">+82%</td><td>35.6%</td><td>514</td><td>Alphabet 2026 $195–205bn <span class="prov" data-prov="G">G</span></td><td>AA+</td><td data-sort="0">–</td></tr>
               <tr><th scope="row">Oracle OCI <span class="sub ticker">ORCL</span></th><td>Q1 FY27 (Aug-26)</td><td data-sort="7.4">7.4 (total 19.3)</td><td data-sort="121">+121% (co. +30%)</td><td>co. non-GAAP 42%</td><td>664</td><td>$28bn/qtr; FY27 $90–95bn <span class="prov" data-prov="G">G</span></td><td>Notes payable $129.5bn; BBB− (cut 9 Jul 26)</td><td data-sort="139.54">$139.54</td></tr>
-              <tr><th scope="row">CoreWeave <span class="sub ticker">CRWV</span></th><td>Q2-26</td><td>2.58</td><td data-sort="112">+112%</td><td>GAAP −2%; adj. 5%</td><td data-sort="104.2">104 (Aug ~129)</td><td>FY26 $35–39bn <span class="prov" data-prov="G">G</span></td><td>~$35bn (recourse $31.4bn); HY (conf: med)</td><td data-sort="90.13">$90.13</td></tr>
-              <tr><th scope="row">Nebius <span class="sub ticker">NBIS</span></th><td>Q2-26</td><td>0.58</td><td data-sort="454">+454%</td><td>GAAP ~−30%; adj. EBITDA 41%</td><td data-sort="0">MSFT/Meta contracts</td><td>Q2 $5.7bn</td><td>Converts ~$10bn+; unrated/HY</td><td data-sort="243.48">$243.48</td></tr>
+              <tr><th scope="row">CoreWeave <span class="sub ticker">CRWV</span></th><td>Q2-26</td><td>2.58</td><td data-sort="112">+112%</td><td>GAAP −2%; adj. 5%</td><td data-sort="104.2">104 (Aug ~129)</td><td>FY26 $35–39bn <span class="prov" data-prov="G">G</span></td><td>~$35bn (recourse $31.4bn); +$3.7bn 2.875% converts (Sep-26) <a class="cite" href="#src-72">72</a>; HY (conf: med)</td><td data-sort="90.13">$90.13</td></tr>
+              <tr><th scope="row">Nebius <span class="sub ticker">NBIS</span></th><td>Q2-26</td><td>0.58</td><td data-sort="454">+454%</td><td>GAAP ~−30%; adj. EBITDA 41%</td><td data-sort="0">MSFT/Meta contracts</td><td>Q2 $5.7bn; FY26 $20–25bn <span class="prov" data-prov="G">G</span><a class="cite" href="#src-81">81</a></td><td>Converts ~$10bn+; unrated/HY</td><td data-sort="243.48">$243.48</td></tr>
               <tr><th scope="row">IREN <span class="sub ticker">IREN</span></th><td>FY to Jun-26</td><td data-sort="0.13">0.13 (AI cloud)</td><td data-sort="700">~8×</td><td>adj. EBITDA 35% (co.)</td><td data-sort="4">$4bn ARR contracted</td><td>–</td><td>$3.6bn @ 6.0%; $2.4bn @ 9.0%</td><td data-sort="46.15">$46.15</td></tr>
               <tr><th scope="row">Crusoe</th><td>private</td><td data-sort="0">n.d.</td><td data-sort="0">–</td><td>–</td><td data-sort="140">$140bn+ TCV</td><td>–</td><td>–</td><td data-sort="0">val. $30.9bn</td></tr>
-              <tr><th scope="row">Lambda</th><td>private</td><td data-sort="0">n.d.</td><td data-sort="0">–</td><td>–</td><td data-sort="0">"growing"</td><td>–</td><td>$1bn facility + $926m TLB (Baa2)</td><td data-sort="0">private</td></tr>
+              <tr><th scope="row">Lambda</th><td>private</td><td data-sort="0">n.d.</td><td data-sort="0">–</td><td>–</td><td data-sort="0">"growing"</td><td>–</td><td>$1bn facility + $926m TLB (Baa2)</td><td data-sort="0">private (pre-IPO talks at ≥$12bn <span class="prov" data-prov="E">E</span><a class="cite" href="#src-76">76</a>)</td></tr>
+              <tr><th scope="row">Nscale</th><td>H1-26</td><td data-sort="0.14">0.14</td><td data-sort="0">–</td><td>net loss $1.02bn (H1)</td><td data-sort="103.4">103.4 (contracted value)</td><td>–</td><td>Liabilities $12.36bn; $3.36bn pre-IPO notes</td><td data-sort="0">S-1 filed 18 Sep 26 (NYSE: NSCL) <a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a></td></tr>
             </tbody>
           </table>
         </div>
-        <p class="table-note">Click a column to sort. Sources <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a><a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a><a class="cite" href="#src-9">9</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-14">14</a><a class="cite" href="#src-15">15</a><a class="cite" href="#src-17">17</a><a class="cite" href="#src-25">25</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-30">30</a><a class="cite" href="#src-35">35</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-38">38</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-47">47</a>. Oracle rating uses the Atlas canonical figure (S&amp;P BBB−, cut 9 Jul 2026); the W08 dossier had "BBB (negative watch)".</p>
+        <p class="table-note">Click a column to sort. Sources <a class="cite" href="#src-1">1</a><a class="cite" href="#src-2">2</a><a class="cite" href="#src-6">6</a><a class="cite" href="#src-7">7</a><a class="cite" href="#src-9">9</a><a class="cite" href="#src-11">11</a><a class="cite" href="#src-12">12</a><a class="cite" href="#src-14">14</a><a class="cite" href="#src-15">15</a><a class="cite" href="#src-17">17</a><a class="cite" href="#src-25">25</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-30">30</a><a class="cite" href="#src-35">35</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-38">38</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-47">47</a><a class="cite" href="#src-72">72</a><a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a><a class="cite" href="#src-76">76</a><a class="cite" href="#src-81">81</a>. Oracle rating uses the Atlas canonical figure (S&amp;P BBB−, cut 9 Jul 2026); the W08 dossier had "BBB (negative watch)".</p>
 
         <div class="cards wide">
           <article class="company-card">
@@ -801,7 +820,7 @@
         <h3>Amazon Web Services</h3>
         <ul>
           <li><strong>AI products</strong> run from EC2 GPU and Trainium instances, through SageMaker, up to <strong>Bedrock</strong>, a multi-model API offering Anthropic Claude, OpenAI GPT-5.x open-weight and API models, Meta Llama, Mistral, Google Gemma, xAI Grok and Amazon Nova. In Q2-26, Bedrock customer spending "exceeded all prior quarters combined" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-2">2</a>. One report puts Bedrock alone at $25bn+ <a class="cite" href="#src-1">1</a>; we treat $25bn as the AI total (conf: med).</li>
-          <li><strong>Customers.</strong> Anthropic is the primary training partner (Project Rainier) with <strong>up to 5 GW of Trainium</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a>. OpenAI signed a $38bn, seven-year GPU deal (Nov-2025) plus <strong>~2 GW of Trainium from 2027</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a>. Meta uses "tens of millions of Graviton cores".</li>
+          <li><strong>Customers.</strong> Anthropic is the primary training partner (Project Rainier) with <strong>up to 5 GW of Trainium</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a>. OpenAI signed a $38bn, seven-year GPU deal (Nov-2025), expanded by a further <strong>$100bn over eight years</strong> on 27 Feb 2026 (≈$138bn in total) alongside Amazon's $50bn equity investment <span class="prov" data-prov="R">R</span><a class="cite" href="#src-85">85</a>, plus <strong>~2 GW of Trainium from 2027</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a>. Meta uses "tens of millions of Graviton cores".</li>
           <li><strong>Margins</strong> dipped to 32.9% in Q2-25 as AI depreciation ramped, then recovered to a record 39.4% through efficiency and pricing.</li>
           <li><strong>Capacity.</strong> Amazon is "on pace to double power capacity by end of 2027 vs 2025" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-5">5</a>. 2026 capex was raised to <strong>$220bn</strong>, of which about $20bn reflects higher HBM and memory costs <span class="prov" data-prov="R">R</span><a class="cite" href="#src-1">1</a>.</li>
           <li><strong>Balance sheet.</strong> Long-term debt doubled to $128.9bn from $65.6bn at year-end 2025 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-1">1</a>: even Amazon now borrows to build. It is considering selling Trainium chips outside AWS, and launched Kiro (a coding agent) and Amazon Quick.</li>
@@ -814,7 +833,7 @@
           <li><strong>AI products.</strong> Azure AI Foundry has 100,000 customers; Foundry customers running at least a trillion tokens a year grew 4×, and Foundry revenue "more than doubled" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-7">7</a>. Microsoft 365 Copilot has <strong>more than 30m paid seats</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-6">6</a>.</li>
           <li><strong>Margins.</strong> Microsoft Cloud gross margin was about 65–67%, down year on year on the shift to AI infrastructure (two summaries disagree; conf: med) <a class="cite" href="#src-7">7</a><a class="cite" href="#src-10">10</a>. Company operating margin was 45% in FY26 Q4 <span class="prov" data-prov="A">A</span> (40.6 / 90.0).</li>
           <li><strong>Capacity.</strong> 31 data centers added in FY26 Q4 (88 in FY26) plus roughly 1 GW in the quarter; on track to "roughly double overall capacity in two years" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-9">9</a>.</li>
-          <li><strong>The biggest neocloud tenant.</strong> Microsoft leases from Nebius ($17.4–19.4bn, Sep-2025), IREN ($9.7bn, Nov-2025), Nscale (~200k GB300s across the UK, Norway, Portugal and Texas, Oct-2025), Lambda ("multibillion", Nov-2025) and CoreWeave (~67% of 2025 revenue). Bloomberg tallied more than $60bn of neocloud commitments by November 2025 (conf: med). Deal values are from widely reported releases not re-fetched for this page (conf: med–high).</li>
+          <li><strong>The biggest neocloud tenant.</strong> Microsoft leases from Nebius ($17.4–19.4bn, Sep-2025), IREN ($9.7bn, Nov-2025), Nscale (~200k GB300s across the UK, Norway, Portugal and Texas, Oct-2025), Lambda ("multibillion", Nov-2025) and CoreWeave (~67% of 2025 revenue; CoreWeave's top customer, presumably Microsoft, was 36% in Q2-26 <a class="cite" href="#src-79">79</a>). Bloomberg tallied more than $60bn of neocloud commitments by November 2025 (conf: med). Deal values are from widely reported releases not re-fetched for this page (conf: med–high).</li>
           <li><strong>Moat.</strong> The enterprise bundle (M365, GitHub, Dynamics), OpenAI IP rights through 2032, Maia silicon and a AAA balance sheet.</li>
         </ul>
 
@@ -845,14 +864,39 @@
         <ul>
           <li><strong>Q2-26</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-29">29</a>: revenue <strong>$2,575m (+112%)</strong>; cost of revenue $879m; <strong>gross margin 66%</strong>; adjusted EBITDA <strong>$1,510m (59%)</strong>; D&amp;A <strong>$1,393m</strong>; GAAP operating loss −$49m; adjusted operating income $128m (5%); <strong>interest $640m</strong> (vs $267m a year ago); net loss −$626m.</li>
           <li><strong>FY26 guidance</strong> <span class="prov" data-prov="G">G</span><a class="cite" href="#src-30">30</a><a class="cite" href="#src-31">31</a>: revenue $12.4–13.2bn; adjusted operating income $0.96–1.15bn; <strong>capex $35–39bn</strong>; active power above 1.85 GW at year-end; exit-ARR $18.5–19.5bn. Q3: revenue $3.45–3.6bn and <strong>interest $860–940m</strong>.</li>
-          <li><strong>Backlog</strong> $104.2bn at 30 June (+246%), plus more than $25bn of net new commitments by 11 August (≈$129bn). Contracts of 48+ months rose from 10% to 21% of the mix <span class="prov" data-prov="R">R</span><a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a>. Meta: $14.2bn (Sep-2025) + <strong>$21bn through 2032</strong>; OpenAI: $11.9bn + $4bn + $6.5bn ≈ <strong>$22.4bn</strong>; Anthropic: multi-year (Apr-2026); Jane Street: $6bn plus a $1bn equity investment; NVIDIA: $6.3bn capacity backstop through 2032 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-32">32</a><a class="cite" href="#src-33">33</a><a class="cite" href="#src-34">34</a>.</li>
-          <li><strong>Concentration.</strong> Microsoft was ≈67% of FY2025 revenue, much of it capacity used by OpenAI (conf: med). The Q2-26 call gave no breakdown <a class="cite" href="#src-30">30</a>.</li>
-          <li><strong>Capacity.</strong> 51 data centers; <strong>1.5 GW active</strong> (+~500 MW in Q2); 3.7 GW contracted (4.2 GW by 11 Aug); target of at least 8 GW by 2030 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a>.</li>
-          <li><strong>Debt.</strong> Q2 cash capex $6.4bn (~$9.4bn accrual). Recourse debt $31.4bn, total ~$35bn; unrestricted cash $5.5bn <a class="cite" href="#src-29">29</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-34">34</a>. The stack mixes <span class="term" data-term="DDTL">delayed-draw term loans</span> secured by GPUs and contracts, senior unsecured notes (~9.0–9.25% coupons, 2030–31; conf: med), convertibles and vendor financing. Weighted cost of debt fell ~300 bp in a year, saving ~$1.1bn a year <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>.</li>
-          <li><strong>Pricing power.</strong> A <strong>~25% price increase across SKUs in July 2026</strong>. Old A100s rent "at or above where it was years ago", with one A100 renewal running into 2029. New contracts carry contribution margins 5–10 points above recent quarters, and Vera Rubin pricing is setting "new highs" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>.</li>
+          <li><strong>Backlog</strong> $104.2bn at 30 June (+246%), plus more than $25bn of net new commitments by 11 August (≈$129bn). Contracts of 48+ months rose from 10% to 21% of the mix <span class="prov" data-prov="R">R</span><a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a>. The 10-Q gives remaining performance obligations of <strong>$103.7bn</strong> at 30 June, <strong>41%</strong> of it to be recognized within 24 months <span class="prov" data-prov="R">R</span><a class="cite" href="#src-79">79</a>. Meta: $14.2bn (Sep-2025) + <strong>$21bn through 2032</strong>; OpenAI: $11.9bn + $4bn + $6.5bn ≈ <strong>$22.4bn</strong>; Anthropic: multi-year (Apr-2026); Jane Street: $6bn plus a $1bn equity investment; NVIDIA: $6.3bn capacity backstop through 2032 <span class="prov" data-prov="E">E</span><a class="cite" href="#src-32">32</a><a class="cite" href="#src-33">33</a><a class="cite" href="#src-34">34</a>.</li>
+          <li><strong>Concentration.</strong> Microsoft was ≈67% of FY2025 revenue, much of it capacity used by OpenAI (conf: med) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-33">33</a>. The Q2-26 10-Q (filed 12 Aug 2026) names no customers but shows <strong>Customer A at 36%, Customer B at 26% and Customer C at 10%</strong> of Q2-26 revenue (H1-26: A 40%, B 23%), against Customer A at <strong>71%</strong> in Q2-25. A and B each hold 32% of receivables <span class="prov" data-prov="R">R</span><a class="cite" href="#src-79">79</a>. A is presumably Microsoft and B plausibly Meta or OpenAI (our reading, not disclosed; conf: med).</li>
+          <li><strong>Capacity.</strong> 51 data centers. At <strong>30 Jun 2026: ~1.5 GW active</strong> (+~500 MW in Q2) and <strong>~3.7 GW contracted</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-29">29</a><a class="cite" href="#src-31">31</a>. The business update of <strong>17 Sep 2026</strong> puts contracted power at <strong>~4.2 GW as of 11 Aug 2026</strong> <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a>. Target of at least 8 GW by 2030 <a class="cite" href="#src-31">31</a><a class="cite" href="#src-32">32</a>.</li>
+          <li><strong>Debt.</strong> Q2 cash capex $6.4bn (~$9.4bn accrual). Recourse debt $31.4bn, total ~$35bn; unrestricted cash $5.5bn <a class="cite" href="#src-29">29</a><a class="cite" href="#src-32">32</a><a class="cite" href="#src-34">34</a>. The stack mixes <span class="term" data-term="DDTL">delayed-draw term loans</span> secured by GPUs and contracts, senior unsecured notes (~9.0–9.25% coupons, 2030–31; conf: med), convertibles and vendor financing. Weighted cost of debt fell ~300 bp in a year, saving ~$1.1bn a year <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>. On <strong>18 Sep 2026</strong> it priced an upsized <strong>$3.7bn of 2.875% convertible notes due 2033</strong> (conversion price $97.85, a 22.5% premium; net ~$3.64bn), alongside an at-the-market program of up to 35m shares, to move "toward an investment-grade credit profile" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-72">72</a><a class="cite" href="#src-73">73</a>.</li>
+          <li><strong>Pricing power.</strong> A <strong>~25% price increase across SKUs in July 2026</strong>. Old A100s rent "at or above where it was years ago", with one A100 renewal running into 2029. New contracts carry contribution margins 5–10 points above recent quarters, and Vera Rubin pricing is setting "new highs" <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>. In September it said <strong>&gt;$25bn of net new commitments</strong> came early in Q3, and that new short-dated (3–6 month) contracts were priced at about <strong>$40m of annualized revenue per MW</strong>, roughly double IREN's ~$20m/MW multi-year deals <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a>.</li>
           <li><strong>Core Scientific.</strong> CoreWeave agreed in July 2025 to buy its largest colocation landlord for ~$9bn in stock; Core Scientific shareholders voted it down in late October 2025 <a class="cite" href="#src-34">34</a>. CoreWeave remains a tenant under ~590 MW of long-term leases (conf: med).</li>
           <li><strong>Stock.</strong> IPO on 28 Mar 2025 at <strong>$40</strong> (raised $1.5bn, cut from $2.7bn). Now <strong>$90.13</strong>; 52-week range $60.55–153.20; market value ~$49.7bn <a class="cite" href="#src-35">35</a>. NVIDIA invested <strong>$2bn at $87.20</strong> in January 2026. Five-year CDS ~<strong>855 bp</strong> (late Jul-2026), implying ~50% five-year default odds by one market reading <span class="prov" data-prov="E">E</span><a class="cite" href="#src-32">32</a>.</li>
         </ul>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "stacked-bar", "horizontal": true,
+            "title": "CoreWeave's biggest customer went from 71% to 36% of revenue in a year",
+            "subtitle": "Share of CoreWeave revenue from its largest disclosed customers (unnamed in the 10-Q), %",
+            "valueFormat": { "suffix": "%", "decimals": 0 }, "unit": "% of revenue",
+            "xKey": "p",
+            "series": [
+              { "key": "a", "label": "Customer A (presumably Microsoft)" },
+              { "key": "b", "label": "Customer B" },
+              { "key": "c", "label": "Customer C" }
+            ],
+            "data": [
+              { "p": "Q2-2025", "a": 71, "note": "Only Customer A disclosed above 10% for the comparison quarter" },
+              { "p": "H1-2026", "a": 40, "b": 23 },
+              { "p": "Q2-2026", "a": 36, "b": 26, "c": 10, "note": "A and B each hold 32% of receivables" }
+            ],
+            "labels": true, "yMax": 100,
+            "source": "CoreWeave Form 10-Q for the quarter ended 30 Jun 2026 [79]", "asOf": "2026-08-12", "provenance": "R",
+            "note": "The 10-Q does not name customers. Microsoft was ~67% of FY2025 revenue [33]. Top three together = 72% of Q2-26 revenue."
+          }
+          </script>
+        </figure>
 
         <figure class="wide">
           <script type="application/json" data-chart>
@@ -918,8 +962,9 @@
         <h3>Nebius</h3>
         <p>Amsterdam-headquartered, the former international arm of Yandex, spun out in 2024 with ~$2bn+ of cash and rated ClusterMAX <strong>Platinum</strong> <span class="prov" data-prov="E">E</span><a class="cite" href="#src-49">49</a>. It runs a full-stack AI cloud (its own software, Token Factory inference, and Tavily agentic search bought for ~$400m in Feb-2026 <a class="cite" href="#src-40">40</a>) and holds stakes in ClickHouse and Avride. Q2-26 adjusted EBITDA was <strong>$236m (41%)</strong>, capex <strong>$5.66bn</strong>, and operating cash flow $2.25bn, inflated by customer prepayments <span class="prov" data-prov="R">R</span><a class="cite" href="#src-36">36</a>; SemiAnalysis says Nebius takes up to 100% prepayment on one-year commits, enough to "cover the entire capex of the servers" <a class="cite" href="#src-49">49</a>.</p>
         <ul>
-          <li><strong>Deals.</strong> Microsoft: $17.4bn through 2031, up to $19.4bn with add-ons, from the Vineland NJ site (Sep-2025). Meta: ~$3bn over five years (Nov-2025). NVIDIA invested $2bn (Mar-2026) <a class="cite" href="#src-40">40</a>. Palantir sovereign-AI partnership (Sep-2026) and a UK expansion with Vantage in South Wales (Aug-2026) <a class="cite" href="#src-39">39</a>.</li>
+          <li><strong>Deals.</strong> Microsoft: $17.4bn through 2031, up to $19.4bn with add-ons, from the Vineland NJ site (Sep-2025). Meta: ~$3bn over five years (Nov-2025), then <strong>up to ~$27bn over five years</strong> (16 Mar 2026: $12bn dedicated + $15bn optional; Vera Rubin; delivery from early 2027) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-77">77</a>. NVIDIA invested $2bn (Mar-2026) <a class="cite" href="#src-40">40</a>. Palantir sovereign-AI partnership (Sep-2026) and a UK expansion with Vantage in South Wales (Aug-2026) <a class="cite" href="#src-39">39</a>.</li>
           <li><strong>Financing.</strong> <strong>$5.75bn of convertibles</strong> (Aug-2026) <a class="cite" href="#src-65">65</a>; $4.3bn of converts and $2bn of pre-funded warrants in H1-26 <a class="cite" href="#src-36">36</a>; first <strong>secured</strong> debt of $775m backed by GPUs and an investment-grade customer's contract (Jul-2026) <a class="cite" href="#src-66">66</a>.</li>
+          <li><strong>FY26 guidance</strong> (reaffirmed 12 Aug 2026) <span class="prov" data-prov="G">G</span><a class="cite" href="#src-80">80</a><a class="cite" href="#src-81">81</a>: revenue <strong>$3.0–3.4bn</strong>; year-end ARR <strong>$7–9bn</strong> (vs $3.0bn at end-June); adjusted EBITDA margin ~40%; capex <strong>$20–25bn</strong>; <strong>800 MW–1 GW connected</strong> power by year-end; year-end <strong>contracted power target raised to 5 GW</strong>; more than 1 GW of new capacity a year from 2027. Nebius expects more than $9bn of customer prepayments in 2026, self-financing 50–60% of capex.</li>
           <li><strong>Pricing.</strong> Two pay-as-you-go price increases on select NVIDIA GPUs within three months, the latest effective 1 Oct 2026; BNP upgraded the stock on "favorable contract pricing" <span class="prov" data-prov="E">E</span><a class="cite" href="#src-38">38</a>.</li>
           <li><strong>Stock.</strong> $243.48 (24 Sep 2026); market value ~$66.7bn, above CoreWeave's <a class="cite" href="#src-38">38</a>. GPU servers depreciate over <strong>4 years</strong> (conf: med).</li>
         </ul>
@@ -952,6 +997,30 @@
           </script>
         </figure>
 
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "horizontal": true,
+            "title": "Nebius guides to 2–3× its annual revenue run-rate by December",
+            "subtitle": "Nebius scale indicators, USD bn: latest actual vs FY2026 guidance (range midpoints; low and high in the tooltip)",
+            "valueFormat": { "prefix": "$", "suffix": "bn", "decimals": 1 }, "unit": "USD bn",
+            "xKey": "m",
+            "series": [ { "key": "v", "label": "USD bn" } ],
+            "data": [
+              { "m": "FY26 capex", "v": 22.5, "note": "Guidance $20–25bn" },
+              { "m": "Meta deal", "v": 27, "note": "Mar-2026, maximum: $12bn dedicated + $15bn optional, 5 years" },
+              { "m": "Microsoft deal", "v": 19.4, "note": "Sep-2025, maximum: $17.4bn through 2031, up to $19.4bn" },
+              { "m": "YE-26 ARR", "v": 8, "note": "Guidance $7–9bn" },
+              { "m": "Jun-26 ARR", "v": 3.0, "note": "Reported, end-June 2026" },
+              { "m": "FY26 revenue", "v": 3.2, "note": "Guidance $3.0–3.4bn" }
+            ],
+            "labels": true,
+            "source": "Nebius Q2-26 shareholder letter and call [80][81]; Meta release [77]", "asOf": "2026-08-12", "provenance": ["R", "G"],
+            "note": "Contract values are multi-year totals, not annual revenue. Nebius also targets 5 GW of contracted power by year-end 2026."
+          }
+          </script>
+        </figure>
+
         <h3>The private neoclouds</h3>
         <div class="cards wide">
           <article class="company-card">
@@ -967,7 +1036,7 @@
           </article>
           <article class="company-card">
             <header><h3>Lambda</h3><span class="ticker">private</span><span class="chip role"><span class="chip-id">W08</span> Neocloud</span></header>
-            <p>Founded 2012 as a GPU-workstation maker; now "the superintelligence cloud" for tens of thousands of customers. Microsoft GB300 deal (Nov-2025); NVIDIA leases back ~18,000 GPUs (~$1.5bn), making it Lambda's largest customer (conf: med). Still private as of Aug-2026; CEO Michel Combes.</p>
+            <p>Founded 2012 as a GPU-workstation maker; now "the superintelligence cloud" for tens of thousands of customers. Microsoft GB300 deal (Nov-2025); NVIDIA leases back ~18,000 GPUs (~$1.5bn), making it Lambda's largest customer (conf: med). CEO Michel Combes. In talks for a ~$3bn pre-IPO round at ≥$12bn, expects more than $1.5bn of 2026 revenue, and could list "as soon as 2027" (Bloomberg, Aug-2026) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-76">76</a>.</p>
             <dl class="metrics">
               <div><dt>Term loan B</dt><dd>$926m</dd></div>
               <div><dt>Pricing</dt><dd>SOFR+300</dd></div>
@@ -1009,14 +1078,51 @@
             </dl>
             <footer><span class="prov" data-prov="R">R</span> FY26 (Jun) <a class="cite" href="#src-47">47</a></footer>
           </article>
+          <article class="company-card">
+            <header><h3>Nscale</h3><span class="ticker">NSCL (filed)</span><span class="chip role"><span class="chip-id">W08</span> Neocloud</span></header>
+            <p>UK-based; Microsoft's European neocloud (Stargate Norway with Aker, Stargate UK, Loughton; ~200k GB300s contracted to Microsoft, Oct-2025). Series B $1.1bn (Sep-2025). Filed an S-1 for an NYSE listing on 18 Sep 2026 (reported ~$30bn target, ~$3bn raise). Anthropic up to ~$44.6bn (460 MW); Microsoft up to $43.8bn; 25k active / 461k contracted GPUs; Monarch campus 8+ GW by 2031; NVIDIA holds &gt;5% (non-voting) <a class="cite" href="#src-74">74</a>.</p>
+            <dl class="metrics">
+              <div><dt>Contracted value</dt><dd>$103.4bn</dd></div>
+              <div><dt>H1-26 revenue</dt><dd>$140.6m</dd></div>
+              <div><dt>H1-26 net loss</dt><dd>$1.02bn</dd></div>
+              <div><dt>Pre-IPO notes</dt><dd>$3.36bn</dd></div>
+            </dl>
+            <footer><span class="prov" data-prov="R">R</span> via press summaries of the S-1 · 18–25 Sep 2026 <a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a></footer>
+          </article>
         </div>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "horizontal": true,
+            "title": "Nscale: $103bn of contracts against $0.14bn of half-year revenue",
+            "subtitle": "Nscale S-1 figures, USD bn (contract values are multi-year maxima; P&L lines are H1-2026)",
+            "valueFormat": { "prefix": "$", "suffix": "bn", "decimals": 2 }, "unit": "USD bn",
+            "xKey": "m",
+            "series": [ { "key": "v", "label": "USD bn" } ],
+            "data": [
+              { "m": "Contracted value", "v": 103.4, "note": "Active + contracted, at 31 Aug 2026" },
+              { "m": "Anthropic (max)", "v": 44.6, "note": "460 MW" },
+              { "m": "Microsoft (max)", "v": 43.8 },
+              { "m": "Liabilities", "v": 12.36 },
+              { "m": "Pre-IPO notes", "v": 3.36, "note": "Third Point lead; $2.36bn at close + $1bn from NVIDIA mid-Nov (25 Sep 2026)" },
+              { "m": "H1-26 net loss", "v": 1.02 },
+              { "m": "H1-26 revenue", "v": 0.14, "note": "$140.6m" }
+            ],
+            "labels": true,
+            "source": "Tech Times summary of the S-1 [74]; Fierce Network [75]", "asOf": "2026-09-25", "provenance": ["R", "E"],
+            "note": "S-1 figures come via press summaries; the EDGAR filing was not fetched (R via E)."
+          }
+          </script>
+        </figure>
 
         <p class="table-caption">Other clouds worth knowing</p>
         <div class="table-wrap wide">
           <table class="table--compact">
             <thead><tr><th scope="col">Company</th><th scope="col">HQ</th><th scope="col">What to know</th><th scope="col">Conf.</th></tr></thead>
             <tbody>
-              <tr><th scope="row">Nscale</th><td>UK</td><td>Microsoft's European neocloud: Stargate Norway (with Aker), Stargate UK, Loughton UK; ~200k GB300s contracted to Microsoft across UK/Norway/Portugal/Texas (Oct-2025); Series B $1.1bn (Sep-2025); in Synergy's high-growth tier <a class="cite" href="#src-26">26</a></td><td>med</td></tr>
+              <tr><th scope="row">Akamai</th><td>US</td><td>CDN and security company turned distributed cloud. <strong>$11.6bn, 7-year Anthropic deal</strong> (24 Sep 2026), plus up to $9bn more (~$20bn). Akamai gives Anthropic a warrant for 7.7m shares (~5%) at $111.33, ~2% vesting with the base commitment and ~1% per extra $3bn: the vendor hands equity to the customer. Had already announced &gt;$2.8bn of multi-year cloud-infrastructure commitments in 2026 <span class="prov" data-prov="R">R</span><a class="cite" href="#src-84">84</a></td><td>high</td></tr>
+              <tr><th scope="row">SpaceX (SpaceXAI)</th><td>US</td><td>Rents Colossus GPUs to Anthropic (~$1.25bn/month, May-2026 → May-2029) and Google (~$920m/month for ~110k GPUs, Oct-2026 → Jun-2029, ~$29.4bn); per summaries of the S-1, both can be ended on 90 days' notice (conf: med) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-78">78</a></td><td>med</td></tr>
               <tr><th scope="row">Vultr</th><td>US</td><td>Independent cloud with an AMD focus; raised $333m at <strong>$3.5bn</strong> (Dec-2024) and $329m of credit (Jun-2025); 50 MW AMD MI355X cluster in Springfield OH, ~$1bn (Dec-2025) <a class="cite" href="#src-46">46</a></td><td>high</td></tr>
               <tr><th scope="row">Firmus</th><td>Australia / Singapore</td><td>Liquid-cooled AI factories (Project Southgate with CDC; Tasmania); NVIDIA-backed; ClusterMAX Silver <a class="cite" href="#src-49">49</a></td><td>med</td></tr>
               <tr><th scope="row">TensorWave</th><td>US</td><td>AMD-GPU neocloud; ClusterMAX Silver <a class="cite" href="#src-49">49</a></td><td>high</td></tr>
@@ -1098,7 +1204,7 @@
           </script>
         </figure>
 
-        <p><strong>In 2026 prices rose.</strong> The neocloud index was up ~11% from April to May <a class="cite" href="#src-51">51</a>; the median H100 is +12% and the H200 +25% year on year <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a>. Named increases: CoreWeave ~+25% across SKUs (Jul-2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>; Nebius two pay-as-you-go hikes (Jul and Oct 2026) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-38">38</a>; Oracle renewals +20% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-16">16</a>; IREN from $20m to ~$25m per MW(IT) on new three-year deals <span class="prov" data-prov="R">R</span><a class="cite" href="#src-47">47</a>. <strong>Why:</strong> Blackwell ramp delays and tight supply; <strong>HBM and DRAM inflation</strong> raising the replacement cost of any new GPU <a class="cite" href="#src-1">1</a>; inference demand (reasoning and agentic workloads) soaking up older GPUs; and lab mega-contracts pre-empting supply.</p>
+        <p><strong>In 2026 prices rose.</strong> The neocloud index was up ~11% from April to May <a class="cite" href="#src-51">51</a>; the median H100 is +12% and the H200 +25% year on year <a class="cite" href="#src-54">54</a><a class="cite" href="#src-55">55</a>. Named increases: CoreWeave ~+25% across SKUs (Jul-2026) <span class="prov" data-prov="R">R</span><a class="cite" href="#src-30">30</a>; Nebius two pay-as-you-go hikes (Jul and Oct 2026) <span class="prov" data-prov="E">E</span><a class="cite" href="#src-38">38</a>; Oracle renewals +20% <span class="prov" data-prov="R">R</span><a class="cite" href="#src-16">16</a>; IREN from $20m to ~$25m per MW(IT) on new three-year deals <span class="prov" data-prov="R">R</span><a class="cite" href="#src-47">47</a>. The scarcity premium shows most in short contracts: in September CoreWeave said new 3–6 month deals were priced at about <strong>$40m of annualized revenue per MW</strong>, roughly double IREN's multi-year rate <span class="prov" data-prov="R">R</span><a class="cite" href="#src-71">71</a>. <strong>Why:</strong> Blackwell ramp delays and tight supply; <strong>HBM and DRAM inflation</strong> raising the replacement cost of any new GPU <a class="cite" href="#src-1">1</a>; inference demand (reasoning and agentic workloads) soaking up older GPUs; and lab mega-contracts pre-empting supply.</p>
 
         <figure class="wide">
           <script type="application/json" data-chart>
@@ -1447,6 +1553,7 @@
             "xKey": "i",
             "series": [{ "key": "r", "label": "Rate" }],
             "data": [
+              { "i": "CoreWeave 2033 converts", "r": 2.875, "note": "Coupon on $3.7bn of convertible notes priced 18 Sep 2026; low because buyers get an option on the stock (conversion $97.85, +22.5%) [72]" },
               { "i": "Hyperscaler bonds", "r": 5.0, "note": "Senior bonds, AA/AAA. Estimate, ~4.5–5.5% (conf: med)" },
               { "i": "IREN IG loan", "r": 6.0, "note": "IG financing against the Microsoft contract. Aug-2026 [47]" },
               { "i": "Lambda TLB", "r": 7.3, "note": "Baa2 term loan B at SOFR+300. All-in at ~4.3% SOFR (conf: med)" },
@@ -1455,7 +1562,8 @@
               { "i": "IREN private credit", "r": 9.0, "note": "Blue Owl/PIMCO facility. Non-IG offtakers, Aug-2026 [47]" },
               { "i": "CoreWeave notes", "r": 9.1, "note": "Senior unsecured notes. ~9.0–9.25% coupons, 2025 issues (conf: med)" }
             ],
-            "source": "Lambda [41]; IREN [47]; CoreWeave [30][32]; StockAnalysis [25]", "asOf": "2026-09-25", "provenance": ["R", "E"]
+            "note": "Convertible coupons are not comparable with straight debt: the lower cash cost is paid for with potential dilution.",
+            "source": "Lambda [41]; IREN [47]; CoreWeave [30][32][72]; StockAnalysis [25]", "asOf": "2026-09-25", "provenance": ["R", "E"]
           }
           </script>
         </figure>
@@ -1492,31 +1600,33 @@
               { "id": "gcp", "label": "Google Cloud", "column": 1, "group": "hyp" },
               { "id": "crwv", "label": "CoreWeave", "column": 2, "group": "neo" },
               { "id": "nbis", "label": "Nebius", "column": 2, "group": "neo" },
-              { "id": "iren", "label": "IREN", "column": 2, "group": "neo" }
+              { "id": "iren", "label": "IREN", "column": 2, "group": "neo" },
+              { "id": "akam", "label": "Akamai", "column": 2, "group": "neo" }
             ],
             "links": [
               { "source": "openai", "target": "oci", "value": 300, "label": "~$300bn, ~5 yrs from FY28 (~4.5 GW)" },
               { "source": "openai", "target": "azure", "value": 250, "label": "+$250bn incremental Azure (Oct-2025)" },
-              { "source": "openai", "target": "aws", "value": 38, "label": "$38bn / 7 yrs (Nov-2025) + ~2 GW Trainium" },
+              { "source": "openai", "target": "aws", "value": 138, "label": "$38bn / 7 yrs (Nov-2025) + $100bn / 8 yrs (Feb-2026) + ~2 GW Trainium" },
               { "source": "openai", "target": "crwv", "value": 22.4, "label": "$11.9bn + $4bn + $6.5bn (2025)" },
               { "source": "anthropic", "target": "fluid", "value": 50, "label": "$50bn US data-center plan (Nov-2025)" },
               { "source": "anthropic", "target": "azure", "value": 30, "label": "$30bn Azure commitment (Nov-2025)" },
               { "source": "meta", "target": "crwv", "value": 35.2, "label": "$14.2bn + $21bn through 2032" },
               { "source": "meta", "target": "oci", "value": 20, "label": "~$20bn (Oct-2025, conf: med)" },
               { "source": "meta", "target": "gcp", "value": 10, "label": "$10bn+ / 6 yrs (Aug-2025)" },
-              { "source": "meta", "target": "nbis", "value": 3, "label": "~$3bn / 5 yrs (Nov-2025)" },
+              { "source": "meta", "target": "nbis", "value": 30, "label": "~$3bn (Nov-2025) + up to ~$27bn / 5 yrs (Mar-2026; $12bn committed)" },
+              { "source": "anthropic", "target": "akam", "value": 11.6, "label": "$11.6bn / 7 yrs (Sep-2026); up to ~$20bn; Akamai warrant to Anthropic" },
               { "source": "nvda", "target": "crwv", "value": 6.3, "label": "Unused-capacity backstop to 2032" },
               { "source": "azure", "target": "nbis", "value": 19.4, "label": "$17.4bn, up to $19.4bn, to 2031" },
               { "source": "azure", "target": "iren", "value": 9.7, "label": "$9.7bn / 5 yrs, GB300 at Childress TX" }
             ],
             "height": 520, "labelSmall": true,
-            "source": "Company releases and press [3][17][22][32][33][67]; W08 data 'flows'", "asOf": "2026-09-25", "provenance": ["R", "E"],
-            "note": "Contract values over different multi-year terms; not annual flows. Not shown (value undisclosed): Anthropic–Google (up to 1m TPUs, 'tens of billions'), Anthropic–AWS (up to 5 GW Trainium), Anthropic–CoreWeave, OpenAI–Google. Microsoft paid CoreWeave ~$3.4bn in CY2025 (~67% of revenue; annual, so not drawn). Several 2025 deal values are from recall (conf: med–high)."
+            "source": "Company releases and press [3][17][22][32][33][67][77][84][85]; W08 data 'flows'", "asOf": "2026-09-25", "provenance": ["R", "E"],
+            "note": "Contract values over different multi-year terms; not annual flows. Not shown (value undisclosed): Anthropic–Google (up to 1m TPUs, 'tens of billions'), Anthropic–AWS (up to 5 GW Trainium), Anthropic–CoreWeave, OpenAI–Google. Microsoft paid CoreWeave ~$3.4bn in CY2025 (~67% of revenue; annual, so not drawn). Akamai (a CDN turned distributed cloud) is shown with the neoclouds. SpaceX's monthly GPU rentals to Anthropic (~$1.25bn/month) and Google (~$920m/month) are cancellable on 90 days' notice and not drawn. Several 2025 deal values are from recall (conf: med–high)."
           }
           </script>
         </figure>
 
-        <p><strong>The OpenAI number.</strong> OpenAI's disclosed compute commitments totalled about <strong>$1.4tn over ~8 years (~30 GW)</strong> by November 2025, across Microsoft, Oracle, AWS, CoreWeave, Google, Broadcom, AMD and NVIDIA (conf: med). At least <strong>$600bn</strong> of it sits in the RPO of the clouds on this page <span class="prov" data-prov="A">A</span> (Microsoft ~$250bn + Oracle ~$300bn + AWS $38bn + CoreWeave $22bn).</p>
+        <p><strong>The OpenAI number.</strong> OpenAI's disclosed compute commitments totalled about <strong>$1.4tn over ~8 years (~30 GW)</strong> by November 2025, across Microsoft, Oracle, AWS, CoreWeave, Google, Broadcom, AMD and NVIDIA (conf: med). At least <strong>~$710bn</strong> of it sits in the RPO of the clouds on this page <span class="prov" data-prov="A">A</span> (Microsoft ~$250bn + Oracle ~$300bn + AWS ~$138bn + CoreWeave $22bn). That figure was ≥$600bn before 25 Sep 2026, when it counted only the original $38bn AWS deal and missed the $100bn expansion of 27 Feb 2026 <a class="cite" href="#src-85">85</a>.</p>
 
         <h3>Who pays this layer</h3>
         <div class="table-wrap wide">
@@ -1525,7 +1635,7 @@
             <tbody>
               <tr><th scope="row">OpenAI</th><td>Microsoft</td><td>+$250bn incremental Azure commitment (Oct-2025)</td><td>Training and inference capacity</td><td>conf: high</td></tr>
               <tr><th scope="row">OpenAI</th><td>Oracle</td><td>~$300bn over ~5 yrs from FY28 (~4.5 GW)</td><td>Stargate capacity</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-22">22</a></td></tr>
-              <tr><th scope="row">OpenAI</th><td>AWS</td><td>$38bn / 7 yrs (Nov-2025) + ~2 GW Trainium from 2027</td><td>GB200/GB300 and Trainium</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a></td></tr>
+              <tr><th scope="row">OpenAI</th><td>AWS</td><td>$38bn / 7 yrs (Nov-2025) + a further $100bn / 8 yrs (27 Feb 2026) ≈ $138bn; ~2 GW Trainium from 2027</td><td>GB200/GB300 and Trainium</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-3">3</a><a class="cite" href="#src-85">85</a></td></tr>
               <tr><th scope="row">OpenAI</th><td>CoreWeave</td><td>~$22.4bn (three contracts, 2025)</td><td>GPU clusters</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-33">33</a></td></tr>
               <tr><th scope="row">OpenAI</th><td>Crusoe / Oracle (Abilene)</td><td>via Oracle</td><td>Stargate I</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-42">42</a></td></tr>
               <tr><th scope="row">Anthropic</th><td>Google Cloud</td><td>"tens of billions", up to 1m TPUs</td><td>TPU training and inference</td><td>conf: high</td></tr>
@@ -1533,11 +1643,13 @@
               <tr><th scope="row">Anthropic</th><td>Microsoft Azure</td><td>$30bn commitment (Nov-2025)</td><td>GB/VR capacity</td><td>conf: high</td></tr>
               <tr><th scope="row">Anthropic</th><td>Fluidstack</td><td>part of a $50bn US data-center plan</td><td>Custom DCs, NY and TX</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-67">67</a></td></tr>
               <tr><th scope="row">Anthropic</th><td>CoreWeave</td><td>multi-year (Apr-2026)</td><td>GPU cloud</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-32">32</a></td></tr>
+              <tr><th scope="row">Anthropic</th><td>Akamai</td><td>$11.6bn / 7 yrs (24 Sep 2026; up to ~$20bn); paid partly in kind by a warrant for up to ~5% of Akamai</td><td>Distributed and edge compute</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-84">84</a></td></tr>
+              <tr><th scope="row">Anthropic; Google</th><td>SpaceX (SpaceXAI)</td><td>~$1.25bn/month (May-2026 → May-2029); ~$920m/month (Oct-2026 → Jun-2029)</td><td>Rented Colossus GPUs; 90-day termination clauses per the S-1 (conf: med)</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-78">78</a> (Google); Anthropic contract in <a href="W09-model-labs.html">W09</a></td></tr>
               <tr><th scope="row">Meta</th><td>CoreWeave</td><td>$14.2bn + $21bn (to 2032)</td><td>GPU cloud</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-32">32</a><a class="cite" href="#src-33">33</a></td></tr>
               <tr><th scope="row">Meta</th><td>Google Cloud</td><td>$10bn+ / 6 yrs (Aug-2025)</td><td>GPU/TPU cloud</td><td>conf: high</td></tr>
-              <tr><th scope="row">Meta</th><td>Nebius</td><td>~$3bn / 5 yrs (Nov-2025)</td><td>GPU cloud</td><td>conf: high</td></tr>
+              <tr><th scope="row">Meta</th><td>Nebius</td><td>~$3bn / 5 yrs (Nov-2025) + up to ~$27bn / 5 yrs (Mar-2026; $12bn committed)</td><td>GPU cloud (Vera Rubin from 2027)</td><td><span class="prov" data-prov="R">R</span><a class="cite" href="#src-77">77</a></td></tr>
               <tr><th scope="row">Meta</th><td>Oracle</td><td>~$20bn (Oct-2025)</td><td>OCI capacity</td><td>conf: med</td></tr>
-              <tr><th scope="row">Microsoft (as buyer)</th><td>Nebius / IREN / Nscale / Lambda / CoreWeave</td><td>$17.4–19.4bn / $9.7bn / multi-$bn / multi-$bn / ~67% of CoreWeave revenue</td><td>Overflow capacity for Azure and OpenAI</td><td>conf: med–high</td></tr>
+              <tr><th scope="row">Microsoft (as buyer)</th><td>Nebius / IREN / Nscale / Lambda / CoreWeave</td><td>$17.4–19.4bn / $9.7bn / up to $43.8bn (Nscale S-1 <a class="cite" href="#src-74">74</a>) / multi-$bn / ~67% of CoreWeave 2025 revenue (largest customer 36% in Q2-26 <a class="cite" href="#src-79">79</a>)</td><td>Overflow capacity for Azure and OpenAI</td><td>conf: med–high</td></tr>
               <tr><th scope="row">NVIDIA (as buyer / backstop)</th><td>CoreWeave; Lambda</td><td>$6.3bn backstop to 2032; ~$1.5bn leaseback</td><td>Unused-capacity guarantee; internal research</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-33">33</a>; conf: med</td></tr>
               <tr><th scope="row">Enterprises and start-ups</th><td>All clouds</td><td>Bulk of the ~$500bn TTM market; GenAI services +165%</td><td>IaaS, PaaS, MaaS</td><td><span class="prov" data-prov="E">E</span><a class="cite" href="#src-26">26</a></td></tr>
             </tbody>
@@ -1738,7 +1850,7 @@
       <section>
         <h2><span class="kicker">11 · Competitive dynamics</span>Frenemies, labs becoming clouds, and NVIDIA as kingmaker</h2>
         <ul>
-          <li><strong>Hyperscalers and neoclouds are frenemies.</strong> Microsoft is both CoreWeave's biggest customer (~67% of 2025 revenue) and its biggest competitor. It uses neoclouds as <strong>off-balance-sheet overflow capacity</strong>: a lease is an operating expense, and the neocloud carries the asset and the obsolescence risk. As Microsoft's own capacity catches up, neocloud renewal risk rises; diversifying to Meta, OpenAI, Anthropic, Jane Street and Google (via Fluidstack backstops) is the neocloud response.</li>
+          <li><strong>Hyperscalers and neoclouds are frenemies.</strong> Microsoft is both CoreWeave's biggest customer (~67% of 2025 revenue; the top customer was 36% in Q2-26 per the 10-Q <a class="cite" href="#src-79">79</a>) and its biggest competitor. It uses neoclouds as <strong>off-balance-sheet overflow capacity</strong>: a lease is an operating expense, and the neocloud carries the asset and the obsolescence risk. As Microsoft's own capacity catches up, neocloud renewal risk rises; diversifying to Meta, OpenAI, Anthropic, Jane Street and Google (via Fluidstack backstops) is the neocloud response.</li>
           <li><strong>Labs are becoming clouds.</strong> OpenAI's Stargate (with SoftBank, Oracle, MGX), Anthropic's $50bn own-DC plan with Fluidstack, and xAI's Colossus make the largest customers partial owners of their compute. Synergy already counts OpenAI and Anthropic among tier-two cloud providers <a class="cite" href="#src-26">26</a>.</li>
           <li><strong>Custom silicon versus NVIDIA.</strong> Google TPU (now also sold to Anthropic and Meta), AWS Trainium (Anthropic, OpenAI from 2027; "$25bn+ chips run-rate" <a class="cite" href="#src-2">2</a>), Microsoft Maia, Meta MTIA. Every GPU-hour moved to custom silicon moves margin from NVIDIA to the hyperscaler, and <strong>removes demand from the neocloud model</strong>, which is NVIDIA-only.</li>
           <li><strong>NVIDIA as kingmaker.</strong> NVIDIA allocates scarce GPUs and invests in neoclouds: CoreWeave $2bn (Jan-2026), Nebius $2bn (Mar-2026), plus Crusoe, Together and Lambda. It also backstops demand (CoreWeave $6.3bn) <a class="cite" href="#src-33">33</a><a class="cite" href="#src-34">34</a><a class="cite" href="#src-40">40</a><a class="cite" href="#src-42">42</a><a class="cite" href="#src-44">44</a>. Critics call this <span class="term" data-term="Circular financing">circular financing</span> (<a href="W02-capital-financing.html">W02</a>); supporters say NVIDIA is seeding a competitive customer base against the hyperscalers' custom chips.</li>
@@ -1815,6 +1927,8 @@
             "series": [{ "key": "a", "label": "Amount" }],
             "data": [
               { "d": "Nebius converts", "a": 5.75, "note": "Convertible notes, Aug" },
+              { "d": "CoreWeave converts", "a": 3.7, "note": "2.875% convertible notes due 2033, priced 18 Sep (upsized)" },
+              { "d": "Nscale pre-IPO notes", "a": 3.36, "note": "Convertible loan notes, Third Point lead; $1bn from NVIDIA; 25 Sep" },
               { "d": "Crusoe Series F", "a": 3.9, "note": "Sep, at $30.9bn post-money" },
               { "d": "IREN IG loan", "a": 3.6, "note": "IG financing against the Microsoft contract, 6%" },
               { "d": "IREN priv. credit", "a": 2.4, "note": "Blue Owl/PIMCO facility at 9%, Aug" },
@@ -1826,7 +1940,8 @@
               { "d": "Together AI C", "a": 0.8, "note": "Series C, Jul" },
               { "d": "Nebius secured", "a": 0.775, "note": "First secured debt, backed by an IG customer contract, Jul" }
             ],
-            "source": "Company releases [34][40][41][42][44][45][47][64][65][66]", "asOf": "2026-09-25", "provenance": "R"
+            "source": "Company releases [34][40][41][42][44][45][47][64][65][66][72][75]", "asOf": "2026-09-25", "provenance": "R",
+            "note": "Lambda's ~$3bn pre-IPO round at ≥$12bn is only in talks (Aug-2026) and is not shown [76]."
           }
           </script>
         </figure>
@@ -1907,9 +2022,10 @@
               <tr><th scope="row">H100/H200/B200 rental indices</th><td>Direct read on supply and demand</td><td>H100 median $3.39 (+12% y/y)</td><td>Silicon Data / GetDeploying weekly</td><td><span class="status status--good">Firming</span></td></tr>
               <tr><th scope="row">Renewal pricing on 2023–24 H100 contracts</th><td>Tests depreciation assumptions</td><td>CoreWeave: "at or above"</td><td>Q4-26 / 2027 renewals</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Neocloud CDS and bond spreads</th><td>The market's default view</td><td>CoreWeave ~855 bp (Jul-26)</td><td>Continuous</td><td><span class="status status--serious">Elevated</span></td></tr>
-              <tr><th scope="row">OpenAI funding and revenue</th><td>Counterparty to ~$600bn+ of RPO</td><td>see <a href="W09-model-labs.html">W09</a></td><td>W09</td><td><span class="status status--warning">Watch</span></td></tr>
+              <tr><th scope="row">Neocloud spot and short-term pricing</th><td>Scarcity premium vs multi-year contracts</td><td>CoreWeave ~$40m/MW (short-dated, Sep-26) vs IREN ~$20–25m/MW <a class="cite" href="#src-71">71</a><a class="cite" href="#src-47">47</a></td><td>CRWV Q3-26, ~mid-Nov-2026</td><td><span class="status status--good">Firming</span></td></tr>
+              <tr><th scope="row">OpenAI funding and revenue</th><td>Counterparty to ~$700bn+ of RPO</td><td>see <a href="W09-model-labs.html">W09</a></td><td>W09</td><td><span class="status status--warning">Watch</span></td></tr>
               <tr><th scope="row">Synergy share data</th><td>Neocloud share (5%) vs big three (63%)</td><td>Q2-26</td><td>Q3-26 data, ~late Oct-2026</td><td><span class="status status--warning">Watch</span></td></tr>
-              <tr><th scope="row">Lambda / Crusoe / Nscale IPO filings</th><td>Public-market appetite for neoclouds</td><td>Lambda private (Aug-26)</td><td>2026–27</td><td><span class="status status--warning">Watch</span></td></tr>
+              <tr><th scope="row">Lambda / Crusoe / Nscale IPO filings</th><td>Public-market appetite for neoclouds</td><td>Nscale S-1 filed 18 Sep 2026 (~$30bn target) <a class="cite" href="#src-74">74</a>; Lambda ~$3bn pre-IPO round talks at ≥$12bn <a class="cite" href="#src-76">76</a></td><td>Nscale pricing Q4-26; Lambda IPO "as soon as 2027"</td><td><span class="status status--warning">Watch</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1938,16 +2054,21 @@
           <li><time datetime="2025-10">Oct 2025</time><div class="tl-body"><h4>Microsoft–OpenAI recapitalization; Anthropic–Google TPU deal</h4><p>+$250bn of Azure commitments; Anthropic gets up to 1m TPUs. Core Scientific holders reject CoreWeave's offer <a class="cite" href="#src-34">34</a>.</p></div></li>
           <li><time datetime="2025-11">Nov 2025</time><div class="tl-body"><h4>A month of mega-deals, and the Burry critique</h4><p>OpenAI–AWS $38bn; IREN–Microsoft $9.7bn; Lambda–Microsoft; Nebius–Meta $3bn; Anthropic–Azure $30bn; Anthropic's $50bn DC plan with Fluidstack; Michael Burry's depreciation critique.</p></div></li>
           <li><time datetime="2026-01">Jan 2026</time><div class="tl-body"><h4>NVIDIA invests $2bn in CoreWeave at $87.20</h4><p>Fluidstack closes an $830m Series A at $7.5bn <a class="cite" href="#src-34">34</a><a class="cite" href="#src-45">45</a>.</p></div></li>
+          <li class="is-key"><time datetime="2026-02-27">27 Feb 2026</time><div class="tl-body"><h4>Amazon invests $50bn in OpenAI; OpenAI's AWS deal grows by $100bn</h4><p>The $38bn agreement expands by $100bn over eight years, ≈$138bn in total <a class="cite" href="#src-85">85</a>.</p><span class="tag">Turning point</span></div></li>
           <li><time datetime="2026-02">Feb/Apr 2026</time><div class="tl-body"><h4>CoreWeave–Meta +$21bn through 2032; Anthropic–CoreWeave deal</h4><p><a class="cite" href="#src-32">32</a><a class="cite" href="#src-34">34</a></p></div></li>
-          <li><time datetime="2026-03">Mar 2026</time><div class="tl-body"><h4>NVIDIA invests $2bn in Nebius</h4><p><a class="cite" href="#src-40">40</a></p></div></li>
+          <li><time datetime="2026-03">Mar 2026</time><div class="tl-body"><h4>NVIDIA invests $2bn in Nebius; Nebius–Meta up to ~$27bn</h4><p>Meta signs for up to ~$27bn over five years (16 Mar: $12bn dedicated + $15bn optional) <a class="cite" href="#src-40">40</a><a class="cite" href="#src-77">77</a>.</p></div></li>
           <li><time datetime="2026-04">Apr 2026</time><div class="tl-body"><h4>Microsoft AI run-rate passes $37bn</h4><p>AWS–OpenAI ~2 GW Trainium; Anthropic up to 5 GW Trainium <a class="cite" href="#src-8">8</a><a class="cite" href="#src-3">3</a>.</p></div></li>
           <li class="is-key"><time datetime="2026-04">Apr–May 2026</time><div class="tl-body"><h4>Neocloud H100 index bottoms at $2.47, then rises to $2.76</h4><p><a class="cite" href="#src-51">51</a></p><span class="tag">Turning point</span></div></li>
+          <li><time datetime="2026-06-05">5 Jun 2026</time><div class="tl-body"><h4>SpaceX filing: Google to rent ~110k GPUs at ~$920m a month</h4><p>October 2026 to June 2029, ~$29.4bn in total <a class="cite" href="#src-78">78</a>.</p></div></li>
           <li><time datetime="2026-06">Jun 2026</time><div class="tl-body"><h4>Oracle FY26</h4><p>OCI $18.1bn, FCF −$23.7bn, RPO $638bn <a class="cite" href="#src-18">18</a>.</p></div></li>
           <li><time datetime="2026-07">Jul 2026</time><div class="tl-body"><h4>CoreWeave raises prices ~25%</h4><p>Together AI's $800m Series C; Synergy Q2 cloud market $143.4bn (+43%) <a class="cite" href="#src-44">44</a><a class="cite" href="#src-30">30</a><a class="cite" href="#src-26">26</a>.</p></div></li>
           <li><time datetime="2026-07-22">22–30 Jul 2026</time><div class="tl-body"><h4>All three big clouds accelerate</h4><p>Google Cloud +82%; Azure +43%; AWS +37% with a $496bn backlog <a class="cite" href="#src-11">11</a><a class="cite" href="#src-6">6</a><a class="cite" href="#src-1">1</a>.</p></div></li>
-          <li><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Neocloud results and financings</h4><p>CoreWeave Q2 $2.58bn revenue, $104bn backlog; Nebius +454% and $5.75bn converts; Lambda's $926m IG term loan; IREN FY26 ($4bn contracted ARR) <a class="cite" href="#src-29">29</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-65">65</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-47">47</a>.</p></div></li>
+          <li><time datetime="2026-08">Aug 2026</time><div class="tl-body"><h4>Neocloud results and financings</h4><p>CoreWeave Q2 $2.58bn revenue, $104bn backlog, ~1.5 GW active / ~3.7 GW contracted (11 Aug); CoreWeave 10-Q: top customer 36% of Q2 revenue (12 Aug); Nebius +454%, FY26 guide $3.0–3.4bn and a 5 GW contracted target (12 Aug), $5.75bn converts; Lambda's $926m IG term loan; IREN FY26 ($4bn contracted ARR) <a class="cite" href="#src-79">79</a><a class="cite" href="#src-80">80</a><a class="cite" href="#src-29">29</a><a class="cite" href="#src-36">36</a><a class="cite" href="#src-65">65</a><a class="cite" href="#src-41">41</a><a class="cite" href="#src-47">47</a>.</p></div></li>
           <li><time datetime="2026-09-10">10 Sep 2026</time><div class="tl-body"><h4>Oracle Q1 FY27</h4><p>OCI +121%, RPO $664bn, $20bn at-the-market equity, 97.9% GPU utilization <a class="cite" href="#src-14">14</a><a class="cite" href="#src-15">15</a>.</p></div></li>
-          <li><time datetime="2026-09-17">17 Sep 2026</time><div class="tl-body"><h4>Crusoe raises $3.9bn at $30.9bn</h4><p><a class="cite" href="#src-42">42</a></p></div></li>
+          <li><time datetime="2026-09-17">17 Sep 2026</time><div class="tl-body"><h4>Crusoe raises $3.9bn at $30.9bn; CoreWeave business update</h4><p>CoreWeave: &gt;$25bn of new commitments, ~$40m/MW short-dated pricing, ~4.2 GW contracted (as of 11 Aug) <a class="cite" href="#src-42">42</a><a class="cite" href="#src-71">71</a>.</p></div></li>
+          <li><time datetime="2026-09-18">18 Sep 2026</time><div class="tl-body"><h4>CoreWeave prices $3.7bn of 2.875% converts; Nscale files for an NYSE IPO</h4><p>Nscale's S-1 shows $103.4bn of active and contracted value <a class="cite" href="#src-72">72</a><a class="cite" href="#src-74">74</a>.</p></div></li>
+          <li><time datetime="2026-09-24">24 Sep 2026</time><div class="tl-body"><h4>Akamai–Anthropic $11.6bn, seven-year deal</h4><p>Up to ~$20bn with options; Akamai gives Anthropic a warrant for up to ~5% of its shares <a class="cite" href="#src-84">84</a>.</p></div></li>
+          <li><time datetime="2026-09-25">25 Sep 2026</time><div class="tl-body"><h4>Nscale closes $3.36bn of pre-IPO convertible notes</h4><p>Third Point lead; $1bn from NVIDIA <a class="cite" href="#src-75">75</a>.</p></div></li>
           <li class="is-key"><time datetime="2026-09">Sep 2026</time><div class="tl-body"><h4>Oracle stress; ClusterMAX 3.0; Nebius's second price hike</h4><p>Project Jupiter force majeure; Oracle CDS at a record; Nebius hike effective 1 Oct <a class="cite" href="#src-25">25</a><a class="cite" href="#src-49">49</a><a class="cite" href="#src-38">38</a>.</p><span class="tag">This page's as-of</span></div></li>
         </ol>
       </section>
@@ -2011,20 +2132,26 @@
       <!-- ============================================================ 18 CONFIDENCE -->
       <section>
         <h2><span class="kicker">18 · Confidence notes</span>What is low-confidence or unverified</h2>
+        <aside class="callout callout--note" id="edition-2-update">
+          <p class="callout-label">Updated 2026-09-25 (Edition 2 re-check)</p>
+          <p>Added CoreWeave's 10-Q customer split (36% / 26% / 10%), dated power figures (~4.2 GW contracted), ~$40m/MW short-dated pricing and $3.7bn of converts; Nebius's FY26 guidance and its missing Meta deal (up to ~$27bn); Nscale's S-1 ($103.4bn contracted) and $3.36bn pre-IPO notes; Lambda's pre-IPO talks; Akamai's $11.6bn Anthropic deal; SpaceX's GPU rentals; Google Cloud Q4-25/Q1-26 operating income from 8-Ks; and the full ~$138bn OpenAI–AWS commitment (OpenAI's share of cloud RPO ≥$600bn → ~$710bn).</p>
+        </aside>
         <aside class="callout callout--note">
           <p class="callout-label">Read these numbers with care</p>
           <ul>
             <li><strong>Oracle's AI-infrastructure gross margin today.</strong> Only The Information's Jun–Aug 2025 figures (14–16%) and Oracle's life-of-contract target (30–40%) exist. Oracle has not disclosed segment gross margin since, and its 35% compute / 65% DC-and-power cost split is ambiguous.</li>
-            <li><strong>Google Cloud Q4-25 and Q1-26 operating income, and Q4-25 backlog</strong> were not re-verified (conf: low–med).</li>
+            <li><strong>Google Cloud Q4-25 backlog.</strong> <em>Mostly resolved 25 Sep 2026:</em> Q4-25 ($17.66bn / OI $5.31bn) and Q1-26 ($20.03bn / OI $6.60bn, backlog &gt;$460bn) now come from Alphabet's 8-K exhibits <a class="cite" href="#src-82">82</a><a class="cite" href="#src-83">83</a>. The Q4-25 backlog (~$240bn, conf: low–med) is still not stated in any release.</li>
             <li><strong>Microsoft Intelligent Cloud FY26 Q1–Q2 values and the OpenAI share of RPO</strong> (~45% at Dec-2025) come from prior-knowledge recall.</li>
             <li><strong>2025 deal values</strong> (Nebius–Microsoft, IREN–Microsoft, Anthropic–Azure $30bn, Meta–GCP, Lambda–Microsoft, Nscale–Microsoft) are widely reported, but the primary releases were not re-fetched.</li>
             <li><strong>AWS's $496bn backlog and Oracle's 97.9% GPU utilization</strong> are not in the companies' releases; they come from call transcripts and press (fact-check: unverified, left as widely reported).</li>
-            <li><strong>CoreWeave's current customer concentration</strong> is not disclosed; the 67% Microsoft figure is FY2025.</li>
+            <li><strong>CoreWeave's current customer concentration.</strong> <em>Resolved:</em> the Q2-26 10-Q shows Customer A 36%, B 26%, C 10% of Q2 revenue (A was 71% in Q2-25) <a class="cite" href="#src-79">79</a>. Still open: the names, which the 10-Q does not give (A is presumably Microsoft).</li>
             <li><strong>Depreciation policies</strong> (Oracle especially) and Burry's $176bn figure are from recall and press (conf: med). His Sep-2026 "$3 trillion" piece is paywalled.</li>
             <li><strong>GB200/GB300 contract prices</strong> are inferred (IREN $/MW and our model); nobody discloses them directly. All unit-economics tables are Atlas models.</li>
             <li><strong>Hyperscaler list prices are inconsistent across sources</strong>: GetDeploying shows AWS H100 at $6.88, Silicon Data's regional series ~$5.40 (US East) and its hyperscaler index ~$7.45. Different baskets, instance sizes and dates.</li>
             <li><strong>Inference vs training and lab vs enterprise revenue splits</strong> are analyst estimates; no company discloses them.</li>
-            <li><strong>Lambda IPO timing, Nscale's latest round and Nebius 2026 guidance</strong> were not verified or retrieved.</li>
+            <li><strong>Lambda and Nscale.</strong> <em>Largely resolved:</em> Nscale filed an S-1 on 18 Sep 2026 and raised $3.36bn of pre-IPO notes <a class="cite" href="#src-74">74</a><a class="cite" href="#src-75">75</a>; its S-1 figures come via press summaries (EDGAR not fetched). Lambda is only in pre-IPO round talks (~$3bn at ≥$12bn), with an IPO "as soon as 2027" <a class="cite" href="#src-76">76</a> (conf: med).</li>
+            <li><strong>Nebius 2026 guidance.</strong> <em>Resolved:</em> FY26 revenue $3.0–3.4bn, year-end ARR $7–9bn, capex $20–25bn, 5 GW contracted power target <a class="cite" href="#src-80">80</a><a class="cite" href="#src-81">81</a>. <em>Correction:</em> the Mar-2026 Meta deal (up to ~$27bn) had been missing from this page and is now added <a class="cite" href="#src-77">77</a>.</li>
+            <li><strong>SpaceX compute contracts.</strong> The 90-day termination clauses come from summaries of the S-1 (conf: med); Google's ~$920m/month is from SpaceX's filing as reported <a class="cite" href="#src-78">78</a>.</li>
             <li><strong>Where this page differs from the dossier.</strong> Headline numbers follow the Atlas canonical set: Oracle debt $129.5bn (dossier ~$125–130bn), Oracle rating BBB− (dossier BBB, negative watch), hyperscaler AI-cloud operating profit ~$33bn (dossier $40–60bn), neocloud operating result ~−$1.5bn (dossier ~$0 to −$5bn), NVIDIA operating profit ~$250bn (dossier ≈$200bn+), Microsoft 2026 capex ~$175bn (dossier ~$190bn+). The fact-check corrected Nebius's Q2-26 GAAP operating loss to −$175.9m.</li>
           </ul>
         </aside>
@@ -2111,6 +2238,22 @@
           <li id="src-68"><span class="src-pub">The Register</span>, “Enterprise cloud infrastructure uptake shows no sign of slowing”, 2026-08-01 (via search listing; not fetched), <a href="https://www.theregister.com/off-prem/2026/08/01/enterprise-cloud-infrastructure-uptake-shows-no-sign-of-slowing/5281835">theregister.com/off-prem/2026/08/01/enterprise-cloud-infr…</a></li>
           <li id="src-69"><span class="src-pub">Bitget News (Alphabet Q2 2026 highlights: Cloud +82%</span>, backlog $514B, FCF negative), 2026-07-23 (via search listing), <a href="https://www.bitget.com/news/detail/12560605532392">bitget.com/news/detail/12560605532392</a></li>
           <li id="src-70"><span class="src-pub">KuCoin News</span>, “AWS Backlog Surpasses $496B…”, 2026-07-31 (via search listing), <a href="https://www.kucoin.com/news/flash/aws-backlog-surpasses-496b-signals-potential-1-trillion-revenue-milestone">kucoin.com/news/flash/aws-backlog-surpasses-496b-signals-…</a></li>
+          <li id="src-71"><span class="src-pub">Yahoo Finance / CoreWeave</span>, “CoreWeave Continues to Contract New Compute Capacity at Higher Prices”, 2026-09-17, <a href="https://finance.yahoo.com/technology/articles/coreweave-continues-contract-compute-capacity-113000032.html">finance.yahoo.com</a></li>
+          <li id="src-72"><span class="src-pub">CoreWeave (via StockTitan)</span>, “CoreWeave Prices Upsized $3.7 Billion Convertible Senior Notes Offering”, 2026-09-18, <a href="https://www.stocktitan.net/news/CRWV/core-weave-prices-upsized-3-7-billion-convertible-senior-notes-mehpzqf6tg8n.html">stocktitan.net</a></li>
+          <li id="src-73"><span class="src-pub">Tradingpedia (citing Reuters)</span>, “CoreWeave Seeks Multibillion-Dollar Financing Plan”, 2026-09-17, <a href="https://www.tradingpedia.com/2026/09/17/coreweave-seeks-multibillion-dollar-financing-plan/">tradingpedia.com</a></li>
+          <li id="src-74"><span class="src-pub">Tech Times</span>, “Nscale Files $30B NYSE IPO With $1B Nvidia Note and $45B Anthropic Deal”, 2026-09-20, <a href="https://www.techtimes.com/articles/327754/20260920/nscale-files-30b-nyse-ipo-1b-nvidia-note-45b-anthropic-deal.htm">techtimes.com</a></li>
+          <li id="src-75"><span class="src-pub">Fierce Network</span>, “Neocloud Nscale raises $3.36B ahead of IPO”, 2026-09-25, <a href="https://www.fierce-network.com/cloud/neocloud-nscale-raises-336b-ahead-ipo">fierce-network.com</a></li>
+          <li id="src-76"><span class="src-pub">Tech Funding News (citing Bloomberg)</span>, “Lambda eyes $12B valuation with $3B pre-IPO raise as AI cloud race heats up”, 2026-08-25, <a href="https://techfundingnews.com/lambda-eyes-12b-valuation-with-3b-pre-ipo-raise-as-ai-cloud-race-heats-up/">techfundingnews.com</a></li>
+          <li id="src-77"><span class="src-pub">Nebius</span>, “Nebius signs new AI infrastructure agreement with Meta”, 2026-03-16, <a href="https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta">nebius.com</a></li>
+          <li id="src-78"><span class="src-pub">TechCrunch</span>, “Google will pay SpaceX $920M per month for compute (SpaceX SEC filing)”, 2026-06-05, <a href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/">techcrunch.com</a></li>
+          <li id="src-79"><span class="src-pub">CoreWeave (SEC)</span>, “Form 10-Q for the quarter ended 30 Jun 2026 (customer concentration, RPO)”, 2026-08-12, <a href="https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630.htm">sec.gov</a></li>
+          <li id="src-80"><span class="src-pub">Nebius Group</span>, “Letter to shareholders Q2 2026”, 2026-08-12, <a href="https://assets.nebius.com/assets/a6ecfd85-a6cb-4967-8ef7-9a25bd261f9c/SHLQ226.pdf">assets.nebius.com</a></li>
+          <li id="src-81"><span class="src-pub">The Motley Fool</span>, “Nebius (NBIS) Q2 2026 Earnings Call Transcript”, 2026-08-19, <a href="https://www.fool.com/earnings/call-transcripts/2026/08/19/nebius-nbis-q2-2026-earnings-call-transcript/">fool.com</a></li>
+          <li id="src-82"><span class="src-pub">Alphabet Inc. (SEC)</span>, “Form 8-K Exhibit 99.1, Q4 2025 results”, 2026-02-04, <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm">sec.gov</a></li>
+          <li id="src-83"><span class="src-pub">Alphabet Inc. (SEC)</span>, “Form 8-K Exhibit 99.1, Q1 2026 results”, 2026-04-29, <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm">sec.gov</a></li>
+          <li id="src-84"><span class="src-pub">Akamai</span>, “Akamai announces $11.6 billion multi-year agreement with Anthropic to support growing demand”, 2026-09-24, <a href="https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand">akamai.com</a></li>
+          <li id="src-85"><span class="src-pub">Amazon</span>, “Amazon and OpenAI announce strategic partnership and investment (expanding the $38B agreement by $100B over 8 years)”, 2026-02-27, <a href="https://www.aboutamazon.com/news/aws/amazon-open-ai-strategic-partnership-investment">aboutamazon.com</a></li>
+          <li id="src-86"><span class="src-pub">Amazon</span>, “Amazon Q2 2026 earnings report (chips business: Trainium, Graviton, Nitro &gt;$25B run-rate)”, 2026-07-30, <a href="https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report">aboutamazon.com</a></li>
         </ol>
       </section>
 
