@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en" data-root="" data-page="style-guide">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design system · AI Buildout Atlas</title>
+  <meta name="description" content="The living style guide for the AI Buildout Atlas: tokens, components and chart types, with usage notes.">
+  <script>try{var t=localStorage.getItem('atlas-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/atlas.css">
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/atlas.js" defer></script>
+</head>
+<body>
+<header class="topbar"></header>
+<div class="shell">
+  <nav class="sidebar" id="atlas-sidebar" aria-label="Atlas contents"></nav>
+  <main id="main" class="main" tabindex="-1">
+    <article class="article">
+
+      <header class="hero">
+        <div class="hero-top"><span class="layer-chip">DS</span><span class="hero-track">Reference · Design system</span></div>
+        <h1>Design system</h1>
+        <p class="dek">Every token, component and chart the Atlas uses, rendered live with a note on when to use it. Copy markup from here or from <code>_template.html</code>; never restyle a component inside a page.</p>
+        <dl class="hero-meta">
+          <div><dt>Version</dt><dd>1.0</dd></div>
+          <div><dt>Files</dt><dd><code>assets/css/atlas.css</code> · <code>assets/js/atlas.js</code> · <code>assets/js/nav.js</code></dd></div>
+          <div><dt>Rules</dt><dd><code>methodology/html-style-guide.md</code></dd></div>
+        </dl>
+      </header>
+
+      <!-- ============================================================ PRINCIPLES -->
+      <section>
+        <h2>Principles</h2>
+        <p class="lede">Calm, typographic and exact. The data is the only thing allowed to be loud.</p>
+        <ul>
+          <li><strong>One accent.</strong> A single blue carries links, the current page and focus. Everything else is ink on paper.</li>
+          <li><strong>Color has a job.</strong> Categorical color is identity, sequential is magnitude, diverging is polarity, status is state. Never decoration.</li>
+          <li><strong>Every number is dated and tagged</strong> with a provenance badge and a source.</li>
+          <li><strong>Every chart has a table.</strong> Tooltips help; they never gate a value.</li>
+          <li><strong>Two themes, both designed.</strong> Dark is its own palette, not an inversion. Check both.</li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ COLOR -->
+      <section>
+        <h2>Color tokens</h2>
+        <p class="sg-usage">All colors are CSS custom properties on <code>:root</code>, redefined for dark mode. Charts read them at render time, so the theme toggle re-colors every chart. Swatches below follow the current theme.</p>
+
+        <h3>Planes and ink</h3>
+        <div class="sg-swatches wide">
+          <div class="sg-swatch" style="--sw: var(--page)"><i></i><span>Page<br><code>--page</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--surface)"><i></i><span>Surface / chart<br><code>--surface</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--surface-2)"><i></i><span>Quiet fill<br><code>--surface-2</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--ink)"><i></i><span>Ink<br><code>--ink</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--ink-2)"><i></i><span>Secondary<br><code>--ink-2</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--ink-3)"><i></i><span>Muted<br><code>--ink-3</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--rule)"><i></i><span>Hairline / grid<br><code>--rule</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--rule-2)"><i></i><span>Baseline<br><code>--rule-2</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--accent)"><i></i><span>Accent<br><code>--accent</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--accent-soft)"><i></i><span>Accent wash<br><code>--accent-soft</code></span></div>
+        </div>
+        <p class="sg-usage"><strong>Muted ink</strong> (<code>--ink-3</code>) is below 4.5:1. Use it for axis ticks and decorative labels only, never for sentences.</p>
+
+        <h3>Categorical (fixed order, never cycled)</h3>
+        <div class="sg-swatches wide">
+          <div class="sg-swatch" style="--sw: var(--cat-1)"><i></i><span>1 · blue<br><code>--cat-1</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-2)"><i></i><span>2 · orange<br><code>--cat-2</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-3)"><i></i><span>3 · aqua<br><code>--cat-3</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-4)"><i></i><span>4 · yellow<br><code>--cat-4</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-5)"><i></i><span>5 · magenta<br><code>--cat-5</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-6)"><i></i><span>6 · green<br><code>--cat-6</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-7)"><i></i><span>7 · violet<br><code>--cat-7</code></span></div>
+          <div class="sg-swatch" style="--sw: var(--cat-8)"><i></i><span>8 · red<br><code>--cat-8</code></span></div>
+        </div>
+        <p class="sg-usage">Series take slots in this order. To keep an entity the same color across charts, pin it with <code>"color": 3</code> on the series. A ninth series is never a new hue: fold it into "Other". Scatter and bubble charts use at most 3 series.</p>
+
+        <h3>Sequential and diverging</h3>
+        <div class="sg-ramp wide" aria-label="Sequential blue ramp">
+          <i style="--sw: var(--seq-1)"></i><i style="--sw: var(--seq-2)"></i><i style="--sw: var(--seq-3)"></i><i style="--sw: var(--seq-4)"></i><i style="--sw: var(--seq-5)"></i>
+          <i style="--sw: var(--seq-6)"></i><i style="--sw: var(--seq-7)"></i><i style="--sw: var(--seq-8)"></i><i style="--sw: var(--seq-9)"></i><i style="--sw: var(--seq-10)"></i>
+        </div>
+        <div class="sg-ramp wide" aria-label="Diverging blue to red ramp">
+          <i style="--sw: var(--div-pos-3)"></i><i style="--sw: var(--div-pos-2)"></i><i style="--sw: var(--div-pos-1)"></i><i style="--sw: var(--div-mid)"></i>
+          <i style="--sw: var(--div-neg-1)"></i><i style="--sw: var(--div-neg-2)"></i><i style="--sw: var(--div-neg-3)"></i>
+        </div>
+        <p class="sg-usage">Sequential (<code>--seq-1</code> to <code>--seq-10</code>) shows magnitude. Diverging (<code>--div-pos-*</code>, <code>--div-mid</code>, <code>--div-neg-*</code>) shows polarity: waterfall increases are <code>--div-pos-2</code>, decreases <code>--div-neg-2</code>, totals neutral <code>--c-total</code>.</p>
+
+        <h3>Status (only for status)</h3>
+        <p class="pill-row">
+          <span class="status status--good">On track</span>
+          <span class="status status--warning">Watch</span>
+          <span class="status status--serious">Tight</span>
+          <span class="status status--critical">Risk</span>
+        </p>
+        <p class="sg-usage">Always icon + label; never color alone and never as a chart series. Markup: <code>&lt;span class="status status--warning"&gt;Watch&lt;/span&gt;</code>.</p>
+      </section>
+
+      <!-- ============================================================ TYPE -->
+      <section>
+        <h2>Typography</h2>
+        <p class="sg-usage">System fonts only, no web fonts. A system serif (Iowan Old Style, Charter, Cambria, Georgia) for titles and long-form prose; the system sans for UI, tables, numbers and charts. Big numbers use proportional figures; columns of numbers use <code>tabular-nums</code>.</p>
+        <div class="sg-type-row"><span>h1 · serif</span><span style="font-family:var(--font-serif);font-size:2.4rem;font-weight:600;line-height:1.1;color:var(--ink)">Compute silicon</span></div>
+        <div class="sg-type-row"><span>h2 · serif</span><span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:600;color:var(--ink)">Where the money goes</span></div>
+        <div class="sg-type-row"><span>h3 · sans</span><span style="font-size:1.1875rem;font-weight:600;color:var(--ink)">Quarterly revenue by vendor</span></div>
+        <div class="sg-type-row"><span>.lede</span><span style="font-family:var(--font-serif);font-size:1.3rem;color:var(--ink)">An opening sentence that sets up the section.</span></div>
+        <div class="sg-type-row"><span>body · serif</span><span style="font-family:var(--font-serif);font-size:1.125rem">Body prose sits in a ~72-character column at 18px with generous leading.</span></div>
+        <div class="sg-type-row"><span>.kpi-value</span><span style="font-size:2rem;font-weight:620;color:var(--ink);letter-spacing:-0.02em">$230<small style="font-size:.5em;color:var(--ink-2)">bn</small></span></div>
+        <div class="sg-type-row"><span>.eyebrow</span><span class="eyebrow">The 60-second version</span></div>
+        <div class="sg-type-row"><span>.note</span><span class="note">Small print for method notes and captions.</span></div>
+      </section>
+
+      <!-- ============================================================ LAYOUT -->
+      <section>
+        <h2>Layout</h2>
+        <p>The shell has a sticky left sidebar (built from <code>nav.js</code>), a main column, and an "On this page" rail generated from every <code>h2</code>/<code>h3</code> on screens 1280px and wider. Below 1024px the sidebar becomes a drawer behind the menu button.</p>
+        <p>Inside <code>.article</code>, every child sits in the reading column. Two opt-outs:</p>
+        <div class="figure-plain wide"><strong>.wide</strong>: charts, tables, card grids, KPI rows. Breaks out of the reading column on large screens.</div>
+        <div class="figure-plain"><strong>(default)</strong>: prose, callouts, small figures. Holds a ~72ch measure.</div>
+        <p class="sg-usage" style="margin-top:1rem">Use <code>.full</code> for rare edge-to-edge bands (add <code>.full-inner</code> inside for gutters). Wrap each h2 section in a plain <code>&lt;section&gt;</code>; it inherits the grid.</p>
+      </section>
+
+      <!-- ============================================================ COMPONENTS -->
+      <section>
+        <h2>Components</h2>
+
+        <h3>Hero header</h3>
+        <p class="sg-usage">Top of every layer page: layer ID chip, track, serif title, one-sentence dek, then as-of, reading time (<code>data-reading-time</code> is filled automatically), status and related layers. See the top of this page and <code>_template.html</code>.</p>
+
+        <h3>KPI tiles</h3>
+        <div class="kpis wide" role="group" aria-label="Example KPIs">
+          <div class="kpi"><span class="kpi-label">Accelerator revenue, 2025</span><span class="kpi-value">$230<small>bn</small></span><span class="kpi-delta is-up">+53% <span>vs 2024</span></span><span class="kpi-foot"><span class="prov" data-prov="E">E</span> CY2025</span></div>
+          <div class="kpi"><span class="kpi-label">Merchant GPU unit share</span><span class="kpi-value">78%</span><span class="kpi-delta is-down">−6 pp <span>vs 2024</span></span><span class="kpi-foot"><span class="prov" data-prov="E">E</span> CY2025</span></div>
+          <div class="kpi"><span class="kpi-label">Gross margin</span><span class="kpi-value">75%</span><span class="kpi-delta is-flat">±0 pp <span>q/q</span></span><span class="kpi-foot"><span class="prov" data-prov="R">R</span> FQ2</span></div>
+        </div>
+        <p class="sg-usage">4 to 6 tiles. Sentence-case label with the period in it; value with the unit in <code>&lt;small&gt;</code>; optional delta (<code>is-up</code>, <code>is-down</code>, <code>is-flat</code>) against a named period; provenance and period in the foot. The delta color is direction, not good/bad.</p>
+
+        <h3>The 60-second version</h3>
+        <div class="summary"><p class="eyebrow">The 60-second version</p><ol><li><strong>Lead with the claim</strong>, then the number that proves it.</li><li>Four to six items. A reader can stop here.</li></ol></div>
+
+        <h3>Callouts</h3>
+        <aside class="callout callout--insight"><p class="callout-label">Key insight</p><p>The one thing to remember from a section. Use at most one or two per section.</p></aside>
+        <aside class="callout callout--analogy"><p class="callout-label">Analogy</p><p>An everyday comparison that makes the mechanism click. Every layer page has at least one.</p></aside>
+        <aside class="callout callout--why"><p class="callout-label">Why it matters</p><p>Connects this detail to money, risk or the rest of the stack.</p></aside>
+        <aside class="callout callout--definition"><p class="callout-label">Definition</p><p><dfn>Term</dfn>: a precise one-sentence definition.</p></aside>
+        <aside class="callout callout--watch"><p class="callout-label">Watch list</p><ul><li>A leading indicator, with the date it next updates.</li></ul></aside>
+        <aside class="callout callout--note"><p class="callout-label">Note</p><p>Method caveats, data gaps, low-confidence flags.</p></aside>
+        <div class="bullbear wide">
+          <aside class="callout callout--bull"><p class="callout-label">Bull case</p><h3>The strongest case for</h3><ul><li>Specific, quantified, falsifiable.</li></ul></aside>
+          <aside class="callout callout--bear"><p class="callout-label">Bear case</p><h3>The strongest case against</h3><ul><li>Same length and rigor as the bull side.</li></ul></aside>
+        </div>
+        <p class="sg-usage">Markup: <code>&lt;aside class="callout callout--insight"&gt;&lt;p class="callout-label"&gt;Key insight&lt;/p&gt;…&lt;/aside&gt;</code>. Variants: <code>insight</code>, <code>analogy</code>, <code>why</code>, <code>definition</code>, <code>watch</code>, <code>note</code>, <code>bull</code>, <code>bear</code>. Bull and bear sit side by side in <code>.bullbear.wide</code> and stack on phones.</p>
+
+        <h3>Explain like I'm new</h3>
+        <details class="eli5"><summary>What is HBM, and why is it scarce?</summary><div class="eli5-body"><p>A short, plain-language answer for beginners. Experts skip it because it is closed by default.</p></div></details>
+        <p class="sg-usage"><code>&lt;details class="eli5"&gt;&lt;summary&gt;Question?&lt;/summary&gt;&lt;div class="eli5-body"&gt;…&lt;/div&gt;&lt;/details&gt;</code>. Phrase the summary as the question a newcomer would ask.</p>
+
+        <h3>Comparison table</h3>
+        <div class="table-wrap wide">
+          <table data-sortable>
+            <caption>Sortable comparison <small>Click a header. Numeric columns align right with tabular figures.</small></caption>
+            <thead><tr><th scope="col">Company</th><th scope="col">Role</th><th scope="col" class="num">Revenue ($bn)</th><th scope="col" class="num">Growth</th><th scope="col" class="num">Gross margin</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Vendor A</th><td>Merchant GPU</td><td>198.0</td><td data-sort="62">+62%</td><td>75%</td></tr>
+              <tr><th scope="row">Vendor B</th><td>Merchant GPU</td><td>17.9</td><td data-sort="38">+38%</td><td>53%</td></tr>
+              <tr><th scope="row">Vendor C</th><td>Custom ASIC</td><td>24.5</td><td data-sort="65">+65%</td><td>64%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="sg-usage">Wrap in <code>.table-wrap</code> (it scrolls sideways on phones). Put <code>class="num"</code> on numeric <code>&lt;th&gt;</code>s and atlas.js aligns the whole column. Add <code>data-sortable</code> to the table for click-to-sort, <code>data-sort="…"</code> on cells whose text is not a clean number, <code>data-nosort</code> on a header to exclude it. <code>.table--sticky-col</code> pins the first column; <code>.is-tall</code> on the wrap caps height so the header sticks; <code>.table--compact</code> tightens rows.</p>
+
+        <h3>Company cards</h3>
+        <div class="cards wide">
+          <article class="company-card">
+            <header><h4>Vendor A</h4><span class="ticker">AAAA</span><span class="chip role"><span class="chip-id">W05</span> GPU</span></header>
+            <p>One line on the business and why it matters in this layer.</p>
+            <dl class="metrics"><div><dt>AI revenue, LTM</dt><dd>$198bn</dd></div><div><dt>Gross margin</dt><dd>75%</dd></div><div><dt>Unit share</dt><dd>71%</dd></div><div><dt>Growth y/y</dt><dd>+62%</dd></div></dl>
+            <footer><span class="prov" data-prov="R">R</span> FY26 Q2 · as of 2026-09-25</footer>
+          </article>
+          <article class="company-card">
+            <header><h4>Vendor C</h4><span class="ticker">CCCC</span><span class="chip role"><span class="chip-id">W06</span> Foundry</span></header>
+            <p>Cards go in a <code>.cards.wide</code> grid; three per row on desktop, one on phones.</p>
+            <dl class="metrics"><div><dt>Revenue</dt><dd>$90bn</dd></div><div><dt>Share</dt><dd>~90%</dd></div></dl>
+            <footer><span class="prov" data-prov="E">E</span> CY2025</footer>
+          </article>
+        </div>
+
+        <h3>Pills, tags and chips</h3>
+        <p class="pill-row"><span class="pill">Pill</span><span class="pill pill--accent">Accent pill</span><span class="tag">Tag</span><span class="chip"><span class="chip-id">W05</span> Role chip</span><span class="chip"><span class="swatch" style="--sw: var(--cat-2)"></span>Swatch chip</span></p>
+        <p class="sg-usage">Pills for filters and categories, tags for labels on timeline items, chips for a company's role in the stack (layer ID + role).</p>
+
+        <h3>Provenance badges</h3>
+        <div class="prov-legend">
+          <span><span class="prov" data-prov="R">R</span> Reported (filings, releases)</span>
+          <span><span class="prov" data-prov="G">G</span> Company guidance</span>
+          <span><span class="prov" data-prov="E">E</span> Third-party estimate</span>
+          <span><span class="prov" data-prov="A">A</span> Atlas estimate (show the math)</span>
+        </div>
+        <p class="sg-usage">Place right after the number: <code>$230bn &lt;span class="prov" data-prov="E"&gt;E&lt;/span&gt;</code>. Hover or focus shows the meaning; screen readers get it as text. In charts use <code>"provenance"</code> in the JSON.</p>
+
+        <h3>Citations and sources</h3>
+        <p>Revenue grew tenfold in four years.<a class="cite" href="#src-demo-1">1</a> Hover the number to preview the source.</p>
+        <ol class="sources">
+          <li id="src-demo-1"><span class="src-pub">Publisher</span>, “Title of the document”, 2026-06-30, <a href="https://example.com">example.com</a></li>
+        </ol>
+        <p class="sg-usage">Cite with <code>&lt;a class="cite" href="#src-1"&gt;1&lt;/a&gt;</code> (the brackets are drawn by CSS). Each source is <code>&lt;li id="src-1"&gt;</code> in <code>&lt;ol class="sources"&gt;</code>, numbered as in the dossier.</p>
+
+        <h3>Glossary terms</h3>
+        <p>Accelerators need <span class="term" data-term="HBM">HBM</span> and advanced packaging. An <abbr title="Application-specific integrated circuit">ASIC</abbr> can also use a plain <code>&lt;abbr&gt;</code>. Inline definitions work too: <span class="term" data-def="Tera floating-point operations per second: a measure of raw compute.">TFLOPS</span>.</p>
+        <script type="application/json" id="atlas-glossary">{ "HBM": "High-bandwidth memory. DRAM stacked vertically next to the processor to feed it data fast." }</script>
+        <p class="sg-usage"><code>&lt;span class="term" data-term="HBM"&gt;HBM&lt;/span&gt;</code> looks the definition up in the page's <code>&lt;script type="application/json" id="atlas-glossary"&gt;</code> block (or <code>window.ATLAS_GLOSSARY</code>); <code>data-def="…"</code> defines it inline. Use on first mention per section only.</p>
+
+        <h3>Timeline</h3>
+        <ol class="timeline">
+          <li><time datetime="2022-11">Nov 2022</time><div class="tl-body"><h4>An event</h4><p>One or two sentences on what happened and why it mattered.</p></div></li>
+          <li class="is-key"><time datetime="2023-05">May 2023</time><div class="tl-body"><h4>A turning point</h4><p>Add <code>class="is-key"</code> to the <code>li</code> for a filled accent dot.</p><span class="tag">Turning point</span></div></li>
+        </ol>
+
+        <h3>Layer stack (static HTML)</h3>
+        <ol class="layer-stack">
+          <li><span class="l-id">W09</span><span class="l-name">Model labs<span class="l-note">A note under the name</span></span><span class="l-value">$ value</span></li>
+          <li class="is-current"><span class="l-id">W08</span><span class="l-name">Cloud<span class="l-note">.is-current highlights a row</span></span><span class="l-value">$ value</span></li>
+          <li><span class="l-id">W07</span><span class="l-name">Networking &amp; systems</span><span class="l-value"></span></li>
+        </ol>
+        <p class="sg-usage" style="margin-top:0.75rem">Prefer the <code>"layers"</code> chart type (below): it adds the Table toggle, links and the money arrow, and highlights the current page automatically.</p>
+
+        <h3>Money-flow chain</h3>
+        <div class="flow wide" role="group" aria-label="Example money flow">
+          <div class="flow-node"><span class="f-id">W10</span><span class="f-name">Apps</span><span class="f-note">Customers pay</span></div>
+          <div class="flow-arrow"><span class="f-amt">$10bn</span><span class="f-line"></span><span class="f-what">API fees</span></div>
+          <div class="flow-node is-current"><span class="f-id">W09</span><span class="f-name">Model labs</span><span class="f-note">Train and serve</span></div>
+          <div class="flow-arrow"><span class="f-amt">$6bn</span><span class="f-line"></span><span class="f-what">compute</span></div>
+          <div class="flow-node"><span class="f-id">W08</span><span class="f-name">Cloud</span><span class="f-note">Rents GPUs</span></div>
+        </div>
+        <p class="sg-usage">For a simple chain (A pays B pays C). Turns vertical on phones. When flows split or merge, use the sankey instead.</p>
+
+        <h3>Status in a table</h3>
+        <div class="table-wrap"><table class="table--compact"><thead><tr><th scope="col">Indicator</th><th scope="col">Signal</th></tr></thead><tbody><tr><th scope="row">Packaging capacity</th><td><span class="status status--serious">Tight</span></td></tr><tr><th scope="row">Lead times</th><td><span class="status status--good">Easing</span></td></tr></tbody></table></div>
+
+        <h3>Navigation furniture</h3>
+        <p class="sg-usage">All generated by atlas.js; pages only provide empty containers: the <strong>sidebar</strong> (current page highlighted from <code>&lt;html data-page&gt;</code>), the <strong>On this page</strong> rail with scroll-spy, <strong>section anchors</strong> (hover any h2/h3 for the # link), the <strong>reading progress</strong> bar under the top edge, the <strong>back-to-top</strong> button, the <strong>theme toggle</strong>, and the <strong>prev/next pager</strong> (<code>&lt;nav data-pager&gt;&lt;/nav&gt;</code>, ordered by <code>nav.js</code>).</p>
+        <nav class="pager" aria-label="Pager example">
+          <a class="pg-prev" href="#"><span class="pg-dir">← Previous layer</span><span class="pg-title"><span class="nav-id">W04</span>Data centers</span></a>
+          <a class="pg-next" href="#"><span class="pg-dir">Next layer →</span><span class="pg-title"><span class="nav-id">W06</span>Semiconductor supply chain</span></a>
+        </nav>
+      </section>
+
+      <!-- ============================================================ CHARTS -->
+      <section>
+        <h2>Charts</h2>
+        <p>Every chart is a <code>&lt;figure&gt;</code> holding an inline <code>&lt;script type="application/json" data-chart&gt;</code> config. atlas.js draws an SVG, a legend (for 2+ series), a tooltip, a keyboard-navigable focus layer (arrow keys), a <strong>Table</strong> toggle and a source line. Charts re-render on resize and on theme change. Open "Show config" under any chart to copy it.</p>
+        <aside class="callout callout--note"><p class="callout-label">Rules</p><ul><li>One value axis. Never a dual axis; use two charts.</li><li>No pie charts: use a bar or a treemap.</li><li>Text is always ink; identity comes from the swatch beside it.</li><li>Always set <code>source</code>, <code>asOf</code> and <code>provenance</code>.</li></ul></aside>
+
+        <h3>Column (single series)</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bar", "title": "Column chart", "subtitle": "One series: no legend box, values on the caps", "valueFormat": "$bn",
+            "xKey": "year", "series": [{ "key": "v", "label": "Revenue" }],
+            "data": [{ "year": "2021", "v": 17 }, { "year": "2022", "v": 25 }, { "year": "2023", "v": 62 }, { "year": "2024", "v": 150 }, { "year": "2025", "v": 230 }],
+            "annotations": [{ "x": "2023", "label": "Annotation" }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "R" }
+          </script>
+        </figure>
+
+        <h3>Horizontal bar</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bar", "horizontal": true, "title": "Horizontal bar", "subtitle": "Best for ranked lists and long labels", "valueFormat": "$bn",
+            "xKey": "name", "series": [{ "key": "v", "label": "Spend" }],
+            "data": [{ "name": "Buyer one", "v": 38 }, { "name": "Buyer two", "v": 34 }, { "name": "A buyer with a long name", "v": 29 }, { "name": "Everyone else", "v": 63 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+
+        <h3>Grouped bar</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bar", "title": "Grouped bar", "subtitle": "Multiple series side by side; negative values hang below zero", "valueFormat": "%",
+            "xKey": "co", "series": [{ "key": "gm", "label": "Gross margin" }, { "key": "om", "label": "Operating margin" }],
+            "data": [{ "co": "A", "gm": 75, "om": 62 }, { "co": "B", "gm": 53, "om": 24 }, { "co": "C", "gm": 39, "om": -8 }],
+            "annotations": [{ "y": 50, "label": "Reference line" }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "R" }
+          </script>
+        </figure>
+
+        <h3>Stacked bar and 100% stacked bar</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bar", "stacked": true, "title": "Stacked bar", "subtitle": "Totals on top; 2px surface gap between segments", "valueFormat": "$bn",
+            "xKey": "y", "series": [{ "key": "a", "label": "Hyperscalers" }, { "key": "b", "label": "Neoclouds" }, { "key": "c", "label": "Enterprise" }],
+            "data": [{ "y": "2023", "a": 38, "b": 8, "c": 12 }, { "y": "2024", "a": 95, "b": 22, "c": 25 }, { "y": "2025", "a": 140, "b": 38, "c": 36 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bar", "stacked": "percent", "title": "100% stacked bar", "subtitle": "Shares; the tooltip also shows absolute values", "valueFormat": "$bn",
+            "xKey": "y", "series": [{ "key": "a", "label": "Hyperscalers" }, { "key": "b", "label": "Neoclouds" }, { "key": "c", "label": "Enterprise" }],
+            "data": [{ "y": "2023", "a": 38, "b": 8, "c": 12 }, { "y": "2024", "a": 95, "b": 22, "c": 25 }, { "y": "2025", "a": 140, "b": 38, "c": 36 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+
+        <h3>Line</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "line", "title": "Line chart", "subtitle": "Crosshair tooltip lists every series; end labels when they fit; forecast shading", "valueFormat": "$bn",
+            "xKey": "q", "series": [{ "key": "a", "label": "Vendor A" }, { "key": "b", "label": "Vendor B" }],
+            "data": [{ "q": "Q1 25", "a": 39, "b": 12 }, { "q": "Q2 25", "a": 41, "b": 16 }, { "q": "Q3 25", "a": 51, "b": 19 }, { "q": "Q4 25", "a": 57, "b": 24 }, { "q": "Q1 26", "a": 62, "b": 27 }],
+            "forecastFrom": "Q1 26",
+            "source": "Example data", "asOf": "2026-09-25", "provenance": ["R", "G"] }
+          </script>
+        </figure>
+
+        <h3>Area and stacked area</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "area", "title": "Area chart", "subtitle": "One series with a 10% wash", "valueFormat": { "suffix": "m", "decimals": 1 },
+            "xKey": "year", "series": [{ "key": "v", "label": "Installed base" }],
+            "data": [{ "year": 2021, "v": 0.7 }, { "year": 2022, "v": 1.1 }, { "year": 2023, "v": 2.4 }, { "year": 2024, "v": 5.6 }, { "year": 2025, "v": 9.8 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "A" }
+          </script>
+        </figure>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "stacked-area", "title": "Stacked area", "subtitle": "Parts of a growing whole over time", "valueFormat": "$bn",
+            "xKey": "year", "series": [{ "key": "a", "label": "Training" }, { "key": "b", "label": "Inference" }],
+            "data": [{ "year": 2022, "a": 18, "b": 7 }, { "year": 2023, "a": 40, "b": 22 }, { "year": 2024, "a": 80, "b": 70 }, { "year": 2025, "a": 105, "b": 125 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+
+        <h3>Scatter and bubble</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "scatter", "title": "Scatter", "subtitle": "Two measures per item; nearest-point hover; at most 3 series",
+            "xKey": "x", "yKey": "y", "labelKey": "name", "groupKey": "kind", "xFormat": "%", "yFormat": "%", "xLabel": "Growth", "yLabel": "Margin",
+            "series": [{ "key": "gpu", "label": "GPU" }, { "key": "asic", "label": "ASIC" }],
+            "data": [{ "name": "A", "kind": "gpu", "x": 62, "y": 75 }, { "name": "B", "kind": "gpu", "x": 38, "y": 53 }, { "name": "C", "kind": "asic", "x": 65, "y": 64 }, { "name": "D", "kind": "asic", "x": -5, "y": 46 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "R" }
+          </script>
+        </figure>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "bubble", "title": "Bubble", "subtitle": "Circle area encodes a third measure (rKey)",
+            "xKey": "x", "yKey": "y", "rKey": "cap", "labelKey": "name", "xFormat": "%", "yFormat": "%", "rFormat": "$bn",
+            "xLabel": "Growth", "yLabel": "Margin", "rLabel": "market value", "labels": "all",
+            "data": [{ "name": "A", "x": 62, "y": 75, "cap": 4200 }, { "name": "B", "x": 38, "y": 53, "cap": 260 }, { "name": "C", "x": 65, "y": 64, "cap": 1500 }, { "name": "D", "x": -5, "y": 46, "cap": 90 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+
+        <h3>Waterfall ("where does $1 go")</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "waterfall", "title": "Waterfall", "subtitle": "Totals neutral, increases blue, decreases red; a total with no value is the running total",
+            "valueFormat": { "prefix": "$", "decimals": 2 },
+            "data": [{ "label": "Revenue", "value": 1.0, "kind": "total" }, { "label": "Memory", "value": -0.1 }, { "label": "Wafers", "value": -0.08 }, { "label": "Other", "value": -0.07 }, { "label": "Gross profit", "kind": "total" }, { "label": "Opex", "value": -0.12 }, { "label": "Operating profit", "kind": "total" }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "A" }
+          </script>
+        </figure>
+
+        <h3>Sankey (money flow)</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "sankey", "title": "Sankey", "subtitle": "Band width is proportional to USD; hover traces the whole path", "valueFormat": "$bn",
+            "columns": ["Payers", "Middle", "Recipients"], "height": 320,
+            "nodes": [{ "id": "a", "label": "Customers", "column": 0 }, { "id": "b", "label": "Investors", "column": 0 }, { "id": "c", "label": "Clouds", "column": 1 }, { "id": "d", "label": "Chips", "column": 2 }, { "id": "e", "label": "Buildings", "column": 2 }],
+            "links": [{ "source": "a", "target": "c", "value": 60, "label": "Services" }, { "source": "b", "target": "c", "value": 90, "label": "Capital" }, { "source": "c", "target": "d", "value": 100, "label": "Accelerators" }, { "source": "c", "target": "e", "value": 50, "label": "Construction" }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "A" }
+          </script>
+        </figure>
+
+        <h3>Treemap</h3>
+        <figure class="wide" data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "treemap", "title": "Treemap", "subtitle": "Market share or profit pools; color by group, labels only where they fit", "valueFormat": "$bn", "height": 300,
+            "groups": [{ "key": "g", "label": "GPU" }, { "key": "a", "label": "ASIC" }],
+            "data": [{ "label": "Vendor A", "group": "g", "value": 178 }, { "label": "Vendor B", "group": "g", "value": 12 }, { "label": "Buyer 1", "group": "a", "value": 14 }, { "label": "Buyer 2", "group": "a", "value": 7 }],
+            "source": "Example data", "asOf": "2026-09-25", "provenance": "E" }
+          </script>
+        </figure>
+
+        <h3>Layer stack</h3>
+        <figure data-show-code>
+          <script type="application/json" data-chart>
+          { "type": "layers", "title": "Layer stack", "subtitle": "HTML rows; the current page's layer is highlighted", "arrow": { "label": "Money", "direction": "down" },
+            "layers": [{ "id": "W10", "label": "Applications & agents", "note": "Customers pay here", "value": "$—" }, { "id": "W09", "label": "Model labs", "value": "$—" }, { "id": "W08", "label": "Cloud", "value": "$—", "current": true }] }
+          </script>
+        </figure>
+
+        <h3>Config reference</h3>
+        <div class="table-wrap wide">
+          <table class="table--compact">
+            <thead><tr><th scope="col">Key</th><th scope="col">Applies to</th><th scope="col">Meaning</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>type</code></th><td>all</td><td><code>bar</code>, <code>hbar</code>, <code>stacked-bar</code>, <code>stacked-bar-100</code>, <code>line</code>, <code>area</code>, <code>stacked-area</code>, <code>scatter</code>, <code>bubble</code>, <code>waterfall</code>, <code>sankey</code>, <code>treemap</code>, <code>layers</code></td></tr>
+              <tr><th scope="row"><code>title</code>, <code>subtitle</code></th><td>all</td><td>Title states the takeaway or the measure; subtitle gives unit and period.</td></tr>
+              <tr><th scope="row"><code>source</code>, <code>asOf</code>, <code>unit</code>, <code>note</code></th><td>all</td><td>Printed in the foot. <code>note</code> holds method notes (show the math for [A]).</td></tr>
+              <tr><th scope="row"><code>provenance</code></th><td>all</td><td><code>"R"</code>, <code>"G"</code>, <code>"E"</code>, <code>"A"</code> or an array.</td></tr>
+              <tr><th scope="row"><code>xKey</code>, <code>series</code>, <code>data</code></th><td>bar, line, area</td><td>Rows are objects; each series <code>{key, label, color?}</code> names a field. <code>color</code> pins a categorical slot 1–8.</td></tr>
+              <tr><th scope="row"><code>stacked</code></th><td>bar, area</td><td><code>true</code> or <code>"percent"</code>.</td></tr>
+              <tr><th scope="row"><code>horizontal</code></th><td>bar, waterfall</td><td>Force orientation. Default: vertical, flipping to horizontal on narrow screens when crowded.</td></tr>
+              <tr><th scope="row"><code>valueFormat</code></th><td>all numeric</td><td><code>"$bn"</code>, <code>"$tn"</code>, <code>"$m"</code>, <code>"$"</code>, <code>"%"</code>, <code>"x"</code>, <code>"pp"</code>, <code>"GW"</code>, <code>"$/hr"</code>… or <code>{prefix, suffix, decimals}</code>.</td></tr>
+              <tr><th scope="row"><code>yMin</code>, <code>yMax</code>, <code>height</code></th><td>cartesian</td><td>Domain and size overrides.</td></tr>
+              <tr><th scope="row"><code>labels</code>, <code>totals</code>, <code>endLabels</code></th><td>bar, line, scatter</td><td>Turn direct labels on or off. Defaults are selective.</td></tr>
+              <tr><th scope="row"><code>annotations</code></th><td>bar, line, area, scatter</td><td><code>[{x, label}]</code> marker at an x or category; <code>[{y, label}]</code> reference line.</td></tr>
+              <tr><th scope="row"><code>forecastFrom</code></th><td>line, area</td><td>Shades from this x onward and marks tooltips "(forecast)".</td></tr>
+              <tr><th scope="row"><code>xKey</code>, <code>yKey</code>, <code>rKey</code>, <code>groupKey</code>, <code>labelKey</code></th><td>scatter, bubble</td><td>Plus <code>xFormat</code>, <code>yFormat</code>, <code>rFormat</code>, <code>xLabel</code>, <code>yLabel</code>, <code>rLabel</code>. Rows with <code>"highlight": true</code> get a label.</td></tr>
+              <tr><th scope="row"><code>data[].kind</code></th><td>waterfall</td><td><code>"total"</code> or <code>"delta"</code> (default after the first row).</td></tr>
+              <tr><th scope="row"><code>nodes</code>, <code>links</code>, <code>columns</code>, <code>groups</code>, <code>minWidth</code></th><td>sankey</td><td>Nodes <code>{id, label, column, group?, note?}</code>; links <code>{source, target, value, label}</code>. Below <code>minWidth</code> (680px) the chart scrolls sideways.</td></tr>
+              <tr><th scope="row"><code>groups</code></th><td>treemap</td><td><code>[{key, label}]</code>; rows carry <code>group</code>.</td></tr>
+              <tr><th scope="row"><code>layers</code>, <code>arrow</code></th><td>layers</td><td>Rows <code>{id, label, note, value, href, current}</code>.</td></tr>
+              <tr><th scope="row"><code>sample</code></th><td>all</td><td>Adds a SAMPLE badge. Only on templates.</td></tr>
+              <tr><th scope="row"><code>alt</code></th><td>all</td><td>Replaces the generated screen-reader description.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </article>
+  </main>
+  <aside class="toc" aria-label="On this page"></aside>
+</div>
+<footer class="site-footer"></footer>
+
+<!-- Style-guide only: show each chart's JSON config under the chart. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('figure[data-show-code]').forEach(function (fig) {
+    var sc = fig.querySelector('script[data-chart]');
+    if (!sc) return;
+    var d = document.createElement('details'); d.className = 'sg-code';
+    var sm = document.createElement('summary'); sm.textContent = 'Show config';
+    var pre = document.createElement('pre'); var code = document.createElement('code');
+    var txt = sc.textContent;
+    try { txt = JSON.stringify(JSON.parse(txt), null, 2); } catch (e) {}
+    code.textContent = '<figure class="wide">\n  <script type="application/json" data-chart>\n' + txt + '\n  </scr' + 'ipt>\n</figure>';
+    pre.appendChild(code); d.appendChild(sm); d.appendChild(pre);
+    fig.parentNode.insertBefore(d, fig.nextSibling);
+    d.classList.add(fig.classList.contains('wide') ? 'wide' : 'content');
+  });
+});
+</script>
+</body>
+</html>
