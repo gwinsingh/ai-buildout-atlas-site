@@ -61,17 +61,17 @@
         <dl class="hero-meta">
           <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
-          <div><dt>Applies to</dt><dd>Western track, Edition 1 + Edition 2 re-check (25 Sep 2026)</dd></div>
-          <div><dt>Related</dt><dd><a href="sources.html">Sources</a> · <a href="western/W11-synthesis.html">W11 Synthesis</a></dd></div>
+          <div><dt>Applies to</dt><dd>Western track (Edition 1 + Edition 2 re-check); China track and West-vs-China comparison (25 Sep 2026)</dd></div>
+          <div><dt>Related</dt><dd><a href="sources.html">Sources</a> · <a href="western/W11-synthesis.html">W11 Synthesis</a> · <a href="china/C11-synthesis.html">C11 Synthesis</a> · <a href="compare/X00-west-vs-china.html">X00 West vs China</a></dd></div>
         </dl>
       </header>
 
       <div class="kpis wide" role="group" aria-label="The atlas by the numbers">
-        <div class="kpi"><span class="kpi-label">Layer dossiers (W00–W11)</span><span class="kpi-value">12</span><span class="kpi-foot">~175,000 words · as of 2026-09-25</span></div>
-        <div class="kpi"><span class="kpi-label">Numbered sources cited</span><span class="kpi-value">1,085</span><span class="kpi-foot"><a href="sources.html">searchable list</a></span></div>
-        <div class="kpi"><span class="kpi-label">Claim rows fact-checked, three passes</span><span class="kpi-value">549</span><span class="kpi-foot">311 in Edition 1 + 238 in the re-check</span></div>
-        <div class="kpi"><span class="kpi-label">Confirmed</span><span class="kpi-value">80%</span><span class="kpi-foot">439 of 549 rows</span></div>
-        <div class="kpi"><span class="kpi-label">Found likely fabricated</span><span class="kpi-value">1</span><span class="kpi-foot">NVIDIA–MediaTek "$110bn", removed · 22 contradicted and corrected</span></div>
+        <div class="kpi"><span class="kpi-label">Dossiers (W00–W11, C00–C11, X00)</span><span class="kpi-value">25</span><span class="kpi-foot">~390,000 words · as of 2026-09-25</span></div>
+        <div class="kpi"><span class="kpi-label">Numbered sources cited</span><span class="kpi-value">2,151</span><span class="kpi-foot">Western 1,085 · China 968 · X00 98 · <a href="sources.html">searchable list</a></span></div>
+        <div class="kpi"><span class="kpi-label">Western claim rows fact-checked, three passes</span><span class="kpi-value">549</span><span class="kpi-foot">311 in Edition 1 + 238 in the re-check · 80% confirmed</span></div>
+        <div class="kpi"><span class="kpi-label">Western rows found likely fabricated</span><span class="kpi-value">1</span><span class="kpi-foot">NVIDIA–MediaTek "$110bn", removed · 22 contradicted and corrected</span></div>
+        <div class="kpi"><span class="kpi-label">China claims fact-checked (C01–C10)</span><span class="kpi-value">543</span><span class="kpi-foot">428 confirmed (79%) · 27 corrected · 0 fabricated-likely</span></div>
       </div>
 
       <div class="summary" role="note" aria-labelledby="sixty">
@@ -81,6 +81,7 @@
           <li><strong>Every number is tagged</strong> <span class="prov" data-prov="R">R</span> reported, <span class="prov" data-prov="G">G</span> guidance, <span class="prov" data-prov="E">E</span> third-party estimate or <span class="prov" data-prov="A">A</span> our estimate. Each one carries a date or fiscal period, and a confidence tag where it is contested.</li>
           <li><strong>The atlas was built in stages:</strong> ten analysts researched the layers in parallel, two independent fact-checkers checked 311 claims, a synthesis pass reconciled 36 disagreements into one set of canonical numbers, and HTML engineers built and tested the pages. An Edition-2 re-check on 25 Sep 2026, this time with working web access, re-verified W01–W05 (238 rows), filled thin spots in W03, W04, W06 and W07, and swept the news since mid-September.</li>
           <li><strong>The fact-checks found one likely fabrication and a few dozen errors.</strong> A claim that NVIDIA would buy MediaTek for $110bn was removed; the real deal is a $3.5bn convertible-bond purchase. The re-check also reversed two Edition-1 "corrections" about Meta's Hyperion financing and confirmed most of 2026's extraordinary events. Across the three passes, 22 claims were contradicted and corrected.</li>
+          <li><strong>The China track had its own deep check.</strong> One independent pass checked 543 claims across C01–C10: 428 confirmed, 73 partial, 27 contradicted and corrected, 15 unverified and none likely fabricated. A consistency pass then carried 21 corrected facts into the other China dossiers. China figures stay in RMB and convert to US$ under one rule (<a href="#fx-rule">§02</a>).</li>
           <li><strong>The biggest open number is Anthropic's run-rate.</strong> The last firm figure is &gt;$65B at end-July. The New York Times reported a &gt;$100B pace on 18 Sep. Anthropic has not confirmed it, so the atlas shows it as a press report (conf: med).</li>
           <li><strong>The main weaknesses are known.</strong> W06–W10 were not re-checked row by row. Some filings (Nscale's S-1, SpaceX's S-1) were read only through press summaries. Private-company figures come from leaks and press reports, and the "AI-attributable" splits are our own judgment.</li>
         </ol>
@@ -131,6 +132,22 @@
             </tbody>
           </table>
         </div>
+
+        <h3 id="fx-rule">Currency: the China FX rule</h3>
+        <p>China figures are reported in renminbi, and the China dossiers keep <strong>RMB as the primary unit</strong>. Every US-dollar figure next to them is a conversion under one rule, set in C11 and used by the China pages, the comparison (X00) and the reference pages:</p>
+        <div class="table-wrap">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">What is converted</th><th scope="col" class="num">Rate</th><th scope="col">Used for</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">RMB, 2026</th><td class="num">6.70 per US$</td><td>CY2026E flows and point-in-time values (market caps, cash, prices)</td></tr>
+              <tr><th scope="row">RMB, 2025</th><td class="num">7.18 per US$</td><td>2025 annual average</td></tr>
+              <tr><th scope="row">RMB, 2024</th><td class="num">7.19 per US$</td><td>2024 annual average</td></tr>
+              <tr><th scope="row">RMB, 2023</th><td class="num">7.08 per US$</td><td>2023 annual average</td></tr>
+              <tr><th scope="row">HK$</th><td class="num">7.78 per US$</td><td>Hong Kong listings, placements and market values</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Some layer dossiers converted at the rate of the period (C01–C05 used 6.71 for stocks and plans and 6.83 for June-quarter flows). The fact-check kept each dossier's local convention, and C11 re-converts every dollar figure it uses, so a US$ value can differ by 1–2% between a layer page and the synthesis. The RMB figure is the one to quote.</p>
 
         <aside class="callout callout--why">
           <p class="callout-label">Why canonical numbers</p>
@@ -225,7 +242,7 @@
       <!-- ============================================================ 4 FACT-CHECK -->
       <section>
         <h2><span class="kicker">04 · Fact-check</span>What the fact-checks found</h2>
-        <p>Three passes have checked 549 claim rows. The two Edition-1 passes checked 311 rows, about 570 individual figures, across the ten layer dossiers. The Edition-2 re-check (25 Sep 2026) went back over W01–W05 with working web access and logged 238 more rows. Some claims were therefore checked twice. Four in five rows were confirmed and one looked fabricated. The three passes worked under very different conditions, and that shapes how much weight their verdicts carry.</p>
+        <p>For the Western track, three passes have checked 549 claim rows. The China track's check is <a href="#china-factcheck">below</a>. The two Edition-1 passes checked 311 rows, about 570 individual figures, across the ten layer dossiers. The Edition-2 re-check (25 Sep 2026) went back over W01–W05 with working web access and logged 238 more rows. Some claims were therefore checked twice. Four in five rows were confirmed and one looked fabricated. The three passes worked under very different conditions, and that shapes how much weight their verdicts carry.</p>
 
         <figure class="wide">
           <script type="application/json" data-chart>
@@ -409,6 +426,91 @@
           </table>
         </div>
         <p class="table-note">Status labels summarize the fact-check logs and the §16 status tables in <code>factcheck-W01-W05-v2.md</code> and <code>hardening-2026-09-25.md</code>. "Doubtful" means the checker had a specific reason to think the claim is wrong. Click a column header to sort.</p>
+
+        <h3 id="china-factcheck">The China track fact-check (C01–C10)</h3>
+        <p>The China dossiers were checked the way the Western re-check was: one independent checker per pair of layers, with working web access, primary sources first (company releases and HKEX or A-share filings, MIIT, NDA and NEA data, then Caixin, SCMP, Reuters and the Chinese financial press), a cap of 24 web searches per pair and every <span class="prov" data-prov="A">A</span> calculation and FX conversion re-run. Rows already covered by each dossier's own TL;DR check table were not redone. The pass logged <strong>543 claim rows</strong>. Many rows bundle a whole results release, so the figures checked run to several times that: the C01–C02 pair alone covered about 300.</p>
+
+        <figure class="wide">
+          <script type="application/json" data-chart>
+          {
+            "type": "bar", "stacked": true, "horizontal": true,
+            "title": "China track: 79% of checked claims confirmed, none fabricated",
+            "subtitle": "Verdicts by dossier, claim rows, deep fact-check pass of 25 Sep 2026",
+            "valueFormat": { "decimals": 0 }, "unit": "claim rows",
+            "xKey": "layer",
+            "series": [
+              { "key": "confirmed", "label": "Confirmed", "color": 1 },
+              { "key": "partial", "label": "Partial", "color": 4 },
+              { "key": "contradicted", "label": "Contradicted", "color": 8 },
+              { "key": "unverified", "label": "Unverified", "color": 7 }
+            ],
+            "data": [
+              { "layer": "C01 Demand", "confirmed": 41, "partial": 5, "contradicted": 2, "unverified": 2 },
+              { "layer": "C02 Capital", "confirmed": 39, "partial": 10, "contradicted": 3, "unverified": 1 },
+              { "layer": "C03 Power", "confirmed": 42, "partial": 9, "contradicted": 1, "unverified": 1 },
+              { "layer": "C04 Data centers", "confirmed": 49, "partial": 10, "contradicted": 0, "unverified": 1 },
+              { "layer": "C05 Silicon", "confirmed": 58, "partial": 7, "contradicted": 6, "unverified": 1 },
+              { "layer": "C06 Supply chain", "confirmed": 31, "partial": 5, "contradicted": 3, "unverified": 6 },
+              { "layer": "C07 Systems", "confirmed": 51, "partial": 6, "contradicted": 2, "unverified": 1 },
+              { "layer": "C08 Cloud", "confirmed": 40, "partial": 9, "contradicted": 5, "unverified": 0 },
+              { "layer": "C09 Model labs", "confirmed": 44, "partial": 8, "contradicted": 2, "unverified": 1 },
+              { "layer": "C10 Apps", "confirmed": 33, "partial": 4, "contradicted": 3, "unverified": 1 }
+            ],
+            "height": 340,
+            "source": "methodology/qa/factcheck-C01-C02.md, factcheck-C03-C04.md, factcheck-C05-C06.md, factcheck-C07-C08.md and factcheck-C09-C10.md, summary tables",
+            "asOf": "2026-09-25", "provenance": "A",
+            "note": "No row was judged fabricated-likely. C07's confirmed count includes rows confirmed only from a weak source."
+          }
+          </script>
+        </figure>
+
+        <div class="table-wrap wide">
+          <table class="table--compact mtab">
+            <thead><tr><th scope="col">Verdict</th><th scope="col" class="num">C01–C02</th><th scope="col" class="num">C03–C04</th><th scope="col" class="num">C05–C06</th><th scope="col" class="num">C07–C08</th><th scope="col" class="num">C09–C10</th><th scope="col" class="num">Total</th><th scope="col" class="num">Share</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Confirmed</th><td class="num">80</td><td class="num">91</td><td class="num">89</td><td class="num">91</td><td class="num">77</td><td class="num">428</td><td class="num">78.8%</td></tr>
+              <tr><th scope="row">Partial</th><td class="num">15</td><td class="num">19</td><td class="num">12</td><td class="num">15</td><td class="num">12</td><td class="num">73</td><td class="num">13.4%</td></tr>
+              <tr><th scope="row">Contradicted, corrected</th><td class="num">5</td><td class="num">1</td><td class="num">9</td><td class="num">7</td><td class="num">5</td><td class="num">27</td><td class="num">5.0%</td></tr>
+              <tr><th scope="row">Unverified</th><td class="num">3</td><td class="num">2</td><td class="num">7</td><td class="num">1</td><td class="num">2</td><td class="num">15</td><td class="num">2.8%</td></tr>
+              <tr><th scope="row">Fabricated-likely</th><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0%</td></tr>
+            </tbody>
+            <tfoot><tr><th scope="row">All rows</th><td class="num">103</td><td class="num">113</td><td class="num">117</td><td class="num">114</td><td class="num">96</td><td class="num">543</td><td class="num">100%</td></tr></tfoot>
+          </table>
+        </div>
+
+        <p>Many errors were arithmetic or units rather than wrong facts. The most common trap was 亿 (100 million): a few fetch summaries rendered "X亿元" as "X billion yuan", so every figure was re-scaled before comparison. The corrections that mattered most:</p>
+        <ul>
+          <li><strong>C01:</strong> the listed platforms' Q1-2025 capex was mis-added (RMB 35.0bn, corrected to 55.0bn), which had inflated Q1-2026 growth to +85%; the true figure is +18%.</li>
+          <li><strong>C02:</strong> Bloomberg names Tencent, CATL and the National AI Industry Investment Fund in DeepSeek's first outside round. Big Fund III's role rests on Chinese press reports only, and its stake was still being negotiated on 4 Aug.</li>
+          <li><strong>C05:</strong> Hygon's "eight straight quarters" of growth is year-on-year only (Q1-2026 dipped sequentially); the Ascend 960's scale-up link is ~4 TB/s, not ~2.2 TB/s; Enflame's revenue table was ten times too high (a 亿 error).</li>
+          <li><strong>C06:</strong> SMIC's cash and cash equivalents are US$8.22bn, not US$13.9bn; Hua Hong's 2Q26 net profit is US$38.6m.</li>
+          <li><strong>C08:</strong> a 亿 mis-scale had the sell-side at US$120–150bn of cloud revenue per GW; the source says US$12–15bn.</li>
+          <li><strong>C09–C10:</strong> Zhipu's 2026 revenue forecast was raised to RMB 5–7bn to fit its US$1.6bn August run-rate; Tencent's Q2 capex is RMB 52.8bn (+176%), and the RMB 51.8bn (+190%) figure is operating capex; Kimi K3 costs US$0.88/US$10.53 per million tokens on OpenRouter.</li>
+        </ul>
+        <p>A consistency pass (<code>methodology/qa/factcheck-C-crosslayer.md</code>) then searched C01–C10 and their JSON files for every stale value: 21 corrected facts needed patches outside their own dossier, in 74 edits (56 in prose, 18 in JSON), and six sources were added. C00 and C11 were not edited by that pass; C11 reconciles the layers' remaining disagreements in its §11.</p>
+
+        <h3 id="china-open">China track: what is still low-confidence</h3>
+        <p>Each China dossier ends with an "open questions / low-confidence" list. These are the items that could move the China numbers most. China discloses less than the West: ByteDance and Huawei do not publish segment figures, the state's spending is inferred, and private labs report through the press.</p>
+        <div class="table-wrap wide">
+          <table data-sortable class="table--compact mtab">
+            <thead><tr><th scope="col">Claim</th><th scope="col">Layer</th><th scope="col">Why it is open</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">ByteDance's 2026 capex</th><td>C00, C01, C11</td><td>Only press-reported budgets: &gt;RMB 200bn (SCMP) up to RMB 400bn+ (Bloomberg's upper bound). The spread moves China's total AI capex by ~RMB 0.2tn</td><td><span class="status status--serious">Open</span></td></tr>
+              <tr><th scope="row">State-deployed money into compute</th><td>C02, C11</td><td>Guidance funds, policy-bank project capital and special bonds are not split out by AI or compute; the ~US$15–20bn a year of direct state money is an estimate</td><td><span class="status status--warning">Conf: low</span></td></tr>
+              <tr><th scope="row">Huawei Ascend volume and margin</th><td>C05, C11</td><td>~US$12bn of 2026 AI-chip revenue is Bernstein's estimate; the ~10% margin is assumed. At 30%, C05 would be China's largest domestic profit pool</td><td><span class="status status--warning">Estimate</span></td></tr>
+              <tr><th scope="row">Grey-market compute</th><td>C05, C11</td><td>Epoch's 90% interval for smuggled Nvidia compute runs from 290k to 1.6m H100-equivalents, the widest range in China's effective compute</td><td><span class="status status--serious">Open</span></td></tr>
+              <tr><th scope="row">SMIC advanced-node capacity and yields</th><td>C06</td><td>Sources differ ~3× (under 20k vs ~45k wafers a month); N+2/N+3 yields of 20–40% come from one secondary report. SMIC does not disclose either</td><td><span class="status status--warning">Conf: low</span></td></tr>
+              <tr><th scope="row">CXMT HBM3 yield and AI share of its profit</th><td>C06, C11</td><td>~25% yield and ~2m stacks in 2026 are single-source; the AI-direct (~RMB 30bn) vs AI-induced (~RMB 115–135bn) split is a judgment</td><td><span class="status status--warning">Conf: low</span></td></tr>
+              <tr><th scope="row">Token series</th><td>C01, C10, C11</td><td>Doubao's 180T tokens a day (Jun 2026) exceeds the national 140T (Mar 2026); the counting bases differ and are not reconciled</td><td><span class="status status--serious">Unreconciled</span></td></tr>
+              <tr><th scope="row">RMB 2tn national AI data-center grid</th><td>C01, C04</td><td>A Bloomberg report of a draft; no NDRC document has been found</td><td><span class="status status--warning">Conf: low–med</span></td></tr>
+              <tr><th scope="row">Alibaba's RMB 480bn plan</th><td>C01, C05, C11</td><td>Reported as "under consideration" in Jan 2026; Alibaba's August call still cites RMB 380bn</td><td><span class="status status--serious">Unconfirmed</span></td></tr>
+              <tr><th scope="row">Private-company financials</th><td>C02, C09, C10</td><td>ByteDance's 2025 profit (~US$42bn vs "down more than 70%"), DeepSeek's 2025 revenue and Moonshot's ~US$1bn ARR (one aggregator) come from conflicting or single press sources</td><td><span class="status status--warning">Conf: low</span></td></tr>
+              <tr><th scope="row">The 50% power subsidy for domestic-chip data centers</th><td>C03</td><td>FT-sourced; never officially published, and its fiscal cost is unknown</td><td><span class="status status--warning">Conf: low</span></td></tr>
+              <tr><th scope="row">AI ad uplift (RMB 30–60bn)</th><td>C10, C11</td><td>No Chinese platform discloses an AI-ad run-rate; the range rests on attribution guesses</td><td><span class="status status--critical">Conf: very low</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Drawn from §14 of C00, §16 of C01–C10 and §18 of C11. The full lists, with each dossier's resolved items, are in the dossiers themselves.</p>
       </section>
 
       <!-- ============================================================ 5 RECONCILIATION -->
@@ -480,6 +582,7 @@
           <li><strong>Calendar-year conversions add error.</strong> Fiscal years are shifted to calendar years (Nvidia's FY27 ≈ CY2026 less a month). Growth is so fast that this adds about ±5% even to reported figures.</li>
           <li><strong>Lab operating results extrapolate from one or two quarters</strong> of leaked data (OpenAI ~−$37B, Anthropic ~+$3.5B, xAI ~−$10B in 2026E).</li>
           <li><strong>Scenario probabilities are judgment, not models</strong> (base 50%, bear 30%, bull 20%). The 2024 profit pools for W03, W04 and W07 are rough back-casts.</li>
+          <li><strong>China discloses less, and the China track leans harder on estimates.</strong> ByteDance, Huawei and most labs are private, the state's spending is inferred, and many figures reach the atlas through the Chinese financial press rather than filings. The China fact-check confirmed 79% of the claims it checked, but it could not check what was never published; see <a href="#china-open">China's open items</a>.</li>
           <li><strong>"Western" is a convention.</strong> It means non-China. Nvidia sales to India and Southeast Asia count as Western. The effect is small.</li>
           <li><strong>Some sources are weak by design.</strong> These include aggregators (StockTitan, BigGo, Investing.com summaries), Wikipedia, and title-only or headline-only listings. They are marked in the source lists and were deprioritized in the fact-checks.</li>
         </ol>
@@ -509,7 +612,7 @@
             <li><strong>Lab filings:</strong> Anthropic's public S-1 (IPO targeted for November 2026, roadshow from mid-October) would replace press figures with reported ones and settle the &gt;$100B question. OpenAI's would follow later.</li>
             <li><strong>Dated prints:</strong> Micron FQ4 FY26 (30 Sep 2026), Tokyo Electron's first full-year guide (late Oct–mid Nov), Nscale's IPO pricing.</li>
             <li><strong>Monthly indicators:</strong> lab run-rates, DRAM contract prices, H100 and GB200 rental prices, and TSMC monthly revenue.</li>
-            <li><strong>New tracks:</strong> add <code>research/china/</code> and <code>docs/china/</code> with C-prefixed IDs. The sources generator picks up new track folders automatically.</li>
+            <li><strong>New tracks:</strong> the China track (<code>research/china/</code>, C-prefixed IDs) and the comparison (<code>research/compare/</code>, X00) are in. The reference generators read every track: the sources generator picks up new folders on its own, and the glossary, companies and timeline generators need only the new layers in <code>TRACKS</code> and <code>LAYERS</code> in <code>tools/atlas_extract.py</code>, plus the pages in <code>nav.js</code>.</li>
           </ul>
         </aside>
       </section>

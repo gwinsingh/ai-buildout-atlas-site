@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Buildout Atlas · From electrons to agents</title>
-  <meta name="description" content="From electrons to agents: how the AI build-out works and where the money goes. Ten layers, one money map, every number dated and sourced.">
+  <meta name="description" content="From electrons to agents: how the AI build-out works and where the money goes, in the West and in China. Ten layers, two tracks, one taxonomy, every number dated and sourced.">
   <script>try{var t=localStorage.getItem('atlas-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
   <link rel="stylesheet" href="assets/css/atlas.css">
   <script src="assets/js/nav.js" defer></script>
@@ -13,6 +13,7 @@
     /* ---- Page-local components (home only). Tokens from atlas.css; no new colors. ---- */
     .home-hero h1 { font-size: clamp(2.1rem, 1.4rem + 2.6vw, 3.4rem); max-width: 22ch; }
     :where(.article) .answer p { font-size: 1.1875rem; line-height: 1.7; margin: 0; color: var(--ink-prose); }
+    :where(.article) .answer p + p { margin-top: 0.9rem; }
 
     /* Interactive layer stack */
     .stackmap { margin: 1.25rem 0 2.25rem; font-family: var(--font-sans); }
@@ -37,11 +38,14 @@
     .sm-name a { font-weight: 650; font-size: 0.95rem; color: var(--ink); text-decoration: none; line-height: 1.3; }
     .sm-name a::after { content: ""; position: absolute; inset: 0; border-radius: 6px; }   /* whole row is the link */
     .sm-name a:focus-visible { outline: none; }
-    .sm-row:has(a:focus-visible) { outline: 2px solid var(--focus); outline-offset: 1px; }
+    .sm-row:has(.sm-name > a:first-child:focus-visible) { outline: 2px solid var(--focus); outline-offset: 1px; }
     .sm-dek { display: block; font-size: 0.8125rem; color: var(--ink-2); line-height: 1.35; margin-top: 0.1rem; }
     .sm-go { font-size: 0.8rem; color: var(--ink-3); margin-left: 0.25rem; }
     .sm-row:hover .sm-go { color: var(--accent); }
     .sm-row .prov { position: relative; z-index: 1; }                                   /* badges stay hoverable above the row link */
+    .sm-twin { position: relative; z-index: 1; display: inline-block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600; line-height: 1.5; color: var(--accent); text-decoration: none; background: var(--surface); border: 1px solid var(--rule-2); border-radius: 5px; padding: 0 0.4rem; }
+    .sm-twin:hover { border-color: var(--accent-line); text-decoration: underline; }
+    .sm-twin:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
     .sm-view { display: none; min-width: 0; }
     .stackmap[data-mode="head"] .sm-head, .stackmap[data-mode="rev"] .sm-rev, .stackmap[data-mode="op"] .sm-op { display: block; }
     .sm-num { display: block; font-size: 0.8125rem; color: var(--ink-2); line-height: 1.4; }
@@ -59,6 +63,8 @@
 
     /* Track cards */
     .tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 1.5rem; }
+    .track-card--wide { grid-column: 1 / -1; }
+    .track-card--wide .metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .track-card { background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-lg); padding: 1.2rem 1.3rem; font-family: var(--font-sans); min-width: 0; display: flex; flex-direction: column; }
     .track-card header { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
     .track-card h3 { font-family: var(--font-serif); font-size: 1.45rem; margin: 0; }
@@ -66,9 +72,17 @@
     :where(.article) .track-card p { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.55; color: var(--ink-2); margin: 0 0 0.8rem; }
     .track-card .metrics { margin-top: 0.25rem; }
     .track-card .tc-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; font-size: 0.875rem; font-weight: 600; }
+    .tc-verdicts { list-style: none; margin: 0 0 0.9rem; padding: 0; display: grid; gap: 0.5rem; }
+    :where(.article) .tc-verdicts li { font-family: var(--font-sans); font-size: 0.84rem; line-height: 1.5; color: var(--ink-2); margin: 0; padding: 0.45rem 0.6rem; background: var(--surface-2); border-radius: 6px; }
+    .tc-verdicts b { display: block; color: var(--ink); font-weight: 650; }
+    .tc-verdicts em { font-style: normal; font-weight: 650; color: var(--ink); }
+    :where(.article) .track-card .tc-note { font-size: 0.78rem; line-height: 1.45; margin: -0.3rem 0 0.8rem; }
     .china-qs { columns: 2 22rem; column-gap: 2rem; margin: 0.5rem 0 0; padding-left: 1.6em; }
-    :where(.article) .china-qs li { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); break-inside: avoid; margin: 0 0 0.55rem; }
+    :where(.article) .china-qs li { font-family: var(--font-sans); font-size: 0.875rem; line-height: 1.5; color: var(--ink-2); break-inside: avoid; margin: 0 0 0.95rem; }
     .china-qs li strong { color: var(--ink); }
+    .china-qs .qa-a { display: block; color: var(--ink); margin-top: 0.15rem; }
+    .china-qs .qa-src { display: block; font-size: 0.78rem; margin-top: 0.1rem; }
+    .china-qs .qa-src a { font-weight: 600; }
 
     /* How to read */
     .howto { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; margin: 1.25rem 0 1.5rem; }
@@ -88,6 +102,7 @@
       .sm-row { grid-template-columns: 2.6rem minmax(0, 1fr); row-gap: 0.45rem; padding: 0.65rem 0.75rem; }
       .sm-view { grid-column: 2; }
       .sm-bookends, .tracks { grid-template-columns: minmax(0, 1fr); }
+      .track-card--wide .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .sm-val { width: 4.75rem; }
     }
   </style>
@@ -104,22 +119,23 @@
       <header class="hero home-hero">
         <div class="hero-top">
           <span class="layer-chip">ATLAS</span>
-          <span class="hero-track">AI Buildout Atlas · Edition 1 · Western track</span>
+          <span class="hero-track">AI Buildout Atlas · Edition 2 · Western and China tracks</span>
         </div>
         <h1>From electrons to agents: how the AI build-out works and where the money goes</h1>
-        <p class="dek">Ten layers, from the power grid to the apps people pay for. One money map. Every number dated, sourced and tagged with where it came from.</p>
+        <p class="dek">Ten layers, from the power grid to the apps people pay for, mapped twice: once for the West and once for China, on the same definitions. Every number dated, sourced and tagged with where it came from.</p>
         <dl class="hero-meta">
-          <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time></dd></div>
+          <div><dt>As of</dt><dd><time datetime="2026-09-25">25 Sep 2026</time> · Edition 2</dd></div>
           <div><dt>Reading time</dt><dd data-reading-time></dd></div>
-          <div><dt>Tracks</dt><dd>Western (live) · China (coming soon)</dd></div>
-          <div><dt>Behind it</dt><dd>12 dossiers · <a href="sources.html">842 sources</a> · <a href="methodology.html">311 claims fact-checked</a></dd></div>
+          <div><dt>Tracks</dt><dd><a href="western/W00-overview.html">Western (live)</a> · <a href="china/C00-overview.html">China (live)</a> · <a href="compare/X00-west-vs-china.html">West vs China (live)</a></dd></div>
+          <div><dt>Behind it</dt><dd>25 dossiers · <a href="sources.html">2,151 sources</a> · <a href="methodology.html">1,092 claim rows fact-checked</a></dd></div>
         </dl>
       </header>
 
       <!-- ============================================================ BIG ANSWER -->
       <div class="summary answer" role="note" aria-labelledby="big-answer">
-        <p class="eyebrow" id="big-answer">The answer in one paragraph</p>
-        <p>In 2026 the Western world is spending <strong>about $1.0 trillion on AI data centers</strong> <span class="prov" data-prov="A">A</span>, up from ~$290B in 2024, mostly through five companies: Microsoft, Alphabet, Amazon, Meta and Oracle. About two-thirds buys chips and servers that wear out in five to six years, and <strong>Nvidia alone receives ~35¢ of every dollar</strong> <span class="prov" data-prov="A">A</span>. <strong>The money mostly does not come from AI customers yet.</strong> About half is Big Tech's existing profit from search, social ads, retail and software, a fifth is new debt, and a fifth (~$200B) is what consumers, businesses and advertisers pay for AI. That last slice is growing about <strong>3× a year</strong>, led by coding agents. <strong>The suppliers keep the profit:</strong> of a ~$637B AI operating-profit pool, chipmakers take ~44% and memory makers ~23%, the clouds earn ~5% and the model labs lose ~$48B <span class="prov" data-prov="A">A</span>. To earn a normal return on what has already been built, AI revenue needs to reach <strong>~$600B a year, about twice today's ~$280B run-rate</strong> <span class="prov" data-prov="A">A</span>. Our base case closes that gap around 2028–29. Along the way, whoever owns the scarce input earns the rent. The scarce input moved from GPUs (2023) to packaging (2024), power (2025) and memory (2026).</p>
+        <p class="eyebrow" id="big-answer">The answer in two paragraphs</p>
+        <p><strong>The West.</strong> In 2026 the Western world is spending <strong>about $1.0 trillion on AI data centers</strong> <span class="prov" data-prov="A">A</span>, up from ~$290B in 2024, mostly through five companies: Microsoft, Alphabet, Amazon, Meta and Oracle. About two-thirds buys chips and servers that wear out in five to six years, and <strong>Nvidia alone receives ~35¢ of every dollar</strong> <span class="prov" data-prov="A">A</span>. <strong>The money mostly does not come from AI customers yet.</strong> About half is Big Tech's existing profit from search, social ads, retail and software, a fifth is new debt, and a fifth (~$200B) is what consumers, businesses and advertisers pay for AI. That last slice is growing about <strong>3× a year</strong>, led by coding agents. <strong>The suppliers keep the profit:</strong> of a ~$637B AI operating-profit pool, chipmakers take ~44% and memory makers ~23%, the clouds earn ~5% and the model labs lose ~$48B <span class="prov" data-prov="A">A</span>. To earn a normal return on what has already been built, AI revenue needs to reach <strong>~$600B a year, about twice today's ~$280B run-rate</strong> <span class="prov" data-prov="A">A</span>. Our base case closes that gap around 2028–29. Along the way, whoever owns the scarce input earns the rent. The scarce input moved from GPUs (2023) to packaging (2024), power (2025) and memory (2026).</p>
+        <p><strong>China.</strong> On the same definitions China spends <strong>~RMB 0.9tn (~US$134bn)</strong> <span class="prov" data-prov="A">A</span> in 2026 (the West spends ~7.5× more), mostly through Alibaba, Tencent, ByteDance and Baidu, with the state directing <strong>~19% (~RMB 170bn)</strong> <span class="prov" data-prov="A">A</span>. It builds on its own chips (domestic vendors hold <strong>~80% by value (Huawei ~50%; Nvidia ~8%)</strong> <span class="prov" data-prov="E">E</span>) and cheap, abundant power. Usage is enormous but revenue is small: end customers pay <strong>~RMB 157bn (~US$23bn)</strong> <span class="prov" data-prov="A">A</span>. <strong>Almost nobody keeps a profit:</strong> the positive AI profit pool is <strong>~US$17bn (West ~US$637bn)</strong>, and <strong>~US$0bn (net of lab and consumer-AI losses)</strong> <span class="prov" data-prov="A">A</span>. China binds on chips, above all HBM memory; the West on memory, power and permits. <a href="compare/X00-west-vs-china.html">The full comparison is in X00</a>.</p>
       </div>
 
       <!-- ============================================================ KPIs -->
@@ -177,7 +193,7 @@
       <!-- ============================================================ LAYER STACK -->
       <section>
         <h2>The stack, from electrons to agents</h2>
-        <p>The atlas splits the build-out into ten layers. Picture three familiar things stacked up: a <strong>power grid</strong> at the bottom (energy and buildings), a <strong>factory</strong> in the middle (chips, memory, networking and the clouds that own them), and a <strong>retail chain</strong> on top (model labs and the apps customers pay for). A <strong>bank</strong> sits underneath all of it. Click any layer to open its page. Switch the view to compare the layers' 2026 AI revenue and operating profit.</p>
+        <p>The atlas splits the build-out into ten layers. Picture three familiar things stacked up: a <strong>power grid</strong> at the bottom (energy and buildings), a <strong>factory</strong> in the middle (chips, memory, networking and the clouds that own them), and a <strong>retail chain</strong> on top (model labs and the apps customers pay for). A <strong>bank</strong> sits underneath all of it. Click any layer to open its Western page, or its small <strong>China</strong> link to open the China twin (same layer, C prefix). Switch the view to compare the Western layers' 2026 AI revenue and operating profit. <a href="compare/X00-west-vs-china.html#s-pairs">X00 compares each pair side by side</a>.</p>
 
         <div class="stackmap wide" data-mode="head" id="stackmap">
           <div class="sm-controls" role="group" aria-label="What each layer shows">
@@ -192,7 +208,7 @@
             <div class="sm-rows">
               <div class="sm-row">
                 <span class="sm-id">W10</span>
-                <span class="sm-name"><a href="western/W10-apps-agents.html">Applications &amp; agents<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where end-customer money enters</span></span>
+                <span class="sm-name"><a href="western/W10-apps-agents.html">Applications &amp; agents<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where end-customer money enters</span><a class="sm-twin" href="china/C10-apps-agents.html" aria-label="China twin: C10 Applications &amp; agents">China: C10</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>~$200B</b> end-customer AI money, CY2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>&gt;1B</b> ChatGPT weekly users, Aug 2026 <span class="prov" data-prov="R">R</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.182"></span></span><span class="sm-val">$83B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.093"></span></span><span class="sm-val">$26.5B</span></span></span>
@@ -205,7 +221,7 @@
             <div class="sm-rows">
               <div class="sm-row">
                 <span class="sm-id">W09</span>
-                <span class="sm-name"><a href="western/W09-model-labs.html">Model labs<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Frontier and open-weight labs</span></span>
+                <span class="sm-name"><a href="western/W09-model-labs.html">Model labs<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Frontier and open-weight labs</span><a class="sm-twin" href="china/C09-model-labs.html" aria-label="China twin: C09 Model labs">China: C09</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>−$48B</b> labs' combined operating result, 2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>$65B / $40B</b> Anthropic / OpenAI run-rate, Jul 2026 <span class="prov" data-prov="E">E</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.226"></span></span><span class="sm-val">$103B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar is-neg" style="--v:0.169"></span></span><span class="sm-val">−$48B loss</span></span></span>
@@ -218,14 +234,14 @@
             <div class="sm-rows">
               <div class="sm-row">
                 <span class="sm-id">W08</span>
-                <span class="sm-name"><a href="western/W08-cloud.html">Cloud<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Hyperscalers and neoclouds</span></span>
+                <span class="sm-name"><a href="western/W08-cloud.html">Cloud<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Hyperscalers and neoclouds</span><a class="sm-twin" href="china/C08-cloud.html" aria-label="China twin: C08 Cloud">China: C08</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>$143.4B</b> cloud infrastructure revenue, Q2 2026 (+43%) <span class="prov" data-prov="E">E</span></span><span class="sm-num"><b>~$2.46T</b> contracted backlog, five companies, Jun/Aug 2026 <span class="prov" data-prov="R">R</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.259"></span></span><span class="sm-val">$118B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.111"></span></span><span class="sm-val">$31.5B</span></span></span>
               </div>
               <div class="sm-row">
                 <span class="sm-id">W01</span>
-                <span class="sm-name"><a href="western/W01-demand-capex.html">Demand &amp; capex<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Who is spending, how much, on what</span></span>
+                <span class="sm-name"><a href="western/W01-demand-capex.html">Demand &amp; capex<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Who is spending, how much, on what</span><a class="sm-twin" href="china/C01-demand-capex.html" aria-label="China twin: C01 Demand &amp; capex">China: C01</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>~$1.0T</b> Western AI data-center investment, CY2026E <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>96%</b> Big-4 capex / operating cash flow, Q2 2026 <span class="prov" data-prov="A">A</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-na">A spending layer, not a revenue layer: ~$1.0T of capex</span></span>
                 <span class="sm-view sm-op"><span class="sm-na">Not a profit layer; the return shows up in W08 and W10</span></span>
@@ -238,35 +254,35 @@
             <div class="sm-rows">
               <div class="sm-row">
                 <span class="sm-id">W07</span>
-                <span class="sm-name"><a href="western/W07-networking-systems.html">Networking &amp; systems<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Switches, optics, servers and racks</span></span>
+                <span class="sm-name"><a href="western/W07-networking-systems.html">Networking &amp; systems<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Switches, optics, servers and racks</span><a class="sm-twin" href="china/C07-networking-systems.html" aria-label="China twin: C07 Networking &amp; systems">China: C07</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>$16.7B</b> Broadcom AI semiconductor revenue, FQ3-26 (+221%) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~86%</b> of rack-level gross profit goes to Nvidia, 2026 <span class="prov" data-prov="A">A</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.285"></span></span><span class="sm-val">$130B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.088"></span></span><span class="sm-val">$25B</span></span></span>
               </div>
               <div class="sm-row">
                 <span class="sm-id">W05</span>
-                <span class="sm-name"><a href="western/W05-compute-silicon.html">Compute silicon<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">GPUs, custom ASICs, CPUs, accelerators</span></span>
+                <span class="sm-name"><a href="western/W05-compute-silicon.html">Compute silicon<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">GPUs, custom ASICs, CPUs, accelerators</span><a class="sm-twin" href="china/C05-compute-silicon.html" aria-label="China twin: C05 Compute silicon">China: C05</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>$89.0B</b> Nvidia data-center revenue, Q2 FY27 (+117% y/y) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~44%</b> of the AI operating-profit pool, 2026E <span class="prov" data-prov="A">A</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:1"></span></span><span class="sm-val">$456B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:1"></span></span><span class="sm-val">$283.5B</span></span></span>
               </div>
               <div class="sm-row">
                 <span class="sm-id">W06</span>
-                <span class="sm-name"><a href="western/W06-semi-supply-chain.html">Semiconductor supply chain<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Foundry, packaging, HBM, equipment, EDA</span></span>
+                <span class="sm-name"><a href="western/W06-semi-supply-chain.html">Semiconductor supply chain<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Foundry, packaging, HBM, equipment, EDA</span><a class="sm-twin" href="china/C06-semi-supply-chain.html" aria-label="China twin: C06 Semiconductor supply chain">China: C06</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>84.9%</b> Micron gross margin, FQ3-26 <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>67.7%</b> TSMC gross margin, 2Q26 (a record) <span class="prov" data-prov="R">R</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.708"></span></span><span class="sm-val">$323B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.717"></span></span><span class="sm-val">$203.4B</span></span></span>
               </div>
               <div class="sm-row">
                 <span class="sm-id">W04</span>
-                <span class="sm-name"><a href="western/W04-datacenters.html">Data centers<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Developers, REITs, construction, power and cooling</span></span>
+                <span class="sm-name"><a href="western/W04-datacenters.html">Data centers<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Developers, REITs, construction, power and cooling</span><a class="sm-twin" href="china/C04-datacenters.html" aria-label="China twin: C04 Data centers">China: C04</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>1.4%</b> vacancy in North American primary markets, H1 2026 <span class="prov" data-prov="E">E</span></span><span class="sm-num"><b>~$50–60B</b> all-in cost of 1 GW with chips (Blackwell era) <span class="prov" data-prov="E">E</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.726"></span></span><span class="sm-val">$331B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.183"></span></span><span class="sm-val">$52B</span></span></span>
               </div>
               <div class="sm-row">
                 <span class="sm-id">W03</span>
-                <span class="sm-name"><a href="western/W03-energy-power.html">Energy &amp; power<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Electrons, grids and the power bottleneck</span></span>
+                <span class="sm-name"><a href="western/W03-energy-power.html">Energy &amp; power<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Electrons, grids and the power bottleneck</span><a class="sm-twin" href="china/C03-energy-power.html" aria-label="China twin: C03 Energy &amp; power">China: C03</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>$333/MW-day</b> PJM capacity price, 2027/28 (from $28.92 for 2024/25) <span class="prov" data-prov="R">R</span></span><span class="sm-num"><b>~485 TWh</b> global data-center electricity, 2025 (+17%) <span class="prov" data-prov="E">E</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.101"></span></span><span class="sm-val">$46B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.053"></span></span><span class="sm-val">$15B</span></span></span>
@@ -279,7 +295,7 @@
             <div class="sm-rows">
               <div class="sm-row">
                 <span class="sm-id">W02</span>
-                <span class="sm-name"><a href="western/W02-capital-financing.html">Capital &amp; financing<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where the money comes from</span></span>
+                <span class="sm-name"><a href="western/W02-capital-financing.html">Capital &amp; financing<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Where the money comes from</span><a class="sm-twin" href="china/C02-capital-financing.html" aria-label="China twin: C02 Capital &amp; financing">China: C02</a></span>
                 <span class="sm-view sm-head"><span class="sm-num"><b>~$200B</b> debt applied to the build-out, 2026E (~18% of flows) <span class="prov" data-prov="A">A</span></span><span class="sm-num"><b>$217B</b> OpenAI + Anthropic equity raised, H1 2026 (43% of global VC) <span class="prov" data-prov="R">R</span></span></span>
                 <span class="sm-view sm-rev"><span class="sm-barwrap"><span class="sm-track"><span class="sm-bar" style="--v:0.066"></span></span><span class="sm-val">~$30B</span></span></span>
                 <span class="sm-view sm-op"><span class="sm-na">Fees and spread (~$30B/yr) not split into profit</span></span>
@@ -290,11 +306,11 @@
           <div class="sm-bookends">
             <div class="sm-row">
               <span class="sm-id">W00</span>
-              <span class="sm-name"><a href="western/W00-overview.html">Start here: the overview<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">The stack, the money map and the story from ChatGPT's launch to today</span></span>
+              <span class="sm-name"><a href="western/W00-overview.html">Start here: the overview<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">The stack, the money map and the story from ChatGPT's launch to today</span><a class="sm-twin" href="china/C00-overview.html" aria-label="China twin: C00 Overview">China: C00</a></span>
             </div>
             <div class="sm-row">
               <span class="sm-id">W11</span>
-              <span class="sm-name"><a href="western/W11-synthesis.html">Synthesis<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Money flow, profit pools, circular financing, risks and scenarios</span></span>
+              <span class="sm-name"><a href="western/W11-synthesis.html">Synthesis<span class="sm-go" aria-hidden="true">→</span></a><span class="sm-dek">Money flow, profit pools, circular financing, risks and scenarios</span><a class="sm-twin" href="china/C11-synthesis.html" aria-label="China twin: C11 Synthesis">China: C11</a></span>
             </div>
           </div>
 
@@ -310,7 +326,7 @@
       <!-- ============================================================ MONEY MAP -->
       <section>
         <h2>Where the money comes from and where it goes</h2>
-        <p>This is the 2026 money map in five steps. Read it left to right. Money comes in from six sources. Some of it passes through apps and model labs. All of it reaches the companies that own compute, who pay the suppliers. It ends as someone's operating profit, or as wages, materials and interest. Band widths are proportional to dollars. Hover a band to trace it.</p>
+        <p>This is the Western 2026 money map in five steps. Read it left to right. Money comes in from six sources. Some of it passes through apps and model labs. All of it reaches the companies that own compute, who pay the suppliers. It ends as someone's operating profit, or as wages, materials and interest. Band widths are proportional to dollars. Hover a band to trace it.</p>
         <figure class="wide">
           <script type="application/json" data-chart>
           {
@@ -362,7 +378,7 @@
               { "source": "fac", "target": "p_other", "value": 44, "label": "Equipment makers', contractors' and designers' margins" },
               { "source": "fac", "target": "costs", "value": 276, "label": "Copper, steel, labor, land, fees" }
             ],
-            "height": 480, "labelSmall": true,
+            "height": 480, "labelSmall": true, "minWidth": 820,
             "source": "AI Buildout Atlas W11 money map (data/western/W11-synthesis.json, sankey), aggregated from 40 nodes to 15; totals unchanged",
             "asOf": "2026-09-25", "provenance": "A",
             "note": "Atlas estimate: a cash flow-of-funds, not a P&L. Every intermediate node balances. Hyperscalers' own AI-cloud profit (~$33B) and lab losses (about −$48B) are P&L items and are not shown as cash links.",
@@ -370,54 +386,104 @@
           }
           </script>
         </figure>
-        <p>Three things stand out. First, <strong>customers supply less than a fifth of the money</strong> ($202B of $1,117B) <span class="prov" data-prov="A">A</span>, so the build-out is still funded mainly on the expectation of demand. Second, <strong>about 51¢ of every capex dollar becomes a supplier's operating profit</strong>, with Nvidia ~23¢ and memory ~15¢ <span class="prov" data-prov="A">A</span>. Third, <strong>debt now funds about as much as AI customers do</strong>. The full eight-column map, with every flow and its source dossier, is in <a href="western/W11-synthesis.html">W11 Synthesis</a>.</p>
+        <p>Three things stand out. First, <strong>customers supply less than a fifth of the money</strong> ($202B of $1,117B) <span class="prov" data-prov="A">A</span>, so the build-out is still funded mainly on the expectation of demand. Second, <strong>about 51¢ of every capex dollar becomes a supplier's operating profit</strong>, with Nvidia ~23¢ and memory ~15¢ <span class="prov" data-prov="A">A</span>. Third, <strong>debt now funds about as much as AI customers do</strong>. The full eight-column map, with every flow and its source dossier, is in <a href="western/W11-synthesis.html">W11 Synthesis</a>. China's map, <strong>RMB 1,032bn (~US$154bn)</strong> <span class="prov" data-prov="A">A</span> on the same method, is in <a href="china/C11-synthesis.html">C11 Synthesis</a>: platform legacy cash is <strong>~38% (West 49%)</strong> of it and the state and SOEs <strong>~15% direct + SOE (~18% incl. state-bank credit to LGFV/SOE)</strong> <span class="prov" data-prov="A">A</span>.</p>
       </section>
 
       <!-- ============================================================ TRACKS -->
       <section>
         <h2>Two tracks, one taxonomy</h2>
-        <p>The atlas is built in tracks that share the same layer IDs, so any layer can be compared line by line across regions. W05 (Western compute silicon) will sit next to C05 (China compute silicon).</p>
+        <p>The atlas is built in tracks that share the same layer IDs, so any layer can be compared line by line across regions: W05 (Western compute silicon) sits next to C05 (China compute silicon). A third page, X00, puts the two tracks side by side on the same definitions.</p>
         <div class="tracks wide">
           <article class="track-card">
             <header><h3 data-toc="false">Western build-out</h3><span class="pill pill--accent tc-state">Live</span></header>
-            <p>The US, Europe, Taiwan, Korea, Japan, the Gulf and the rest of the non-China world. Ten layer pages plus an overview and a synthesis, researched from filings, earnings calls, regulator data and reputable press.</p>
+            <p>The US, Europe, Taiwan, Korea, Japan, the Gulf and the rest of the non-China world. Ten layer pages plus an overview and a synthesis, researched from filings, earnings calls, regulator data and reputable press, and re-verified against primary sources in Edition 2. Its three headline findings:</p>
+            <ul class="tc-verdicts">
+              <li><b>Who pays?</b> <em>Mostly Big Tech's old profit.</em> Legacy cash flow is ~49% (~$547B) of 2026 flows; end customers pay ~$200B, growing ~3× a year <span class="prov" data-prov="A">A</span>.</li>
+              <li><b>Who keeps the profit?</b> <em>The suppliers.</em> Of a ~$637B (net of lab losses ~$589B) pool, compute silicon takes ~44% (62% in 2024) and memory ~23% (9% in 2024) <span class="prov" data-prov="A">A</span>.</li>
+              <li><b>What binds?</b> <em>Memory, power and permits.</em> The scarce input moved from GPUs (2023) to packaging (2024), power (2025) and memory (2026) <span class="prov" data-prov="A">A</span>.</li>
+            </ul>
             <dl class="metrics">
               <div><dt>Pages</dt><dd>12 <small>W00–W11</small></dd></div>
-              <div><dt>Sources</dt><dd>842</dd></div>
-              <div><dt>Claims fact-checked</dt><dd>311</dd></div>
+              <div><dt>Sources</dt><dd>1,085</dd></div>
+              <div><dt>Claim rows fact-checked</dt><dd>549 <small>3 passes</small></dd></div>
               <div><dt>As of</dt><dd>25 Sep 2026</dd></div>
             </dl>
             <div class="tc-links"><a href="western/W00-overview.html">Start with W00 Overview →</a><a href="western/W11-synthesis.html">Jump to W11 Synthesis →</a></div>
           </article>
           <article class="track-card">
-            <header><h3 data-toc="false">China build-out</h3><span class="tag tc-state">Coming soon</span></header>
-            <p>Track 2 mirrors every layer with a C prefix (C00–C11) and uses the same definitions, so the two tracks can be read side by side. Our starting hypotheses: China spends roughly an order of magnitude fewer dollars but gets more compute per dollar. Its profit pool is flatter, because it has no ~75%-margin chip monopolist and open-weight models are in a price war. Its binding constraint is chips (EUV tools, HBM), not power <span class="prov" data-prov="A">A</span>.</p>
+            <header><h3 data-toc="false">China build-out</h3><span class="pill pill--accent tc-state">Live</span></header>
+            <p>Mainland China and Hong Kong, including capacity Chinese firms own or rent offshore. Every layer mirrors the Western one with a C prefix (C00–C11). RMB is primary; US$ at 6.70 for 2026E. Edition 1 set three hypotheses. The verdicts:</p>
+            <ul class="tc-verdicts">
+              <li><b>H1 · More compute per dollar?</b> <em>Partly confirmed.</em> ~7.5× fewer dollars (not 10×) and more MW per dollar, but ~1.5–2× dearer per EFLOPS, because domestic systems draw ~2.4× the power per FLOP <span class="prov" data-prov="A">A</span>.</li>
+              <li><b>H2 · A flatter profit pool?</b> <em>Confirmed, and stronger.</em> The pool is thin and roughly zero-sum: ~US$17bn (West ~US$637bn), ~US$0bn (net of lab and consumer-AI losses) <span class="prov" data-prov="A">A</span>.</li>
+              <li><b>H3 · Chips bind, not power?</b> <em>Confirmed.</em> Chips and HBM bind; power does not. Monetization is a second binding constraint <span class="prov" data-prov="A">A</span>.</li>
+            </ul>
             <dl class="metrics">
-              <div><dt>Pages planned</dt><dd>12 <small>C00–C11</small></dd></div>
-              <div><dt>Questions to answer</dt><dd>15</dd></div>
+              <div><dt>Pages</dt><dd>12 <small>C00–C11</small></dd></div>
+              <div><dt>Sources</dt><dd>968</dd></div>
+              <div><dt>Claim rows fact-checked</dt><dd>543 <small>0 fabricated</small></dd></div>
+              <div><dt>As of</dt><dd>25 Sep 2026</dd></div>
             </dl>
-            <div class="tc-links"><a href="#china-questions">See the 15 questions ↓</a></div>
+            <div class="tc-links"><a href="china/C00-overview.html">Start with C00 Overview →</a><a href="china/C11-synthesis.html">Jump to C11 Synthesis →</a><a href="#china-questions">The 15 answers ↓</a></div>
+          </article>
+          <article class="track-card track-card--wide">
+            <header><h3 data-toc="false">West vs China</h3><span class="pill pill--accent tc-state">Live</span></header>
+            <p>One page that lines up every layer pair (W01↔C01 … W10↔C10), 35 headline metrics, costs three ways (power, chips, tokens), where the money comes from, who keeps the profit, the role of the state and scenarios to 2030.</p>
+            <dl class="metrics">
+              <div><dt>AI data-center capex, 2026E</dt><dd>~7.5× <small>West ÷ China</small></dd></div>
+              <div><dt>End-customer AI money, 2026E</dt><dd>~8.5× <small>West ÷ China</small></dd></div>
+              <div><dt>Positive AI profit pool, 2026E</dt><dd>~38× <small>West ÷ China</small></dd></div>
+              <div><dt>Generating capacity added, 2025</dt><dd>~10× <small>China ÷ US</small></dd></div>
+            </dl>
+            <p class="tc-note"><span class="prov" data-prov="A">A</span> Ratios in US$ from the two canonical files: 1,000 ÷ 134; 200 ÷ 23; 637 ÷ 16.8; 550 ÷ 53 GW.</p>
+            <div class="tc-links"><a href="compare/X00-west-vs-china.html">Open X00 West vs China →</a><a href="#at-a-glance">At a glance ↓</a></div>
           </article>
         </div>
+      </section>
 
-        <h3 id="china-questions">The questions Track 2 will answer</h3>
-        <p>Each question is set up so its answer lands next to the Western number on the same definition (from W11 §13).</p>
+      <!-- ============================================================ AT A GLANCE -->
+      <section>
+        <h2 id="at-a-glance">West vs China at a glance</h2>
+        <p>Eight headline numbers on the same definitions. <strong>Money ratios cluster at 7–9×, profit and revenue ratios at 15–40×, and physical and usage ratios invert</strong>: China builds more power and runs more tokens, but earns far less per yuan <span class="prov" data-prov="A">A</span>. China's values are in RMB first, US$ at 6.70.</p>
+        <div class="table-wrap wide">
+          <table class="table--compact table--sticky-col">
+            <caption>West vs China, headline metrics<small>Display values from <code>data/western/_canonical.json</code> and <code>data/china/_canonical.json</code>; ratio = West ÷ China in US$ <span class="prov" data-prov="A">A</span>. As of 25 Sep 2026.</small></caption>
+            <thead><tr><th scope="col">Metric</th><th scope="col">West</th><th scope="col">China</th><th scope="col" class="num">West ÷ China</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">AI data-center capex, CY2026E</th><td>~$1.0T <span class="prov" data-prov="A">A</span></td><td>~RMB 0.9tn (~US$134bn) <span class="prov" data-prov="A">A</span></td><td>~7.5×</td></tr>
+              <tr><th scope="row">Capex ÷ operating cash flow, Q2 2026</th><td>96% <span class="prov" data-prov="A">A</span> <small class="muted">US Big-4</small></td><td>~167% (US Big-4: 96%) <span class="prov" data-prov="A">A</span> <small class="muted">Alibaba, Tencent, Baidu</small></td><td>China more stretched</td></tr>
+              <tr><th scope="row">End-customer AI money, CY2026E</th><td>~$200B <span class="prov" data-prov="A">A</span></td><td>~RMB 157bn (~US$23bn) <span class="prov" data-prov="A">A</span></td><td>~8.5×</td></tr>
+              <tr><th scope="row">Positive AI operating-profit pool, 2026E</th><td>~$637B (net of lab losses ~$589B) <span class="prov" data-prov="A">A</span></td><td>~US$17bn (West ~US$637bn) <span class="prov" data-prov="A">A</span> <small class="muted">~US$0bn net</small></td><td>~38×</td></tr>
+              <tr><th scope="row">Who sells the AI chips, 2026E</th><td>~$365B (Nvidia ~82%) <span class="prov" data-prov="A">A</span></td><td>~80% by value (Huawei ~50%; Nvidia ~8%) <span class="prov" data-prov="E">E</span> <small class="muted">domestic vendors</small></td><td>~15× <small class="muted">market size</small></td></tr>
+              <tr><th scope="row">Generating capacity added, 2025</th><td>53 GW (US) <span class="prov" data-prov="R">R</span></td><td>~550 GW (US: 53 GW) <span class="prov" data-prov="R">R</span></td><td>~0.1×</td></tr>
+              <tr><th scope="row">Tokens processed, leader</th><td>~3.2 quadrillion/month, all Google surfaces (~107tn/day, May 2026) <span class="prov" data-prov="R">R</span></td><td>180tn/day (~125bn/min; ~5.7× Google's 22bn/min) <span class="prov" data-prov="R">R</span> <small class="muted">Doubao, Jun 2026</small></td><td>China ≥1.7× <small class="muted">definitions differ</small></td></tr>
+              <tr><th scope="row">Leading labs' revenue, 2026E</th><td>~$96B (OpenAI ~$36B + Anthropic ~$60B) <span class="prov" data-prov="A">A</span></td><td>~US$2.4bn (range 2.0-2.7; ~1:40 vs OpenAI + Anthropic) <span class="prov" data-prov="A">A</span></td><td>~40×</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>All 35 metrics, the layer-by-layer pairs and the cost reconciliation are in <a href="compare/X00-west-vs-china.html#s-dashboard">X00 West vs China</a>.</p>
+      </section>
+
+      <!-- ============================================================ CHINA QUESTIONS -->
+      <section>
+        <h2 id="china-questions">The 15 China questions, answered</h2>
+        <p>Edition 1 set Track 2 fifteen questions, each designed so its answer lands next to the Western number on the same definition (W11 §13). Here is the one-line answer to each; the evidence is in <a href="china/C11-synthesis.html#s-answers">C11 Synthesis §1</a> and the layer page named after each answer.</p>
         <ol class="china-qs wide">
-          <li><strong>Capex.</strong> What is China's total AI data-center capex in CY2026 (Alibaba, Tencent, ByteDance, Baidu, telcos, state funds), on W01's company-basis definition?</li>
-          <li><strong>Funding.</strong> What share comes from operating cash flow versus state-directed bank credit, local-government funds and policy banks?</li>
-          <li><strong>Silicon profit pool.</strong> Without Nvidia, who captures it (Huawei Ascend, Cambricon, Hygon, in-house chips), and at what gross margins?</li>
-          <li><strong>Where scarcity sits.</strong> SMIC 7/5nm capacity, domestic HBM (CXMT), advanced packaging or power? Is China's binding constraint chips while the West's is power and memory?</li>
-          <li><strong>End-customer AI revenue</strong> on W10's definition: subscriptions, enterprise API and agents, and AI-driven ads at ByteDance, Tencent and Alibaba.</li>
-          <li><strong>Unit costs.</strong> How much lower are China's $/MW, $/GPU-hour and $/million tokens, and why (power prices, construction cost, open-weight price wars)?</li>
-          <li><strong>Circularity.</strong> Are there vendor or cloud equity loops (Alibaba and Tencent in Moonshot, Zhipu, MiniMax, StepFun) comparable to the West's?</li>
-          <li><strong>Backlog.</strong> What is the equivalent of contracted backlog (RPO), given that Chinese firms disclose little?</li>
-          <li><strong>Power.</strong> How much headroom does "East Data, West Compute" provide, at what tariff, and how fast is generation being added?</li>
-          <li><strong>Token volumes.</strong> ByteDance Doubao and Alibaba Qwen tokens per minute versus Google's 22 billion.</li>
-          <li><strong>Open weights abroad.</strong> What share of Chinese open-weight usage is outside China (~13% of OpenRouter tokens), and does it make money?</li>
-          <li><strong>Capex intensity.</strong> Capex/operating cash flow and server depreciation lives at Alibaba, Tencent and Baidu, versus the US Big-4's 96%.</li>
-          <li><strong>Export controls.</strong> How do H20/H200 availability and the 25% revenue-share regime shape the chip mix, and how big is the grey market?</li>
-          <li><strong>Profit pools by layer, 2024–26E,</strong> in the same table format as W11 §4.1, so the tracks can be shown side by side.</li>
-          <li><strong>Scenario triggers.</strong> Property and local-government debt, chip controls, domestic demand and a Taiwan contingency.</li>
+          <li><strong>Capex.</strong> How much does China spend on AI data centers in 2026? <span class="qa-a">~RMB 0.9tn (~US$134bn) <span class="prov" data-prov="A">A</span>, up ~60% from ~RMB 560bn (~US$78bn); the West spends ~7.5× more.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.1</a> · <a href="china/C01-demand-capex.html">C01</a></span></li>
+          <li><strong>Funding.</strong> Operating cash flow, or state-directed credit? <span class="qa-a">Platform legacy cash ~38% (West 49%); the state and SOEs ~15% direct + SOE (~18% incl. state-bank credit to LGFV/SOE), five times the West's ~3% <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.2</a> · <a href="china/C02-capital-financing.html">C02</a></span></li>
+          <li><strong>Silicon profit pool.</strong> Who captures it without Nvidia? <span class="qa-a">Huawei takes the revenue, ~US$12bn (~50% share) <span class="prov" data-prov="E">E</span>, and Cambricon the profit; the whole pool is ~US$1.5-2.5bn net (~1% of Nvidia's) <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.3</a> · <a href="china/C05-compute-silicon.html">C05</a></span></li>
+          <li><strong>Where scarcity sits.</strong> Chips, memory, packaging or power? <span class="qa-a">HBM first, then SMIC 7/5nm-class capacity and yields, then packaging and tool servicing. Power does not bind <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.4</a> · <a href="china/C06-semi-supply-chain.html">C06</a></span></li>
+          <li><strong>End-customer AI revenue.</strong> What do customers and advertisers pay for AI? <span class="qa-a">~RMB 157bn (~US$23bn) <span class="prov" data-prov="A">A</span>, ~12% of the West's ~$200B, and only ~25-35% of it is fresh money.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.5</a> · <a href="china/C10-apps-agents.html">C10</a></span></li>
+          <li><strong>Unit costs.</strong> How much cheaper per MW, GPU-hour and token? <span class="qa-a">Far cheaper per MW (RMB 20m/MW (~US$3.0m; US US$11.3m) <span class="prov" data-prov="R">R</span>), kWh and GPU-hour, but ~1.5–2× dearer per EFLOPS <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.6</a> · <a href="china/C04-datacenters.html">C04</a></span></li>
+          <li><strong>Circularity.</strong> Vendor and cloud equity loops like the West's? <span class="qa-a">Yes, but smaller and state-reinforced: ~12-16% strict; ~30% broad (West ~45%/60%) of lab equity <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.7</a> · <a href="china/C09-model-labs.html">C09</a></span></li>
+          <li><strong>Backlog.</strong> Is there an RPO equivalent? <span class="qa-a">No. Visible commitments are ~RMB 0.2-0.3tn (~US$30-45bn); ~1-2% of the West's US$2.46T <span class="prov" data-prov="A">A</span> (conf: very low).</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.8</a> · <a href="china/C08-cloud.html">C08</a></span></li>
+          <li><strong>Power.</strong> How much headroom, at what tariff? <span class="qa-a">Effectively unlimited: ~550 GW (US: 53 GW) added in 2025 <span class="prov" data-prov="R">R</span>, at RMB 0.20-0.35/kWh (3.0-5.2 US¢) in the western hubs <span class="prov" data-prov="E">E</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.9</a> · <a href="china/C03-energy-power.html">C03</a></span></li>
+          <li><strong>Token volumes.</strong> Doubao and Qwen versus Google's 22 billion a minute? <span class="qa-a">Doubao 180tn/day (~125bn/min; ~5.7× Google's 22bn/min); China >140tn/day (~97bn/min) <span class="prov" data-prov="R">R</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.10</a> · <a href="china/C01-demand-capex.html">C01</a></span></li>
+          <li><strong>Open weights abroad.</strong> How much use is outside China, and does it pay? <span class="qa-a">≥49.8% (week of 14 Sep 2026) of OpenRouter tokens <span class="prov" data-prov="R">R</span>, but only ~RMB 13bn (~US$1.9bn) of overseas spend <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.11</a> · <a href="china/C09-model-labs.html">C09</a></span></li>
+          <li><strong>Capex intensity.</strong> Capex/OCF and server lives versus the US Big-4? <span class="qa-a">~167% (US Big-4: 96%) in Q2 2026 <span class="prov" data-prov="A">A</span>; server lives ~3-5 years (US Big-4: 5-6).</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.12</a> · <a href="china/C01-demand-capex.html">C01</a></span></li>
+          <li><strong>Export controls.</strong> How do they shape the chip mix, and how big is the grey market? <span class="qa-a">Nvidia ~8% (from ~39% in 2025; ~95% in 2022) <span class="prov" data-prov="E">E</span>; H200 is &lt;1% of Nvidia's DC revenue; ~660k H100e smuggled through 2025 <span class="prov" data-prov="E">E</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.13</a> · <a href="china/C05-compute-silicon.html">C05</a></span></li>
+          <li><strong>Profit pools by layer.</strong> Who keeps the profit, 2024–26E? <span class="qa-a">~US$17bn (West ~US$637bn) positive, and ~US$0bn (net of lab and consumer-AI losses); memory is the largest slice at ~33% <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.14</a></span></li>
+          <li><strong>Scenario triggers.</strong> What would change the story? <span class="qa-a">Local-government debt sets the state leg, chip controls the ceiling, domestic demand the monetization; Taiwan (~5%) is an overlay. Base 50% · Bull 20% · Bear 30% <span class="prov" data-prov="A">A</span>.</span> <span class="qa-src"><a href="china/C11-synthesis.html#s-answers">C11 §1.15</a></span></li>
         </ol>
       </section>
 
@@ -442,7 +508,7 @@
           </div>
           <div>
             <h3 data-toc="false">Dates and periods</h3>
-            <p>Every page shows an <strong>As of</strong> date (this edition: 25 Sep 2026). Every figure names its period.</p>
+            <p>Every page shows an <strong>As of</strong> date (Edition 2: 25 Sep 2026). Every figure names its period. China figures lead with RMB, converted at 6.70 RMB/US$ for 2026E and at annual averages for past years.</p>
             <dl>
               <dt><code>CY2026E</code></dt><dd>Calendar-year estimate. Fiscal years are shifted to calendar years, which adds about ±5% error.</dd>
               <dt><code>Q2 FY27</code></dt><dd>A company's fiscal quarter (for Nvidia, May–Jul 2026).</dd>
@@ -451,7 +517,7 @@
           </div>
           <div>
             <h3 data-toc="false">One set of numbers</h3>
-            <p>Where dossiers disagreed, the synthesis picked one value and explained why (W11 §9). Those values live in <code>data/western/_canonical.json</code>, and every page uses them, so the same metric reads the same everywhere.</p>
+            <p>Where dossiers disagreed, each synthesis picked one value and explained why (W11 §9, C11 §11). Those values live in <code>data/western/_canonical.json</code> and <code>data/china/_canonical.json</code>, and every page uses them, so the same metric reads the same everywhere, including on X00.</p>
             <p>Every chart has a <strong>Table</strong> button with the underlying numbers, a source line and an as-of date. Dotted terms show a definition when you hover or tap them.</p>
           </div>
         </div>
@@ -463,30 +529,37 @@
         <ol class="timeline">
           <li class="is-key"><time datetime="2026-09-25">25 Sep 2026</time>
             <div class="tl-body">
+              <h4>Second edition: the China track and West vs China</h4>
+              <p>Twelve China dossiers (<a href="china/C00-overview.html">C00</a>–<a href="china/C11-synthesis.html">C11</a>, roughly 165,000 words) and a page for each layer, on the same taxonomy as the Western track. A 543-claim fact-check across C01–C10 found 0 fabrications, and its corrections are in the synthesis and <code>data/china/_canonical.json</code>. A new comparison page, <a href="compare/X00-west-vs-china.html">X00 West vs China</a>, lines up 35 headline metrics, every layer pair, costs, money sources, profit pools and the state.</p>
+              <span class="tag">Edition 2</span>
+            </div>
+          </li>
+          <li><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
+              <h4>Western hardening pass</h4>
+              <p>W01–W05 re-verified against primary sources (238 claim rows), one likely fabrication removed, and fresh news to 25 Sep carried into the canonical numbers, W00, W11 and all twelve Western pages.</p>
+            </div>
+          </li>
+          <li><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
+              <h4>Reference pages cover both tracks</h4>
+              <p><a href="glossary.html">Glossary</a> (393 terms), <a href="companies.html">company directory</a> (259 companies), <a href="timeline.html">timeline</a> (1,025 events) and <a href="sources.html">sources</a> (2,151 citations, searchable), now with China and the comparison page.</p>
+            </div>
+          </li>
+          <li class="is-key"><time datetime="2026-09-25">25 Sep 2026</time>
+            <div class="tl-body">
               <h4>First edition: the Western track</h4>
-              <p>Twelve analyst dossiers (W00–W11, roughly 150,000 words) and a web page for each layer. They include the 2026 money map, profit pools, circular financing, the "$600B question", scenarios to 2030 and a risk register.</p>
+              <p>Twelve analyst dossiers (W00–W11, roughly 150,000 words) and a web page for each layer. They include the 2026 money map, profit pools, circular financing, the "$600B question", scenarios to 2030 and a risk register. Two fact-check passes checked 311 claims; corrections went into the synthesis and the canonical numbers.</p>
               <span class="tag">Edition 1</span>
-            </div>
-          </li>
-          <li><time datetime="2026-09-25">25 Sep 2026</time>
-            <div class="tl-body">
-              <h4>Two independent fact-check passes</h4>
-              <p>311 claims checked across W01–W10: 233 confirmed, 36 partly right, 13 contradicted and corrected, 29 unverified, none found to be fabricated. The corrections were carried into the synthesis and the canonical numbers.</p>
-            </div>
-          </li>
-          <li><time datetime="2026-09-25">25 Sep 2026</time>
-            <div class="tl-body">
-              <h4>Reference pages</h4>
-              <p><a href="sources.html">Sources</a> (all 842 citations, searchable) and <a href="methodology.html">Methodology</a> (how the atlas is researched, checked and updated).</p>
             </div>
           </li>
         </ol>
         <aside class="callout callout--watch">
           <p class="callout-label">Coming next</p>
           <ul>
-            <li><strong>Track 2: China</strong> (C00–C11), answering the 15 questions above on the same definitions.</li>
-            <li><strong>A follow-up fact-check with full web access.</strong> It covers the claims still unverified, starting with Anthropic's September run-rate and SK hynix's 2Q26 figures.</li>
-            <li><strong>A refresh after Q3 2026 earnings</strong> (late October to November 2026). Hyperscaler capex guides, Nvidia's Q3 FY27 and the lab run-rates all move the canonical numbers.</li>
+            <li><strong>Quarterly refreshes</strong> of both tracks, starting after Q3 2026 earnings (late October to November 2026): hyperscaler and Chinese platform capex, Nvidia's Q3 FY27, lab run-rates and the 9–10 Nov 2026 truce expiries all move the canonical numbers.</li>
+            <li><strong>Site-wide search</strong> across every page, term, company and source.</li>
+            <li><strong>Possible new tracks</strong> for the Gulf and Europe, on the same layer IDs.</li>
           </ul>
         </aside>
       </section>

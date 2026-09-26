@@ -51,20 +51,28 @@ window.ATLAS_NAV = {
       id: "china",
       title: "China build-out",
       short: "China",
-      note: "Coming soon. Same layer IDs with a C prefix, so the two tracks compare line by line.",
+      note: "Same layer IDs with a C prefix, so the two tracks compare line by line.",
       items: [
-        { id: "C00", title: "Overview",                 href: "china/C00-overview.html",            status: "planned" },
-        { id: "C01", title: "Demand & capex",           href: "china/C01-demand-capex.html",        status: "planned" },
-        { id: "C02", title: "Capital & financing",      href: "china/C02-capital-financing.html",   status: "planned" },
-        { id: "C03", title: "Energy & power",           href: "china/C03-energy-power.html",        status: "planned" },
-        { id: "C04", title: "Data centers",             href: "china/C04-datacenters.html",         status: "planned" },
-        { id: "C05", title: "Compute silicon",          href: "china/C05-compute-silicon.html",     status: "planned" },
-        { id: "C06", title: "Semiconductor supply chain", href: "china/C06-semi-supply-chain.html", status: "planned" },
-        { id: "C07", title: "Networking & systems",     href: "china/C07-networking-systems.html",  status: "planned" },
-        { id: "C08", title: "Cloud",                    href: "china/C08-cloud.html",               status: "planned" },
-        { id: "C09", title: "Model labs",               href: "china/C09-model-labs.html",          status: "planned" },
-        { id: "C10", title: "Applications & agents",    href: "china/C10-apps-agents.html",         status: "planned" },
-        { id: "C11", title: "Synthesis",                href: "china/C11-synthesis.html",           status: "planned" }
+        { id: "C00", title: "Overview",                 href: "china/C00-overview.html",            status: "live", dek: "The stack, the money map, the story" },
+        { id: "C01", title: "Demand & capex",           href: "china/C01-demand-capex.html",        status: "live", dek: "Who is spending, how much, on what" },
+        { id: "C02", title: "Capital & financing",      href: "china/C02-capital-financing.html",   status: "live", dek: "Platforms, the state, banks and IPOs" },
+        { id: "C03", title: "Energy & power",           href: "china/C03-energy-power.html",        status: "live", dek: "Cheap power, fast grids, the power advantage" },
+        { id: "C04", title: "Data centers",             href: "china/C04-datacenters.html",         status: "live", dek: "Hubs, IDC operators, utilization and costs" },
+        { id: "C05", title: "Compute silicon",          href: "china/C05-compute-silicon.html",     status: "live", dek: "Huawei Ascend, Cambricon and the domestic-chip pivot" },
+        { id: "C06", title: "Semiconductor supply chain", href: "china/C06-semi-supply-chain.html", status: "live", dek: "SMIC, CXMT, equipment and export controls" },
+        { id: "C07", title: "Networking & systems",     href: "china/C07-networking-systems.html",  status: "live", dek: "Supernodes, switches, optics and servers" },
+        { id: "C08", title: "Cloud",                    href: "china/C08-cloud.html",               status: "live", dek: "Alibaba Cloud, Volcano Engine and the price wars" },
+        { id: "C09", title: "Model labs",               href: "china/C09-model-labs.html",          status: "live", dek: "DeepSeek, Qwen, Kimi, Zhipu and open weights" },
+        { id: "C10", title: "Applications & agents",    href: "china/C10-apps-agents.html",         status: "live", dek: "Doubao, Yuanbao, agents and who pays" },
+        { id: "C11", title: "Synthesis",                href: "china/C11-synthesis.html",           status: "live", dek: "Money flow, profit pools, the state, scenarios" }
+      ]
+    },
+    {
+      id: "compare",
+      title: "West vs China",
+      short: "Compare",
+      items: [
+        { id: "X00", title: "West vs China",            href: "compare/X00-west-vs-china.html",       status: "live", dek: "Layer economics, costs, money sources and profit, side by side" }
       ]
     }
   ],
